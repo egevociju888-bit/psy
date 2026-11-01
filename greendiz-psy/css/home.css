@@ -17,6 +17,12 @@
     gap: 8px;
     padding-block: 8px;
   }
+  .gz-help-list p {
+    line-height: 1.4;
+  }
+  .gz-help-list .gz-help-check {
+    line-height: 25.2px;
+  }
 }
 #gz-concepts .gz-work h3 a {
   text-decoration: none;
