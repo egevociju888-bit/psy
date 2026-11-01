@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="gz-benefit gz-inner" id="gz-benefit" aria-labelledby="gz-benefit-title">
         <div class="gz-screen-head">
           <div class="gz-screen-meta gz-screen-meta--lead">
-            <div class="gz-index">Тесты, практики, упражнения</div>
+            <div class="gz-index">польза для клиентов ещё до первой встречи</div>
             <div class="gz-screen-caption">готовые или по вашей идее</div>
           </div>
-          <h2 class="gz-screen-title" id="gz-benefit-title">Интерактивы: польза для клиентов ещё до первой встречи</h2>
+          <h2 class="gz-screen-title" id="gz-benefit-title">Тесты, практики и упражнения</h2>
         </div>
         <div class="gz-benefit-body">
           <div class="gz-benefit-copy">

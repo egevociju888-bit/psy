@@ -35,11 +35,6 @@
   animation-delay: var(--gz-reveal-delay, 0s);
 }
 @media (max-width: 540px) {
-  #gz-concepts .gz-case-title > em {
-    font-size: clamp(30px, 9vw, 48px);
-  }
-}
-@media (max-width: 540px) {
   #gz-formats .gz-formats-layout {
     row-gap: 40px;
   }

@@ -10,9 +10,6 @@
   font-size: 14px;
   line-height: 1.6;
 }
-#gz-formats .gz-format-price p {
-  line-height: 1.6;
-}
 #gz-formats .gz-format-action {
   margin-top: 36px;
 }
@@ -110,8 +107,15 @@
   }
 }
 @media (max-width: 540px) {
+  #gz-formats .gz-format-badge {
+    font-size: 12px;
+  }
   .gz-extra {
     padding: 28px 24px;
+  }
+  .gz-extra h3 {
+    font-size: 24px;
+    font-weight: 600;
   }
   #gz-formats .gz-format-new .gz-format-price p,
   #gz-formats .gz-format-new .gz-format-description {

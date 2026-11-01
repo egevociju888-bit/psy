@@ -1942,14 +1942,6 @@ body {
   padding-bottom: 20px;
 }
 
-#gz-concepts .gz-screen-meta .gz-index,
-#gz-concepts .gz-screen-caption {
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
-  word-spacing: 3px;
-}
-
 #gz-concepts .gz-screen-meta .gz-index {
   gap: 14px;
 }
@@ -2114,15 +2106,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0;
+  gap: 20px;
   min-width: 0;
   align-self: stretch;
 }
 
 #gz-concepts .gz-case-story p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 #gz-concepts .gz-case-links {
@@ -2206,13 +2196,13 @@ body {
     margin-top: 10px;
   }
 
-  #gz-concepts .gz-case-story {
-    gap: 28px;
-  }
-
 }
 
 @media (max-width: 760px) {
+
+  #gz-concepts .gz-title-accent {
+    font-size: inherit;
+  }
 
   #gz-concepts .gz-title-tail {
     display: none;
@@ -2284,8 +2274,12 @@ body {
     padding-bottom: 0;
   }
 
+  #gz-concepts .gz-screen-title {
+    margin-bottom: 20px;
+  }
+
   #gz-concepts .gz-concept-intro > p {
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   #gz-concepts .gz-case {
@@ -2293,13 +2287,13 @@ body {
     padding: 28px 24px;
   }
 
-  #gz-concepts .gz-case-title > span {
+  #gz-concepts .gz-case-title > :is(span, em) {
     font-size: clamp(26px, 7.5vw, 36px);
   }
 
   #gz-concepts .gz-case-links {
     flex-direction: column;
-    gap: 14px;
+    gap: 4px;
   }
 
   #gz-concepts .gz-case-links .gz-inline-link {
@@ -2437,7 +2431,7 @@ body {
 
 #gz-formats .gz-format-price p {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 #gz-formats .gz-format-price b {
@@ -2550,8 +2544,18 @@ body {
     line-height: 1.5;
   }
 
+  #gz-formats .gz-title-accent {
+    font-size: inherit;
+  }
+
   #gz-formats .gz-format h3 {
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  #gz-formats .gz-format-price p {
+    font-size: var(--gz-text-size);
+    line-height: var(--gz-text-line-height);
   }
 
   #gz-formats .gz-format-price {
@@ -2690,7 +2694,8 @@ body {
   }
 
   .gz-screen-meta .gz-index {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
+    word-spacing: 0;
     flex-wrap: wrap;
     gap: 6px 10px;
     font-size: 11px;
@@ -2698,6 +2703,7 @@ body {
 
   .gz-screen-caption {
     letter-spacing: 0.08em;
+    word-spacing: 0;
     font-size: 11px;
   }
 
@@ -2735,14 +2741,6 @@ body {
 
 #gz-benefit {
   background: var(--gz-sand);
-}
-
-#gz-benefit .gz-screen-meta .gz-index,
-#gz-benefit .gz-screen-caption {
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
-  word-spacing: 3px;
 }
 
 #gz-benefit .gz-screen-meta .gz-index {
@@ -3301,7 +3299,8 @@ body {
   }
 
   #gz-benefit .gz-breathe-card h3 {
-    font-size: clamp(28px, 8.718vw, 34px);
+    font-size: 24px;
+    font-weight: 600;
   }
 
   #gz-benefit .gz-breathe-card {
@@ -3548,14 +3547,6 @@ body {
   margin-bottom: 100px;
   padding-bottom: 20px;
   align-items: baseline;
-}
-
-#gz-formats .gz-screen-meta .gz-index,
-#gz-formats .gz-screen-caption {
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
-  word-spacing: 3px;
 }
 
 #gz-formats .gz-screen-meta .gz-index {
@@ -4190,6 +4181,8 @@ body {
   }
 
   .gz-hero-cta {
+    width: 100%;
+    justify-content: space-between;
     margin-top: 28px;
     padding-inline: 20px;
     font-size: 16px;
@@ -4216,14 +4209,6 @@ body {
 #gz-cost .gz-screen-meta {
   margin-bottom: 40px;
   padding-bottom: 20px;
-}
-
-#gz-cost .gz-screen-meta .gz-index,
-#gz-cost .gz-screen-caption {
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
-  word-spacing: 3px;
 }
 
 #gz-cost .gz-screen-meta .gz-index {
@@ -4771,13 +4756,6 @@ body {
     margin-bottom: 28px;
   }
 
-  #gz-cost .gz-screen-meta .gz-index,
-  #gz-cost .gz-screen-caption {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    word-spacing: 0;
-  }
-
   #gz-cost .gz-screen-meta .gz-index {
     gap: 10px;
   }
@@ -5285,9 +5263,6 @@ body {
 
   #gz-faq .gz-screen-meta .gz-index {
     gap: 12px;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    word-spacing: 0;
   }
 
   #gz-faq .gz-screen-title {
@@ -5357,14 +5332,6 @@ body {
   grid-area: meta;
   margin-bottom: 70px;
   padding-bottom: clamp(20px, 1.47vw, 30px);
-}
-
-#gz-after .gz-screen-meta .gz-index,
-#gz-after .gz-screen-caption {
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.18em;
-  word-spacing: 3px;
 }
 
 #gz-after .gz-after-title {
@@ -5456,9 +5423,6 @@ body {
 
   #gz-after .gz-screen-meta .gz-index {
     gap: 12px;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    word-spacing: 0;
   }
 
   #gz-after .gz-after-title {
