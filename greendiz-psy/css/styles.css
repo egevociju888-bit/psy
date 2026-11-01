@@ -4191,7 +4191,7 @@ body {
   }
 
   .gz-hero-word {
-    font-size: calc((100vw - 2 * var(--gz-gutter)) * 0.46);
+    font-size: calc((100vw - 2 * var(--gz-gutter)) * 0.42);
     line-height: 0.88;
   }
 
@@ -4257,7 +4257,7 @@ body {
   }
 
   .gz-hero-quiz h2 {
-    font-size: 22px;
+    font-size: min(25px, calc((100vw - 2 * var(--gz-gutter)) / 12.6));
     white-space: nowrap;
   }
 
@@ -4283,7 +4283,7 @@ body {
   .gz-hero-cta {
     margin-top: 28px;
     padding-inline: 20px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
   }
 
