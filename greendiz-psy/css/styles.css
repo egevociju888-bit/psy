@@ -2416,6 +2416,28 @@ body {
   line-height: var(--gz-text-line-height);
 }
 
+#gz-formats .gz-format-list {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#gz-formats .gz-format-list li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  font-size: var(--gz-text-size);
+  line-height: var(--gz-text-line-height);
+}
+
+#gz-formats .gz-format-list li::before {
+  content: "✓";
+  color: var(--gz-blue);
+  font-weight: 600;
+}
+
 #gz-formats .gz-format-price {
   display: grid;
   gap: 12px;
@@ -2468,8 +2490,8 @@ body {
     grid-row: 1;
   }
 
-  #gz-formats .gz-format-concept > .gz-format-description {
-    grid-row: 2;
+  #gz-formats .gz-format-concept > .gz-format-body {
+    grid-row: 2 / span 2;
   }
 
   #gz-formats .gz-format-concept > .gz-format-price {
@@ -7102,7 +7124,7 @@ body {
 /* Единый вертикальный ритм секций на десктопе. */
 
 .gz-page {
-  --gz-section-space: 64px;
+  --gz-section-space: 88px;
   --gz-section-title: clamp(44px, 12.8vw, 50px);
 }
 
