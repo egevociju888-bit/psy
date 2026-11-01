@@ -48,6 +48,10 @@
     if (inDialog) dialogOpen = open;
     else mobileOpen = open;
     setExpanded(open);
+    if (!open) return;
+    const first = fields.querySelector('input[name="reply"]:checked') || fields.querySelector('input');
+    first?.focus({ preventScroll: true });
+    window.requestAnimationFrame(() => fields.scrollIntoView({ behavior: 'smooth', block: 'nearest' }));
   });
   mobile.addEventListener('change', syncLayout);
   section.addEventListener('gz:contact-layout', (event) => {

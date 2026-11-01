@@ -32,7 +32,7 @@ $heading_tag = ! empty( $args['page'] ) ? 'h1' : 'h2';
     </div>
   </div>
   <p class="gz-contact-feedback" id="gz-contact-status" role="status" aria-live="polite"></p>
-  <button class="gz-contact-toggle gz-button<?php echo ! empty( $args['dark'] ) ? ' gz-button--black' : ' gz-button--navy'; ?>" type="button" aria-expanded="true" aria-controls="gz-contact-reveal">Отправить заявку<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m6 9 6 6 6-6"/></svg></button>
+  <button class="gz-contact-toggle gz-button<?php echo ! empty( $args['dark'] ) ? ' gz-button--black' : ' gz-button--navy'; ?>" type="button" aria-expanded="true" aria-controls="gz-contact-reveal">Оставить контакт<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m6 9 6 6 6-6"/></svg></button>
   <div class="gz-contact-reveal is-open" id="gz-contact-reveal">
     <div class="gz-contact-reveal-inner">
       <fieldset class="gz-contact-fields" aria-label="Контакт для ответа">

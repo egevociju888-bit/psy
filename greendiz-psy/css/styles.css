@@ -6726,6 +6726,10 @@ body {
   display: none;
 }
 
+:is(#gz-contact, #gz-contact-dialog) .gz-contact-toggle[aria-expanded="true"] {
+  display: none;
+}
+
 :is(#gz-contact, #gz-contact-dialog) .gz-contact-reveal {
   display: grid;
   grid-template-rows: 0fr;
@@ -7004,14 +7008,6 @@ body {
     gap: 12px;
     width: 100%;
     margin-top: 16px;
-  }
-
-  :is(#gz-contact, #gz-contact-dialog) .gz-contact-toggle svg {
-    transition: transform 0.35s ease;
-  }
-
-  :is(#gz-contact, #gz-contact-dialog) .gz-contact-toggle[aria-expanded="true"] svg {
-    transform: rotate(180deg);
   }
 
   :is(#gz-contact, #gz-contact-dialog) .gz-reply-options {
@@ -8050,14 +8046,6 @@ html.gz-contact-modal-open body {
   gap: 12px;
   width: 100%;
   margin-top: 16px;
-}
-
-#gz-contact-dialog .gz-contact-toggle svg {
-  transition: transform 0.35s ease;
-}
-
-#gz-contact-dialog .gz-contact-toggle[aria-expanded="true"] svg {
-  transform: rotate(180deg);
 }
 
 #gz-contact-dialog .gz-contact-direct {
