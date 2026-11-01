@@ -2761,6 +2761,10 @@ body {
     display: none;
   }
 
+  .gz-home-page #gz-contact > .gz-screen-meta {
+    display: none;
+  }
+
   .gz-section-head .gz-section-side {
     margin-top: 26px;
   }
