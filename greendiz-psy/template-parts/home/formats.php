@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <p class="gz-format-description">Подойдёт, если нужен собственный визуальный язык или особый состав сайта.</p>
             <div class="gz-format-price">
               <b><?php echo esc_html( gdpsy_money( 'base' ) ); ?></b>
-              <p>Цена за лендинг на 5–10 блоков, включая контактную форму и 1 интерактив по желанию. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
+              <details class="gz-format-note"><summary>Что входит в цену</summary><p>Цена за лендинг на 5–10 блоков, включая контактную форму и 1 интерактив по желанию. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p></details>
             </div>
             <a class="gz-primary gz-button gz-button--navy gz-format-action" href="#gz-contact" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить индивидуальную разработку сайта." data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить свою идею</a>
           </article>
@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
             <div class="gz-format-price">
               <b><?php echo esc_html( gdpsy_price_label( 'concept', 'от ' ) ); ?></b>
-              <p>Цена за лендинг на 5–10 блоков, включая существующий интерактив и контактную форму. Объём адаптации уточним при обсуждении. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
+              <details class="gz-format-note"><summary>Что входит в цену</summary><p>Цена за лендинг на 5–10 блоков, включая существующий интерактив и контактную форму. Объём адаптации уточним при обсуждении. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p></details>
             </div>
             <a class="gz-button gz-format-action" href="#gz-concepts">Посмотреть концепты</a>
           </article>
