@@ -4883,14 +4883,14 @@ body {
 }
 
 #gz-articles .gz-screen-title {
-  font-size: clamp(56px, 4.3vw, 88px);
+  font-size: calc(var(--gz-section-title) * 0.8);
   letter-spacing: -0.045em;
   line-height: 1.1;
 }
 
 #gz-articles .gz-title-accent {
   margin-top: 0;
-  font-size: clamp(56px, 4.1vw, 84px);
+  font-size: inherit;
   line-height: 1.12;
 }
 
@@ -5074,11 +5074,6 @@ body {
     gap: 0 32px;
   }
 
-  #gz-articles .gz-screen-title,
-  #gz-articles .gz-title-accent {
-    font-size: 48px;
-  }
-
 }
 
 @media (max-width: 1000px) {
@@ -5096,9 +5091,8 @@ body {
     padding-top: 0;
   }
 
-  #gz-articles .gz-screen-title,
-  #gz-articles .gz-title-accent {
-    font-size: clamp(50px, 10.5vw, 80px);
+  #gz-articles .gz-screen-title {
+    font-size: var(--gz-section-title);
   }
 
   #gz-articles .gz-article {
@@ -5125,14 +5119,6 @@ body {
 
   #gz-articles .gz-screen-caption {
     display: none;
-  }
-
-  #gz-articles .gz-screen-title {
-    font-size: 50px;
-  }
-
-  #gz-articles .gz-title-accent {
-    font-size: clamp(39px, 11.8vw, 46px);
   }
 
   #gz-articles .gz-article-intro > .gz-inline-link {
@@ -8330,8 +8316,7 @@ html.gz-contact-modal-open body {
   color: var(--gz-contact-muted);
 }
 
-#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) :is(.gz-direct-links a, .gz-social-links a),
-#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light))[data-contact-variant="main"] .gz-contact-hours {
+#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-social-links a {
   color: #6e82e1;
 }
 
@@ -8344,12 +8329,13 @@ html.gz-contact-modal-open body {
   color: #fff;
 }
 
-#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-contact-channel > span {
-  color: #6e82e1;
+#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-contact-channel > span,
+#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light))[data-contact-variant="main"] .gz-contact-hours {
+  color: var(--gz-contact-muted);
 }
 
 #gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-direct-links a:hover span {
-  color: #b9c0e4;
+  color: var(--gz-contact-secondary);
 }
 
 #gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light))[data-contact-variant="main"] .gz-contact-copy > .gz-contact-availability {
