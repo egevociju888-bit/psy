@@ -2370,11 +2370,16 @@ body {
 
 #gz-formats .gz-formats-layout {
   display: grid;
-  grid-template:
-    "heading concept" auto
-    "individual concept" auto / minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    "heading heading"
+    "individual concept"
+    "individual concept"
+    "individual concept"
+    "individual concept"
+    "individual concept";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: stretch;
-  gap: 40px 70px;
+  column-gap: 70px;
 }
 
 #gz-formats .gz-formats-heading {
@@ -2383,7 +2388,6 @@ body {
 }
 
 #gz-formats .gz-screen-title {
-  transform: translateY(-9px);
   font-size: clamp(42px, 4.3vw, 62px);
   letter-spacing: -0.045em;
   line-height: 1.1;
@@ -2397,26 +2401,24 @@ body {
   min-width: 0;
   height: auto;
   margin: 0;
+  padding: 40px;
   border: 0;
 }
 
 #gz-formats .gz-format-new {
   grid-area: individual;
   background: var(--gz-sand);
-  padding: 40px;
 }
 
 #gz-formats .gz-format-concept {
   grid-area: concept;
   background: #fff;
-  padding: 52px;
 }
 
 #gz-formats .gz-format-labels {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 12px;
   width: 100%;
 }
@@ -2437,12 +2439,6 @@ body {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.6;
-}
-
-#gz-formats .gz-format-concept .gz-format-labels {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
 }
 
 #gz-formats .gz-format-concept .gz-format-badge {
@@ -2496,15 +2492,18 @@ body {
   justify-content: center;
 }
 
-#gz-formats .gz-format-concept .gz-format-action {
-  margin-top: auto;
-  align-self: flex-start;
-}
+@media (min-width: 1001px) {
 
-@media (min-width: 1560px) {
+  #gz-formats .gz-formats-heading {
+    margin-bottom: 60px;
+  }
 
-  #gz-formats .gz-formats-layout {
-    grid-template-columns: minmax(0, 1.194fr) minmax(0, 1fr);
+  #gz-formats .gz-format {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    align-items: start;
+    justify-items: start;
   }
 
 }
@@ -2556,12 +2555,6 @@ body {
 
   #gz-formats .gz-format {
     padding: 24px 24px 30px;
-  }
-
-  #gz-formats .gz-format-labels {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
   }
 
   #gz-formats .gz-format-badge {

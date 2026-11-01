@@ -19,12 +19,6 @@
 #gz-formats .gz-format-action {
   margin-top: 36px;
 }
-#gz-formats .gz-format-concept .gz-format-price {
-  margin-bottom: 88px;
-}
-#gz-formats .gz-format-concept .gz-format-action {
-  margin-top: auto;
-}
 .gz-home-page #gz-main > #gz-cost.gz-extras {
   padding-top: 64px;
 }
@@ -124,9 +118,6 @@
   }
   .gz-extra h3 {
     font-size: 36px;
-  }
-  #gz-formats .gz-format-concept .gz-format-price {
-    margin-bottom: 36px;
   }
 }
 @media (max-width: 540px) {

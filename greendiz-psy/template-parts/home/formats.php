@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
               <b><?php echo esc_html( gdpsy_price_label( 'concept', 'от ' ) ); ?></b>
               <p>Цена за лендинг на 5–10 блоков, включая существующий интерактив и контактную форму. Объём адаптации уточним при обсуждении. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
             </div>
-            <a class="gz-button gz-format-action" href="<?php echo esc_url( add_query_arg( 'case-type', 'consept', gdpsy_archive_url() ) ); ?>">Посмотреть концепты</a>
+            <a class="gz-button gz-format-action" href="#gz-concepts">Посмотреть концепты</a>
           </article>
         </div>
       </section>
