@@ -3783,12 +3783,16 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "intro intro"
-    "foot foot"
+    "nav quiz"
     "meta meta";
   gap: 40px 12px;
   box-sizing: border-box;
   min-height: 703px;
   padding: 92px 0 40px;
+}
+
+.gz-hero-first {
+  display: contents;
 }
 
 .gz-hero-intro {
@@ -3854,17 +3858,9 @@ body {
   pointer-events: none;
 }
 
-.gz-hero-foot {
-  display: grid;
-  grid-area: foot;
-  grid-template-columns: 51% minmax(0, 1fr);
-  grid-template-areas: "nav quiz";
-  align-self: end;
-  gap: 12px;
-}
-
 .gz-hero-navigation {
   grid-area: nav;
+  align-self: end;
   display: flex;
   align-items: flex-end;
   gap: 24px;
@@ -4075,7 +4071,8 @@ body {
     grid-template-rows: auto;
     grid-template-areas:
       "intro"
-      "foot"
+      "quiz"
+      "nav"
       "meta";
     align-content: start;
     gap: 60px;
@@ -4104,14 +4101,6 @@ body {
   .gz-hero-slash,
   .gz-hero-caption {
     display: none;
-  }
-
-  .gz-hero-foot {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "quiz"
-      "nav";
-    gap: 60px;
   }
 
   .gz-hero-navigation {
@@ -4151,9 +4140,8 @@ body {
   }
 
   .gz-hero-core {
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "intro" "foot";
-    gap: 32px;
+    grid-template-areas: "first" "nav";
+    gap: calc(var(--gz-gutter) + 12px);
     padding-top: 52px;
     padding-bottom: calc(var(--gz-gutter) + 12px);
   }
@@ -4188,8 +4176,14 @@ body {
     display: none;
   }
 
-  .gz-hero-foot {
-    gap: 40px;
+  .gz-hero-first {
+    display: flex;
+    grid-area: first;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    min-height: calc(100vh - var(--gz-header-height) - 52px - var(--gz-gutter) - 12px);
+    min-height: calc(100dvh - var(--gz-header-height) - 52px - var(--gz-gutter) - 12px);
   }
 
   .gz-hero-navigation {
@@ -4201,7 +4195,20 @@ body {
   }
 
   .gz-hero-nav .gz-wp-menu {
-    column-gap: 24px;
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+
+  .gz-hero-nav a {
+    min-height: 54px;
+  }
+
+  .gz-hero-nav li:nth-child(3n + 1) a {
+    border-top: 1px solid var(--gz-sand-line);
+  }
+
+  .gz-hero-nav li:first-child a {
+    border-top: 0;
   }
 
   .gz-hero-quiz {
