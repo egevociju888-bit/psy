@@ -20,7 +20,7 @@ function gdpsy_shadow_css( $set, $names ) {
 			$css .= file_get_contents( $path ) . "\n";
 		}
 	}
-	$css = strtr( $css, array( 'Onest' => 'GDPSY Onest', 'Lora' => 'GDPSY Lora', 'Playfair Display' => 'GDPSY Playfair Display' ) );
+	$css = strtr( $css, array( 'Onest' => 'GDPSY Onest', 'Lora' => 'GDPSY Lora' ) );
 	preg_match_all( '/@font-face\s*\{[^}]+\}/s', $css, $faces );
 	$fonts = str_replace( 'url(../fonts/', 'url(' . esc_url( get_theme_file_uri( 'fonts/' ) ), implode( "\n", $faces[0] ) );
 	$css = preg_replace( '/@font-face\s*\{[^}]+\}/s', '', $css );
