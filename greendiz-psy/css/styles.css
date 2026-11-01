@@ -2269,14 +2269,25 @@ body {
 
   #gz-concepts .gz-owner-heading {
     font-size: 28px;
+    text-align: left;
   }
 
   #gz-concepts .gz-concept-owner {
     display: flex;
+    align-items: flex-start;
+  }
+
+  #gz-concepts .gz-title-main {
+    font-size: clamp(30px, 9vw, 40px);
+  }
+
+  #gz-concepts .gz-title-accent {
+    font-size: clamp(30px, 9vw, 40px);
   }
 
   #gz-concepts .gz-concept-owner > .gz-concepts-action {
     margin-top: 0;
+    margin-left: -6px;
   }
 
 }
