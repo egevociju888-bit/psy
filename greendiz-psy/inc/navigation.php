@@ -44,6 +44,14 @@ function gdpsy_menu_link_attributes( $attributes, $item, $args ) {
 }
 add_filter( 'nav_menu_link_attributes', 'gdpsy_menu_link_attributes', 10, 3 );
 
+function gdpsy_header_menu_title( $title, $item, $args ) {
+	if ( ( $args->theme_location ?? '' ) !== 'header' ) {
+		return $title;
+	}
+	return preg_replace( '/[\s\x{00A0}]*[\x{2190}-\x{21FF}\x{2B00}-\x{2BFF}]+[\x{FE0E}\x{FE0F}]?\s*$/u', '', (string) $title );
+}
+add_filter( 'nav_menu_item_title', 'gdpsy_header_menu_title', 10, 3 );
+
 function gdpsy_rank_math_breadcrumbs_enabled( $enabled ) {
 	return is_home() || is_category() || is_post_type_archive( 'portfolio' ) || is_singular( 'post' ) ? false : $enabled;
 }
