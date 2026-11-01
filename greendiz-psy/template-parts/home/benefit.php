@@ -16,15 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="gz-benefit-body">
           <div class="gz-benefit-copy">
-            <div class="gz-benefit-rail" aria-hidden="true">Практика → доверие → встреча</div>
             <div class="gz-benefit-intro">
               <p>
                 Небольшие действия, через которые посетитель может почувствовать опору, понять, как может работать терапия и получить полезный опыт. Это вовлекает и повышает доверие.
               </p>
               <p>Механики подбираем вместе под вашу специализацию и подход. Возможна разработка новой механики под ваш запрос.</p>
-            <a class="gz-primary gz-button gz-benefit-action" href="https://psy.greendiz.ru/interactive/">
-              Каталог интерактивов
-            </a>
             </div>
             <ol class="gz-outcomes">
               <li class="gz-outcome">
@@ -52,6 +48,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                 </div>
               </li>
             </ol>
+            <a class="gz-primary gz-button gz-benefit-action" href="https://psy.greendiz.ru/interactive/">
+              Каталог интерактивов
+            </a>
           </div>
           <div class="gz-benefit-example">
             <div class="gz-breathe-card" id="gz-breathe-demo" data-state="idle" aria-labelledby="gz-breathe-title">

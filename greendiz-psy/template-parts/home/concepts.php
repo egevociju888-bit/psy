@@ -17,7 +17,7 @@ $slots = array( 'gz-concept-teen', 'gz-concept-family', 'gz-concept-academic', '
 <div class="gz-concept-intro">
               <h2 id="gz-concepts-title" class="gz-screen-title">
                 <span class="gz-title-main">Примеры сайтов:</span>
-                <span class="gz-title-accent">готовые концепты для разных практик</span>
+                <span class="gz-title-accent">готовые концепты <span class="gz-title-tail">для разных практик</span></span>
               </h2>
               <p>Концепт — это готовый дизайн сайта, который я придумала заранее. Выберите близкий вам по настроению: я заменю тексты и фото на ваши и при необходимости добавлю до трёх блоков в том же стиле.</p>
             </div>

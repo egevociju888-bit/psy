@@ -10,7 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="gz-formats-layout">
           <div class="gz-formats-heading">
-            <h2 id="gz-formats-title" class="gz-screen-title">Два пути разработки: с нуля или с готовой идеи</h2>
+            <h2 id="gz-formats-title" class="gz-screen-title">
+              <span class="gz-title-main">Два пути разработки:</span>
+              <span class="gz-title-accent">с нуля или с готовой идеи</span>
+            </h2>
           </div>
           <article class="gz-format gz-format-new" aria-labelledby="gz-format-new-title">
             <div class="gz-format-head">
