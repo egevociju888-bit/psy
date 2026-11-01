@@ -4151,7 +4151,7 @@ body {
   }
 
   .gz-hero-word {
-    font-size: min(clamp(96px, 31vw, 196px), 165.6px);
+    font-size: calc((100vw - 2 * var(--gz-gutter)) * 0.46);
     line-height: 0.88;
   }
 
@@ -4159,7 +4159,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: -8.5px;
-    font-size: min(clamp(26px, 8vw, 48px), 47.84px);
+    font-size: calc((100vw - 2 * var(--gz-gutter)) * 0.111);
     line-height: 1.03;
   }
 
@@ -4168,12 +4168,9 @@ body {
     order: 1;
     width: auto;
     margin-top: 20px;
-    font-size: 15px;
+    font-size: min(15px, 3.9vw);
     text-align: left;
-  }
-
-  .gz-hero-audience > span {
-    display: block;
+    white-space: nowrap;
   }
 
   .gz-hero-meta {
@@ -4225,8 +4222,8 @@ body {
   }
 
   .gz-hero-quiz-info {
-    gap: 10px;
-    margin-top: 12px;
+    gap: 14px;
+    margin-top: 20px;
   }
 
   .gz-hero-quiz-info p {
@@ -4244,7 +4241,7 @@ body {
   }
 
   .gz-hero-cta {
-    margin-top: 16px;
+    margin-top: 28px;
     padding-inline: 20px;
     font-size: 18px;
     line-height: 24px;
