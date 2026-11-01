@@ -1963,7 +1963,7 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) repeat(2, minmax(0, 1fr));
   align-items: stretch;
-  gap: 48px;
+  gap: 30px;
 }
 
 #gz-concepts .gz-concept-side {
@@ -1976,6 +1976,7 @@ body {
   align-self: start;
   gap: 40px;
   min-width: 0;
+  padding-right: 30px;
 }
 
 #gz-concepts .gz-concept-intro {
