@@ -11,7 +11,7 @@ $gdpsy_rows_open = $gdpsy_rows( count( $concepts ) );
 $slots = array( 'gz-concept-teen', 'gz-concept-family', 'gz-concept-academic', 'gz-concept-haven', 'gz-concept-clarity', 'gz-concept-extra-1', 'gz-concept-extra-2', 'gz-concept-extra-3' );
 ?>
 <section class="gz-gallery gz-inner" id="gz-concepts" aria-labelledby="gz-concepts-title">
-<div class="gz-screen-meta"><div class="gz-index">Готовый дизайн</div><div class="gz-screen-caption">Ваши тексты и фото</div></div>
+<div class="gz-screen-meta gz-screen-meta--lead"><div class="gz-index">Готовый дизайн</div><div class="gz-screen-caption">Ваши тексты и фото</div></div>
 <h2 id="gz-concepts-title" class="gz-screen-title">
   <span class="gz-title-main">Примеры сайтов:</span>
   <span class="gz-title-accent">готовые концепты <span class="gz-title-tail">для разных практик</span></span>

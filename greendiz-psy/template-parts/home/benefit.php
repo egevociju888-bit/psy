@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="gz-index">польза для клиентов ещё до первой встречи</div>
             <div class="gz-screen-caption">готовые или по вашей идее</div>
           </div>
-          <h2 class="gz-screen-title" id="gz-benefit-title">Тесты, практики и упражнения</h2>
+          <h2 class="gz-screen-title" id="gz-benefit-title">Опросники и упражнения</h2>
         </div>
         <div class="gz-benefit-body">
           <div class="gz-benefit-copy">

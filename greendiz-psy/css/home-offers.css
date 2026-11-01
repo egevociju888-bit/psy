@@ -23,6 +23,10 @@
   line-height: 1.1;
   text-wrap: balance;
 }
+#gz-cost.gz-extras .gz-title-accent {
+  margin-top: 0;
+  font-size: calc(var(--gz-section-title) * 0.72);
+}
 .gz-extras-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -87,6 +91,11 @@
   }
   .gz-extras-grid {
     gap: 24px;
+  }
+}
+@media (max-width: 760px) {
+  #gz-cost.gz-extras .gz-title-accent {
+    font-size: inherit;
   }
 }
 @media (max-width: 1000px) {

@@ -2341,12 +2341,6 @@ body {
   line-height: 1.1;
 }
 
-#gz-formats .gz-title-accent {
-  margin-top: 0;
-  text-wrap: balance;
-  font-size: calc(var(--gz-section-title) * 0.72);
-}
-
 #gz-formats .gz-format {
   display: flex;
   flex-direction: column;
@@ -2542,10 +2536,6 @@ body {
     padding: 6px 10px;
     font-size: 13px;
     line-height: 1.5;
-  }
-
-  #gz-formats .gz-title-accent {
-    font-size: inherit;
   }
 
   #gz-formats .gz-format h3 {
@@ -5246,16 +5236,17 @@ body {
   }
 
   #gz-faq .gz-section-side {
-    gap: 10px;
+    gap: 12px;
     margin-top: 14px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   #gz-faq .gz-faq-all {
-    min-height: 44px;
-    padding: 10px 14px;
-    font-size: 14px;
-    line-height: 20px;
+    min-height: 52px;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: normal;
   }
 
   #gz-faq .gz-faq-grid {
@@ -6303,6 +6294,7 @@ body {
 #gz-faq .gz-faq-all {
   width: fit-content;
   max-width: 100%;
+  white-space: nowrap;
 }
 
 #gz-articles .gz-article-placeholder > span {
@@ -8207,12 +8199,11 @@ html.gz-contact-modal-open body {
 }
 
 #gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-contact-icon {
-  color: #6d83ea;
+  color: #fff;
 }
 
 #gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-contact-channel b,
-#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-social-links a:hover,
-#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-direct-links a:hover .gz-contact-icon {
+#gz-contact:where(:not(.gz-contact--dark):not(.gz-contact--light)) .gz-social-links a:hover {
   color: #fff;
 }
 

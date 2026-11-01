@@ -9,7 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="gz-index">Если нужно больше</div>
       <div class="gz-screen-caption">Сразу или позже</div>
     </div>
-    <h2 class="gz-screen-title" id="gz-extras-title">Что ещё может быть на сайте, кроме главной страницы</h2>
+    <h2 class="gz-screen-title" id="gz-extras-title">
+      <span class="gz-title-main">Что ещё может быть на сайте,</span>
+      <span class="gz-title-accent">кроме главной страницы</span>
+    </h2>
   </div>
   <div class="gz-extras-grid">
     <article class="gz-extra gz-extra--pages" aria-labelledby="gz-extra-pages-title">
