@@ -18,7 +18,7 @@
 }
 #gz-cost.gz-extras .gz-screen-title {
   margin: 0;
-  font-size: clamp(36px, 4vw, 58px);
+  font-size: var(--gz-section-title);
   letter-spacing: -0.045em;
   line-height: 1.1;
   text-wrap: balance;
