@@ -167,6 +167,8 @@
     const status = dialog.querySelector('#gz-quiz-status');
     const progress = dialog.querySelector('.gz-quiz-progress');
     const title = dialog.querySelector('#gz-quiz-title');
+    const eyebrow = dialog.querySelector('.gz-quiz-eyebrow');
+    const defaultEyebrow = eyebrow?.textContent || '';
     const defaultTitle = [...(title?.children || [])].map((part) => part.textContent);
     let step = 0;
     const answers = [];
@@ -260,7 +262,8 @@
       const question = questions[step];
       const heading = node('h3', 'gz-quiz-question', question.q);
       heading.id = 'gz-quiz-question';
-      content.append(node('p', 'gz-quiz-step', 'Вопрос ' + (step + 1) + ' из ' + questions.length), heading);
+      if (eyebrow) eyebrow.textContent = 'Вопрос ' + (step + 1) + ' из ' + questions.length;
+      content.appendChild(heading);
       const list = node('div', 'gz-quiz-answers');
       list.setAttribute('role', 'radiogroup');
       list.setAttribute('aria-labelledby', heading.id);
@@ -318,6 +321,7 @@
       const recommended = recommendedBase();
       const refreshers = [];
       const result = node('div', 'gz-quiz-result');
+      if (eyebrow) eyebrow.textContent = 'Итог';
       setTitle(ids.length ? ['Что я', 'рекомендую'] : ['Начнём', 'с лендинга'], true);
       const intro = ids.length ? texts.intro : 'Остальное можно добавить позже, когда появится потребность.';
       if (intro) result.appendChild(node('p', 'gz-quiz-intro', intro));
@@ -522,6 +526,7 @@
       next.disabled = !Number.isInteger(answers[step]);
       updateProgress();
       content.replaceChildren();
+      if (eyebrow) eyebrow.textContent = defaultEyebrow;
       setTitle(defaultTitle, false);
       if (step < questions.length) renderQuestion();
       else renderResult();

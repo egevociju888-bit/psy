@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="gz-quiz-scroll">
         <div id="gz-quiz-content"></div>
         <details class="gz-menu-collapse gz-quiz-hint" id="gz-quiz-hint" hidden>
-          <summary>На что влияет ответ <span class="line" aria-hidden="true"></span><span class="gz-menu-chevron" aria-hidden="true"></span></summary>
+          <summary>На что влияет ответ <span class="gz-menu-chevron" aria-hidden="true"></span></summary>
           <div class="gz-menu-collapse-content"><p id="gz-quiz-hint-text"></p></div>
         </details>
       </div>

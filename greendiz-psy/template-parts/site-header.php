@@ -6,6 +6,8 @@
 		</a>
 		<?php if ( ! is_front_page() && has_nav_menu( 'header' ) ) : ?>
 			<nav class="gz-nav" aria-label="Основные разделы"><?php gdpsy_menu( 'header', 'header', 1 ); ?></nav>
+		<?php elseif ( is_front_page() ) : ?>
+			<nav class="gz-nav" aria-label="Связаться"><ul class="gz-wp-menu"><li><a href="#gz-contact" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить создание сайта." data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить сайт</a></li></ul></nav>
 		<?php endif; ?>
 		<?php if ( has_nav_menu( 'primary_left' ) || has_nav_menu( 'primary_right' ) ) : ?>
 			<div class="gz-menu-anchor">
