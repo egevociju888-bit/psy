@@ -10,7 +10,7 @@ $gdpsy_from = array_filter( array( gdpsy_price( 'concept' ), gdpsy_price( 'base'
             <h1 class="gz-hero-headline" id="gz-hero-title">
               <span class="gz-hero-word">Сайт,</span>
               <span class="gz-hero-message">
-                <span class="gz-hero-audience sub">для психолога, психотерапевта, коуча</span>
+                <span class="gz-hero-audience sub"><span>для психолога,</span> <span>психотерапевта, коуча</span></span>
                 <span>с которым клиенту</span>
                 <span>легче сделать</span>
                 <span>первый шаг</span>
