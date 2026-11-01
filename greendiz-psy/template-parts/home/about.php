@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="gz-about-grid">
           <div class="gz-about-intro">
             <div class="gz-screen-meta">
-              <div class="gz-index">ДАВАЙТЕ ЗНАКОМИТЬСЯ</div>
+              <div class="gz-index">Давайте знакомиться</div>
               <div class="gz-screen-caption">про мой подход</div>
             </div>
             <h2 class="gz-about-heading gz-screen-title" id="gz-about-title">
@@ -24,8 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
             </figcaption>
           </figure>
           <div class="gz-bio">
-            <p>Больше 10 лет разрабатываю сайты для личных брендов и компаний и всё ещё люблю своё дело.</p>
             <p>
+              Больше 10 лет разрабатываю сайты для личных брендов и компаний и всё ещё люблю своё дело.
               Я давно увлекаюсь психологией, есть личный опыт психотерапии, я знаю, как тревожно выбирать
               «своего» специалиста. Поэтому думаю не только о том, как сайт выглядит, но и о том, что
               почувствует человек, открывший его в два часа ночи.

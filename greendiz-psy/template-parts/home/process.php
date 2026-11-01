@@ -6,14 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="gz-block gz-process gz-inner" id="gz-process" aria-labelledby="gz-process-title">
         <div class="gz-section-head">
           <div class="gz-screen-meta">
-            <div class="gz-index">КАК ПРОХОДИТ РАБОТА</div>
+            <div class="gz-index">Как проходит работа</div>
             <div class="gz-screen-caption">основа — за 7&nbsp;дней</div>
           </div>
 
-          <h2 class="gz-screen-title" id="gz-process-title">
-            <span class="gz-title-main">Четыре шага</span>
-            <span class="gz-title-accent">до запуска</span>
-          </h2>
+          <h2 class="gz-screen-title" id="gz-process-title">Четыре шага до запуска</h2>
         </div>
         <ol class="gz-steps">
           <li>

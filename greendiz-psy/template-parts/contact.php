@@ -9,8 +9,8 @@ $heading_tag = ! empty( $args['page'] ) ? 'h1' : 'h2';
 <section class="gz-block gz-contact gz-inner<?php echo ! empty( $args['dark'] ) ? ' gz-contact--dark' : ( ! empty( $args['light'] ) ? ' gz-contact--light' : '' ); ?>" id="gz-contact" data-contact-variant="main"<?php echo '' !== $gdpsy_contact_number ? ' data-screen-number="' . esc_attr( $gdpsy_contact_number ) . '"' : ''; ?> aria-labelledby="gz-contact-title"<?php echo ! empty( $args['popup_source'] ) ? ' data-popup-source' : ''; ?>>
 <?php if ( empty( $args['page'] ) ) : ?>
 <div class="gz-screen-meta">
-  <div class="gz-index"><?php if ( '' !== $gdpsy_contact_number ) : ?><span><?php echo esc_html( $gdpsy_contact_number ); ?></span><span class="gz-screen-slash" aria-hidden="true">/</span><?php endif; ?><span>ВАШ ПЕРВЫЙ ШАГ</span></div>
-  <div class="gz-screen-caption">ЛИЧНЫЙ ОТВЕТ</div>
+  <div class="gz-index"><?php if ( '' !== $gdpsy_contact_number ) : ?><span><?php echo esc_html( $gdpsy_contact_number ); ?></span><span class="gz-screen-slash" aria-hidden="true">/</span><?php endif; ?><span>Ваш первый шаг</span></div>
+  <div class="gz-screen-caption">Личный ответ</div>
 </div>
 <?php endif; ?>
 <div class="gz-contact-copy">

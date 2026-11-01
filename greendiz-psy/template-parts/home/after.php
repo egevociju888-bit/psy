@@ -6,15 +6,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="gz-after gz-inner" id="gz-after">
         <div class="gz-screen-meta">
           <div class="gz-index">
-            ПОСЛЕ ЗАПУСКА
+            После запуска
           </div>
-          <div class="gz-screen-caption">ДОСТУПЫ И ПОДДЕРЖКА</div>
+          <div class="gz-screen-caption">Доступы и поддержка</div>
         </div>
         <div class="gz-after-title">
-          <h2 class="gz-screen-title">
-            <span class="gz-title-main">Сайт остаётся</span>
-            <span class="gz-title-accent">в ваших руках</span>
-          </h2>
+          <h2 class="gz-screen-title">Сайт остаётся в ваших руках</h2>
         </div>
         <div class="gz-after-content">
           <div>

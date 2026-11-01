@@ -53,11 +53,11 @@ $slots = array( 'gz-concept-teen', 'gz-concept-family', 'gz-concept-academic', '
 <?php foreach ( gdpsy_home_projects() as $project ) : $info = gdpsy_portfolio_info( $project->ID ); $review = gdpsy_review( $project->ID ); $gdpsy_is_gipnopro = $project->post_name === 'gipnopro'; ?>
 <div class="gz-case"><div class="gz-case-intro">
 <?php if ( $gdpsy_is_gipnopro ) : ?>
-<div class="gz-case-label">РЕАЛИЗОВАННЫЙ ПРОЕКТ GIPNOPRO.RU</div>
+<div class="gz-case-label">Реализованный проект gipnopro.ru</div>
 <h3 class="gz-case-title"><span>Сайт психолога</span><em>Ольги Филатовой</em></h3>
 <p class="gz-case-specialty">клинический психолог, ЭОТ-терапевт, гипнолог · Москва и онлайн</p>
 <?php else : ?>
-<div class="gz-case-label">РЕАЛИЗОВАННЫЙ ПРОЕКТ</div>
+<div class="gz-case-label">Реализованный проект</div>
 <h3 class="gz-case-title"><em><?php echo esc_html( get_the_title( $project ) ); ?></em></h3>
 <?php if ( gdpsy_text( $info['speczializacziya'] ?? '' ) !== '' ) : ?><p class="gz-case-specialty"><?php echo esc_html( gdpsy_text( $info['speczializacziya'] ) ); ?></p><?php endif; ?>
 <?php endif; ?>

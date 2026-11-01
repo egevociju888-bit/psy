@@ -142,11 +142,6 @@
     font-size: clamp(29px, 5.5vw, 36px);
   }
 }
-@media (max-width: 540px) {
-  .gz-hero-audience {
-    top: -56px;
-  }
-}
 #gz-faq .gz-faq-grid > div {
   min-width: 0;
 }

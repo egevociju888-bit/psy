@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="gz-benefit gz-inner" id="gz-benefit" aria-labelledby="gz-benefit-title">
         <div class="gz-screen-head">
           <div class="gz-screen-meta">
-            <div class="gz-index">ТЕСТЫ, ПРАКТИКИ, УПРАЖНЕНИЯ</div>
+            <div class="gz-index">Тесты, практики, упражнения</div>
             <div class="gz-screen-caption">готовые или по вашей идее</div>
           </div>
           <h2 class="gz-screen-title" id="gz-benefit-title">
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="gz-benefit-body">
           <div class="gz-benefit-copy">
-            <div class="gz-benefit-rail" aria-hidden="true">ПРАКТИКА → ДОВЕРИЕ → ВСТРЕЧА</div>
+            <div class="gz-benefit-rail" aria-hidden="true">Практика → доверие → встреча</div>
             <div class="gz-benefit-intro">
               <p>
                 Небольшие действия, через которые посетитель может почувствовать опору, понять, как может работать терапия и получить полезный опыт. Это вовлекает и повышает доверие.
