@@ -6726,8 +6726,28 @@ body {
   display: none;
 }
 
+:is(#gz-contact, #gz-contact-dialog) .gz-contact-toggle {
+  max-height: 96px;
+  overflow: hidden;
+}
+
 :is(#gz-contact, #gz-contact-dialog) .gz-contact-toggle[aria-expanded="true"] {
-  display: none;
+  min-height: 0;
+  max-height: 0;
+  margin-top: 0;
+  padding-block: 0;
+  border-width: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+:is(#gz-contact.is-ready, #gz-contact-dialog) .gz-contact-toggle {
+  transition: max-height 0.35s ease, min-height 0.35s ease, margin-top 0.35s ease, padding 0.35s ease, border-width 0.35s ease, opacity 0.2s ease, visibility 0s;
+}
+
+:is(#gz-contact.is-ready, #gz-contact-dialog) .gz-contact-toggle[aria-expanded="true"] {
+  transition: max-height 0.35s ease, min-height 0.35s ease, margin-top 0.35s ease, padding 0.35s ease, border-width 0.35s ease, opacity 0.2s ease, visibility 0s 0.35s;
 }
 
 :is(#gz-contact, #gz-contact-dialog) .gz-contact-reveal {

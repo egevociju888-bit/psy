@@ -62,6 +62,7 @@
     fitMessage();
   });
   syncLayout();
+  window.requestAnimationFrame(() => section.classList.add('is-ready'));
   function syncReply() {
     const value = form.querySelector('input[name="reply"]:checked').value;
     replyField.type = value === 'email' ? 'email' : value === 'phone' ? 'tel' : 'text';
