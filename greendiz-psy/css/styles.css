@@ -8341,16 +8341,13 @@ html.gz-contact-modal-open body {
   color: #a8a9aa;
 }
 
-#gz-contact.gz-contact--dark .gz-contact-icon {
-  color: #747677;
+#gz-contact.gz-contact--dark .gz-contact-icon,
+#gz-contact.gz-contact--dark .gz-contact-channel b {
+  color: #fff;
 }
 
 #gz-contact.gz-contact--dark :is(.gz-direct-links a, .gz-social-links a):hover {
   color: #fff;
-}
-
-#gz-contact.gz-contact--dark .gz-direct-links a:hover .gz-contact-icon {
-  color: #afb0b1;
 }
 
 #gz-contact.gz-contact--dark[data-contact-variant="main"] .gz-contact-copy > .gz-contact-availability {
