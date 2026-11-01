@@ -16,6 +16,12 @@
 					</div>
 				</details>
 			<?php endif; ?>
+			<?php if ( is_front_page() ) : ?>
+				<aside class="gz-menu-cta" aria-label="Связаться">
+					<p>Расскажите о задаче — даже пары предложений достаточно. Отвечу в течение рабочего дня лично.</p>
+					<a class="gz-primary gz-button" href="#gz-contact" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить создание сайта." data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить сайт</a>
+				</aside>
+			<?php endif; ?>
 		</div>
 	</dialog>
 <?php endif; ?>
