@@ -3816,7 +3816,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - var(--gz-header-height));
-  min-height: calc(100dvh - var(--gz-header-height));
+  min-height: calc(100svh - var(--gz-header-height));
   padding-block: 0;
 }
 
@@ -4224,7 +4224,7 @@ body {
     justify-content: space-between;
     gap: 32px;
     min-height: calc(100vh - var(--gz-header-height) - 52px - var(--gz-gutter) - 12px);
-    min-height: calc(100dvh - var(--gz-header-height) - 52px - var(--gz-gutter) - 12px);
+    min-height: calc(100svh - var(--gz-header-height) - 52px - var(--gz-gutter) - 12px);
   }
 
   .gz-hero-navigation {
