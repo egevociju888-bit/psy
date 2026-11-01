@@ -4269,7 +4269,7 @@ body {
 
   .gz-hero-core {
     grid-template-areas: "intro" "foot";
-    gap: 40px;
+    gap: 60px;
     padding-top: 52px;
     padding-bottom: calc(var(--gz-gutter) + 12px);
   }
@@ -4343,7 +4343,8 @@ body {
   }
 
   .gz-hero-quiz-info p {
-    font-size: 15px;
+    font-size: min(14px, 3.4vw);
+    white-space: nowrap;
   }
 
   .gz-hero-quiz-steps li:not(:last-child)::after {
