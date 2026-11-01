@@ -1,0 +1,526 @@
+diff --git a/greendiz-psy/css/home.css b/greendiz-psy/css/home.css
+index b3fe92a..a91c45a 100644
+--- a/greendiz-psy/css/home.css
++++ b/greendiz-psy/css/home.css
+@@ -1,9 +1,6 @@
+ .gz-process-notes b {
+   font-weight: 500;
+ }
+-.gz-pain .gz-help-heading > em {
+-  color: #fff;
+-}
+ .gz-help-list .gz-help-check {
+   line-height: 28.8px;
+ }
+@@ -15,9 +12,6 @@
+   padding-bottom: 0;
+ }
+ @media (max-width: 760px) {
+-  .gz-help-heading > em {
+-    font-size: 1.22em;
+-  }
+   .gz-help-list > li {
+     grid-template-columns: 24px minmax(0, 1fr);
+     gap: 16px;
+@@ -356,7 +350,7 @@ dialog[id^="gz-review-"] .gz-review-name {
+     font-size: clamp(34px, 3.2vw, 56px);
+   }
+   #gz-concepts .gz-title-accent {
+-    font-size: clamp(30px, 2.8vw, 48px);
++    font-size: clamp(34px, 3.2vw, 56px);
+   }
+   #gz-concepts .gz-owner-heading {
+     font-size: clamp(22px, 1.9vw, 30px);
+diff --git a/greendiz-psy/css/styles.css b/greendiz-psy/css/styles.css
+index 86e6cad..ec15816 100644
+--- a/greendiz-psy/css/styles.css
++++ b/greendiz-psy/css/styles.css
+@@ -1834,16 +1834,14 @@ body {
+   font-family: var(--gz-display-font);
+   font-size: clamp(32px, 3.45vw, 60px);
+   font-weight: var(--gz-display-weight);
+-  letter-spacing: -0.035em;
++  letter-spacing: var(--gz-display-spacing);
+   line-height: 1.09;
+   margin: 0;
+ }
+ 
+-.gz-help-heading > span,
+-.gz-help-heading > em {
++.gz-help-heading > span {
+   white-space: normal;
+   display: block;
+-  color: var(--gz-on-blue-secondary);
+ }
+ 
+ .gz-unwind {
+@@ -2045,8 +2043,8 @@ body {
+ }
+ 
+ #gz-concepts .gz-title-accent {
+-  margin-top: -6px;
+-  font-size: 56px;
++  margin-top: 0;
++  font-size: 66px;
+   line-height: 1.1;
+ }
+ 
+@@ -2208,7 +2206,7 @@ body {
+   }
+ 
+   #gz-concepts .gz-title-accent {
+-    font-size: 66px;
++    font-size: 76px;
+   }
+ 
+ }
+@@ -2286,8 +2284,7 @@ body {
+   }
+ 
+   #gz-concepts .gz-title-accent {
+-    margin-top: 8px;
+-    font-size: 48px;
++    font-size: 56px;
+   }
+ 
+   #gz-concepts .gz-case {
+@@ -2370,10 +2367,6 @@ body {
+     padding-bottom: 0;
+   }
+ 
+-  #gz-concepts .gz-title-accent {
+-    margin-top: -2px;
+-  }
+-
+   #gz-concepts .gz-concept-intro > p {
+     margin-top: 6px;
+   }
+@@ -2742,7 +2735,6 @@ body {
+ 
+ .gz-screen-title--split > .gz-title-main {
+   font-size: var(--gz-title-main-size);
+-  letter-spacing: -0.055em;
+ }
+ 
+ @media (max-width: 1000px) {
+@@ -2766,7 +2758,6 @@ body {
+ 
+   .gz-screen-title--split > .gz-title-main {
+     font-size: inherit;
+-    letter-spacing: inherit;
+   }
+ 
+ }
+@@ -2877,7 +2868,7 @@ body {
+ #gz-benefit .gz-title-main {
+   font-size: 148px;
+   line-height: 1.1;
+-  letter-spacing: -0.055em;
++  letter-spacing: -0.045em;
+   white-space: nowrap;
+ }
+ 
+@@ -3483,12 +3474,12 @@ body {
+ 
+   #gz-benefit .gz-title-follow {
+     margin-top: -8px;
+-    font-size: clamp(25px, 8.205vw, 32px);
++    font-size: clamp(24px, 7.9vw, 32px);
+   }
+ 
+   #gz-benefit .gz-title-accent {
+     margin-top: 3px;
+-    font-size: clamp(26px, 8.718vw, 34px);
++    font-size: inherit;
+   }
+ 
+   #gz-benefit .gz-benefit-body {
+@@ -3592,7 +3583,6 @@ body {
+ .gz-about-heading .gz-title-main {
+   display: inline;
+   font-weight: 500;
+-  letter-spacing: -0.055em;
+ }
+ 
+ .gz-about .gz-photo {
+@@ -3744,10 +3734,6 @@ body {
+ 
+   .gz-about-heading .gz-title-main {
+     display: block;
+-    font-size: clamp(56px, 15.67vw, 72px);
+-  }
+-
+-  .gz-about-heading .gz-about-name {
+     font-size: clamp(42px, 13.05vw, 60px);
+   }
+ 
+@@ -5388,7 +5374,7 @@ body {
+   grid-area: title;
+   display: flex;
+   align-items: baseline;
+-  gap: clamp(20px, 1.8vw, 32px);
++  gap: 0.25em;
+   font-size: clamp(56px, 5.3vw, 88px);
+   font-weight: 400;
+   letter-spacing: -0.045em;
+@@ -5402,7 +5388,7 @@ body {
+ #gz-faq .gz-title-accent {
+   flex: none;
+   margin: 0;
+-  font-size: 68px;
++  font-size: inherit;
+   line-height: 1.1;
+ }
+ 
+@@ -5493,10 +5479,6 @@ body {
+     font-size: 80px;
+   }
+ 
+-  #gz-faq .gz-title-accent {
+-    font-size: 56px;
+-  }
+-
+   #gz-faq .gz-screen-caption {
+     display: none;
+   }
+@@ -5528,7 +5510,6 @@ body {
+   }
+ 
+   #gz-faq .gz-title-accent {
+-    font-size: clamp(44px, 14.35vw, 56px);
+     line-height: 1;
+   }
+ 
+@@ -5605,7 +5586,7 @@ body {
+ #gz-after .gz-screen-title {
+   font-size: clamp(56px, 5.3vw, 88px);
+   font-weight: 400;
+-  letter-spacing: -0.055em;
++  letter-spacing: -0.045em;
+   line-height: 1.02;
+ }
+ 
+@@ -5989,7 +5970,7 @@ body {
+   grid-area: title;
+   display: flex;
+   align-items: baseline;
+-  gap: 24px;
++  gap: 0.25em;
+   font-size: clamp(56px, 5.3vw, 88px);
+   font-weight: 400;
+   letter-spacing: -0.045em;
+@@ -6003,7 +5984,7 @@ body {
+ #gz-process .gz-title-accent {
+   flex: none;
+   margin: 0;
+-  font-size: 70px;
++  font-size: inherit;
+   line-height: 1.1;
+ }
+ 
+@@ -6156,7 +6137,6 @@ body {
+ 
+   #gz-process .gz-title-accent {
+     margin-top: 0;
+-    font-size: 48px;
+   }
+ 
+   #gz-process .gz-steps > .gz-step-launch {
+@@ -6227,15 +6207,10 @@ body {
+   display: block;
+ }
+ 
+-#gz-quiz h2:not(.gz-quiz-title-inline) > em {
+-  display: block;
++#gz-quiz h2:not(.gz-quiz-title-inline) > span + span {
+   margin-top: 2px;
+ }
+ 
+-#gz-quiz h2 > em {
+-  font-size: 44px;
+-}
+-
+ #gz-quiz .gz-quiz-question {
+   margin: 0 0 12px;
+   font-family: "Onest", Arial, sans-serif;
+@@ -6458,8 +6433,7 @@ body {
+     gap: 12px;
+   }
+ 
+-  #gz-quiz h2,
+-  #gz-quiz h2 > em {
++  #gz-quiz h2 {
+     font-size: clamp(28px, 8.2vw, 32px);
+   }
+ 
+@@ -6519,13 +6493,6 @@ body {
+   line-height: 1.1;
+ }
+ 
+-#gz-review h2 em {
+-  display: block;
+-  margin-top: 2px;
+-  color: var(--gz-blue);
+-  font-size: inherit;
+-}
+-
+ #gz-review .gz-review-quote {
+   margin: 0;
+   padding: 0;
+diff --git a/greendiz-psy/inc/faq.php b/greendiz-psy/inc/faq.php
+index acf6076..7250ca2 100644
+--- a/greendiz-psy/inc/faq.php
++++ b/greendiz-psy/inc/faq.php
+@@ -57,7 +57,7 @@ function gdpsy_home_faq_sections() {
+ 				),
+ 				array(
+ 					'question' => 'А если у меня нет готовых текстов и профессиональных фото?',
+-					'answer' => 'Да. Задам вопросы о вашей практике и соберу тексты из ответов — достаточно рассказать о работе своими словами. Фотосессия не обязательна: подберём оформление с теми материалами, которые есть, или сделаем акцент на графике. Содержание согласуем с вами.',
++					'answer' => 'Это не проблема. Задам вопросы о вашей практике и соберу тексты из ответов — достаточно рассказать о работе своими словами. Фотосессия не обязательна: подберём оформление с теми материалами, которые есть, или сделаем акцент на графике. Содержание согласуем с вами.',
+ 				),
+ 				array(
+ 					'question' => 'Можно ли начать с одной страницы, а блог добавить позже?',
+diff --git a/greendiz-psy/inc/helpers.php b/greendiz-psy/inc/helpers.php
+index 46a94a1..33ddead 100644
+--- a/greendiz-psy/inc/helpers.php
++++ b/greendiz-psy/inc/helpers.php
+@@ -67,7 +67,7 @@ function gdpsy_quiz_config() {
+ 
+ function gdpsy_contact_month() {
+ 	$today = current_datetime();
+-	if ( (int) $today->format( 't' ) - (int) $today->format( 'j' ) <= 10 ) {
++	if ( (int) $today->format( 't' ) - (int) $today->format( 'j' ) < 10 ) {
+ 		$today = $today->modify( 'first day of next month' );
+ 	}
+ 	$months = array( 'январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь' );
+diff --git a/greendiz-psy/inc/setup.php b/greendiz-psy/inc/setup.php
+index 1f95333..66e1217 100644
+--- a/greendiz-psy/inc/setup.php
++++ b/greendiz-psy/inc/setup.php
+@@ -17,6 +17,8 @@ function gdpsy_setup() {
+ 	) );
+ }
+ add_action( 'after_setup_theme', 'gdpsy_setup' );
++remove_action( 'wp_head', 'wp_generator' );
++add_filter( 'the_generator', '__return_empty_string' );
+ 
+ 
+ function gdpsy_favicon() {
+diff --git a/greendiz-psy/template-parts/home/after.php b/greendiz-psy/template-parts/home/after.php
+index ef2b1a8..a4bb226 100644
+--- a/greendiz-psy/template-parts/home/after.php
++++ b/greendiz-psy/template-parts/home/after.php
+@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+         <div class="gz-after-title">
+           <h2 class="gz-screen-title">
+             <span class="gz-title-main">Сайт остаётся</span>
+-            <em class="gz-title-accent">в ваших руках</em>
++            <span class="gz-title-accent">в ваших руках</span>
+           </h2>
+         </div>
+         <div class="gz-after-content">
+@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+           </div>
+           <div>
+             <h3>Месяц поддержки</h3>
+-            <p>После запуска бесплатно исправляю мелкие недочеты, отвечаю на вопросы об использовании сайта.</p>
++            <p>После запуска бесплатно исправляю мелкие недочёты, отвечаю на вопросы об использовании сайта.</p>
+           </div>
+         </div>
+       </section>
+diff --git a/greendiz-psy/template-parts/home/benefit.php b/greendiz-psy/template-parts/home/benefit.php
+index 3dca090..cc913c6 100644
+--- a/greendiz-psy/template-parts/home/benefit.php
++++ b/greendiz-psy/template-parts/home/benefit.php
+@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+           </div>
+           <h2 class="gz-screen-title gz-screen-title--split" id="gz-benefit-title">
+             <span class="gz-title-main">Польза</span>
+-            <span class="gz-title-follow"><span>для ваших клиентов</span> <em class="gz-title-accent">ещё до первой встречи</em></span>
++            <span class="gz-title-follow"><span>для ваших клиентов</span> <span class="gz-title-accent">ещё до первой встречи</span></span>
+           </h2>
+         </div>
+         <div class="gz-benefit-body">
+diff --git a/greendiz-psy/template-parts/home/concepts.php b/greendiz-psy/template-parts/home/concepts.php
+index 78c4e59..cc1d28f 100644
+--- a/greendiz-psy/template-parts/home/concepts.php
++++ b/greendiz-psy/template-parts/home/concepts.php
+@@ -17,7 +17,7 @@ $slots = array( 'gz-concept-teen', 'gz-concept-family', 'gz-concept-academic', '
+ <div class="gz-concept-intro">
+               <h2 id="gz-concepts-title" class="gz-screen-title">
+                 <span class="gz-title-main">Разные практики.</span>
+-                <em class="gz-title-accent">Разный характер.</em>
++                <span class="gz-title-accent">Разный характер.</span>
+               </h2>
+               <p>Выберите близкий по настроению и подходу концепт.<br />Адаптирую под вашу практику.</p>
+             </div>
+@@ -55,7 +55,7 @@ $slots = array( 'gz-concept-teen', 'gz-concept-family', 'gz-concept-academic', '
+ <?php if ( $gdpsy_is_gipnopro ) : ?>
+ <div class="gz-case-label">РЕАЛИЗОВАННЫЙ ПРОЕКТ GIPNOPRO.RU</div>
+ <h3 class="gz-case-title"><span>Сайт психолога</span><em>Ольги Филатовой</em></h3>
+-<p class="gz-case-specialty">клинический психолог, эот-терапевт, гипнолог · москва и онлайн</p>
++<p class="gz-case-specialty">клинический психолог, ЭОТ-терапевт, гипнолог · Москва и онлайн</p>
+ <?php else : ?>
+ <div class="gz-case-label">РЕАЛИЗОВАННЫЙ ПРОЕКТ</div>
+ <h3 class="gz-case-title"><em><?php echo esc_html( get_the_title( $project ) ); ?></em></h3>
+diff --git a/greendiz-psy/template-parts/home/dialogs.php b/greendiz-psy/template-parts/home/dialogs.php
+index f26b656..191ba61 100644
+--- a/greendiz-psy/template-parts/home/dialogs.php
++++ b/greendiz-psy/template-parts/home/dialogs.php
+@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+     </dialog>
+     <?php foreach ( gdpsy_home_projects() as $project ) : $review = gdpsy_review( $project->ID ); if ( gdpsy_text( $review['text'] ?? '' ) === '' ) { continue; } ?>
+ <dialog class="gz-dialog" id="gz-review-<?php echo absint( $project->ID ); ?>" aria-labelledby="gz-review-title-<?php echo absint( $project->ID ); ?>">
+-<div class="gz-dialog-head"><h2 id="gz-review-title-<?php echo absint( $project->ID ); ?>">Отзыв <em>о проекте</em></h2><button class="gz-dialog-close gz-icon-action" type="button" data-close-dialog aria-label="Закрыть отзыв">×</button></div>
++<div class="gz-dialog-head"><h2 id="gz-review-title-<?php echo absint( $project->ID ); ?>">Отзыв о проекте</h2><button class="gz-dialog-close gz-icon-action" type="button" data-close-dialog aria-label="Закрыть отзыв">×</button></div>
+ <blockquote class="gz-review-quote"><?php echo wpautop( esc_html( gdpsy_text( $review['text'] ) ) ); ?></blockquote>
+ <div class="gz-review-author"><?php $photo = $review['photo'] ?? 0; if ( is_numeric( $photo ) && absint( $photo ) ) { echo wp_get_attachment_image( absint( $photo ), 'thumbnail', false, array( 'class' => 'gz-review-photo', 'alt' => '' ) ); } ?>
+ <div><p class="gz-review-name"><?php echo esc_html( gdpsy_text( $review['name'] ?? '' ) ); ?></p><p class="gz-review-role"><?php echo esc_html( gdpsy_text( $review['role'] ?? '' ) ); ?></p></div></div></dialog>
+diff --git a/greendiz-psy/template-parts/home/extras.php b/greendiz-psy/template-parts/home/extras.php
+index e93c0a3..47a45f1 100644
+--- a/greendiz-psy/template-parts/home/extras.php
++++ b/greendiz-psy/template-parts/home/extras.php
+@@ -7,14 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) {
+   <div class="gz-extras-head">
+     <h2 class="gz-screen-title" id="gz-extras-title">
+       <span class="gz-title-main">Если нужно больше</span>
+-      <em class="gz-title-accent">одной страницы</em>
++      <span class="gz-title-accent">одной страницы</span>
+     </h2>
+     <div class="gz-extras-intro">
+       <div class="gz-screen-meta">
+         <div class="gz-index">ДОПОЛНИТЕЛЬНЫЕ ВОЗМОЖНОСТИ</div>
+         <div class="gz-screen-caption">СРАЗУ ИЛИ ПОЗЖЕ</div>
+       </div>
+-      <p>Если у вас есть нестандартная идея - давайте обсудим!<br />
++      <p>Если у вас есть нестандартная идея — давайте обсудим!<br />
+         Ниже предложение для традиционного многостраничного сайта.</p>
+     </div>
+   </div>
+diff --git a/greendiz-psy/template-parts/home/faq.php b/greendiz-psy/template-parts/home/faq.php
+index d97c2ee..9659fb1 100644
+--- a/greendiz-psy/template-parts/home/faq.php
++++ b/greendiz-psy/template-parts/home/faq.php
+@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+ 
+           <h2 class="gz-screen-title" id="gz-faq-title">
+             <span class="gz-title-main">Что ещё</span>
+-            <em class="gz-title-accent">важно знать</em>
++            <span class="gz-title-accent">важно знать</span>
+           </h2>
+         </div>
+         <div class="gz-faq-grid">
+diff --git a/greendiz-psy/template-parts/home/formats.php b/greendiz-psy/template-parts/home/formats.php
+index 1efcd8b..ed7ecf6 100644
+--- a/greendiz-psy/template-parts/home/formats.php
++++ b/greendiz-psy/template-parts/home/formats.php
+@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+           <div class="gz-formats-heading">
+             <h2 id="gz-formats-title" class="gz-screen-title">
+               <span class="gz-title-main">С нуля</span>
+-              <em class="gz-title-accent">или с готовой идеи</em>
++              <span class="gz-title-accent">или с готовой идеи</span>
+             </h2>
+           </div>
+           <article class="gz-format gz-format-new" aria-labelledby="gz-format-new-title">
+@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+             <p class="gz-format-description">Подойдёт, если нужен собственный визуальный язык или особый состав сайта.</p>
+             <div class="gz-format-price">
+               <b><?php echo esc_html( gdpsy_money( 'base' ) ); ?></b>
+-              <p>Цена за лендинг на 5-10 блоков, включая контактную форму и 1 интерактив по желанию. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
++              <p>Цена за лендинг на 5–10 блоков, включая контактную форму и 1 интерактив по желанию. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
+             </div>
+             <a class="gz-primary gz-button gz-button--navy gz-format-action" href="#gz-contact" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить индивидуальную разработку сайта." data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить свою идею</a>
+           </article>
+@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+             <p class="gz-format-description">Адаптация текстов и фото под вас, добавление до трёх информационных блоков в том же дизайне. После покупки снимаю концепт с продажи, другого сайта в таком дизайне не будет.</p>
+             <div class="gz-format-price">
+               <b><?php echo esc_html( gdpsy_price_label( 'concept', 'от ' ) ); ?></b>
+-              <p>Цена за лендинг на 5-10 блоков, включая существующий интерактив и контактную форму. Объём адаптации уточним при обсуждении. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
++              <p>Цена за лендинг на 5–10 блоков, включая существующий интерактив и контактную форму. Объём адаптации уточним при обсуждении. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
+             </div>
+             <a class="gz-button gz-format-action" href="<?php echo esc_url( add_query_arg( 'case-type', 'consept', gdpsy_archive_url() ) ); ?>">Посмотреть концепты</a>
+           </article>
+diff --git a/greendiz-psy/template-parts/home/hero.php b/greendiz-psy/template-parts/home/hero.php
+index e396a01..d41068c 100644
+--- a/greendiz-psy/template-parts/home/hero.php
++++ b/greendiz-psy/template-parts/home/hero.php
+@@ -58,8 +58,8 @@ $gdpsy_from = array_filter( array( gdpsy_price( 'concept' ), gdpsy_price( 'base'
+             <h2 class="gz-help-heading" id="gz-help-title">
+               <span>Вы помогаете людям</span>
+               <span>распутывать сложное.</span>
+-              <em>Я помогу вам</em>
+-              <em>распутать сайт.</em>
++              <span>Я помогу вам</span>
++              <span>распутать сайт.</span>
+             </h2>
+           </div>
+           <ul class="gz-help-list">
+diff --git a/greendiz-psy/template-parts/home/process.php b/greendiz-psy/template-parts/home/process.php
+index 56c7e0e..d096cc5 100644
+--- a/greendiz-psy/template-parts/home/process.php
++++ b/greendiz-psy/template-parts/home/process.php
+@@ -14,12 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) {
+ 
+           <h2 class="gz-screen-title" id="gz-process-title">
+             <span class="gz-title-main">Четыре шага</span>
+-            <em class="gz-title-accent">до запуска</em>
++            <span class="gz-title-accent">до запуска</span>
+           </h2>
+         </div>
+         <ol class="gz-steps">
+           <li>
+-            <span class="gz-step-num">01</span>
++            <span class="gz-step-num" aria-hidden="true">01</span>
+             <h3>Знакомимся</h3>
+             <p>
+               Рассказываете о себе и практике, присылаете материалы. Согласуем состав, сроки и стоимость.
+@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+             </p>
+           </li>
+           <li>
+-            <span class="gz-step-num">02</span>
++            <span class="gz-step-num" aria-hidden="true">02</span>
+             <h3>Проектирую</h3>
+             <p>
+               Выстраиваю структуру, собираю тексты и визуальное направление. Присылаю прототип по тестовой
+@@ -35,13 +35,13 @@ if ( ! defined( 'ABSPATH' ) ) {
+             </p>
+           </li>
+           <li>
+-            <span class="gz-step-num">03</span>
++            <span class="gz-step-num" aria-hidden="true">03</span>
+             <h3>Дорабатываем</h3>
+             <p>Обсуждаем, уточняем и дополняем. В согласованный объём входят до двух циклов правок.</p>
+           </li>
+           <li class="gz-step-launch">
+             <span class="gz-launch-arrow" aria-hidden="true">↗</span>
+-            <span class="gz-step-num">04</span>
++            <span class="gz-step-num" aria-hidden="true">04</span>
+             <h3>Запускаем</h3>
+             <p>
+               Подключаю домен и аналитику, публикую сайт. Передаю доступы и показываю, как им пользоваться. Остаюсь на связи.
+diff --git a/greendiz-psy/template-parts/quiz-dialog.php b/greendiz-psy/template-parts/quiz-dialog.php
+index da58e02..b4b041e 100644
+--- a/greendiz-psy/template-parts/quiz-dialog.php
++++ b/greendiz-psy/template-parts/quiz-dialog.php
+@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
+           <p class="gz-quiz-eyebrow">Подбор сайта</p>
+           <h2 id="gz-quiz-title">
+             <span>Что нужно</span>
+-            <em>вашей практике?</em>
++            <span>вашей практике?</span>
+           </h2>
+         </div>
+         <button class="gz-dialog-close gz-icon-action" type="button" data-close-dialog="" aria-label="Закрыть">×</button>
+diff --git a/greendiz-psy/template-parts/site-footer.php b/greendiz-psy/template-parts/site-footer.php
+index efabf50..8dc1234 100644
+--- a/greendiz-psy/template-parts/site-footer.php
++++ b/greendiz-psy/template-parts/site-footer.php
+@@ -9,5 +9,5 @@
+ 				<nav class="gz-footer-legal-list" id="gz-footer-legal-list" aria-label="Юридическая информация" hidden><?php gdpsy_menu( 'footer_legal', 'footer-legal', 1 ); ?></nav>
+ 			</div>
+ 		<?php endif; ?>
+-		<span>© 2013 - <?php echo esc_html( wp_date( 'Y' ) ); ?> · greendiz.ru</span>
++		<span>© 2013–<?php echo esc_html( wp_date( 'Y' ) ); ?> · greendiz.ru</span>
+ 	</footer>
