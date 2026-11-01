@@ -2465,6 +2465,8 @@ body {
 
 #gz-formats .gz-format-note summary {
   width: fit-content;
+  padding-block: 11px;
+  margin-block: -11px;
   color: var(--gz-muted);
   font-size: 14px;
   line-height: 1.6;
@@ -4215,7 +4217,7 @@ body {
   }
 
   .gz-hero-quiz-info p {
-    font-size: min(14px, 3.4vw);
+    font-size: max(12px, min(14px, 3.4vw));
     white-space: nowrap;
   }
 
@@ -4243,6 +4245,29 @@ body {
 
   .gz-hero-message {
     margin-top: 14px;
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  .gz-hero-quiz-info p {
+    white-space: normal;
+  }
+
+  .gz-hero-quiz-steps li:not(:last-child)::after {
+    width: 6px;
+  }
+
+  .gz-hero-quiz-steps span {
+    min-width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    font-size: 12px;
+  }
+
+  .gz-hero-quiz-steps .gz-hero-quiz-result {
+    padding: 0 10px 0 7px;
   }
 
 }
