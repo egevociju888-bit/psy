@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="gz-after-title">
           <h2 class="gz-screen-title">
             <span class="gz-title-main">Сайт остаётся</span>
-            <em class="gz-title-accent">в ваших руках</em>
+            <span class="gz-title-accent">в ваших руках</span>
           </h2>
         </div>
         <div class="gz-after-content">
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
           <div>
             <h3>Месяц поддержки</h3>
-            <p>После запуска бесплатно исправляю мелкие недочеты, отвечаю на вопросы об использовании сайта.</p>
+            <p>После запуска бесплатно исправляю мелкие недочёты, отвечаю на вопросы об использовании сайта.</p>
           </div>
         </div>
       </section>

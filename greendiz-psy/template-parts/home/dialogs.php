@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </dialog>
     <?php foreach ( gdpsy_home_projects() as $project ) : $review = gdpsy_review( $project->ID ); if ( gdpsy_text( $review['text'] ?? '' ) === '' ) { continue; } ?>
 <dialog class="gz-dialog" id="gz-review-<?php echo absint( $project->ID ); ?>" aria-labelledby="gz-review-title-<?php echo absint( $project->ID ); ?>">
-<div class="gz-dialog-head"><h2 id="gz-review-title-<?php echo absint( $project->ID ); ?>">Отзыв <em>о проекте</em></h2><button class="gz-dialog-close gz-icon-action" type="button" data-close-dialog aria-label="Закрыть отзыв">×</button></div>
+<div class="gz-dialog-head"><h2 id="gz-review-title-<?php echo absint( $project->ID ); ?>">Отзыв о проекте</h2><button class="gz-dialog-close gz-icon-action" type="button" data-close-dialog aria-label="Закрыть отзыв">×</button></div>
 <blockquote class="gz-review-quote"><?php echo wpautop( esc_html( gdpsy_text( $review['text'] ) ) ); ?></blockquote>
 <div class="gz-review-author"><?php $photo = $review['photo'] ?? 0; if ( is_numeric( $photo ) && absint( $photo ) ) { echo wp_get_attachment_image( absint( $photo ), 'thumbnail', false, array( 'class' => 'gz-review-photo', 'alt' => '' ) ); } ?>
 <div><p class="gz-review-name"><?php echo esc_html( gdpsy_text( $review['name'] ?? '' ) ); ?></p><p class="gz-review-role"><?php echo esc_html( gdpsy_text( $review['role'] ?? '' ) ); ?></p></div></div></dialog>

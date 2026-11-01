@@ -1,9 +1,6 @@
 .gz-process-notes b {
   font-weight: 500;
 }
-.gz-pain .gz-help-heading > em {
-  color: #fff;
-}
 .gz-help-list .gz-help-check {
   line-height: 28.8px;
 }
@@ -15,9 +12,6 @@
   padding-bottom: 0;
 }
 @media (max-width: 760px) {
-  .gz-help-heading > em {
-    font-size: 1.22em;
-  }
   .gz-help-list > li {
     grid-template-columns: 24px minmax(0, 1fr);
     gap: 16px;
@@ -356,7 +350,7 @@ dialog[id^="gz-review-"] .gz-review-name {
     font-size: clamp(34px, 3.2vw, 56px);
   }
   #gz-concepts .gz-title-accent {
-    font-size: clamp(30px, 2.8vw, 48px);
+    font-size: clamp(34px, 3.2vw, 56px);
   }
   #gz-concepts .gz-owner-heading {
     font-size: clamp(22px, 1.9vw, 30px);

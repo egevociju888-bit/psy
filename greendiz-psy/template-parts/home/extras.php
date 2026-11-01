@@ -7,14 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) {
   <div class="gz-extras-head">
     <h2 class="gz-screen-title" id="gz-extras-title">
       <span class="gz-title-main">Если нужно больше</span>
-      <em class="gz-title-accent">одной страницы</em>
+      <span class="gz-title-accent">одной страницы</span>
     </h2>
     <div class="gz-extras-intro">
       <div class="gz-screen-meta">
         <div class="gz-index">ДОПОЛНИТЕЛЬНЫЕ ВОЗМОЖНОСТИ</div>
         <div class="gz-screen-caption">СРАЗУ ИЛИ ПОЗЖЕ</div>
       </div>
-      <p>Если у вас есть нестандартная идея - давайте обсудим!<br />
+      <p>Если у вас есть нестандартная идея — давайте обсудим!<br />
         Ниже предложение для традиционного многостраничного сайта.</p>
     </div>
   </div>

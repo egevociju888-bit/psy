@@ -17,6 +17,8 @@ function gdpsy_setup() {
 	) );
 }
 add_action( 'after_setup_theme', 'gdpsy_setup' );
+remove_action( 'wp_head', 'wp_generator' );
+add_filter( 'the_generator', '__return_empty_string' );
 
 
 function gdpsy_favicon() {

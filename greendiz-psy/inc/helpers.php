@@ -67,7 +67,7 @@ function gdpsy_quiz_config() {
 
 function gdpsy_contact_month() {
 	$today = current_datetime();
-	if ( (int) $today->format( 't' ) - (int) $today->format( 'j' ) <= 10 ) {
+	if ( (int) $today->format( 't' ) - (int) $today->format( 'j' ) < 10 ) {
 		$today = $today->modify( 'first day of next month' );
 	}
 	$months = array( 'январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь' );

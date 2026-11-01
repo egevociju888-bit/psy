@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <p class="gz-quiz-eyebrow">Подбор сайта</p>
           <h2 id="gz-quiz-title">
             <span>Что нужно</span>
-            <em>вашей практике?</em>
+            <span>вашей практике?</span>
           </h2>
         </div>
         <button class="gz-dialog-close gz-icon-action" type="button" data-close-dialog="" aria-label="Закрыть">×</button>

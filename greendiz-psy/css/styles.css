@@ -1834,16 +1834,14 @@ body {
   font-family: var(--gz-display-font);
   font-size: clamp(32px, 3.45vw, 60px);
   font-weight: var(--gz-display-weight);
-  letter-spacing: -0.035em;
+  letter-spacing: var(--gz-display-spacing);
   line-height: 1.09;
   margin: 0;
 }
 
-.gz-help-heading > span,
-.gz-help-heading > em {
+.gz-help-heading > span {
   white-space: normal;
   display: block;
-  color: var(--gz-on-blue-secondary);
 }
 
 .gz-unwind {
@@ -2045,8 +2043,8 @@ body {
 }
 
 #gz-concepts .gz-title-accent {
-  margin-top: -6px;
-  font-size: 56px;
+  margin-top: 0;
+  font-size: 66px;
   line-height: 1.1;
 }
 
@@ -2208,7 +2206,7 @@ body {
   }
 
   #gz-concepts .gz-title-accent {
-    font-size: 66px;
+    font-size: 76px;
   }
 
 }
@@ -2286,8 +2284,7 @@ body {
   }
 
   #gz-concepts .gz-title-accent {
-    margin-top: 8px;
-    font-size: 48px;
+    font-size: 56px;
   }
 
   #gz-concepts .gz-case {
@@ -2368,10 +2365,6 @@ body {
 
   #gz-concepts .gz-concept-intro {
     padding-bottom: 0;
-  }
-
-  #gz-concepts .gz-title-accent {
-    margin-top: -2px;
   }
 
   #gz-concepts .gz-concept-intro > p {
@@ -2742,7 +2735,6 @@ body {
 
 .gz-screen-title--split > .gz-title-main {
   font-size: var(--gz-title-main-size);
-  letter-spacing: -0.055em;
 }
 
 @media (max-width: 1000px) {
@@ -2766,7 +2758,6 @@ body {
 
   .gz-screen-title--split > .gz-title-main {
     font-size: inherit;
-    letter-spacing: inherit;
   }
 
 }
@@ -2877,7 +2868,7 @@ body {
 #gz-benefit .gz-title-main {
   font-size: 148px;
   line-height: 1.1;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.045em;
   white-space: nowrap;
 }
 
@@ -3483,12 +3474,12 @@ body {
 
   #gz-benefit .gz-title-follow {
     margin-top: -8px;
-    font-size: clamp(25px, 8.205vw, 32px);
+    font-size: clamp(24px, 7.9vw, 32px);
   }
 
   #gz-benefit .gz-title-accent {
     margin-top: 3px;
-    font-size: clamp(26px, 8.718vw, 34px);
+    font-size: inherit;
   }
 
   #gz-benefit .gz-benefit-body {
@@ -3592,7 +3583,6 @@ body {
 .gz-about-heading .gz-title-main {
   display: inline;
   font-weight: 500;
-  letter-spacing: -0.055em;
 }
 
 .gz-about .gz-photo {
@@ -3744,10 +3734,6 @@ body {
 
   .gz-about-heading .gz-title-main {
     display: block;
-    font-size: clamp(56px, 15.67vw, 72px);
-  }
-
-  .gz-about-heading .gz-about-name {
     font-size: clamp(42px, 13.05vw, 60px);
   }
 
@@ -5388,7 +5374,7 @@ body {
   grid-area: title;
   display: flex;
   align-items: baseline;
-  gap: clamp(20px, 1.8vw, 32px);
+  gap: 0.25em;
   font-size: clamp(56px, 5.3vw, 88px);
   font-weight: 400;
   letter-spacing: -0.045em;
@@ -5402,7 +5388,7 @@ body {
 #gz-faq .gz-title-accent {
   flex: none;
   margin: 0;
-  font-size: 68px;
+  font-size: inherit;
   line-height: 1.1;
 }
 
@@ -5493,10 +5479,6 @@ body {
     font-size: 80px;
   }
 
-  #gz-faq .gz-title-accent {
-    font-size: 56px;
-  }
-
   #gz-faq .gz-screen-caption {
     display: none;
   }
@@ -5528,7 +5510,6 @@ body {
   }
 
   #gz-faq .gz-title-accent {
-    font-size: clamp(44px, 14.35vw, 56px);
     line-height: 1;
   }
 
@@ -5605,7 +5586,7 @@ body {
 #gz-after .gz-screen-title {
   font-size: clamp(56px, 5.3vw, 88px);
   font-weight: 400;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.045em;
   line-height: 1.02;
 }
 
@@ -5989,7 +5970,7 @@ body {
   grid-area: title;
   display: flex;
   align-items: baseline;
-  gap: 24px;
+  gap: 0.25em;
   font-size: clamp(56px, 5.3vw, 88px);
   font-weight: 400;
   letter-spacing: -0.045em;
@@ -6003,7 +5984,7 @@ body {
 #gz-process .gz-title-accent {
   flex: none;
   margin: 0;
-  font-size: 70px;
+  font-size: inherit;
   line-height: 1.1;
 }
 
@@ -6156,7 +6137,6 @@ body {
 
   #gz-process .gz-title-accent {
     margin-top: 0;
-    font-size: 48px;
   }
 
   #gz-process .gz-steps > .gz-step-launch {
@@ -6227,13 +6207,8 @@ body {
   display: block;
 }
 
-#gz-quiz h2:not(.gz-quiz-title-inline) > em {
-  display: block;
+#gz-quiz h2:not(.gz-quiz-title-inline) > span + span {
   margin-top: 2px;
-}
-
-#gz-quiz h2 > em {
-  font-size: 44px;
 }
 
 #gz-quiz .gz-quiz-question {
@@ -6458,8 +6433,7 @@ body {
     gap: 12px;
   }
 
-  #gz-quiz h2,
-  #gz-quiz h2 > em {
+  #gz-quiz h2 {
     font-size: clamp(28px, 8.2vw, 32px);
   }
 
@@ -6517,13 +6491,6 @@ body {
   margin: 0;
   font-size: 44px;
   line-height: 1.1;
-}
-
-#gz-review h2 em {
-  display: block;
-  margin-top: 2px;
-  color: var(--gz-blue);
-  font-size: inherit;
 }
 
 #gz-review .gz-review-quote {

@@ -9,5 +9,5 @@
 				<nav class="gz-footer-legal-list" id="gz-footer-legal-list" aria-label="Юридическая информация" hidden><?php gdpsy_menu( 'footer_legal', 'footer-legal', 1 ); ?></nav>
 			</div>
 		<?php endif; ?>
-		<span>© 2013 - <?php echo esc_html( wp_date( 'Y' ) ); ?> · greendiz.ru</span>
+		<span>© 2013–<?php echo esc_html( wp_date( 'Y' ) ); ?> · greendiz.ru</span>
 	</footer>

@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
           <h2 class="gz-screen-title" id="gz-faq-title">
             <span class="gz-title-main">Что ещё</span>
-            <em class="gz-title-accent">важно знать</em>
+            <span class="gz-title-accent">важно знать</span>
           </h2>
         </div>
         <div class="gz-faq-grid">

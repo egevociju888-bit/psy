@@ -14,12 +14,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
           <h2 class="gz-screen-title" id="gz-process-title">
             <span class="gz-title-main">Четыре шага</span>
-            <em class="gz-title-accent">до запуска</em>
+            <span class="gz-title-accent">до запуска</span>
           </h2>
         </div>
         <ol class="gz-steps">
           <li>
-            <span class="gz-step-num">01</span>
+            <span class="gz-step-num" aria-hidden="true">01</span>
             <h3>Знакомимся</h3>
             <p>
               Рассказываете о себе и практике, присылаете материалы. Согласуем состав, сроки и стоимость.
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </p>
           </li>
           <li>
-            <span class="gz-step-num">02</span>
+            <span class="gz-step-num" aria-hidden="true">02</span>
             <h3>Проектирую</h3>
             <p>
               Выстраиваю структуру, собираю тексты и визуальное направление. Присылаю прототип по тестовой
@@ -35,13 +35,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             </p>
           </li>
           <li>
-            <span class="gz-step-num">03</span>
+            <span class="gz-step-num" aria-hidden="true">03</span>
             <h3>Дорабатываем</h3>
             <p>Обсуждаем, уточняем и дополняем. В согласованный объём входят до двух циклов правок.</p>
           </li>
           <li class="gz-step-launch">
             <span class="gz-launch-arrow" aria-hidden="true">↗</span>
-            <span class="gz-step-num">04</span>
+            <span class="gz-step-num" aria-hidden="true">04</span>
             <h3>Запускаем</h3>
             <p>
               Подключаю домен и аналитику, публикую сайт. Передаю доступы и показываю, как им пользоваться. Остаюсь на связи.

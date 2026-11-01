@@ -58,8 +58,8 @@ $gdpsy_from = array_filter( array( gdpsy_price( 'concept' ), gdpsy_price( 'base'
             <h2 class="gz-help-heading" id="gz-help-title">
               <span>Вы помогаете людям</span>
               <span>распутывать сложное.</span>
-              <em>Я помогу вам</em>
-              <em>распутать сайт.</em>
+              <span>Я помогу вам</span>
+              <span>распутать сайт.</span>
             </h2>
           </div>
           <ul class="gz-help-list">

@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <div class="gz-formats-heading">
             <h2 id="gz-formats-title" class="gz-screen-title">
               <span class="gz-title-main">С нуля</span>
-              <em class="gz-title-accent">или с готовой идеи</em>
+              <span class="gz-title-accent">или с готовой идеи</span>
             </h2>
           </div>
           <article class="gz-format gz-format-new" aria-labelledby="gz-format-new-title">
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <p class="gz-format-description">Подойдёт, если нужен собственный визуальный язык или особый состав сайта.</p>
             <div class="gz-format-price">
               <b><?php echo esc_html( gdpsy_money( 'base' ) ); ?></b>
-              <p>Цена за лендинг на 5-10 блоков, включая контактную форму и 1 интерактив по желанию. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
+              <p>Цена за лендинг на 5–10 блоков, включая контактную форму и 1 интерактив по желанию. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
             </div>
             <a class="gz-primary gz-button gz-button--navy gz-format-action" href="#gz-contact" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить индивидуальную разработку сайта." data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить свою идею</a>
           </article>
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <p class="gz-format-description">Адаптация текстов и фото под вас, добавление до трёх информационных блоков в том же дизайне. После покупки снимаю концепт с продажи, другого сайта в таком дизайне не будет.</p>
             <div class="gz-format-price">
               <b><?php echo esc_html( gdpsy_price_label( 'concept', 'от ' ) ); ?></b>
-              <p>Цена за лендинг на 5-10 блоков, включая существующий интерактив и контактную форму. Объём адаптации уточним при обсуждении. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
+              <p>Цена за лендинг на 5–10 блоков, включая существующий интерактив и контактную форму. Объём адаптации уточним при обсуждении. Дополнительные страницы, интеграции и новые механики обсуждаем отдельно.</p>
             </div>
             <a class="gz-button gz-format-action" href="<?php echo esc_url( add_query_arg( 'case-type', 'consept', gdpsy_archive_url() ) ); ?>">Посмотреть концепты</a>
           </article>

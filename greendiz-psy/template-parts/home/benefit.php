@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
           <h2 class="gz-screen-title gz-screen-title--split" id="gz-benefit-title">
             <span class="gz-title-main">Польза</span>
-            <span class="gz-title-follow"><span>для ваших клиентов</span> <em class="gz-title-accent">ещё до первой встречи</em></span>
+            <span class="gz-title-follow"><span>для ваших клиентов</span> <span class="gz-title-accent">ещё до первой встречи</span></span>
           </h2>
         </div>
         <div class="gz-benefit-body">
