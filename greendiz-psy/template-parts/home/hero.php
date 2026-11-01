@@ -40,7 +40,7 @@ $gdpsy_from_label = $gdpsy_from ? 'от ' . number_format( min( $gdpsy_from ), 0
           </div>
           <?php if ( has_nav_menu( 'primary_right' ) ) : ?>
           <div class="gz-hero-navigation">
-            <span class="gz-hero-caption sub" aria-hidden="true">Человек → Структура → Сайт</span>
+            <span class="gz-hero-caption sub" aria-hidden="true">Разделы страницы</span>
             <nav class="gz-hero-nav" aria-label="Разделы страницы"><?php gdpsy_menu( 'primary_right', 'hero', 1 ); ?></nav>
           </div>
           <?php endif; ?>

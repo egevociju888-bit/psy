@@ -3766,9 +3766,9 @@ body {
 
 .gz-hero-navigation {
   grid-area: nav;
-  align-self: end;
+  align-self: stretch;
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   gap: 24px;
   box-sizing: border-box;
   width: 620px;
@@ -3777,6 +3777,7 @@ body {
 
 .gz-hero-caption {
   flex: none;
+  align-self: flex-end;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
@@ -3784,6 +3785,7 @@ body {
 }
 
 .gz-hero-nav {
+  display: flex;
   flex: 1;
   min-width: 0;
   box-sizing: border-box;
@@ -3793,15 +3795,21 @@ body {
 
 .gz-hero-nav .gz-wp-menu {
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  flex: 1;
+  grid-template-rows: repeat(3, 1fr);
   grid-auto-flow: column;
   grid-auto-columns: minmax(0, 1fr);
   column-gap: 40px;
 }
 
+.gz-hero-nav li {
+  display: flex;
+}
+
 .gz-hero-nav a {
   position: relative;
   display: flex;
+  flex: 1;
   align-items: center;
   box-sizing: border-box;
   min-height: 48px;
@@ -3819,6 +3827,43 @@ body {
 }
 
 @media (min-width: 1201px) {
+
+  .gz-hero-intro {
+    margin-bottom: 48px;
+  }
+
+  .gz-hero-quiz h2 {
+    font-size: 36px;
+  }
+
+  .gz-hero-quiz-info {
+    margin-top: 24px;
+  }
+
+  .gz-hero-quiz-info p {
+    font-size: 17px;
+  }
+
+  .gz-hero-cta {
+    min-height: 64px;
+    margin-top: 28px;
+  }
+
+  .gz-hero-quiz-steps li:not(:last-child)::after {
+    width: 30px;
+  }
+
+  .gz-hero-quiz-steps span {
+    min-width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    font-size: 14px;
+  }
+
+  .gz-hero-quiz .gz-hero-quiz-result {
+    padding: 0 24px 0 20px;
+    font-size: 15px;
+  }
 
   .gz-hero-audience {
     font-size: 12px;
@@ -3851,10 +3896,11 @@ body {
 }
 
 .gz-hero-cta {
-  width: 100%;
+  width: fit-content;
   max-width: 100%;
   margin-top: 22px;
-  justify-content: space-between;
+  gap: 14px;
+  justify-content: flex-start;
   text-align: left;
 }
 
