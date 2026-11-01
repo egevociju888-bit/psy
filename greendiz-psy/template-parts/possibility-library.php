@@ -37,7 +37,7 @@ $gdpsy_toc = array(
 			<section class="gz-possibility-section">
 				<h2 id="gz-library-adaptation" tabindex="-1">Подключение и адаптация</h2>
 				<p><?php echo esc_html( $gdpsy_tools['features'][0]['text'] ); ?></p>
-				<?php $gdpsy_price = gdpsy_price_label( 'toolkit' ); if ( $gdpsy_price !== '' ) : ?><p class="gz-possibility-price"><?php echo esc_html( $gdpsy_price ); ?> / дополнительный интерактив</p><?php else : ?><p>Стоимость уточняется при подборе.</p><?php endif; ?>
+				<?php $gdpsy_price = gdpsy_price_label( 'toolkit' ); if ( $gdpsy_price !== '' ) : ?><p class="gz-possibility-price"><?php echo esc_html( $gdpsy_price ); ?>&nbsp;/ дополнительный интерактив</p><?php else : ?><p>Стоимость уточняется при подборе.</p><?php endif; ?>
 				<p><?php echo esc_html( $gdpsy_tools['note'] ); ?></p>
 				<p>Один интерактив предусмотрен в составе лендинга. Количество дополнительных инструментов и организацию отдельного каталога согласуем до начала работ.</p>
 			</section>

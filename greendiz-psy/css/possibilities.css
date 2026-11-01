@@ -63,7 +63,6 @@
 }
 .gz-possibility-price {
   color: var(--gz-blue);
-  white-space: nowrap;
 }
 .gz-possibility-note,
 .gz-possibilities-base > p {
