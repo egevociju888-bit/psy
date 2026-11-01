@@ -2,9 +2,6 @@
   --gz-offers-columns: minmax(0, 1fr) minmax(0, 1fr);
   --gz-offers-column-gap: 70px;
 }
-.gz-home-page #gz-formats {
-  padding-bottom: 0;
-}
 #gz-formats .gz-formats-layout {
   grid-template-columns: var(--gz-offers-columns);
   column-gap: var(--gz-offers-column-gap);
@@ -18,12 +15,6 @@
 }
 #gz-formats .gz-format-action {
   margin-top: 36px;
-}
-.gz-home-page #gz-main > #gz-cost.gz-extras {
-  padding-top: 64px;
-}
-#gz-cost.gz-extras {
-  padding-bottom: 86px;
 }
 .gz-extras-head {
   margin-bottom: 64px;
@@ -77,8 +68,6 @@
 }
 #gz-cost.gz-extras .gz-extra-copy {
   margin: 0 0 28px;
-  font-size: 18px;
-  line-height: 1.6;
 }
 #gz-cost.gz-extras .gz-extra-price {
   margin: auto 0 30px;
@@ -121,9 +110,6 @@
   }
 }
 @media (max-width: 540px) {
-  .gz-home-page #gz-main > #gz-cost.gz-extras {
-    padding-top: 40px;
-  }
   .gz-extra {
     padding: 28px 24px;
   }

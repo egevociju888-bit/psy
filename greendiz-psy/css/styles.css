@@ -1771,8 +1771,6 @@ body {
 .gz-pain {
   background: var(--gz-blue-hover);
   color: #ffffff;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
 .gz-help-index {
@@ -1903,11 +1901,6 @@ body {
     height: 9px;
   }
 
-  .gz-pain {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
   .gz-help-index {
     margin-bottom: 26px;
     font-size: 11px;
@@ -1942,10 +1935,6 @@ body {
     --gz-mobile-message-size: clamp(27px, 8.3vw, 43px);
   }
 
-}
-
-#gz-concepts {
-  padding-block: 96px 100px;
 }
 
 #gz-concepts.gz-gallery > .gz-screen-meta {
@@ -2046,7 +2035,7 @@ body {
   margin: 0;
   color: var(--gz-on-bright-blue-secondary);
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 #gz-concepts .gz-owner-heading span,
@@ -2151,18 +2140,9 @@ body {
 
 @media (min-width: 1560px) {
 
-  #gz-concepts {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
 }
 
 @media (max-width: 1200px) {
-
-  #gz-concepts {
-    padding-block: 80px;
-  }
 
   #gz-concepts .gz-concept-owner {
     padding-inline: 20px;
@@ -2179,10 +2159,6 @@ body {
 }
 
 @media (max-width: 1000px) {
-
-  #gz-concepts {
-    padding-block: 80px;
-  }
 
   #gz-concepts .gz-concept-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2267,10 +2243,12 @@ body {
   #gz-concepts .gz-concept-grid {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: none;
+    gap: 24px;
   }
 
   #gz-concepts .gz-concept-intro {
     grid-area: auto;
+    margin-bottom: 16px;
   }
 
   #gz-concepts .gz-concept-grid > .gz-work,
@@ -2289,10 +2267,6 @@ body {
 }
 
 @media (max-width: 540px) {
-
-  #gz-concepts {
-    padding-block: 72px;
-  }
 
   #gz-concepts.gz-gallery > .gz-screen-meta {
     flex-direction: column;
@@ -2346,7 +2320,6 @@ body {
 
 #gz-formats {
   background: var(--gz-paper);
-  padding-block: 124.5px 125px;
 }
 
 #gz-formats .gz-formats-layout {
@@ -2450,8 +2423,8 @@ body {
 
 #gz-formats .gz-format-description,
 #gz-formats .gz-format-price p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: var(--gz-text-size);
+  line-height: var(--gz-text-line-height);
 }
 
 #gz-formats .gz-format-price {
@@ -2530,11 +2503,6 @@ body {
 
 @media (max-width: 1200px) {
 
-  #gz-formats .gz-format-description {
-    font-size: 17px;
-    line-height: 1.375;
-  }
-
   #gz-formats .gz-format-badge {
     padding-inline: 14px;
     font-size: 15px;
@@ -2544,10 +2512,6 @@ body {
 }
 
 @media (max-width: 1000px) {
-
-  #gz-formats {
-    padding-bottom: 85px;
-  }
 
   #gz-formats .gz-formats-layout {
     grid-template:
@@ -2564,10 +2528,6 @@ body {
 }
 
 @media (max-width: 540px) {
-
-  #gz-formats {
-    padding-bottom: 125px;
-  }
 
   #gz-formats .gz-formats-heading {
     margin-bottom: -12px;
@@ -2737,8 +2697,19 @@ body {
 
   .gz-screen-caption {
     letter-spacing: 0.08em;
-    max-width: 18ch;
     font-size: 11px;
+  }
+
+  .gz-home-page .gz-screen-meta .gz-index {
+    display: none;
+  }
+
+  .gz-home-page .gz-screen-meta--lead .gz-index {
+    display: flex;
+  }
+
+  .gz-home-page .gz-screen-meta--lead .gz-screen-caption {
+    display: none;
   }
 
   .gz-section-head .gz-section-side {
@@ -2757,14 +2728,12 @@ body {
 
   .gz-screen-caption {
     text-align: left;
-    max-width: none;
   }
 
 }
 
 #gz-benefit {
   background: var(--gz-sand);
-  padding-block: clamp(72px, 7.5vw, 128px) 80px;
 }
 
 #gz-benefit .gz-screen-meta .gz-index,
@@ -2788,6 +2757,7 @@ body {
   font-size: clamp(40px, 4vw, 58px);
   letter-spacing: -0.045em;
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 #gz-benefit .gz-benefit-body {
@@ -2805,9 +2775,7 @@ body {
 }
 
 #gz-benefit .gz-benefit-intro p {
-  font-size: 18px;
   font-weight: 400;
-  line-height: 1.6;
 }
 
 #gz-benefit .gz-benefit-action {
@@ -2857,7 +2825,7 @@ body {
 #gz-benefit .gz-outcome p {
   color: var(--gz-muted);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 #gz-benefit .gz-benefit-example {
@@ -3304,10 +3272,6 @@ body {
 
 @media (max-width: 1000px) {
 
-  #gz-benefit {
-    padding-block: 60px 80px;
-  }
-
   #gz-benefit .gz-benefit-body {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
@@ -3383,7 +3347,6 @@ body {
 
 .gz-about {
   background: var(--gz-paper);
-  padding-block: clamp(72px, 7.5vw, 128px);
 }
 
 .gz-about-grid {
@@ -3545,10 +3508,6 @@ body {
 }
 
 @media (max-width: 760px) {
-
-  .gz-about {
-    padding-block: 90px 60px;
-  }
 
   .gz-about-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -5344,7 +5303,6 @@ body {
   grid-template-columns: repeat(2, minmax(0.8, 1fr));
   align-items: center;
   gap: 0 clamp(40px, 3.93vw, 80px);
-  padding-block: clamp(60px, 4.72vw, 96px) clamp(60px, 5.1vw, 104px);
   background: var(--gz-sand);
 }
 
@@ -5409,7 +5367,6 @@ body {
       "title"
       "content";
     grid-template-columns: minmax(0, 1fr);
-    padding-block: 60px;
   }
 
   #gz-after > .gz-screen-meta {
@@ -5437,8 +5394,8 @@ body {
 
   #gz-after .gz-after-content p {
     max-width: none;
-    font-size: 17px;
-    line-height: 1.4;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
 }
@@ -5469,12 +5426,6 @@ body {
     margin-bottom: 12px;
     font-size: 18px;
     line-height: 1.3;
-  }
-
-  #gz-after .gz-after-content p {
-    max-width: none;
-    font-size: 16px;
-    line-height: 1.4;
   }
 
 }
@@ -5719,10 +5670,6 @@ body {
 
 /* 06 / Процесс. */
 
-#gz-process {
-  padding-block: 72px 80px;
-}
-
 #gz-process .gz-section-head {
   display: grid;
   grid-template-areas: "meta" "title";
@@ -5835,16 +5782,8 @@ body {
 
 @media (max-width: 760px) {
 
-  #gz-process {
-    padding-block: 60px 72px;
-  }
-
   #gz-process .gz-screen-title {
     font-size: 80px;
-  }
-
-  #gz-process .gz-screen-caption {
-    display: none;
   }
 
   #gz-process .gz-screen-meta {
@@ -5873,10 +5812,6 @@ body {
 }
 
 @media (max-width: 540px) {
-
-  #gz-process {
-    padding-block: 60px;
-  }
 
   #gz-process .gz-screen-title {
     font-size: clamp(44px, 12.82vw, 50px);
@@ -7204,16 +7139,33 @@ body {
 
 /* Единый вертикальный ритм секций на десктопе. */
 
+.gz-page {
+  --gz-section-space: 64px;
+}
+
+@media (max-width: 760px) {
+
+  .gz-home-page {
+    --gz-text-size: 16px;
+    --gz-text-line-height: 1.5;
+  }
+
+}
+
 @media (min-width: 761px) {
 
   .gz-page {
     --gz-section-space: clamp(80px, 8vw, 144px);
   }
 
-  .gz-home-page #gz-main > :where(section, aside):not(#gz-first) {
-    padding-block: var(--gz-section-space);
-  }
+}
 
+.gz-home-page #gz-main > :where(section, aside):not(#gz-first) {
+  padding-block: var(--gz-section-space);
+}
+
+.gz-home-page #gz-main > :is(#gz-formats, #gz-concepts, #gz-about) {
+  padding-bottom: 0;
 }
 
 /* Дополнения контактов на главной. */

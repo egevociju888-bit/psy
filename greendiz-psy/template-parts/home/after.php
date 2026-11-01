@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <section class="gz-after gz-inner" id="gz-after">
-        <div class="gz-screen-meta">
+        <div class="gz-screen-meta gz-screen-meta--lead">
           <div class="gz-index">
             После запуска
           </div>

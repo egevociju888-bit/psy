@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="gz-about-grid">
           <div class="gz-about-intro">
-            <div class="gz-screen-meta">
+            <div class="gz-screen-meta gz-screen-meta--lead">
               <div class="gz-index">Давайте знакомиться</div>
               <div class="gz-screen-caption">про мой подход</div>
             </div>

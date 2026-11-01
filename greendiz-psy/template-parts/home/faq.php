@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <section class="gz-block gz-faq gz-inner" id="gz-faq" aria-labelledby="gz-faq-title">
         <div class="gz-section-head">
-          <div class="gz-screen-meta">
+          <div class="gz-screen-meta gz-screen-meta--lead">
             <div class="gz-index">важно знать</div>
             <div class="gz-screen-caption">До и после запуска</div>
           </div>
