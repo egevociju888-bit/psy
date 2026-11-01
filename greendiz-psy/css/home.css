@@ -144,8 +144,7 @@
 }
 @media (max-width: 540px) {
   .gz-hero-audience {
-    top: -48px;
-    right: 0;
+    top: -56px;
   }
 }
 #gz-faq .gz-faq-grid > div {
