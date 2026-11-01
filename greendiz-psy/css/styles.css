@@ -3655,12 +3655,21 @@ body {
 }
 
 .gz-menu-toggle {
+  --gz-icon-bg: var(--gz-paper);
+  --gz-icon-color: var(--gz-ink);
+  --gz-icon-hover-bg: var(--gz-paper);
+  --gz-icon-hover-color: var(--gz-muted);
+  --gz-icon-focus-bg: var(--gz-paper);
+  position: relative;
+  border-radius: 0;
+}
+
+.gz-menu-toggle:not(.gz-menu-toggle--dark).is-stuck {
   --gz-icon-bg: var(--gz-ink);
   --gz-icon-color: #fcfaf7;
   --gz-icon-hover-bg: var(--gz-ink);
   --gz-icon-hover-color: #a4a8ac;
   --gz-icon-focus-bg: var(--gz-ink);
-  position: relative;
 }
 
 .gz-menu-toggle--dark {

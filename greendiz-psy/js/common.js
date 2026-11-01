@@ -174,6 +174,7 @@
     toggle.style.setProperty('--gz-menu-top', Math.max(0, rect.top) + 'px');
     toggle.style.setProperty('--gz-menu-left', rect.left + 'px');
     toggle.classList.add('is-positioned');
+    toggle.classList.toggle('is-stuck', rect.top < 0);
   }
   function schedulePosition() {
     if (positionFrame === null) positionFrame = window.requestAnimationFrame(updatePosition);
