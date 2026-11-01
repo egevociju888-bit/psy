@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <div class="gz-about-intro">
             <div class="gz-screen-meta">
               <div class="gz-index">ДАВАЙТЕ ЗНАКОМИТЬСЯ</div>
-              <div class="gz-screen-caption">АВТОР И ПОДХОД</div>
+              <div class="gz-screen-caption">про мой подход</div>
             </div>
             <h2 class="gz-about-heading gz-screen-title" id="gz-about-title">
               <span class="gz-title-main">Привет! </span>

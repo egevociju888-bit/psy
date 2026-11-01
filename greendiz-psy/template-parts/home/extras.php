@@ -6,12 +6,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="gz-block gz-extras gz-inner" id="gz-cost" aria-labelledby="gz-extras-title">
   <div class="gz-extras-head">
     <h2 class="gz-screen-title" id="gz-extras-title">
-      <span class="gz-title-main">Если нужно больше</span>
-      <span class="gz-title-accent">одной страницы</span>
+      <span class="gz-title-main">Что ещё может быть на сайте,</span>
+      <span class="gz-title-accent">кроме главной страницы</span>
     </h2>
     <div class="gz-extras-intro">
       <div class="gz-screen-meta">
-        <div class="gz-index">ДОПОЛНИТЕЛЬНЫЕ ВОЗМОЖНОСТИ</div>
+        <div class="gz-index">Если нужно больше</div>
         <div class="gz-screen-caption">СРАЗУ ИЛИ ПОЗЖЕ</div>
       </div>
       <p>Если у вас есть нестандартная идея — давайте обсудим!<br />

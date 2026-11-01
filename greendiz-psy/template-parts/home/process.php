@@ -6,10 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="gz-block gz-process gz-inner" id="gz-process" aria-labelledby="gz-process-title">
         <div class="gz-section-head">
           <div class="gz-screen-meta">
-            <div class="gz-index">
-              ПРОЦЕСС
-            </div>
-            <div class="gz-screen-caption">ОТ ОБСУЖДЕНИЯ ДО ЗАПУСКА</div>
+            <div class="gz-index">КАК ПРОХОДИТ РАБОТА</div>
+            <div class="gz-screen-caption">основа — за 7&nbsp;дней</div>
           </div>
 
           <h2 class="gz-screen-title" id="gz-process-title">
@@ -40,7 +38,6 @@ if ( ! defined( 'ABSPATH' ) ) {
             <p>Обсуждаем, уточняем и дополняем. В согласованный объём входят до двух циклов правок.</p>
           </li>
           <li class="gz-step-launch">
-            <span class="gz-launch-arrow" aria-hidden="true">↗</span>
             <span class="gz-step-num" aria-hidden="true">04</span>
             <h3>Запускаем</h3>
             <p>

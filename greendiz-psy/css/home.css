@@ -263,9 +263,6 @@
   #gz-process .gz-steps > .gz-step-launch::after {
     top: 27px;
   }
-  #gz-process .gz-launch-arrow {
-    top: 20px;
-  }
   #gz-process .gz-process-notes > span:nth-child(2) {
     padding-left: 0;
     border-left: 0;

@@ -2683,40 +2683,11 @@ body {
   color: var(--gz-blue);
 }
 
-.gz-screen-title--split {
-  --gz-title-main-size: clamp(50px, calc(11vw - 34px), 148px);
-  --gz-title-column-gap: clamp(28px, 3vw, 56px);
-  display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  align-items: center;
-  gap: 0 var(--gz-title-column-gap);
-}
-
-.gz-screen-title--split > .gz-title-main {
-  font-size: var(--gz-title-main-size);
-}
-
-@media (max-width: 1000px) {
-
-  .gz-screen-title--split {
-    display: block;
-  }
-
-  .gz-screen-title--split > .gz-title-follow {
-    margin-top: 0.16em;
-  }
-
-}
-
 @media (max-width: 760px) {
 
   .gz-screen-title {
     --gz-title-size: clamp(42px, 13vw, 50px);
     --gz-title-accent-gap: 0.24em;
-  }
-
-  .gz-screen-title--split > .gz-title-main {
-    font-size: inherit;
   }
 
 }
@@ -2816,15 +2787,8 @@ body {
   white-space: nowrap;
 }
 
-#gz-benefit .gz-screen-title {
-  display: grid;
-  grid-template-columns: 454px minmax(0, 1fr);
-  align-items: center;
-  gap: 0 39px;
-}
-
 #gz-benefit .gz-title-main {
-  font-size: 148px;
+  font-size: clamp(64px, 8.4vw, 128px);
   line-height: 1.1;
   letter-spacing: -0.045em;
   white-space: nowrap;
@@ -2832,8 +2796,7 @@ body {
 
 #gz-benefit .gz-title-follow {
   display: block;
-  margin: 0;
-  transform: translateY(-3px);
+  margin: 8px 0 0;
   font-size: 56px;
   font-weight: 600;
   line-height: 1.1;
@@ -3387,15 +3350,6 @@ body {
     margin-bottom: 52px;
   }
 
-  #gz-benefit .gz-screen-title {
-    display: block;
-  }
-
-  #gz-benefit .gz-title-follow {
-    margin-top: -15px;
-    transform: none;
-  }
-
   #gz-benefit .gz-benefit-body {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
@@ -3427,12 +3381,12 @@ body {
   }
 
   #gz-benefit .gz-title-main {
-    font-size: clamp(54px, 17.436vw, 68px);
+    font-size: clamp(44px, 13.5vw, 56px);
   }
 
   #gz-benefit .gz-title-follow {
-    margin-top: -8px;
-    font-size: clamp(24px, 7.9vw, 32px);
+    margin-top: 4px;
+    font-size: clamp(20px, 6.6vw, 30px);
   }
 
   #gz-benefit .gz-title-accent {
@@ -5324,7 +5278,7 @@ body {
   grid-area: contact;
   display: flex;
   flex-wrap: wrap;
-  gap: 0 16px;
+  gap: 12px 16px;
   align-self: center;
   justify-self: flex-end;
   max-width: none;
@@ -5391,6 +5345,7 @@ body {
   }
 
   #gz-faq .gz-section-side {
+    justify-self: start;
     margin-top: 24px;
   }
 
@@ -5442,8 +5397,16 @@ body {
   }
 
   #gz-faq .gz-section-side {
+    gap: 10px;
     margin-top: 14px;
     font-size: 14px;
+  }
+
+  #gz-faq .gz-faq-all {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   #gz-faq .gz-faq-grid {
@@ -5955,20 +5918,12 @@ body {
 }
 
 #gz-process .gz-steps > .gz-step-launch::before {
-  right: 76px;
+  right: 24px;
   background: #fff;
 }
 
 #gz-process .gz-steps > .gz-step-launch::after {
   background: #fff;
-}
-
-#gz-process .gz-launch-arrow {
-  position: absolute;
-  top: 12px;
-  right: 24px;
-  font-size: 36px;
-  line-height: 1;
 }
 
 #gz-process .gz-process-notes {
@@ -6067,11 +6022,6 @@ body {
 
   #gz-process .gz-steps > .gz-step-launch {
     padding: 24px 20px 28px 56px;
-  }
-
-  #gz-process .gz-launch-arrow {
-    right: 20px;
-    font-size: 32px;
   }
 
   #gz-process .gz-process-notes {
@@ -6571,8 +6521,8 @@ body {
 
 #gz-faq {
   display: grid;
-  grid-template-areas: "meta meta" "title contact" "questions questions" "more more";
-  grid-template-columns: minmax(0, 1fr) clamp(260px, 23.2vw, 410px);
+  grid-template-areas: "meta meta" "title contact" "questions questions";
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
   gap: 0 60px;
 }
@@ -6586,11 +6536,8 @@ body {
 }
 
 #gz-faq .gz-faq-all {
-  grid-area: more;
-  justify-self: start;
   width: fit-content;
   max-width: 100%;
-  margin-top: 24px;
 }
 
 #gz-articles .gz-article-placeholder > span {
@@ -6605,7 +6552,7 @@ body {
 @media (max-width: 1200px) {
 
   #gz-faq {
-    grid-template-areas: "meta" "title" "contact" "questions" "more";
+    grid-template-areas: "meta" "title" "contact" "questions";
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -6614,15 +6561,11 @@ body {
 @media (max-width: 1000px) {
 
   #gz-faq {
-    grid-template-areas: "meta" "title" "questions" "contact" "more";
+    grid-template-areas: "meta" "title" "questions" "contact";
   }
 
   #gz-faq .gz-faq-contact {
     margin-top: 40px;
-  }
-
-  #gz-faq .gz-faq-all {
-    margin-top: 20px;
   }
 
 }
