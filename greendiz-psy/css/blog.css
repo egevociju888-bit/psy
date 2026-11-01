@@ -9,7 +9,7 @@
   overflow-wrap: anywhere;
 }
 .gz-blog-content {
-  padding-block: 0 clamp(48px, 6vw, 88px);
+  padding-block: 0 var(--gz-section-space);
 }
 .gz-blog-intro {
   display: grid;
@@ -19,11 +19,12 @@
 .gz-blog-intro h1 {
   margin: 0;
   font-family: var(--gz-display-font);
-  font-size: clamp(38px, 5vw, 72px);
+  font-size: var(--gz-section-title);
   font-weight: var(--gz-display-weight);
   letter-spacing: var(--gz-display-spacing);
   line-height: 1.08;
   overflow-wrap: anywhere;
+  hyphens: auto;
   text-wrap: balance;
 }
 .gz-blog-intro-copy {
@@ -252,7 +253,7 @@
 .gz-blog-empty h2 {
   margin: 0 0 20px;
   font-family: var(--gz-display-font);
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: var(--gz-block-title);
   font-weight: var(--gz-display-weight);
   letter-spacing: var(--gz-display-spacing);
   line-height: 1.2;

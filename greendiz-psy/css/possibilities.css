@@ -21,14 +21,14 @@
 .gz-possibility-included,
 .gz-possibility-examples,
 .gz-possibilities-base {
-  margin-top: clamp(48px, 6vw, 88px);
+  margin-top: var(--gz-section-space);
 }
 :is(.gz-possibility-included, .gz-possibility-examples, .gz-possibility-offer, .gz-possibilities-base, .gz-possibilities-running) > h2,
 .gz-possibility-offer h2 {
   margin: 0 0 24px;
   font-family: var(--gz-display-font);
   font-weight: var(--gz-display-weight);
-  font-size: clamp(28px, 3.5vw, 48px);
+  font-size: var(--gz-block-title);
   line-height: 1.15;
   letter-spacing: var(--gz-display-spacing);
   overflow-wrap: anywhere;
@@ -84,7 +84,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  margin-top: clamp(48px, 6vw, 88px);
+  margin-top: var(--gz-section-space);
   padding-block: clamp(28px, 4vw, 48px);
   border-block: 1px solid var(--gz-rule);
 }

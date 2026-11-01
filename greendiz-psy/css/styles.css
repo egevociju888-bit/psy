@@ -4845,7 +4845,7 @@ body {
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   align-items: start;
   gap: 0 clamp(32px, 2.35vw, 48px);
-  padding-block: 64px 80px;
+  padding-block: var(--gz-section-space);
   background: var(--gz-sand);
 }
 
@@ -5086,7 +5086,6 @@ body {
   #gz-articles {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px 0;
-    padding-block: 48px 56px;
   }
 
   #gz-articles > .gz-screen-meta {
@@ -5118,7 +5117,6 @@ body {
 
   #gz-articles {
     gap: 26px 0;
-    padding-block: 60px;
   }
 
   #gz-articles > .gz-screen-meta {
@@ -7240,11 +7238,13 @@ body {
 
 }
 
-/* Единый вертикальный ритм секций на десктопе. */
+/* Единый вертикальный ритм и шкала заголовков. */
 
 .gz-page {
   --gz-section-space: 104px;
   --gz-section-title: clamp(44px, 12.8vw, 50px);
+  --gz-block-title: 32px;
+  --gz-article-title: 36px;
 }
 
 @media (max-width: 760px) {
@@ -7261,6 +7261,8 @@ body {
   .gz-page {
     --gz-section-space: clamp(80px, 8vw, 144px);
     --gz-section-title: 64px;
+    --gz-block-title: 40px;
+    --gz-article-title: 48px;
   }
 
 }
@@ -7269,6 +7271,8 @@ body {
 
   .gz-page {
     --gz-section-title: clamp(56px, 5.3vw, 88px);
+    --gz-block-title: clamp(36px, 3vw, 48px);
+    --gz-article-title: clamp(44px, 4vw, 64px);
   }
 
 }

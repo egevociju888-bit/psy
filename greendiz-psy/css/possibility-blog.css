@@ -123,7 +123,7 @@
   flex: 1 1 300px;
 }
 .gz-possibility-detail .gz-possibility-cta h2 {
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: var(--gz-block-title);
 }
 .gz-possibility-detail .gz-possibility-cta p {
   margin-bottom: 0;

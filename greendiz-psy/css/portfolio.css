@@ -5,7 +5,7 @@
   display: none;
 }
 .gz-archive {
-  padding-block: 48px 60px;
+  padding-block: 48px var(--gz-section-space);
 }
 .gz-archive-intro {
   display: grid;
@@ -15,10 +15,11 @@
 .gz-archive-intro h1 {
   margin: 0;
   font-family: var(--gz-display-font);
-  font-size: clamp(38px, 4.6vw, 72px);
+  font-size: var(--gz-section-title);
   font-weight: var(--gz-display-weight);
   letter-spacing: var(--gz-display-spacing);
   line-height: 1.1;
+  hyphens: auto;
 }
 .gz-archive-intro > p {
   max-width: 520px;
@@ -174,7 +175,7 @@
 .gz-archive-offer h2 {
   max-width: 560px;
   margin: 18px 0 0;
-  font-size: clamp(30px, 3.2vw, 48px);
+  font-size: var(--gz-block-title);
   line-height: 1.15;
 }
 .gz-archive-offer .gz-primary {
@@ -195,7 +196,7 @@
     --gz-text-size: 18px;
   }
   .gz-archive {
-    padding-block: 60px 80px;
+    padding-block: 60px var(--gz-section-space);
   }
   .gz-archive-intro > p {
     justify-self: end;

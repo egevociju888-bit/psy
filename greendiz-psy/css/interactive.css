@@ -1,7 +1,7 @@
 .gz-interactive-archive {
   flex: 1;
   min-width: 0;
-  padding-bottom: clamp(48px, 6vw, 88px);
+  padding-bottom: var(--gz-section-space);
 }
 .gz-interactive-heading {
   display: grid;
@@ -12,11 +12,12 @@
   max-width: 15ch;
   margin: 12px 0 0;
   font-family: var(--gz-display-font);
-  font-size: clamp(38px, 5vw, 72px);
+  font-size: var(--gz-section-title);
   font-weight: var(--gz-display-weight);
   letter-spacing: var(--gz-display-spacing);
   line-height: 1.08;
   overflow-wrap: anywhere;
+  hyphens: auto;
   text-wrap: balance;
 }
 .gz-interactive-heading .gz-eyebrow,
@@ -418,7 +419,7 @@
 .gz-interactive-contact h2 {
   margin: 0 0 20px;
   font-family: var(--gz-display-font);
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: var(--gz-block-title);
   font-weight: var(--gz-display-weight);
   letter-spacing: var(--gz-display-spacing);
   line-height: 1.2;
@@ -500,6 +501,7 @@
 }
 .gz-interactive-detail .gz-blog-intro h1 {
   max-width: 24ch;
+  font-size: var(--gz-article-title);
 }
 .gz-interactive-detail .gz-blog-intro-copy {
   max-width: 55ch;
@@ -511,7 +513,7 @@
 .gz-interactive-demo h2 {
   margin-bottom: 24px;
   font-family: var(--gz-display-font);
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: var(--gz-block-title);
   font-weight: var(--gz-display-weight);
   letter-spacing: var(--gz-display-spacing);
   line-height: 1.2;
@@ -615,7 +617,7 @@
 .gz-interactive-dark .gz-contact-form .gz-button { background: #050506; color: #fff; border-color: #050506; }
 .gz-interactive-detail > .gz-interactive-dark:first-child { padding-bottom: 32px; }
 .gz-interactive-detail .gz-blog-intro { padding-bottom: 0; }
-.gz-interactive-description { padding-block: clamp(40px, 6vw, 88px); }
+.gz-interactive-description { padding-block: var(--gz-section-space) 0; }
 .gz-interactive-demo { margin: 0; padding-block: 28px 48px; background: #f3f0ea; color: #151916; }
 .gz-interactive-preview-frame { width: 100%; max-width: 1240px; margin-inline: auto; }
 .gz-interactive-demo.is-mobile-preview { padding: 0; background: #111416; }
@@ -650,7 +652,7 @@
 .gz-interactive-description h2 {
   margin: 0 0 24px;
   font-family: var(--gz-display-font);
-  font-size: clamp(30px, 3vw, 42px);
+  font-size: var(--gz-block-title);
   font-weight: var(--gz-display-weight);
   letter-spacing: var(--gz-display-spacing);
   line-height: 1.2;
