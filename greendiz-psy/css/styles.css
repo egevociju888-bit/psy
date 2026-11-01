@@ -7087,6 +7087,19 @@ body {
     font-size: 14px;
   }
 
+  #gz-contact .gz-social-links {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  #gz-contact .gz-social-links a {
+    flex: 1 1 0;
+    width: auto;
+    max-width: 44px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
   :is(#gz-contact, #gz-contact-dialog) .gz-contact-form {
     padding: 24px 18px;
   }
@@ -7273,6 +7286,14 @@ body {
 
 .gz-home-page #gz-main > :is(#gz-formats, #gz-concepts, #gz-about) {
   padding-bottom: 0;
+}
+
+@media (max-width: 760px) {
+
+  .gz-home-page #gz-main > #gz-contact {
+    padding-top: calc(var(--gz-section-space) / 2);
+  }
+
 }
 
 /* Дополнения контактов на главной. */
