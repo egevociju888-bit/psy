@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       </div>
     </fieldset>
     <div class="gz-survey-controls" data-course-controls hidden><button class="gz-text-action" type="button" data-course-back>Назад</button><button class="gz-primary gz-button" type="button" data-course-next>Дальше →</button></div>
-    <button class="gz-primary gz-button" type="submit">Отправить ответы ↗</button>
+    <button class="gz-primary gz-button" type="submit">Отправить ответы</button>
     <p class="gz-form-status" id="gz-survey-status" aria-live="polite"></p>
     <p class="gz-footnote">Это опрос об интересе. Решение о запуске и состав модуля пока не определены.</p>
   </form>

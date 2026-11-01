@@ -15,7 +15,7 @@ $gdpsy_overview = gdpsy_page_url( 'possibilities' );
 	<div class="gz-screen-meta"><span class="gz-screen-caption">Возможности сайта</span></div>
 	<div class="gz-article-intro">
 		<h2 class="gz-screen-title" id="gz-articles-title"><span class="gz-title-main">Другие</span><em class="gz-title-accent">возможности</em></h2>
-		<?php if ( $gdpsy_overview !== '' ) : ?><a class="gz-inline-link gz-button gz-button--white" href="<?php echo esc_url( $gdpsy_overview ); ?>">Все возможности <span aria-hidden="true">↗</span></a><?php endif; ?>
+		<?php if ( $gdpsy_overview !== '' ) : ?><a class="gz-inline-link gz-button gz-button--white" href="<?php echo esc_url( $gdpsy_overview ); ?>">Все возможности</a><?php endif; ?>
 	</div>
 	<div class="gz-articles-carousel">
 		<div class="gz-articles-viewport" id="gz-articles-viewport" tabindex="0" role="region" aria-label="Другие возможности сайта: горизонтальная лента">
@@ -25,7 +25,7 @@ $gdpsy_overview = gdpsy_page_url( 'possibilities' );
 					<div class="gz-eyebrow">Возможность сайта</div>
 					<h3><?php echo esc_html( get_the_title( $gdpsy_page ) ); ?></h3>
 					<?php if ( $gdpsy_summary !== '' ) : ?><p><?php echo esc_html( wp_trim_words( $gdpsy_summary, 24 ) ); ?></p><?php endif; ?>
-					<span>Подробнее <span aria-hidden="true">↗</span></span>
+					<span>Подробнее</span>
 				</a>
 				<?php endforeach; ?>
 			</div>

@@ -1,5 +1,4 @@
 .gz-blog-archive {
-  --gz-text-size: 16px;
   flex: 1;
   min-width: 0;
 }
@@ -282,9 +281,6 @@
   margin-top: 0;
 }
 @media (min-width: 761px) {
-  .gz-blog-archive {
-    --gz-text-size: 18px;
-  }
   .gz-blog-card {
     grid-template-columns: minmax(200px, 36%) minmax(0, 1fr);
   }

@@ -52,10 +52,10 @@ $count = count( array_filter( $items, function ( $post ) use ( $type ) {
 <?php endif; ?>
 <details class="gz-quiet-details gz-archive-disclosure" id="gz-archive-picker" data-details-static="(min-width: 1101px)" open<?php echo $type === 'project' ? ' hidden' : ''; ?>>
 <summary><span>Помочь выбрать концепт</span><span class="gz-menu-chevron" aria-hidden="true"></span></summary>
-<div class="gz-quiet-details-content"><p>Расскажите о своей практике и пожеланиях. Помогу выбрать близкий по характеру концепт и обсудить адаптацию.</p><a class="gz-primary gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Помогите выбрать концепт под мою практику.">Обсудить выбор ↗</a></div></details>
+<div class="gz-quiet-details-content"><p>Расскажите о своей практике и пожеланиях. Помогу выбрать близкий по характеру концепт и обсудить адаптацию.</p><a class="gz-primary gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Помогите выбрать концепт под мою практику.">Обсудить выбор</a></div></details>
 <details class="gz-quiet-details gz-archive-disclosure" id="gz-archive-custom" data-details-static="(min-width: 1101px)" open<?php echo $type !== 'project' ? ' hidden' : ''; ?>>
 <summary><span>Сайт под вашу практику</span><span class="gz-menu-chevron" aria-hidden="true"></span></summary>
-<div class="gz-quiet-details-content"><p>Если нужен собственный визуальный язык или особый состав сайта, разработаю его с нуля.</p><a class="gz-primary gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить индивидуальный сайт под мою практику.">Обсудить сайт ↗</a></div></details>
+<div class="gz-quiet-details-content"><p>Если нужен собственный визуальный язык или особый состав сайта, разработаю его с нуля.</p><a class="gz-primary gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить индивидуальный сайт под мою практику.">Обсудить сайт</a></div></details>
 </aside>
 <div class="gz-archive-results" id="gz-archive-results">
 <div class="gz-archive-grid" id="gz-archive-grid"<?php echo $count === 0 ? ' hidden' : ''; ?>>
@@ -74,10 +74,10 @@ $count = count( array_filter( $items, function ( $post ) use ( $type ) {
 </div></a></article>
 <?php endforeach; ?>
 </div>
-<div class="gz-archive-empty" id="gz-archive-empty"<?php echo $count > 0 ? ' hidden' : ''; ?>><h2 tabindex="-1" data-empty-title>Работ этого типа пока нет</h2><p data-empty-copy>Посмотрите другие примеры или расскажите о своей задаче.</p><a class="gz-inline-link gz-text-action" href="<?php echo esc_url( gdpsy_archive_url() ); ?>" data-filter-reset>Посмотреть все работы ↗</a> <button class="gz-inline-link gz-text-action" type="button" data-filter-clear hidden>Сбросить подбор</button></div>
+<div class="gz-archive-empty" id="gz-archive-empty"<?php echo $count > 0 ? ' hidden' : ''; ?>><h2 tabindex="-1" data-empty-title>Работ этого типа пока нет</h2><p data-empty-copy>Посмотрите другие примеры или расскажите о своей задаче.</p><a class="gz-inline-link gz-text-action" href="<?php echo esc_url( gdpsy_archive_url() ); ?>" data-filter-reset>Посмотреть все работы</a> <button class="gz-inline-link gz-text-action" type="button" data-filter-clear hidden>Сбросить подбор</button></div>
 </div></div>
 <section class="gz-archive-offer" aria-labelledby="gz-archive-offer-title"><div><p class="gz-eyebrow">ВАШ СЛЕДУЮЩИЙ ШАГ</p><h2 id="gz-archive-offer-title"><?php echo esc_html( $offer[0] ); ?></h2></div>
-<div><p id="gz-archive-offer-copy"><?php echo esc_html( $offer[1] ); ?></p><a class="gz-primary gz-button" id="gz-archive-discuss" href="#gz-contact" data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog" data-contact-preset="<?php echo esc_attr( $offer[3] ); ?>"><?php echo esc_html( $offer[2] ); ?> ↗</a></div></section>
+<div><p id="gz-archive-offer-copy"><?php echo esc_html( $offer[1] ); ?></p><a class="gz-primary gz-button" id="gz-archive-discuss" href="#gz-contact" data-open-dialog="gz-contact-dialog" aria-haspopup="dialog" aria-controls="gz-contact-dialog" data-contact-preset="<?php echo esc_attr( $offer[3] ); ?>"><?php echo esc_html( $offer[2] ); ?></a></div></section>
 </section></main>
 <?php get_footer(); ?>
 

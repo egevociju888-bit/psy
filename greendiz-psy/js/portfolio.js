@@ -87,7 +87,7 @@
     const offer = offers[type];
     archive.querySelector('#gz-archive-offer-title').textContent = offer[0];
     archive.querySelector('#gz-archive-offer-copy').textContent = offer[1];
-    discuss.textContent = offer[2] + ' ↗';
+    discuss.textContent = offer[2];
     discuss.dataset.contactPreset = offer[3];
     if (animate) {
       [archive.querySelector('.gz-archive-results'), archive.querySelector('.gz-archive-offer'), type === 'project' ? custom : picker].forEach((element) => {

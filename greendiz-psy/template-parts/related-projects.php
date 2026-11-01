@@ -14,7 +14,7 @@ if ( ! $items ) {
 	</div>
 	<div class="gz-article-intro">
 		<h2 class="gz-screen-title" id="gz-articles-title"><span class="gz-title-main">Другие</span><em class="gz-title-accent">сайты</em></h2>
-		<a class="gz-inline-link gz-button gz-button--white" href="<?php echo esc_url( gdpsy_archive_url() ); ?>">Все сайты ↗</a>
+		<a class="gz-inline-link gz-button gz-button--white" href="<?php echo esc_url( gdpsy_archive_url() ); ?>">Все сайты</a>
 	</div>
 	<div class="gz-articles-carousel">
 		<div class="gz-articles-viewport" id="gz-articles-viewport" tabindex="0" role="region" aria-label="Другие сайты: горизонтальная лента">

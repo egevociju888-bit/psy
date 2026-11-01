@@ -74,7 +74,7 @@ $gdpsy_contact_url = home_url('/#gz-contact');
 									</div>
 									<?php $gdpsy_price = gdpsy_price_label('concept', 'от ');
 									if ($gdpsy_price !== '') : ?><p class="gz-overview-price"><?php echo esc_html($gdpsy_price); ?><small>за адаптацию концепта</small></p><?php endif; ?>
-									<a class="gz-button gz-button--outline" href="<?php echo esc_url(add_query_arg('case-type', 'consept', gdpsy_archive_url())); ?>">Посмотреть концепты <span aria-hidden="true">↗</span></a>
+									<a class="gz-button gz-button--outline" href="<?php echo esc_url(add_query_arg('case-type', 'consept', gdpsy_archive_url())); ?>">Посмотреть концепты</a>
 								</section>
 							</div>
 							<p class="gz-overview-note">Точный состав адаптации, цену и срок при готовых материалах фиксируем для выбранного концепта. Дополнительные страницы, интеграции, новая механика интерактива и переработка дизайна обсуждаются отдельно.</p>
@@ -143,7 +143,7 @@ $gdpsy_contact_url = home_url('/#gz-contact');
 								<h3>Можно ли сделать приложение?</h3>
 								<p><?php echo esc_html($gdpsy_tools['features'][2]['text']); ?></p>
 							</div>
-							<a class="gz-button gz-button--outline" href="<?php echo esc_url(home_url('/interactive/')); ?>">Каталог интерактивов <span aria-hidden="true">↗</span></a>
+							<a class="gz-button gz-button--outline" href="<?php echo esc_url(home_url('/interactive/')); ?>">Каталог интерактивов</a>
 						</section>
 						<section class="gz-overview-section" aria-labelledby="gz-possibilities-further">
 							<p class="gz-eyebrow">05 / Обсудим вашу задачу</p>
@@ -164,7 +164,7 @@ $gdpsy_contact_url = home_url('/#gz-contact');
 								</div>
 							</dl>
 							<p class="gz-overview-note">Изучаю спрос и собираю пожелания. Состав модулей, стоимость и сроки запуска пока не определены.</p>
-							<a class="gz-button gz-button--navy" href="<?php echo esc_url($gdpsy_contact_url); ?>" data-open-dialog="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Помогите выбрать состав сайта для моей практики." aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить состав сайта <span aria-hidden="true">↗</span></a>
+							<a class="gz-button gz-button--navy" href="<?php echo esc_url($gdpsy_contact_url); ?>" data-open-dialog="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Помогите выбрать состав сайта для моей практики." aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить состав сайта</a>
 						</section>
 					</div>
 				</div>

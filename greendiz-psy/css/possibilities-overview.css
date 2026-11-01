@@ -2,9 +2,7 @@
 .gz-article-page .gz-possibilities-design {
   --gz-overview-heading-size: clamp(32px, 3vw, 44px);
   --gz-overview-subheading-size: 20px;
-  --gz-overview-text-size: 16px;
   --gz-overview-caption-size: 14px;
-  --gz-text-size: var(--gz-overview-text-size);
 }
 .gz-possibilities-article {
   padding-bottom: clamp(48px, 6vw, 88px);
@@ -39,7 +37,7 @@
   display: grid;
   align-content: start;
   gap: 28px;
-  font-size: var(--gz-overview-text-size);
+  font-size: var(--gz-text-size);
   line-height: 1.65;
 }
 .gz-overview-section {
@@ -94,7 +92,7 @@
 .gz-overview-rows dt,
 .gz-overview-list strong,
 .gz-overview-placements strong {
-  font-size: var(--gz-overview-text-size);
+  font-size: var(--gz-text-size);
 }
 .gz-overview-section p {
   margin: 0 0 20px;
@@ -115,7 +113,7 @@
   letter-spacing: .08em;
 }
 .gz-overview-lead {
-  font-size: var(--gz-overview-text-size);
+  font-size: var(--gz-text-size);
   line-height: 1.6;
 }
 .gz-overview-section [id] {
@@ -230,7 +228,7 @@
 }
 .gz-overview-section .gz-button {
   max-width: 100%;
-  font-size: var(--gz-overview-text-size);
+  font-size: var(--gz-text-size);
   width: fit-content;
   white-space: nowrap;
   overflow-wrap: normal;

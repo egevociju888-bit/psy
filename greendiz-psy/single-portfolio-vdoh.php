@@ -37,7 +37,7 @@ get_header();
 						<div><dt>Моя работа</dt><dd>Концепция, контент, UX/UI, иллюстрации и разработка</dd></div>
 						<div><dt>Формат</dt><dd>Mobile-first PWA · HTML, CSS, JavaScript</dd></div>
 					</dl>
-					<a class="gz-button" href="https://vdoh.greendiz.ru/" target="_blank" rel="noopener noreferrer">Открыть «Вдох» ↗</a>
+					<a class="gz-button" href="https://vdoh.greendiz.ru/" target="_blank" rel="noopener noreferrer">Открыть «Вдох»</a>
 				</aside>
 				<?php endif; ?>
 			</div>
@@ -101,8 +101,8 @@ get_header();
 			<p class="gz-vdoh-privacy">Личные записи хранятся в браузере на устройстве. Для переноса есть выгрузка в файл; данные можно загрузить обратно или удалить в разделе управления данными.</p>
 			<a class="gz-text-action" href="https://vdoh.greendiz.ru/moe/" target="_blank" rel="noopener noreferrer">Посмотреть кабинет в приложении ↗</a>
 		</section>
-		<section class="gz-vdoh-section gz-inner gz-vdoh-outcome" id="vdoh-result" aria-labelledby="vdoh-result-title"><p class="gz-vdoh-kicker">07 / Результат</p><h2 id="vdoh-result-title">Приложение, которым<br>можно просто поделиться.</h2><div class="gz-vdoh-copy"><p>Из набора техник получился самостоятельный продукт: с единым визуальным языком, интерактивными практиками и личным пространством для наблюдения за собой.</p><p>Концепция, контент, UX/UI-дизайн, иллюстрации и разработка — Анастасия Гриндиз. Разработка в паре с ИИ-ассистентом Claude.</p></div><a class="gz-button" href="https://vdoh.greendiz.ru/" target="_blank" rel="noopener noreferrer">Открыть приложение ↗</a></section>
-		<section class="gz-vdoh-section gz-inner gz-vdoh-dark gz-vdoh-offer" aria-labelledby="vdoh-offer-title"><div><p class="gz-eyebrow">Для вашей практики</p><h2 id="vdoh-offer-title">Что человек сможет<br>попробовать на вашем сайте?</h2><p>Короткую практику, интерактив или собственную библиотеку — под ваш подход и задачи.</p></div><a class="gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить сайт или интерактив по примеру «Вдоха» для своей практики.">Обсудить идею ↗</a></section>
+		<section class="gz-vdoh-section gz-inner gz-vdoh-outcome" id="vdoh-result" aria-labelledby="vdoh-result-title"><p class="gz-vdoh-kicker">07 / Результат</p><h2 id="vdoh-result-title">Приложение, которым<br>можно просто поделиться.</h2><div class="gz-vdoh-copy"><p>Из набора техник получился самостоятельный продукт: с единым визуальным языком, интерактивными практиками и личным пространством для наблюдения за собой.</p><p>Концепция, контент, UX/UI-дизайн, иллюстрации и разработка — Анастасия Гриндиз. Разработка в паре с ИИ-ассистентом Claude.</p></div><a class="gz-button" href="https://vdoh.greendiz.ru/" target="_blank" rel="noopener noreferrer">Открыть приложение</a></section>
+		<section class="gz-vdoh-section gz-inner gz-vdoh-dark gz-vdoh-offer" aria-labelledby="vdoh-offer-title"><div><p class="gz-eyebrow">Для вашей практики</p><h2 id="vdoh-offer-title">Что человек сможет<br>попробовать на вашем сайте?</h2><p>Короткую практику, интерактив или собственную библиотеку — под ваш подход и задачи.</p></div><a class="gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" data-contact-preset="Здравствуйте, Анастасия! Хочу обсудить сайт или интерактив по примеру «Вдоха» для своей практики.">Обсудить идею</a></section>
 		<?php get_template_part( 'template-parts/portfolio-interactives' ); ?>
 		<?php endif; ?>
 	</article>

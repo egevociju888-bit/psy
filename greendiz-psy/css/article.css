@@ -1,5 +1,4 @@
 .gz-article-page {
-  --gz-text-size: 16px;
   --gz-article-gap: clamp(40px, 4vw, 64px);
   flex: 1;
   min-width: 0;
@@ -294,9 +293,6 @@
   --gz-article-sticky-top: 96px;
 }
 @media (min-width: 761px) {
-  .gz-article-page {
-    --gz-text-size: 18px;
-  }
   .gz-article-cta {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;

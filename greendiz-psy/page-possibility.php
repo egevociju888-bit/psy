@@ -56,7 +56,7 @@ if ( gdpsy_is_blog_possibility() || gdpsy_is_library_possibility() || gdpsy_is_c
 				<?php if ( $gdpsy_feature ) : ?>
 					<section class="gz-possibility-offer" aria-labelledby="gz-possibility-offer-title">
 						<div><h2 id="gz-possibility-offer-title"><?php echo ! empty( $gdpsy_feature['upcoming'] ) ? 'Какие возможности нужны вашей практике?' : 'Обсудим вашу задачу'; ?></h2><p>Расскажите о своей практике и о том, что хотите добавить на сайт.</p></div>
-						<a class="gz-primary gz-button gz-button--navy" href="#gz-contact" data-open-dialog="gz-contact-dialog" data-contact-preset="<?php echo esc_attr( 'Здравствуйте, Анастасия! Хочу обсудить: ' . $gdpsy_feature['title'] . '.' ); ?>">Рассказать о задаче <span aria-hidden="true">↗</span></a>
+						<a class="gz-primary gz-button gz-button--navy" href="#gz-contact" data-open-dialog="gz-contact-dialog" data-contact-preset="<?php echo esc_attr( 'Здравствуйте, Анастасия! Хочу обсудить: ' . $gdpsy_feature['title'] . '.' ); ?>">Рассказать о задаче</a>
 					</section>
 				<?php endif; ?>
 			<?php endif; ?>

@@ -15,7 +15,7 @@ $gdpsy_included = $gdpsy_kind === 'consept';
 	<p><?php echo $gdpsy_included ? 'Эти интерактивы включены в стоимость этого концепта:' : 'Примеры использования интерактивов в этом проекте:'; ?></p>
 	<ul>
 		<?php foreach ( $gdpsy_interactive_ids as $gdpsy_interactive_id ) : ?>
-		<li><a href="<?php echo esc_url( get_permalink( $gdpsy_interactive_id ) ); ?>"><?php echo esc_html( get_the_title( $gdpsy_interactive_id ) ); ?> <span aria-hidden="true">↗</span></a></li>
+		<li><a href="<?php echo esc_url( get_permalink( $gdpsy_interactive_id ) ); ?>"><?php echo esc_html( get_the_title( $gdpsy_interactive_id ) ); ?></a></li>
 		<?php endforeach; ?>
 	</ul>
 </section>

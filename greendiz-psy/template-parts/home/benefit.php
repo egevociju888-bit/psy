@@ -181,7 +181,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                       Повторить
                     </button>
                     <button class="gz-primary gz-button gz-button--outline gz-breathe-all" type="button" data-open-dialog="gz-module-interactions">
-                      Все механики <span aria-hidden="true">↗</span>
+                      Все механики
                     </button>
                   </div>
                 </div>

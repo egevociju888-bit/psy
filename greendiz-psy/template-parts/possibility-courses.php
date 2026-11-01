@@ -138,7 +138,7 @@ $gdpsy_toc = array(
 					<h2 id="gz-courses-survey" tabindex="-1">Скидка за участие <em>в опросе</em></h2>
 					<p>Расскажите, нужна ли вам продажа курсов на своём сайте и какие возможности пригодятся. Ваши ответы помогут мне определить состав услуги.</p>
 					<p class="gz-course-offer-terms">При запуске модуля скидка 20% будет действовать на его подключение. Скидка закрепляется за вашим email.</p>
-					<button class="gz-primary gz-button gz-button--white" type="button" data-open-dialog="gz-course-survey" aria-haspopup="dialog" aria-controls="gz-course-survey">Рассказать о своих задачах <span aria-hidden="true">↗</span></button>
+					<button class="gz-primary gz-button gz-button--white" type="button" data-open-dialog="gz-course-survey" aria-haspopup="dialog" aria-controls="gz-course-survey">Рассказать о своих задачах</button>
 					<p class="gz-course-offer-note">В опросе можно отдельно выбрать письмо о запуске.</p>
 				</div>
 			</section>

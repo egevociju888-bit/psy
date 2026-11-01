@@ -103,7 +103,7 @@ $gdpsy_overview = gdpsy_page_url( 'possibilities' );
 	</div>
 	<section class="gz-interactive-guide" aria-labelledby="gz-interactive-guide-title">
 		<div><p class="gz-eyebrow">Как использовать на сайте</p><h2 id="gz-interactive-guide-title">Один инструмент<br>или целая подборка</h2></div>
-		<div><p><?php echo esc_html( $gdpsy_offer['story'][0] ); ?></p><p><?php echo esc_html( $gdpsy_offer['note'] ); ?></p><p>Для подборки можно отдельно обсудить приложение с установкой на телефон. Состав, сохранение результатов и работу без интернета согласуем под выбранные инструменты.</p><?php if ( $gdpsy_overview !== '' ) : ?><a class="gz-text-action" href="<?php echo esc_url( $gdpsy_overview . '#gz-possibility-interactions' ); ?>">О размещении и подключении <span aria-hidden="true">↗</span></a><?php endif; ?></div>
+		<div><p><?php echo esc_html( $gdpsy_offer['story'][0] ); ?></p><p><?php echo esc_html( $gdpsy_offer['note'] ); ?></p><p>Для подборки можно отдельно обсудить приложение с установкой на телефон. Состав, сохранение результатов и работу без интернета согласуем под выбранные инструменты.</p><?php if ( $gdpsy_overview !== '' ) : ?><a class="gz-text-action" href="<?php echo esc_url( $gdpsy_overview . '#gz-possibility-interactions' ); ?>">О размещении и подключении</a><?php endif; ?></div>
 	</section>
 	<section class="gz-interactive-contact" aria-labelledby="gz-interactive-contact-title">
 		<div><h2 id="gz-interactive-contact-title">Помогу выбрать</h2><p>Расскажите, что человеку важно попробовать на вашем сайте. Подберём инструмент и обсудим оформление.</p></div>

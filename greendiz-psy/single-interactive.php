@@ -66,7 +66,7 @@ get_header( $gdpsy_document ? 'interactive' : null );
 						<p>Подберём цвета, шрифты и расположение. Изменения текстов, логики и дополнительные возможности согласуем до начала работы.</p>
 					</div>
 					<p class="gz-interactive-offer-note"><?php echo esc_html( $gdpsy_offer['note'] ); ?></p>
-					<a class="gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" data-contact-preset="<?php echo esc_attr( 'Здравствуйте, Анастасия! Хочу обсудить подключение интерактива «' . gdpsy_text( get_the_title() ) . '» к моему сайту.' ); ?>" aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить подключение ↗</a>
+					<a class="gz-button" href="#gz-contact" data-open-dialog="gz-contact-dialog" data-contact-preset="<?php echo esc_attr( 'Здравствуйте, Анастасия! Хочу обсудить подключение интерактива «' . gdpsy_text( get_the_title() ) . '» к моему сайту.' ); ?>" aria-haspopup="dialog" aria-controls="gz-contact-dialog">Обсудить подключение</a>
 				</section>
 				</div>
 				<?php if ( $gdpsy_data['concepts'] || $gdpsy_data['projects'] ) : ?>
@@ -75,13 +75,13 @@ get_header( $gdpsy_document ? 'interactive' : null );
 					<section aria-labelledby="gz-interactive-concepts">
 					<h2 id="gz-interactive-concepts">Уже включён в концепт</h2>
 					<p>Интерактив входит в стоимость выбранного концепта.</p><ul>
-						<?php foreach ( $gdpsy_data['concepts'] as $gdpsy_concept ) : ?><li><a href="<?php echo esc_url( get_permalink( $gdpsy_concept ) ); ?>"><?php echo esc_html( get_the_title( $gdpsy_concept ) ); ?> ↗</a></li><?php endforeach; ?>
+						<?php foreach ( $gdpsy_data['concepts'] as $gdpsy_concept ) : ?><li><a href="<?php echo esc_url( get_permalink( $gdpsy_concept ) ); ?>"><?php echo esc_html( get_the_title( $gdpsy_concept ) ); ?></a></li><?php endforeach; ?>
 					</ul></section><?php endif; ?>
 					<?php if ( $gdpsy_data['projects'] ) : ?>
 					<section aria-labelledby="gz-interactive-projects">
 					<h2 id="gz-interactive-projects">Примеры использования</h2>
 					<p>Посмотрите, как инструмент используется в проекте.</p><ul>
-						<?php foreach ( $gdpsy_data['projects'] as $gdpsy_project ) : ?><li><a href="<?php echo esc_url( get_permalink( $gdpsy_project ) ); ?>"><?php echo esc_html( get_the_title( $gdpsy_project ) ); ?> ↗</a></li><?php endforeach; ?>
+						<?php foreach ( $gdpsy_data['projects'] as $gdpsy_project ) : ?><li><a href="<?php echo esc_url( get_permalink( $gdpsy_project ) ); ?>"><?php echo esc_html( get_the_title( $gdpsy_project ) ); ?></a></li><?php endforeach; ?>
 					</ul></section><?php endif; ?>
 				</div>
 				<?php endif; ?>

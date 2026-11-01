@@ -22,5 +22,5 @@ if ( ! $examples ) {
 ?>
 <section class="gz-possibility-examples" aria-labelledby="gz-possibility-examples-title">
 	<h2 id="gz-possibility-examples-title">Посмотреть пример</h2>
-	<ul><?php foreach ( $examples as $example ) : ?><li><a class="gz-text-action" href="<?php echo esc_url( $example['url'] ); ?>"<?php if ( $example['external'] ) : ?> target="_blank" rel="noopener noreferrer"<?php endif; ?>><?php echo esc_html( $example['title'] ); ?> <span aria-hidden="true">↗</span></a></li><?php endforeach; ?></ul>
+	<ul><?php foreach ( $examples as $example ) : ?><li><a class="gz-text-action" href="<?php echo esc_url( $example['url'] ); ?>"<?php if ( $example['external'] ) : ?> target="_blank" rel="noopener noreferrer"<?php endif; ?>><?php echo esc_html( $example['title'] ); ?><?php if ( $example['external'] ) : ?> <span aria-hidden="true">↗</span><?php endif; ?></a></li><?php endforeach; ?></ul>
 </section>

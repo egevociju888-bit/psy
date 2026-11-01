@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div><dt>Моя работа</dt><dd>Редизайн и разработка под ключ</dd></div>
                 <div><dt>Состав</dt><dd>Услуги, методы, кабинеты и блог</dd></div>
               </dl>
-              <a class="gz-button" href="<?php echo esc_url( 'https://gipnopro.ru/' ); ?>" target="_blank" rel="noopener noreferrer">Открыть сайт ↗</a>
+              <a class="gz-button" href="<?php echo esc_url( 'https://gipnopro.ru/' ); ?>" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
             </aside>
             <div class="case-hero-visual">
               <img src="<?php echo esc_url( get_theme_file_uri( 'media/gipnopro/img_1.webp' ) ); ?>" width="520" height="1094" alt="Мобильный экран сайта Ольги Филатовой" decoding="async">

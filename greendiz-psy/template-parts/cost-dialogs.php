@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <p class="gz-detail-description" id="gz-library-lead"><?php echo esc_html( $gdpsy_tools['story'][0] ); ?> Один интерактив уже предусмотрен в лендинге; здесь — варианты для дополнительных инструментов.</p>
         <div class="gz-detail-features">
           <section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Дополнительный интерактив</h3><span><?php echo esc_html( gdpsy_price_label( 'toolkit', 'от ' ) ); ?></span></div><p><?php echo esc_html( $gdpsy_tools['features'][0]['text'] ); ?></p><button class="gz-primary gz-button" type="button" data-add-modules="toolkit">Добавить к сайту</button></section>
-          <section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Несколько инструментов</h3></div><p><?php echo esc_html( $gdpsy_tools['note'] ); ?></p><p>В калькуляторе можно указать количество дополнительных инструментов. Расчёт — по минимальной цене, без учёта скидки. Организацию каталога и PWA согласуем отдельно.</p><a class="gz-text-action" href="<?php echo esc_url( home_url( '/interactive/' ) ); ?>">Каталог интерактивов ↗</a></section>
+          <section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Несколько инструментов</h3></div><p><?php echo esc_html( $gdpsy_tools['note'] ); ?></p><p>В калькуляторе можно указать количество дополнительных инструментов. Расчёт — по минимальной цене, без учёта скидки. Организацию каталога и PWA согласуем отдельно.</p><a class="gz-text-action" href="<?php echo esc_url( home_url( '/interactive/' ) ); ?>">Каталог интерактивов</a></section>
           <section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Приложение на телефоне</h3></div><p><?php echo esc_html( $gdpsy_tools['features'][2]['text'] ); ?></p></section>
         </div>
       </div>
@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="gz-dialog-content">
         <p class="gz-detail-description" id="gz-module-courses-lead">Изучаю спрос на модуль для продажи программ и работы с участниками. Готового модуля пока нет; состав, стоимость и дата запуска не определены. Ваши ответы в опросе помогут выбрать полезные функции.</p>
         <div class="gz-detail-features"><section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Материалы и уроки</h3></div><p>Можно предусмотреть видео, аудио и PDF, уроки по расписанию, задания и обратную связь.</p></section><section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Личный кабинет</h3></div><p>Можно предусмотреть покупки и прогресс в одном месте, а также подписку на материалы.</p></section><section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Повлиять на состав</h3></div><p>Можно рассказать о своей программе и пожеланиях, чтобы повлиять на состав будущего модуля.</p></section></div>
-        <div class="gz-detail-followup"><button class="gz-primary gz-button" type="button" data-open-dialog="gz-course-survey">Рассказать о своих задачах ↗</button></div>
+        <div class="gz-detail-followup"><button class="gz-primary gz-button" type="button" data-open-dialog="gz-course-survey">Рассказать о своих задачах</button></div>
       </div>
     </dialog>
     <?php get_template_part( 'template-parts/course-survey' ); ?>
@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Статистика и аналитика</h3></div><p>Исследую, какие показатели нужны для ведения практики и удобно ли смотреть их на сайте.</p></section>
           <section class="gz-detail-feature"><div class="gz-detail-feature-head"><h3>Нужен ли вход клиентам?</h3></div><p>Выясним, нужен ли клиентам свой вход на сайт и какие возможности там пригодятся.</p></section>
         </div>
-        <div class="gz-detail-followup"><button class="gz-primary gz-button" type="button" data-open-dialog="gz-cabinet-survey">Рассказать о своих задачах ↗</button></div>
+        <div class="gz-detail-followup"><button class="gz-primary gz-button" type="button" data-open-dialog="gz-cabinet-survey">Рассказать о своих задачах</button></div>
       </div>
     </dialog>
     <dialog class="gz-dialog" id="gz-cabinet-survey" aria-labelledby="gz-cabinet-survey-title" aria-describedby="gz-cabinet-survey-intro">

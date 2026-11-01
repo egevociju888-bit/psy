@@ -1696,7 +1696,7 @@ body {
   --gz-paper: #f3efea;
   --gz-white: #fcfaf7;
   --gz-ink: #090d0b;
-  --gz-muted: #686763;
+  --gz-muted: #605f5b;
   --gz-rule: #000;
   --gz-blue: #2e50c8;
   --gz-blue-hover: #243fa2;
@@ -1849,7 +1849,7 @@ body {
   --gz-paper: #f3efea;
   --gz-white: #fcfaf7;
   --gz-ink: #090d0b;
-  --gz-muted: #686763;
+  --gz-muted: #605f5b;
   --gz-rule: #000;
   --gz-sand: #e7e1da;
   --gz-blue: #41413e;
@@ -7249,7 +7249,7 @@ body {
 
 @media (max-width: 760px) {
 
-  .gz-home-page {
+  :is(.gz-home-page, #gz-main) {
     --gz-text-size: 16px;
     --gz-text-line-height: 1.5;
   }

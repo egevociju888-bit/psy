@@ -10,7 +10,7 @@
 }
 :is(.gz-project-dark, .gz-concept-page) #gz-articles .gz-article {
   --gz-ink: #090d0b;
-  --gz-muted: #686763;
+  --gz-muted: #605f5b;
   --gz-blue: #2e50c8;
   --gz-sand: #e7e1da;
   --gz-sand-line: #c7bdb0;

@@ -24,8 +24,8 @@ if ( ! $articles ) {
             <span class="gz-title-main"><?php echo $related ? 'Другие' : 'О сайте для'; ?></span>
             <em class="gz-title-accent"><?php echo $related ? 'статьи' : 'вашей практики'; ?></em>
           </h2>
-          <a class="gz-inline-link gz-button gz-button--white" href="<?php echo esc_url( gdpsy_blog_url() ); ?>" target="_blank" rel="noopener noreferrer">Все
-            статьи ↗</a>
+          <a class="gz-inline-link gz-button gz-button--white" href="<?php echo esc_url( gdpsy_blog_url() ); ?>">Все
+            статьи</a>
         </div>
         <div class="gz-articles-carousel">
           <div class="gz-articles-viewport" id="gz-articles-viewport" tabindex="0" role="region" aria-label="Статьи о сайте: горизонтальная лента">

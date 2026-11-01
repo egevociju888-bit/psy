@@ -32,7 +32,7 @@ $gdpsy_toc = array(
 				<h2 id="gz-library-tools" tabindex="-1">Интерактивы на вашем сайте</h2>
 				<p><?php echo esc_html( $gdpsy_tools['story'][0] ); ?></p>
 				<p>Короткая практика может дополнить знакомство с вами, а тест или инструмент для самонаблюдения — стать материалом, которым вы делитесь с клиентами между встречами.</p>
-				<p><a class="gz-text-action" href="<?php echo esc_url( home_url( '/interactive/' ) ); ?>">Каталог интерактивов <span aria-hidden="true">↗</span></a></p>
+				<p><a class="gz-text-action" href="<?php echo esc_url( home_url( '/interactive/' ) ); ?>">Каталог интерактивов</a></p>
 			</section>
 			<section class="gz-possibility-section">
 				<h2 id="gz-library-adaptation" tabindex="-1">Подключение и адаптация</h2>
