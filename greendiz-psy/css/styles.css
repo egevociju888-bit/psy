@@ -7161,7 +7161,7 @@ body {
 /* Единый вертикальный ритм секций на десктопе. */
 
 .gz-page {
-  --gz-section-space: 88px;
+  --gz-section-space: 104px;
   --gz-section-title: clamp(44px, 12.8vw, 50px);
 }
 

@@ -2,15 +2,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-$gdpsy_links = array();
-$gdpsy_portfolio = get_post_type_archive_link( 'portfolio' );
-if ( $gdpsy_portfolio ) {
-	$gdpsy_links[] = array( 'title' => 'Примеры работ', 'url' => $gdpsy_portfolio );
-}
-$gdpsy_posts_page = (int) get_option( 'page_for_posts' );
-if ( $gdpsy_posts_page && get_post_status( $gdpsy_posts_page ) === 'publish' ) {
-	$gdpsy_links[] = array( 'title' => 'Статьи', 'url' => get_permalink( $gdpsy_posts_page ) );
-}
 get_header();
 ?>
 <main class="gz-page-main gz-inner gz-notfound" id="gz-main">
@@ -29,9 +20,6 @@ get_header();
 	</header>
 	<div class="gz-notfound-actions">
 		<a class="gz-button gz-button--large" href="<?php echo esc_url( home_url( '/' ) ); ?>">На главную</a>
-		<?php foreach ( $gdpsy_links as $gdpsy_link ) : ?>
-			<a class="gz-text-action" href="<?php echo esc_url( $gdpsy_link['url'] ); ?>"><?php echo esc_html( $gdpsy_link['title'] ); ?></a>
-		<?php endforeach; ?>
 	</div>
 </main>
 <?php get_footer(); ?>
