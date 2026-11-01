@@ -1,0 +1,159 @@
+.gz-possibility-detail .gz-possibility-section {
+  min-width: 0;
+  padding-block: clamp(28px, 3vw, 48px);
+}
+.gz-possibility-detail .gz-possibility-section:first-child {
+  padding-top: 0;
+}
+.gz-possibility-detail .gz-possibility-section > :last-child,
+.gz-possibility-detail .gz-possibility-split > div > :last-child {
+  margin-bottom: 0;
+}
+.gz-possibility-detail .gz-entry .gz-possibility-section h2 {
+  margin-top: 0;
+  font-family: var(--gz-display-font);
+  font-weight: var(--gz-display-weight);
+  letter-spacing: var(--gz-display-spacing);
+}
+.gz-possibility-detail .gz-entry .gz-possibility-section h3 {
+  margin-top: 0;
+}
+.gz-possibility-detail .gz-possibility-section [id] {
+  scroll-margin-top: calc(var(--gz-article-sticky-top, 50px) + 16px);
+}
+.gz-possibility-detail .gz-possibility-section [tabindex='-1']:focus-visible {
+  outline: 2px solid var(--gz-blue);
+  outline-offset: 6px;
+}
+.gz-possibility-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 3vw, 40px);
+}
+.gz-possibility-detail .gz-entry .gz-possibility-visual {
+  min-width: 0;
+  width: 33.333333%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--gz-sand);
+}
+.gz-possibility-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  animation: gz-possibility-appear .8s ease both;
+  transition: transform .5s ease;
+}
+.gz-possibility-visual:hover img {
+  transform: scale(1.025);
+}
+.gz-possibility-detail .gz-possibility-split + p {
+  margin-top: 24px;
+}
+.gz-possibility-materials {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  margin-block: 28px;
+}
+.gz-possibility-materials > div {
+  min-width: 0;
+  padding: 24px;
+  background: var(--gz-sand);
+  border-radius: 4px;
+}
+.gz-possibility-detail .gz-possibility-materials p:last-child {
+  margin-bottom: 0;
+}
+.gz-possibility-detail .gz-entry .gz-possibility-materials h3 {
+  font-size: 21px;
+}
+.gz-possibility-detail .gz-entry .gz-possibility-steps {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: gz-possibility-step;
+}
+.gz-possibility-detail .gz-entry .gz-possibility-steps > li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 32px 72px;
+  counter-increment: gz-possibility-step;
+}
+.gz-possibility-detail .gz-entry .gz-possibility-steps > li:last-child {
+  padding-bottom: 0;
+}
+.gz-possibility-steps > li::before {
+  content: counter(gz-possibility-step, decimal-leading-zero);
+  position: absolute;
+  inset: 0 auto auto 0;
+  color: var(--gz-blue);
+  font-family: var(--gz-display-font);
+  font-size: 26px;
+  line-height: 1.2;
+}
+.gz-possibility-steps > li::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: -5px;
+  left: 48px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gz-blue) 0 24px, var(--gz-rule) 24px 100%);
+}
+.gz-possibility-steps > li:last-child::after {
+  height: 24px;
+  bottom: auto;
+}
+.gz-possibility-detail .gz-entry .gz-possibility-steps h3 {
+  margin: 0 0 12px;
+}
+.gz-possibility-detail .gz-possibility-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 16px;
+  padding: clamp(24px, 3vw, 40px);
+}
+.gz-possibility-cta > div {
+  flex: 1 1 300px;
+}
+.gz-possibility-detail .gz-possibility-cta h2 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+.gz-possibility-detail .gz-possibility-cta p {
+  margin-bottom: 0;
+}
+.gz-possibility-cta .gz-button {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+.gz-possibility-editor {
+  margin-bottom: 40px;
+}
+@keyframes gz-possibility-appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (min-width: 761px) and (max-width: 1100px), (min-width: 1500px) {
+  .gz-possibility-materials {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 761px) {
+  .gz-possibility-split {
+    grid-template-columns: 33.333333% minmax(0, 1fr);
+  }
+  .gz-possibility-split--visual-end {
+    grid-template-columns: minmax(0, 1fr) 33.333333%;
+  }
+  .gz-possibility-detail .gz-entry .gz-possibility-visual {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,96 @@
+{
+    "key": "group_gdpsy_concept_reservation",
+    "title": "Концепт — бронь",
+    "fields": [
+        {
+            "key": "field_gdpsy_concept_reserve_status",
+            "label": "Бронь",
+            "name": "concept_reserve_status",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6abc676106a99",
+                        "operator": "==",
+                        "value": "consept"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
+            "key": "field_gdpsy_concept_reserve_days",
+            "label": "Забронировать на",
+            "name": "concept_reserve_days",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Срок идёт от сегодняшнего дня и заканчивается в конце выбранного дня по времени сайта. После сохранения поле сбрасывается.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6abc676106a99",
+                        "operator": "==",
+                        "value": "consept"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "— не менять —",
+                "1": "1 сутки",
+                "2": "2 суток",
+                "3": "3 суток",
+                "4": "4 суток",
+                "5": "5 суток",
+                "6": "6 суток",
+                "7": "7 суток",
+                "clear": "Снять бронь"
+            },
+            "default_value": "0",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "portfolio"
+            }
+        ]
+    ],
+    "menu_order": 6,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Бронь концепта: плашка на странице и карточках, мягкая кнопка вместо «Хочу такой сайт».",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793100000
+}

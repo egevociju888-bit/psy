@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f1e8">
+<meta name="description" content="Алексей Громов — психолог в Москве. Очные встречи по записи и онлайн. Помогаю разобраться, когда выбрать трудно, чужие ожидания громче собственных желаний, а направление потеряно.">
+<title>Алексей Громов — психолог, Москва и онлайн</title>
+<link rel="preload" as="image" href="photo.webp" type="image/webp">
+<link rel="preload" as="font" type="font/woff2" href="fonts/AtlasSans-Regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/AtlasSerif-Regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/AtlasSerif-Italic.woff2" crossorigin>
+<style>
+@font-face{font-family:"Atlas Serif";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/AtlasSerif-Regular.woff2") format("woff2")}
+@font-face{font-family:"Atlas Serif";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/AtlasSerif-Italic.woff2") format("woff2")}
+@font-face{font-family:"Atlas Sans";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/AtlasSans-Regular.woff2") format("woff2")}
+@font-face{font-family:"Atlas Sans";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/AtlasSans-Bold.woff2") format("woff2")}
+:root{
+  --paper:#f4f1e8;--white:#fbf9f3;--ink:#233b4b;--ink2:#425460;--muted:#4f5f63;--line:#cbd0c7;--edge:#a89f8b;
+  --rust:#ae4e32;--rust-text:#9a4329;--sand:#e8deca;--sand-line:#d5ccba;
+  --ink-hover:#345467;--line-strong:#8d9a98;--ctl:#6f7f84;--blue:#17394c;--blue-deep:#102e3f;--blue-hover:#0a2431;--on-blue:#f4f1e8;--on-blue-muted:#bccbcb;--terra:#eaa98d;--note:#e8ede0;--blue-sel:#051b27;--on-blue-dim:#8fa5ad;
+  --serif:'Atlas Serif',Georgia,'Times New Roman',serif;--sans:'Atlas Sans',Arial,sans-serif;
+  --fs-s:14px;--fs-m:16px;--fs-l:18px;--fs-q:24px;--fs-h3:30px;
+  --fs-h2:clamp(38px,4.8vw,64px);--fs-h1:clamp(46px,6.6vw,92px);
+  --gutter:clamp(20px,4.5vw,72px);--max:1320px;--ease:cubic-bezier(.2,.7,.2,1);
+  --mark-accent:var(--rust);--brand-rule:var(--line);--surface:var(--paper);--node-line:var(--ink);--node-dot:var(--rust);--route-line:var(--line-strong);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs-m)/1.65 var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure,fieldset,blockquote{margin:0}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;text-wrap:balance}
+p,li,dd{text-wrap:pretty}
+ul,ol{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit;color:inherit;border-radius:0;-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}button:disabled{cursor:not-allowed}
+svg{display:block}button svg,a svg{flex:none}
+fieldset{border:0;padding:0;min-width:0}
+[hidden]{display:none!important}
+::selection{background:#c8d7d7;color:var(--ink)}
+.on-dark ::selection{background:#eaa98d;color:#102e3f}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.on-dark :focus-visible{outline-color:var(--terra)}
+.on-dark .form-panel :focus-visible{outline-color:var(--rust)}
+[tabindex="-1"]:focus{outline:none}
+em{font-family:var(--serif);font-style:italic;font-weight:400}
+section[id]{scroll-margin-top:16px}
+.on-dark{--mark-accent:var(--terra);--brand-rule:#708c9680}
+.wrap{width:min(var(--max),calc(100% - var(--gutter)*2));margin-inline:auto}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:20px;top:10px;z-index:200;transform:translateY(-160%);background:var(--ink);color:var(--white);padding:12px 20px}.skip:focus{transform:none}
+.tel{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* type */
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:var(--fs-s);letter-spacing:.1em;text-transform:uppercase;font-weight:700;line-height:1.4;color:var(--rust-text)}
+.eyebrow i{width:56px;height:9px;background:repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 7px);opacity:.7}
+.eyebrow .no{font-variant-numeric:tabular-nums}
+.on-dark .eyebrow{color:var(--terra)}
+.h2{font-size:var(--fs-h2);line-height:1.04;letter-spacing:-.025em}
+.eyebrow+.h2{margin-top:20px}
+.h2 em{color:var(--rust)}
+.on-dark .h2 em{color:var(--terra)}
+.lead{font-size:var(--fs-l);line-height:1.6;color:var(--muted);max-width:30em}
+.small{font-size:var(--fs-s);line-height:1.55}
+.sec{position:relative;padding:clamp(72px,9vw,120px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head .lead{justify-self:end;max-width:24em}
+.arrow{width:20px;height:20px;stroke:currentColor;stroke-width:1.5;fill:none}
+.br-d{display:none}
+@media(min-width:901px){.br-d{display:inline}}
+.fold{position:relative}
+.fold::after{content:'';position:absolute;top:0;right:0;width:24px;height:24px;background:linear-gradient(225deg,var(--behind) 50%,var(--flap) 50%);pointer-events:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:56px;padding:15px 24px;border:1px solid var(--ink);background:var(--ink);color:var(--white);font-size:var(--fs-m);line-height:1.2;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--ink-hover);border-color:var(--ink-hover)}
+.btn:active{background:#102e3f;border-color:#102e3f}
+.btn:disabled{background:transparent;color:#6b7b80;border-color:var(--line-strong);border-style:dashed}
+.on-dark .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.on-dark .btn:hover{background:#d4ddcf;border-color:#d4ddcf}
+.on-dark .btn:active{background:#bccbcb;border-color:#bccbcb}
+.on-dark .btn:disabled{background:transparent;color:#9db2b8;border-color:#7f969d}
+.on-dark .form-panel .btn,.on-dark .step-note .btn{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.on-dark .form-panel .btn:hover,.on-dark .step-note .btn:hover{background:var(--ink-hover);border-color:var(--ink-hover)}
+.on-dark .form-panel .btn:active,.on-dark .step-note .btn:active{background:#102e3f;border-color:#102e3f}
+.text-link{display:inline-flex;align-items:center;gap:12px;min-height:44px;font-size:var(--fs-m);border-bottom:1px solid currentColor;padding:10px 0;transition:color .25s}
+.text-link:hover{color:var(--rust-text)}
+.on-dark .text-link:hover{color:var(--terra)}
+.text-link svg{width:18px;height:18px}
+.link{background:none;border:0;padding:12px 0;min-height:44px;font-size:var(--fs-m);color:inherit;line-height:1.3;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px;transition:color .25s}
+.link:hover{color:var(--rust-text)}
+.on-dark .link:hover{color:var(--terra)}
+
+.reveal{opacity:1;transform:none}
+.motion .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s var(--ease)}
+.motion .reveal.is-visible{opacity:1;transform:none}
+
+/* header */
+.site-header{border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px}
+.brand{display:flex;gap:14px;align-items:center;min-height:44px}
+.brand-mark{width:42px;height:42px;color:var(--ink)}
+.brand>span{padding-left:14px;border-left:1px solid var(--brand-rule)}
+.brand-name{display:block;font:700 19px/1.1 var(--sans);letter-spacing:-.005em}
+.brand-caption{display:flex;align-items:center;gap:10px;margin-top:7px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);line-height:1}
+.brand-caption::after{content:"";width:30px;height:7px;background:repeating-linear-gradient(90deg,var(--mark-accent) 0 1px,transparent 1px 6px);opacity:.8}
+.desktop-nav{display:none;gap:34px;font-size:15px;letter-spacing:.005em;align-items:center;margin-left:auto;color:var(--ink2)}
+.desktop-nav a{position:relative;padding:12px 0;min-height:44px;display:inline-flex;align-items:center;transition:color .25s}
+.desktop-nav a::after{content:'';position:absolute;bottom:8px;left:0;width:0;height:1px;background:var(--rust);transition:width .3s var(--ease)}
+.desktop-nav a:hover,.desktop-nav a[aria-current]{color:var(--ink)}
+.desktop-nav a:hover::after,.desktop-nav a[aria-current]::after{width:100%}
+.header-actions{display:flex;align-items:center;gap:12px;margin-left:auto}
+.menu-toggle{display:flex;border:1px solid var(--ctl);width:44px;height:44px;background:transparent;align-items:center;justify-content:center;transition:background .25s}
+.menu-toggle:hover{background:var(--sand)}
+.mobile-nav{padding:6px 0 20px;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.mobile-nav a{display:flex;align-items:center;min-height:48px;padding:6px 2px;border-bottom:1px solid var(--line);font-size:var(--fs-m);transition:color .25s}
+.mobile-nav a:hover{color:var(--rust-text)}
+.mobile-nav .mobile-cta{grid-column:1/-1;margin-top:18px;min-height:56px;padding:15px 24px;border:1px solid var(--ink);color:var(--white);font-size:var(--fs-m)}
+.mobile-nav .mobile-cta:hover{color:var(--white)}
+@media(min-width:1180px){.desktop-nav{display:flex}.header-actions{display:none}.mobile-nav{display:none}}
+
+/* ruler */
+.ruler{position:fixed;right:10px;top:50%;height:min(60vh,560px);transform:translateY(-50%);width:26px;z-index:40;color:var(--ink);transition:color .5s;display:none;--accent:var(--rust);--tipbg:var(--paper);--tipfg:var(--ink)}
+@media(min-width:1180px){.ruler{display:block}}
+.ruler.on-dark{color:var(--on-blue);--accent:var(--terra);--tipbg:var(--blue-deep);--tipfg:var(--on-blue)}
+.ruler::before,.ruler::after{content:"";position:absolute;right:0;top:0;bottom:0;pointer-events:none}
+.ruler::before{width:4px;background:repeating-linear-gradient(to bottom,currentColor 0 1px,transparent 1px 10px);opacity:.16}
+.ruler::after{width:8px;background:repeating-linear-gradient(to bottom,currentColor 0 1px,transparent 1px 50px);opacity:.24}
+.ruler ul{list-style:none}
+.ruler li{position:absolute;right:0;width:100%;height:0}
+.ruler li a{position:absolute;right:-4px;top:-14px;width:28px;height:28px;display:flex;align-items:center;justify-content:flex-end}
+.ruler .dot{width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.6;margin-right:6px;transition:background .3s,opacity .3s,width .3s,height .3s,margin .3s}
+.ruler li.active .dot{background:var(--accent);opacity:1;width:7px;height:7px;margin-right:4.5px}
+.ruler .tip{position:absolute;right:34px;top:50%;transform:translateY(-50%);white-space:nowrap;font-size:var(--fs-s);line-height:1.4;opacity:0;transition:opacity .3s;pointer-events:none;background:var(--tipbg);color:var(--tipfg);padding:3px 10px;border:1px solid currentColor}
+.ruler li a:hover .tip,.ruler li a:focus-visible .tip,.ruler li.flash .tip{opacity:1}
+.ruler-needle{position:absolute;right:-1px;top:0;width:14px;height:0;border-top:1px solid var(--accent);pointer-events:none}
+.ruler-needle::after{content:"";position:absolute;left:-1px;top:-4px;border:4px solid transparent;border-right:6px solid var(--accent);border-left:0}
+
+/* hero */
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero{padding-top:clamp(28px,4vw,56px);position:relative;display:flex;flex-direction:column}
+@media(min-width:901px){.hero{min-height:calc(100vh - 89px);min-height:calc(100svh - 89px)}.hero-main{flex:1}}
+.hero-main{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,80px);align-items:center}
+.hero-copy>*{animation:rise .9s var(--ease) both}
+.hero-copy>:nth-child(2){animation-delay:.1s}.hero-copy>:nth-child(3){animation-delay:.2s}.hero-copy>:nth-child(4){animation-delay:.3s}.hero-copy>:nth-child(5){animation-delay:.4s}
+.hero h1{font-size:var(--fs-h1);line-height:.98;letter-spacing:-.03em;margin-top:24px}
+.hero h1 em{color:var(--rust);display:block}
+.hero-sub{max-width:24em;font-size:var(--fs-l);line-height:1.6;margin-top:28px;color:var(--ink2)}
+.hero-actions{margin-top:32px;display:flex;gap:16px 32px;align-items:center;flex-wrap:wrap}
+.hero-note{margin-top:16px;color:var(--muted);font-size:var(--fs-s);font-variant-numeric:tabular-nums}
+.hero-visual{position:relative;animation:rise 1s var(--ease) .2s both;width:100%;max-width:580px;justify-self:end;aspect-ratio:1}
+@media(min-width:901px){.hero-visual{max-width:100%;width:clamp(340px,calc(100vh - 330px),580px);width:clamp(340px,calc(100svh - 330px),580px)}}
+.hero-rings{position:absolute;inset:0;width:100%;height:100%;overflow:visible;color:var(--ink)}
+.hero-needle{transform-origin:50% 50%;transition:transform .4s var(--ease)}
+.hero-disc{position:absolute;left:10%;bottom:10%;width:80%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--sand-line)}
+.hero-disc img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 14%}
+.hero-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid var(--ink);margin-top:clamp(28px,3.5vw,48px);padding:24px 0 clamp(28px,3.5vw,48px)}
+.hero-facts div{display:grid;gap:2px;align-content:start}
+.hero-facts b{font:400 clamp(36px,3.6vw,48px)/1.05 var(--serif);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.hero-facts b em{font-style:normal;font-size:.62em;letter-spacing:0}
+.hero-facts span{margin-top:6px}
+.hero-facts span{font-size:var(--fs-s);color:var(--muted);line-height:1.5;max-width:20em}
+
+/* situations */
+.sit-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.sit{position:relative;perspective:1400px;cursor:pointer;display:flex}
+.sit-inner{flex:1;min-width:0;display:grid;transform-style:preserve-3d;transition:transform .8s var(--ease)}
+.sit.is-flipped .sit-inner{transform:rotateY(180deg)}
+.sit-face{grid-area:1/1;position:relative;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:1px solid var(--edge);border-top:2px solid var(--ink);padding:31px 32px 36px;transition:border-color .3s,box-shadow .3s}
+.sit-front{background:var(--white)}
+.sit-back{background:var(--blue);color:var(--on-blue);border-color:var(--blue);transform:rotateY(180deg)}
+.sit:hover .sit-front{border-top-color:var(--rust);box-shadow:0 14px 28px -18px #17394c66}
+.sit:hover .sit-back{box-shadow:0 14px 28px -18px #102e3f99}
+.sit-top,.back-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px}
+.sit-front,.sit-back{display:flex;flex-direction:column}
+.flip{flex:none;align-self:flex-start;margin-top:auto;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 18px;border:1px solid var(--ctl);background:transparent;color:var(--ink);font-size:var(--fs-s);line-height:1.2;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.flip::after{content:"";position:absolute;inset:0}
+.flip svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.flip:hover{background:var(--sand)}
+.sit-back .flip{color:var(--on-blue);border-color:#8ea6ad}
+.sit-back .flip:hover{background:var(--blue-deep)}
+.sit:hover .sit-front .flip{border-color:var(--ink)}
+.sit .flip:focus-visible,.sit-back .flip:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.sit-back .flip:focus-visible{outline-color:var(--terra)}
+.glyph{width:84px;height:84px;border-radius:50%;background:var(--white);border:1px solid var(--ctl);display:grid;place-items:center;transition:border-color .3s}
+.sit:hover .glyph{border-color:var(--rust)}
+.glyph svg{width:60px;height:60px;overflow:visible}
+.gs{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.gk{fill:var(--ink)}.ga{fill:var(--rust)}
+.sit h3{display:flex;align-items:flex-end;font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.015em;margin-top:28px;min-height:2.3em}
+.sit-quote{font:italic 400 var(--fs-q)/1.3 var(--serif);color:var(--rust-text);margin-top:12px}
+.sit-text{font-size:var(--fs-m);line-height:1.65;color:var(--muted);margin-top:14px;margin-bottom:32px;max-width:22em}
+.back-label{display:flex;align-items:center;min-height:84px;font-size:var(--fs-s);letter-spacing:.1em;text-transform:uppercase;font-weight:700;line-height:1.4;color:var(--terra)}
+.back-q{font:400 var(--fs-h3)/1.25 var(--serif);letter-spacing:-.01em;margin-top:28px;margin-bottom:32px;text-wrap:balance}
+.sit-aside{display:flex;align-items:center;justify-content:space-between;gap:24px 40px;flex-wrap:wrap;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.aside-quote{display:flex;align-items:center;gap:16px;font:italic 400 var(--fs-q)/1.3 var(--serif);max-width:26em}
+.aside-quote svg{width:38px;height:38px;color:var(--ink)}
+.on-dark .aside-quote svg{color:var(--on-blue)}
+
+/* compass */
+.compass{--surface:var(--blue);--node-line:var(--on-blue-muted);--node-dot:var(--terra);--route-line:#708c96;background:var(--blue);color:var(--on-blue);overflow:hidden;overflow:clip}
+.compass::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 119px,#bed0cf05 119px 120px);pointer-events:none}
+.compass .wrap{position:relative}
+.compass .sec-head .lead{color:var(--on-blue-muted)}
+.compass-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,6vw,90px);align-items:stretch;scroll-margin-top:24px}
+.cp-panel{min-width:0;display:flex;flex-direction:column;gap:24px}
+.cp-steps{display:flex;gap:12px}
+.cp-steps li{flex:1;min-width:0;border-bottom:2px solid #708c964d}
+.cp-steps button{display:flex;gap:8px;width:100%;padding:12px 0;border:0;background:none;text-align:left;font-size:var(--fs-s);font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.4;color:var(--on-blue-muted);font-variant-numeric:tabular-nums;transition:color .25s,opacity .25s}
+.cp-steps li[data-state=open] button:hover{color:var(--paper)}
+.cp-steps li[data-state=todo] button{opacity:.4}
+.cp-steps li[data-state=current]{border-color:var(--terra)}
+.cp-steps li[data-state=current] button{color:var(--paper)}
+.cp-h{font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.01em}
+.cp-lead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px;margin-top:10px}
+.cp-text{flex:1 1 20em;font-size:var(--fs-m);line-height:1.6;color:var(--on-blue-muted);max-width:32em}
+.cp-count{display:flex;align-items:center;gap:10px;font-size:var(--fs-m);font-weight:700;color:var(--paper);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cp-meter{display:flex;gap:6px}
+.cp-meter i{width:10px;height:10px;border:1.5px solid var(--terra);border-radius:50%;transition:background .3s}
+.cp-meter i.on{background:var(--terra)}
+.cp-label+.cp-text{margin-top:6px}
+.cp-label{font-size:var(--fs-m);font-weight:700;margin-top:26px}
+.picks{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px}
+.pick{position:relative;background:var(--blue-deep);border:1px solid transparent;padding:12px 16px;text-align:left;display:grid;gap:2px;min-height:64px;align-content:center;transition:background .2s,color .2s,border-color .2s}
+.pick b{font-weight:700;font-size:var(--fs-m);line-height:1.3}
+.pick span{font-size:var(--fs-s);line-height:1.4;color:var(--on-blue-dim)}
+.pick .num{display:none}
+[data-labels=num] .pick{padding-left:44px}
+[data-labels=num] .pick .num{display:block;position:absolute;left:16px;top:12px;font-weight:700;font-size:var(--fs-m);color:var(--terra);font-variant-numeric:tabular-nums;line-height:1.3}
+.pick:hover{background:var(--blue-hover);border-color:#708c96}
+.pick[aria-pressed=true]{background:var(--blue-sel)}
+.pick.is-off b{color:#a9bcc0}
+.pick.is-off:hover{background:var(--blue-deep);border-color:transparent}
+.own-row{margin-top:var(--row-gap,14px);border:0;padding:0;min-width:0}
+.own-row legend{font:700 var(--fs-m)/1.3 var(--sans);padding:0;margin-bottom:10px;float:left;width:100%}
+.own-row legend .num{display:none}
+[data-labels=num] .own-row legend .num{display:inline-block;min-width:1.6em;color:var(--terra);font-variant-numeric:tabular-nums}
+.seg-group{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:6px;clear:both}
+.seg{position:relative;display:block}
+.seg input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:flex-start;text-align:left;min-height:44px;padding:8px 14px;background:var(--blue-deep);border:1px solid transparent;font-size:var(--fs-s);line-height:1.25;transition:background .2s,color .2s,border-color .2s}
+.seg:hover span{background:var(--blue-hover);border-color:#708c96}
+.seg input:checked+span{background:var(--blue-sel)}
+.seg input:focus-visible+span{outline:3px solid var(--terra);outline-offset:2px}
+.cp-actions{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:22px}
+.cp-back{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 0;background:none;border:0;color:var(--on-blue-muted);font-size:var(--fs-m);line-height:1.3;transition:color .25s}
+.cp-back:hover{color:var(--terra)}
+.cp-back .arrow{width:18px;height:18px}
+.cp-actions .link{color:var(--on-blue-muted)}
+.cp-actions .link:hover{color:var(--terra)}
+.notice{color:#f1c1a9;margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--blue-deep);border:1px solid transparent;padding:12px 16px;font-size:var(--fs-m);line-height:1.2;min-height:48px;transition:background .2s,color .2s,border-color .2s}
+.chip:hover{background:var(--blue-hover);border-color:#708c96}
+.chip[aria-pressed=true]{background:var(--blue-sel)}
+.plan{margin-top:6px;--row-gap:22px}
+.plan .own-row+.own-row{border-top:1px solid #708c964d;padding-top:var(--row-gap)}
+.radios{clear:both}
+.radio{display:flex;align-items:flex-start;gap:14px;padding:7px 0;color:var(--on-blue-muted);cursor:pointer;transition:color .2s}
+.radio:hover{color:var(--paper)}
+.radio input{appearance:none;flex:none;width:22px;height:22px;margin:1px 0 0;border:1.5px solid var(--on-blue-muted);border-radius:50%;background:transparent;cursor:pointer;transition:border-color .2s,background .2s}
+.radio input:checked{border-color:var(--terra);background:radial-gradient(circle,var(--terra) 0 5px,transparent 6px)}
+.radio input:focus-visible{outline:3px solid var(--terra);outline-offset:2px}
+.radio input:checked+span{color:var(--paper)}
+.radio span{line-height:1.4}
+.step-note{--behind:var(--blue);--flap:#9fb3a6;--pad:20px 28px 24px;display:flex;flex-direction:column;background:var(--note);color:var(--ink);padding:var(--pad)}
+.step-note .btn{margin-top:auto;align-self:flex-start}
+.plan+.step-note{margin-top:16px}
+.step-note .small{font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.step-text{font:400 var(--step-fs,var(--fs-q))/1.35 var(--serif);margin:10px 0 28px;overflow-wrap:anywhere}
+.step-text.is-empty{color:var(--ink2);font-style:italic}
+.dial .step-note{--step-fs:var(--fs-h3);--pad:clamp(76px,8vw,92px) clamp(28px,4vw,56px) clamp(32px,4vw,56px);display:none;min-height:580px}
+#compass-app[data-view=note] .dial .step-note{display:flex;animation:note-in .7s var(--ease) both}
+@keyframes note-in{from{opacity:0;transform:translateY(18px)}}
+#compass-app[data-view=note] #dial-svg,#compass-app[data-view=note] .dial-legend{display:none}
+.dial-toggle{position:absolute;top:16px;left:16px;z-index:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:1px solid transparent;color:var(--on-blue);transition:background .2s,border-color .2s,color .2s}
+#compass-app[data-view=note] .dial-toggle{color:var(--ink)}
+.dial-toggle:hover{background:color-mix(in srgb,currentColor 10%,transparent);border-color:currentColor}
+.dial-toggle svg{width:28px;height:28px}
+.dial{width:100%;max-width:580px;margin-inline:auto;align-self:start;position:sticky;top:24px}
+#dial-svg{width:100%;height:auto;overflow:visible;-webkit-tap-highlight-color:transparent}
+#compass-app[data-screen=a] #dial-svg{cursor:pointer}
+.ring{fill:none;stroke:#8ca6ae}
+.dial-legend{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:18px;font-size:var(--fs-s);color:var(--on-blue-muted);justify-content:center}
+#compass-app[data-screen=a] .dial-legend{display:none}
+.dial-legend li{display:flex;align-items:center;gap:10px}
+.dial-legend svg{width:26px;height:10px;overflow:visible}
+.dial .dot{transition:transform .7s var(--ease),opacity .5s;opacity:0;pointer-events:none}
+.dial .dot.on{opacity:1}
+.dial .dot .hit{fill:transparent;stroke:none}
+.dial .dot .pt{fill:var(--terra);stroke:var(--blue);stroke-width:2.5;transition:r .3s,fill .3s}
+.dial .dot.hollow .pt{fill:var(--blue);stroke:var(--terra)}
+.dial .dot.focus .pt{r:13}
+#compass-app:is([data-screen=a],[data-screen=o]) .dial .dot.on{pointer-events:all;cursor:grab;touch-action:none}
+.dial .dot.drag{transition:opacity .5s;cursor:grabbing}
+.dial .dot.drag .pt{r:13}
+.axis line{stroke:#c2d2d2;stroke-width:.75;opacity:.2;transition:opacity .4s}
+.axis .tick{fill:#e5ede4;opacity:.35;transition:opacity .4s}
+.axis text{font:400 17px var(--sans);fill:#c2d2d2;transition:fill .3s}
+.axis .lbl-n{display:none;font:700 30px var(--sans);font-variant-numeric:tabular-nums}
+[data-labels=num] .axis .lbl-w{display:none}
+[data-labels=num] .axis .lbl-n{display:block}
+.axis.sel line,.axis.hot line{opacity:.55}.axis.sel .tick,.axis.hot .tick{opacity:1}.axis.sel text,.axis.hot text{fill:var(--paper);font-weight:700}
+.shape{fill:#b9d5c326;stroke:#bbd2c8;stroke-width:1.4;stroke-linejoin:round}
+#needle{transition:transform 1s cubic-bezier(.2,.7,.3,1);pointer-events:none}
+.needle-n{fill:var(--terra)}.needle-s{fill:var(--paper);fill-opacity:.9}
+.hub{fill:var(--blue);stroke:var(--paper);stroke-width:2}
+
+/* about */
+.about{--surface:var(--sand);background:var(--sand);border-top:1px solid var(--sand-line);border-bottom:1px solid var(--sand-line)}
+.about-layout{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,8vw,120px);align-items:start}
+.about .eyebrow{margin-bottom:clamp(28px,3.5vw,48px)}
+.about-id{--behind:var(--sand);--flap:#cbbf9f;border:1px solid var(--edge);border-top:2px solid var(--ink);background:var(--white);padding:clamp(28px,3.5vw,44px) clamp(24px,3.5vw,44px) clamp(20px,2.5vw,32px)}
+.about-name{font-size:clamp(38px,4vw,56px)}
+.about-speciality{margin-top:20px;font-size:var(--fs-m);color:var(--ink2)}
+.facts{margin-top:32px;border-top:1px solid var(--ink)}
+.facts div:last-child{border-bottom:0;padding-bottom:0}
+.about-content .aside-quote{margin-top:44px;max-width:24em;align-items:flex-start}
+.about-content .aside-quote svg{flex:none;margin-top:2px}
+.facts div{display:grid;gap:3px;padding:18px 0 20px;border-bottom:1px solid var(--edge);line-height:1.5}
+.facts dt{color:var(--ink2);font-size:var(--fs-s);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-bottom:5px}
+.facts dd{font-variant-numeric:tabular-nums}
+.facts b{display:block;font:400 var(--fs-q)/1.25 var(--serif);letter-spacing:-.01em}
+.facts span{display:block;max-width:30em;font-size:var(--fs-s);line-height:1.55;color:var(--muted)}
+.about-heading{font-size:clamp(30px,3vw,42px);line-height:1.12;letter-spacing:-.015em}
+.about-heading em{color:var(--rust)}
+.about-content .body{margin-top:20px;font-size:var(--fs-l);line-height:1.65;max-width:32em}
+.approach{margin-top:44px;padding-top:36px;border-top:1px solid var(--ink);--nt:3px;--rg:32px}
+.approach h3{font-size:var(--fs-q);line-height:1.2}
+.approach p{margin-top:6px;font-size:var(--fs-m);line-height:1.6;color:var(--ink2);max-width:30em}
+.about-content .text-link{margin-top:28px}
+
+/* method */
+.trail{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,48px);padding-top:44px}
+.trail::before,.trail::after{content:"";position:absolute;left:0;right:0;top:11px;height:1px}
+.trail::before{background:var(--line-strong)}
+.trail::after{background:var(--rust);transform-origin:left;transition:transform 1.6s var(--ease) .2s}
+.motion .trail::after{transform:scaleX(0)}.motion .trail.is-visible::after{transform:none}
+.station{position:relative}
+.station::before,.route>li::before{content:"";position:absolute;width:23px;height:23px;border-radius:50%;background:radial-gradient(circle,var(--node-dot) 0 4px,var(--surface) 5px);border:1px solid var(--node-line)}
+.station::before{top:-44px;left:0;transition:opacity .5s,transform .5s var(--ease)}
+.route{display:grid;gap:var(--rg)}
+.route>li{position:relative;padding-left:56px}
+.route>li::before{left:0;top:var(--nt)}
+.route>li:not(:last-child)::after{content:"";position:absolute;left:11px;top:calc(var(--nt) + 23px);bottom:calc(-1*(var(--rg) + var(--nt)));width:1px;background:var(--route-line)}
+.motion .station::before{opacity:0;transform:scale(.4)}
+.motion .trail.is-visible .station::before{opacity:1;transform:none}
+.motion .trail.is-visible .station:nth-child(1)::before{transition-delay:.2s}.motion .trail.is-visible .station:nth-child(2)::before{transition-delay:.6s}.motion .trail.is-visible .station:nth-child(3)::before{transition-delay:1s}.motion .trail.is-visible .station:nth-child(4)::before{transition-delay:1.4s}
+.station h3{font-size:var(--fs-h3);line-height:1.15;letter-spacing:-.015em}
+.st-meta{display:block;margin-top:8px;font-size:var(--fs-s);letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--rust-text);line-height:1.4;font-variant-numeric:tabular-nums}
+.station p{margin-top:12px;font-size:var(--fs-m);line-height:1.65;color:var(--muted);max-width:20em}
+.words{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:clamp(30px,6vw,90px);margin-top:clamp(72px,9vw,120px);padding-top:44px;border-top:1px solid var(--ink)}
+.words h3{font-size:clamp(30px,3vw,40px);line-height:1.1;letter-spacing:-.02em;max-width:9em}
+.pairs-head,.pair{display:grid;grid-template-columns:minmax(0,.8fr) 32px minmax(0,1.4fr);gap:16px;align-items:center}
+.pairs-head{padding-bottom:12px;color:var(--muted);font-size:var(--fs-s);letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+.pairs-head span:nth-child(3){color:var(--rust-text)}
+.pair{padding:20px 0;border-top:1px solid var(--line)}
+.pair:last-child{border-bottom:1px solid var(--line)}
+.pair .no{font-size:var(--fs-m);color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:var(--line-strong)}
+.pair .yes{font:italic 400 var(--fs-q)/1.3 var(--serif)}
+.pair svg{width:24px;height:24px;color:var(--rust);stroke:currentColor;fill:none;stroke-width:1.5}
+
+/* pricing */
+.pricing{--surface:var(--sand);background:var(--sand);border-top:1px solid var(--sand-line);border-bottom:1px solid var(--sand-line)}
+.price-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);grid-template-rows:auto 1fr;grid-template-areas:"copy card" "notes card";column-gap:clamp(40px,7vw,100px);align-items:start}
+.price-copy{grid-area:copy}.price-card{grid-area:card}.price-notes{grid-area:notes}
+.faq-side{position:sticky;top:32px}
+.price-copy .lead{margin-top:24px;max-width:24em}
+.price-copy .aside-quote{margin-top:36px;max-width:20em}
+.price-card{--behind:var(--sand);--flap:#cbbf9f;border:1px solid var(--edge);border-top:2px solid var(--ink);background:var(--white);padding:36px 36px 32px}
+.menu{margin-top:14px}
+.row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row dt{font:400 var(--fs-q)/1.25 var(--serif)}
+.row dt small{display:block;font:400 var(--fs-s)/1.4 var(--sans);color:var(--muted);margin-top:4px}
+.row .dots{height:1px;margin-top:17px;background:repeating-linear-gradient(90deg,var(--line-strong) 0 2px,transparent 2px 7px);min-width:16px}
+.row .sum{font:400 var(--fs-h3)/1.1 var(--serif);white-space:nowrap;font-variant-numeric:tabular-nums}
+.row .sum span{font:400 .6em var(--sans);margin-left:.2em}
+.row.feat{background:var(--sand);margin:0 -16px;padding:18px 16px}
+.row.feat dt small{color:var(--ink2)}
+.notes{display:grid;gap:10px;font-size:var(--fs-m);line-height:1.55;color:var(--ink2)}
+.price-notes{margin-top:36px;padding-top:24px;border-top:1px solid var(--edge);max-width:26em}
+.notes li{display:flex;gap:12px}
+.notes li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--rust);margin-top:.7em}
+.price-card .btn{width:100%;margin-top:26px}
+
+/* faq */
+.faq-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(36px,6vw,90px);align-items:start}
+.faq-side .lead{margin-top:24px;max-width:18em}
+.faq-side .text-link{margin-top:20px}
+.faq-list{--behind:var(--paper);--flap:#cbbf9f;background:var(--white);border:1px solid var(--edge);border-top:2px solid var(--ink);padding:0 clamp(24px,3.5vw,44px)}
+.faq-item{border-bottom:1px solid var(--line)}.faq-item:last-child{border-bottom:0}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 0;min-height:88px;background:none;border:0;text-align:left;font-size:var(--fs-q);line-height:1.3;letter-spacing:-.005em;transition:color .25s}
+.faq-q:hover{color:var(--rust-text)}
+.faq-ico{position:relative;flex:none;width:36px;height:36px;border:1px solid var(--ctl);border-radius:50%;transition:background .3s,border-color .3s}
+.faq-ico::before,.faq-ico::after{content:'';position:absolute;left:11px;top:16px;width:12px;height:1px;background:var(--ink);transition:transform .3s,background .3s}
+.faq-ico::after{transform:rotate(90deg)}
+.faq-q[aria-expanded=true] .faq-ico{background:var(--ink);border-color:var(--ink)}.faq-q[aria-expanded=true] .faq-ico::before,.faq-q[aria-expanded=true] .faq-ico::after{background:var(--white)}.faq-q[aria-expanded=true] .faq-ico::after{transform:none}
+.faq-a{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .4s var(--ease),visibility 0s .4s}
+.faq-a>div{overflow:hidden}
+.faq-item.is-open .faq-a{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .4s var(--ease),visibility 0s}
+.faq-a p{font-size:var(--fs-l);line-height:1.65;color:var(--ink2);padding:0 68px 30px 0;max-width:38em}
+
+/* booking */
+.booking{--surface:var(--blue);--node-line:var(--on-blue-muted);--node-dot:var(--terra);--route-line:#708c96;background:var(--blue);color:var(--on-blue)}
+.book-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,100px);align-items:start}
+.book-copy .lead{color:var(--on-blue-muted);margin-top:26px}
+.book-copy .aside-quote{margin-top:32px;max-width:20em}
+.after{margin-top:32px;max-width:28em;--nt:1px;--rg:22px;font-size:var(--fs-m);line-height:1.55}
+.direct{margin-top:36px;padding-top:24px;border-top:1px solid #708c964d;font-size:var(--fs-m);color:var(--on-blue-muted)}
+.contacts{display:flex;flex-wrap:wrap;gap:0 28px;margin-top:6px}
+.contacts a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-blue);border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+.contacts a:hover{color:var(--terra);border-color:var(--terra)}
+.where{margin-top:6px}
+.form-panel{--behind:var(--blue);--flap:#9fb3b3;background:var(--paper);color:var(--ink);padding:40px 36px 36px}
+.field{display:block;margin-bottom:20px}
+.field>label:not(.check){display:block;font-size:var(--fs-s);font-weight:700;margin-bottom:8px}
+.hint{font-weight:400;color:var(--muted)}
+.inp{width:100%;border:1px solid #6f7f84;background:var(--white);color:var(--ink);padding:12px 14px;min-height:48px;font-size:var(--fs-m);line-height:1.4;transition:border-color .2s,box-shadow .2s}
+.inp:hover{border-color:var(--ink)}
+.inp:focus-visible{outline:3px solid var(--rust);outline-offset:1px}
+.inp::placeholder{color:#5d6d71;opacity:1}
+textarea.inp{min-height:104px;resize:vertical}
+.inp[aria-invalid=true]{border-color:var(--rust);box-shadow:inset 0 0 0 1px var(--rust)}
+.err{display:block;font-size:var(--fs-s);line-height:1.45;color:var(--rust-text);margin-top:6px;font-weight:700}
+.err:empty{display:none}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:var(--fs-s);line-height:1.5;cursor:pointer;min-height:44px;padding:6px 0}
+.check input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--ink)}
+.consent-link{display:inline-flex;align-items:center;min-height:44px;margin-left:34px;font-size:var(--fs-s);text-decoration:underline;text-underline-offset:3px;transition:color .25s}
+.consent-link:hover{color:var(--rust-text)}
+.submit-row{margin-top:8px;display:grid;gap:12px}
+.submit-row small{font-size:var(--fs-s);color:var(--muted);line-height:1.5}
+.done{text-align:left}
+.done .stamp{width:84px;height:84px;color:var(--rust);margin-bottom:18px}
+.done .stamp circle{fill:none;stroke:currentColor;stroke-width:1.2}
+.done h3{font-size:38px;line-height:1.1;letter-spacing:-.015em}
+.done p{margin-top:14px;font-size:var(--fs-m);line-height:1.65;color:var(--ink2)}
+.done .done-map{background:var(--note);padding:14px 16px;font-size:var(--fs-s);color:var(--ink);overflow-wrap:anywhere}
+.done .link{margin-top:14px;color:var(--ink)}
+.done .link:hover{color:var(--rust-text)}
+
+/* footer */
+/* footer */
+.site-footer{position:relative;background:var(--blue-deep);color:var(--on-blue);--surface:var(--blue-deep)}
+.foot-scale{height:14px;background:repeating-linear-gradient(90deg,#8ca6ae 0 1px,transparent 1px 10px) left top/100% 7px no-repeat,repeating-linear-gradient(90deg,#bccbcb 0 1px,transparent 1px 50px) left top/100% 14px no-repeat;opacity:.45}
+.site-footer .wrap{padding-top:clamp(48px,6vw,80px)}
+.foot-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr) minmax(0,.7fr);gap:clamp(36px,5vw,80px);align-items:start}
+.on-dark .brand-name{color:var(--on-blue)}
+.on-dark .brand-mark{color:var(--on-blue)}
+.on-dark .brand-caption{color:var(--on-blue-muted)}
+.foot-sign{font:400 clamp(32px,3.4vw,46px)/1.08 var(--serif);letter-spacing:-.02em;margin-top:36px;max-width:9em}
+.foot-sign em{color:var(--terra)}
+.foot-line{margin-top:20px;color:var(--on-blue-muted);max-width:24em}
+.foot-h{font-size:var(--fs-s);letter-spacing:.1em;text-transform:uppercase;font-weight:700;line-height:1.4;color:var(--terra);margin-bottom:10px}
+.foot-col a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-blue);border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+.foot-col a:hover{color:var(--terra);border-color:var(--terra)}
+.foot-bottom{margin-top:clamp(40px,5vw,64px);padding:24px 0 32px;border-top:1px solid #708c964d;display:grid;gap:12px;color:var(--on-blue-muted);font-size:var(--fs-s);line-height:1.65}
+.foot-bottom p{max-width:54em}
+.foot-legal{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0 24px;max-width:none!important}
+.foot-legal a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px;transition:color .25s}
+.foot-legal a:hover{color:var(--terra)}
+
+@media(max-width:1120px){
+  .compass-body{gap:40px}
+}
+@media(max-width:900px){
+  .price-copy,.faq-side{position:static}
+  .foot-main{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}
+    .hero-main{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(46px,9.4vw,76px)}
+  .hero-visual{max-width:440px;justify-self:center}
+  .sec-head{grid-template-columns:1fr;gap:20px}
+  .sec-head .lead{justify-self:start}
+  .sit-list{grid-template-columns:1fr}
+  .sit-front{display:grid;grid-template-columns:84px 1fr;column-gap:24px;align-content:start}
+  .sit-top{display:contents}
+  .sit-front .glyph{grid-row:1/4}.sit-front .flip{grid-column:2;grid-row:4;justify-self:start;margin-top:24px}
+  .sit h3{grid-column:2;margin-top:0;min-height:0;display:block}.sit-quote,.sit-text{grid-column:2}.sit-text{margin-bottom:0}
+  .sit-back .back-label{min-height:44px}.back-q{margin-top:12px}
+  .compass-body{grid-template-columns:1fr}
+  .dial{order:-1;max-width:none;top:0;z-index:2;background:var(--blue);padding:8px 0}
+  #dial-svg{width:min(100%,260px,34svh);margin-inline:auto}
+  .dial-legend{display:none}
+  .about-layout{grid-template-columns:1fr;gap:48px}
+  .trail{grid-template-columns:1fr;gap:34px;padding:0 0 0 54px}
+  .trail::before,.trail::after{left:11px;right:auto;top:6px;bottom:6px;width:1px;height:auto}
+  .trail::after{transform-origin:top}.motion .trail::after{transform:scaleY(0)}.motion .trail.is-visible::after{transform:none}
+  .station::before{top:2px;left:-54px}
+  .station p{max-width:32em}
+  .words{grid-template-columns:1fr;gap:28px}
+  .price-layout{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"copy" "card" "notes";row-gap:40px}
+  .price-notes{margin-top:0}
+  .book-layout,.faq-layout{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:700px){
+  .pairs-head{display:none}
+  .pair{grid-template-columns:1fr;gap:8px;padding:18px 0}.pair svg{display:none}
+  .pair .no::before{content:"Не услышите: ";font-size:var(--fs-s);letter-spacing:.06em;text-transform:uppercase;font-weight:700;text-decoration:none;display:inline-block;margin-right:4px}
+  .hero-facts{grid-template-columns:1fr;gap:18px}
+}
+@media(max-width:640px){
+  :root{--gutter:20px}
+  .header-inner{min-height:76px}
+  .brand-mark{width:36px;height:36px}.brand-name{font-size:17px}
+  .sec{padding:64px 0}
+  .hero-actions .btn{width:100%}
+  .picks{gap:6px}.pick{padding:10px 12px}
+  [data-labels=num] .pick{padding-left:40px}[data-labels=num] .pick .num{left:12px;top:10px}
+  .price-card{padding:30px 22px 26px}.row.feat{margin:0 -12px;padding:16px 12px}
+  .row .sum{font-size:26px}
+  .form-panel{padding:36px 20px 26px}
+  .faq-list{padding-inline:20px}
+  .faq-q{gap:20px;padding:22px 0;min-height:76px;font-size:21px}
+  .faq-a p{padding-right:0;padding-bottom:24px}
+  .foot-main{grid-template-columns:1fr}
+  .sit-face{padding:24px 20px 28px}
+  .sit-front{display:flex;flex-direction:column}.sit-front .flip{margin-top:auto}.sit-text{margin-bottom:24px}
+  .sit-top{display:flex}
+  .sit h3{margin-top:20px;display:block}
+  .glyph{width:64px;height:64px}.glyph svg{width:44px;height:44px}
+  .back-label{min-height:64px}
+  .mobile-nav{grid-template-columns:1fr}
+  .step-note{--pad:22px 20px 24px}
+}
+@media(max-width:400px){
+  .picks{grid-template-columns:1fr}
+  .seg span{padding:8px 10px}
+}
+@media(max-width:360px){
+  .sit-face{padding-inline:16px}.sit-top{gap:8px}
+  .flip{padding:0 12px;gap:6px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
+  <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M3 12h17M13 5l7 7-7 7"/></symbol>
+  <symbol id="arrow-left" viewBox="0 0 24 24"><path d="M21 12H4M11 5l-7 7 7 7"/></symbol>
+  <symbol id="step-mark" viewBox="0 0 44 44"><path d="M11 6.5h22v31H11z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M16.5 15h11M16.5 22h11M16.5 29h6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></symbol>
+  <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 3v17M5 13l7 7 7-7"/></symbol>
+  <symbol id="compass-mark" viewBox="0 0 44 44"><circle cx="22" cy="22" r="16.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M22 1.5v6M22 36.5v6M1.5 22h6M36.5 22h6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><g transform="rotate(40 22 22)"><path d="M22 9.5 25.6 22h-7.2z" style="fill:var(--mark-accent,currentColor)"/><path d="M22 34.5 25.6 22h-7.2z" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></g><circle cx="22" cy="22" r="1.6" fill="currentColor"/></symbol>
+</defs></svg>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Алексей Громов — в начало страницы"><svg class="brand-mark" aria-hidden="true"><use href="#compass-mark"/></svg><span><span class="brand-name">Алексей Громов</span><span class="brand-caption">Психолог</span></span></a>
+    <nav class="desktop-nav" aria-label="Основная навигация"><a href="#situations">С чем приходят</a><a href="#compass">Компас</a><a href="#about">Обо мне</a><a href="#method">Как проходит работа</a><a href="#pricing">Стоимость</a><a href="#faq">Вопросы</a></nav>
+    <div class="header-actions">
+    <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path id="menu-lines" d="M2 6h16M2 13h16"/></svg></button></div>
+  </div>
+  <nav class="wrap mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden><a href="#situations">С чем приходят</a><a href="#compass">Компас</a><a href="#about">Обо мне</a><a href="#method">Как проходит работа</a><a href="#pricing">Стоимость</a><a href="#faq">Вопросы</a><a class="btn mobile-cta" href="#booking">Записаться<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></a></nav>
+</header>
+
+<main id="main">
+
+<section class="hero wrap" id="top" data-theme="light" data-name="Начало" aria-labelledby="hero-title">
+  <div class="hero-main">
+    <div class="hero-copy">
+      <p class="eyebrow"><i aria-hidden="true"></i>Психолог · Москва и онлайн</p>
+      <h1 id="hero-title"><em>Свой курс</em> вместо чужой карты</h1>
+      <p class="hero-sub">Между «так надо» и «я хочу» бывает трудно услышать себя. Давайте искать ваше направление.</p>
+      <div class="hero-actions"><a class="btn" href="#booking">Записаться на знакомство<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></a><a class="text-link" href="#compass">Пройти упражнение<svg class="arrow" aria-hidden="true"><use href="#arrow-down"/></svg></a></div>
+      <p class="hero-note">Знакомство — 30 минут, 1 500 ₽. Ни к чему не обязывает.</p>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-rings" viewBox="0 0 100 100" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="50" cy="50" r="43" stroke-width=".2" opacity=".6"/><path d="M53.75 7.16L53.85 5.97M57.47 7.65L57.68 6.47M61.13 8.47L61.44 7.31M64.71 9.59L65.12 8.47M68.17 11.03L68.68 9.94M74.66 14.78L75.35 13.79M77.64 17.06L78.41 16.14M80.41 19.59L81.25 18.75M82.94 22.36L83.86 21.59M85.22 25.34L86.21 24.65M88.97 31.83L90.06 31.32M90.41 35.29L91.53 34.88M91.53 38.87L92.69 38.56M92.35 42.53L93.53 42.32M92.84 46.25L94.03 46.15M92.84 53.75L94.03 53.85M92.35 57.47L93.53 57.68M91.53 61.13L92.69 61.44M90.41 64.71L91.53 65.12M88.97 68.17L90.06 68.68M85.22 74.66L86.21 75.35M82.94 77.64L83.86 78.41M80.41 80.41L81.25 81.25M77.64 82.94L78.41 83.86M74.66 85.22L75.35 86.21M68.17 88.97L68.68 90.06M64.71 90.41L65.12 91.53M61.13 91.53L61.44 92.69M57.47 92.35L57.68 93.53M53.75 92.84L53.85 94.03M46.25 92.84L46.15 94.03M42.53 92.35L42.32 93.53M38.87 91.53L38.56 92.69M35.29 90.41L34.88 91.53M31.83 88.97L31.32 90.06M25.34 85.22L24.65 86.21M22.36 82.94L21.59 83.86M19.59 80.41L18.75 81.25M17.06 77.64L16.14 78.41M14.78 74.66L13.79 75.35M11.03 68.17L9.94 68.68M9.59 64.71L8.47 65.12M8.47 61.13L7.31 61.44M7.65 57.47L6.47 57.68M7.16 53.75L5.97 53.85M7.16 46.25L5.97 46.15M7.65 42.53L6.47 42.32M8.47 38.87L7.31 38.56M9.59 35.29L8.47 34.88M11.03 31.83L9.94 31.32M14.78 25.34L13.79 24.65M17.06 22.36L16.14 21.59M19.59 19.59L18.75 18.75M22.36 17.06L21.59 16.14M25.34 14.78L24.65 13.79M31.83 11.03L31.32 9.94M35.29 9.59L34.88 8.47M38.87 8.47L38.56 7.31M42.53 7.65L42.32 6.47M46.25 7.16L46.15 5.97" stroke-width=".16" opacity=".55"/><path d="M71.50 12.76L72.80 10.51M87.24 28.50L89.49 27.20M87.24 71.50L89.49 72.80M71.50 87.24L72.80 89.49M28.50 87.24L27.20 89.49M12.76 71.50L10.51 72.80M12.76 28.50L10.51 27.20M28.50 12.76L27.20 10.51" stroke-width=".26" opacity=".8"/><path d="M93.00 50.00L97.20 50.00M50.00 93.00L50.00 97.20M7.00 50.00L2.80 50.00" stroke-width=".36" opacity=".9"/><path class="hero-needle" d="M50 3.4 51.9 9.4h-3.8z" fill="var(--rust)" stroke="none"/><g fill="currentColor" stroke="none" style="font:700 3.1px var(--sans);letter-spacing:.02em"><text x="50.00" y="0.10" text-anchor="middle" dominant-baseline="central">С</text><text x="99.90" y="50.00" text-anchor="middle" dominant-baseline="central">В</text><text x="50.00" y="99.90" text-anchor="middle" dominant-baseline="central">Ю</text><text x="0.10" y="50.00" text-anchor="middle" dominant-baseline="central">З</text></g></svg>
+      <div class="hero-disc"><img src="photo.webp" width="1000" height="1191" fetchpriority="high" decoding="async" alt="Алексей Громов, психолог: портрет, сидит в кресле в светлой комнате"></div>
+    </div>
+  </div>
+  <dl class="hero-facts">
+    <div><dt class="sr">Практика</dt><dd><b>9 <em>лет</em></b></dd><dd><span>частной практики и более 4 000 часов консультаций</span></dd></div>
+    <div><dt class="sr">Консультация</dt><dd><b>50 <em>минут</em></b></dd><dd><span>одна встреча, один вопрос в центре внимания</span></dd></div>
+    <div><dt class="sr">Формат</dt><dd><b>Москва <em>и онлайн</em></b></dd><dd><span>очные встречи по записи, онлайн по видеосвязи</span></dd></div>
+  </dl>
+</section>
+
+<section class="sec" id="situations" data-theme="light" data-name="С чем приходят" aria-labelledby="situations-title"><div class="wrap">
+  <div class="sec-head reveal"><div><p class="eyebrow"><span class="no">01</span><i aria-hidden="true"></i>Запросы</p><h2 class="h2" id="situations-title">С чем ко мне <em>приходят</em></h2></div><p class="lead">Если вы узнали себя хотя бы в одном,<br class="br-d"> этого достаточно, чтобы начать.</p></div>
+  <div class="sit-list reveal">
+    <article class="sit">
+      <div class="sit-inner">
+        <div class="sit-face sit-front">
+          <div class="sit-top"><div class="glyph"><svg class="g-fork" viewBox="0 0 78 78" aria-hidden="true"><path class="gs" d="M39 72V50"/><path class="gs b1" d="M39 50C39 36 18 36 18 14"/><path class="gs b2" d="M39 50V14"/><path class="gs b3" d="M39 50C39 36 60 36 60 14"/><circle class="gk" cx="18" cy="11" r="3.4"/><circle class="ga" cx="39" cy="11" r="3.4"/><circle class="gk" cx="60" cy="11" r="3.4"/></svg></div></div>
+          <h3>Не могу выбрать</h3>
+          <p class="sit-quote">«Всё взвешено, а решить не получается»</p>
+          <p class="sit-text">Варианты есть, уверенности нет. Разберёмся, на что вы опираетесь и чего боитесь потерять.</p>
+          <button type="button" class="flip" aria-label="Что можно сделать: перевернуть карточку"><span>Что можно сделать</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20.5 3.5v5h-5"/></svg></button>
+        </div>
+        <div class="sit-face sit-back" inert>
+          <div class="back-head"><p class="back-label">Что можно сделать: начать с вопроса</p></div>
+          <p class="back-q">Что для вас важно в этом выборе, если убрать слова «надо» и «правильно»?</p>
+          <button type="button" class="flip" aria-label="К описанию: вернуться к карточке"><span>К описанию</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20.5 3.5v5h-5"/></svg></button>
+        </div>
+      </div>
+    </article>
+    <article class="sit">
+      <div class="sit-inner">
+        <div class="sit-face sit-front">
+          <div class="sit-top"><div class="glyph"><svg class="g-voices" viewBox="0 0 78 78" aria-hidden="true"><circle class="gs rg r1" cx="39" cy="39" r="36"/><circle class="gs rg r2" cx="39" cy="39" r="27"/><circle class="gs rg r3" cx="39" cy="39" r="18"/><circle class="ga" cx="39" cy="39" r="6"/></svg></div></div>
+          <h3>Живу по чужим ожиданиям</h3>
+          <p class="sit-quote">«Делаю как надо. Но чьё это „надо“?»</p>
+          <p class="sit-text">Отделим чужие ожидания от собственных желаний и не станем обесценивать ни то, ни другое.</p>
+          <button type="button" class="flip" aria-label="Что можно сделать: перевернуть карточку"><span>Что можно сделать</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20.5 3.5v5h-5"/></svg></button>
+        </div>
+        <div class="sit-face sit-back" inert>
+          <div class="back-head"><p class="back-label">Что можно сделать: начать с вопроса</p></div>
+          <p class="back-q">Если бы никто не узнал о вашем решении, что бы вы выбрали?</p>
+          <button type="button" class="flip" aria-label="К описанию: вернуться к карточке"><span>К описанию</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20.5 3.5v5h-5"/></svg></button>
+        </div>
+      </div>
+    </article>
+    <article class="sit">
+      <div class="sit-inner">
+        <div class="sit-face sit-front">
+          <div class="sit-top"><div class="glyph"><svg class="g-lost" viewBox="0 0 78 78" aria-hidden="true"><circle class="gs" cx="39" cy="39" r="35"/><g class="nd"><path class="ga" d="M39 9 L45 39 L33 39Z"/><path class="gk" d="M39 69 L45 39 L33 39Z"/></g><circle cx="39" cy="39" r="2.6" fill="#fbf9f3" stroke="#233b4b" stroke-width="1.2"/></svg></div></div>
+          <h3>Потерялось направление</h3>
+          <p class="sit-quote">«Вроде всё нормально, а куда идти — непонятно»</p>
+          <p class="sit-text">Прежние цели перестали вести. Сначала выясним, что важно сейчас, и только потом будем искать новую.</p>
+          <button type="button" class="flip" aria-label="Что можно сделать: перевернуть карточку"><span>Что можно сделать</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20.5 3.5v5h-5"/></svg></button>
+        </div>
+        <div class="sit-face sit-back" inert>
+          <div class="back-head"><p class="back-label">Что можно сделать: начать с вопроса</p></div>
+          <p class="back-q">Когда вы в последний раз чувствовали, что идёте своей дорогой?</p>
+          <button type="button" class="flip" aria-label="К описанию: вернуться к карточке"><span>К описанию</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20.5 3.5v5h-5"/></svg></button>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="sit-aside reveal"><p class="aside-quote"><svg aria-hidden="true"><use href="#compass-mark"/></svg>Для начала не нужен<br class="br-d"> идеально сформулированный запрос.</p><a class="text-link" href="#booking">Записаться на знакомство<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></a></div>
+</div></section>
+
+<section class="sec compass on-dark" id="compass" data-theme="dark" data-name="Компас" aria-labelledby="compass-title"><div class="wrap">
+  <div class="sec-head reveal">
+    <div><p class="eyebrow"><span class="no">02</span><i aria-hidden="true"></i>Упражнение</p><h2 class="h2" id="compass-title">Компас <em>самоопределения</em></h2></div>
+    <p class="lead">Это упражнение для размышления, а не тест и не диагностика. Ответы остаются в вашем браузере.</p>
+  </div>
+  <noscript><p class="small" style="margin-top:32px;color:var(--on-blue-muted)">Для интерактивного компаса нужен JavaScript. Можно сделать упражнение на бумаге: назвать три важных направления и для каждого решить, чьё оно.</p></noscript>
+  <div class="compass-body reveal" id="compass-app" data-screen="a" data-labels="word">
+    <div class="cp-panel">
+      <ol class="cp-steps" id="cp-steps" aria-label="Шаги упражнения"><li data-s="a" data-state="current"><button type="button" aria-current="step"><span>1</span>Выбор</button></li><li data-s="o" data-state="todo"><button type="button" disabled><span>2</span>Оценка</button></li><li data-s="b" data-state="todo"><button type="button" disabled><span>3</span>Итог</button></li><li data-s="p" data-state="todo"><button type="button" disabled><span>4</span>Шаг</button></li></ol>
+      <div id="cp-a">
+        <h3 class="cp-h" id="cp-a-title" tabindex="-1">Что важно для вас сейчас?</h3>
+        <div class="cp-lead"><p class="cp-text">Выберите три направления: не навсегда, а на сегодня. Можно нажимать и на компас. Правильных ответов нет.</p><span class="cp-count" id="cp-count"><span class="cp-meter" aria-hidden="true"><i></i><i></i><i></i></span><span class="cp-num" aria-hidden="true">0/3</span><span class="sr" aria-live="polite">Выбрано 0 из 3</span></span></div>
+        <div class="picks" id="picks" role="group" aria-label="Направления"></div>
+        <div class="cp-actions"><button type="button" class="btn" id="cp-next" disabled>Оценить направления<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></button><button type="button" class="link" id="cp-clear" hidden>Снять выбор</button></div>
+        <p class="notice small" id="cp-notice" role="status"></p>
+      </div>
+      <div id="cp-o" hidden>
+        <h3 class="cp-h" id="cp-o-title" tabindex="-1">Чьё это направление?</h3>
+        <div class="cp-lead"><p class="cp-text">Выберите вариант для каждого направления.</p><span class="cp-count" id="cp-ocount"><span class="cp-meter" aria-hidden="true"><i></i><i></i><i></i></span><span class="cp-num" aria-hidden="true">0/3</span><span class="sr" aria-live="polite">Оценено 0 из 3</span></span></div>
+        <div id="own-list"></div>
+        <div class="cp-actions"><button type="button" class="btn" id="cp-show" disabled>Посмотреть итог<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></button><button type="button" class="cp-back" id="cp-back-o"><svg class="arrow" aria-hidden="true"><use href="#arrow-left"/></svg>Назад</button></div>
+      </div>
+      <div id="cp-b" hidden>
+        <h3 class="cp-h" id="cp-b-title" tabindex="-1"></h3>
+        <div class="cp-lead"><p class="cp-text" id="cp-b-sub"></p></div>
+        <p class="cp-label">Выберите направление для первого шага</p>
+        <p class="cp-text">Это не окончательный выбор и не рейтинг важности: направление станет темой одного небольшого шага. Передумаете — можно вернуться и выбрать другое.</p>
+        <div class="chips" id="chips" role="group" aria-label="Направление для первого шага"></div>
+        <div class="cp-actions"><button type="button" class="cp-back" id="cp-back-b"><svg class="arrow" aria-hidden="true"><use href="#arrow-left"/></svg>Назад</button></div>
+      </div>
+      <div id="cp-p" hidden>
+        <h3 class="cp-h" id="cp-p-title" tabindex="-1"></h3>
+        <div class="plan" id="plan"></div>
+        <div class="step-note fold" aria-live="polite"><p class="small">Ваш шаг</p><p class="step-text is-empty" id="step-text"></p><button type="button" class="btn" id="cp-discuss">Обсудить на встрече</button></div>
+        <div class="cp-actions"><button type="button" class="cp-back" id="cp-back-p"><svg class="arrow" aria-hidden="true"><use href="#arrow-left"/></svg>Назад</button></div>
+      </div>
+    </div>
+    <div class="dial">
+      <svg viewBox="-326 -326 652 652" role="img" aria-label="Компас: десять направлений по кругу. Чем ближе точка к центру, тем больше направление ваше. Точки можно ставить и переносить на компасе, то же делают кнопки рядом." id="dial-svg">
+        <circle r="250" fill="none" stroke="#8ca6ae" stroke-opacity=".3" stroke-dasharray="1 8"/>
+        <circle r="190" fill="#f4f1e8" fill-opacity=".03" class="ring" stroke-opacity=".55"/>
+        <circle r="130" class="ring" stroke-opacity=".45" stroke-dasharray="3 6"/>
+        <circle r="70" fill="#f4f1e8" fill-opacity=".05" class="ring" stroke-opacity=".7"/>
+        <g id="axes"></g>
+        <path id="shape" class="shape" d=""/>
+        <g id="needle"><path class="needle-n" d="M0 -124 L8 0 L-8 0Z"/><path class="needle-s" d="M0 44 L8 0 L-8 0Z"/></g>
+        <g id="dots"></g>
+        <circle class="hub" r="6"/>
+      </svg>
+      <ul class="dial-legend">
+        <li><svg viewBox="0 0 26 10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="none" stroke="#bccbcb"/></svg>Ближе к центру — моё</li>
+        <li><svg viewBox="0 0 26 10" aria-hidden="true"><path d="M1 5h24" stroke="#bccbcb" stroke-dasharray="3 3"/></svg>Посередине — не знаю</li>
+        <li><svg viewBox="0 0 26 10" aria-hidden="true"><path d="M1 5h24" stroke="#bccbcb"/></svg>По краю — ожидают от меня</li>
+      </ul>
+      <button type="button" class="dial-toggle" id="dial-toggle" aria-label="Показать компас" hidden><svg aria-hidden="true"><use href="#compass-mark"/></svg></button>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec about" id="about" data-theme="light" data-name="Обо мне" aria-labelledby="about-title">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="no">03</span><i aria-hidden="true"></i>О специалисте</p>
+    <div class="about-layout">
+    <div class="about-id fold reveal">
+      <h2 class="h2 about-name" id="about-title">Алексей Громов.</h2>
+      <p class="about-speciality">Психолог · специалист по самоопределению</p>
+      <dl class="facts">
+        <div><dt>Практика</dt><dd><b>9 лет</b></dd><dd><span>частной практики, более 4 000 часов консультаций</span></dd></div>
+        <div><dt>Образование</dt><dd><b>Высшее психологическое</b></dd><dd><span>и дополнительное обучение</span></dd></div>
+        <div><dt>Подход</dt><dd><b>Экзистенциально-гуманистический</b></dd><dd><span>Консультирование, а не коучинг: без готовых планов и обещаний быстрых результатов</span></dd></div>
+        <div><dt>Супервизия</dt><dd><b>Регулярная</b></dd><dd><span>с коллегами-практиками</span></dd></div>
+        <div><dt>Формат</dt><dd><b>Москва и онлайн</b></dd><dd><span>очно по записи или по видеосвязи, консультация 50 минут</span></dd></div>
+      </dl>
+    </div>
+    <div class="about-content reveal">
+      <h3 class="about-heading">Не выбрать за вас. <em>Помочь услышать себя.</em></h3>
+      <p class="body">Большинство моих клиентов снаружи справляются: есть работа, отношения, планы. Но внутри не складывается: выбирать трудно, решения кажутся не своими. С этим я и работаю.</p>
+      <ol class="approach route">
+        <li><h3>Развернуть вопрос</h3><p>Посмотреть на ситуацию шире. Что в ней происходит, что тяготит и чего хочется вместо этого.</p></li>
+        <li><h3>Различить голоса</h3><p>Отделить внешние ожидания от того, с чем вы согласны и что действительно вам близко.</p></li>
+        <li><h3>Наметить своё</h3><p>Найти ориентир и посильный следующий шаг. Оставить возможность пересматривать решения.</p></li>
+      </ol>
+      <p class="aside-quote"><svg aria-hidden="true"><use href="#compass-mark"/></svg>Здесь есть место сомнениям, противоречиям и ответу «пока не знаю». С него тоже можно начать.</p>
+      <a class="text-link" href="#method">Как проходит работа<svg class="arrow" aria-hidden="true"><use href="#arrow-down"/></svg></a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="method" data-theme="light" data-name="Как проходит работа" aria-labelledby="method-title"><div class="wrap">
+  <div class="sec-head reveal"><div><p class="eyebrow"><span class="no">04</span><i aria-hidden="true"></i>Процесс</p><h2 class="h2" id="method-title">Как проходит <em>работа</em></h2></div><p class="lead">Готовой программы нет. Четыре этапа, и темп задаёте вы.</p></div>
+  <div class="trail reveal">
+    <div class="station"><h3>Знакомство</h3><span class="st-meta">Одна встреча, 30 минут</span><p>Вы рассказываете, что привело. Я честно скажу, чем могу помочь. Не подойдём друг другу — это тоже результат.</p></div>
+    <div class="station"><h3>Карта</h3><span class="st-meta">Обычно 2–4 встречи</span><p>Разбираем, что для вас важно и откуда это пришло: что своё, а что чужие ожидания.</p></div>
+    <div class="station"><h3>Пробные шаги</h3><span class="st-meta">Между встречами</span><p>Небольшой шаг в жизни: разговор, пауза, отказ. Проверяем, что откликается, а что только кажется важным.</p></div>
+    <div class="station"><h3>Сверка курса</h3><span class="st-meta">Раз в четыре встречи</span><p>Смотрим, что изменилось. Продолжить, встречаться реже или остановиться — решаете вы.</p></div>
+  </div>
+  <div class="words reveal">
+    <h3>Чего вы здесь не услышите — и что услышите</h3>
+    <div>
+      <div class="pairs-head" aria-hidden="true"><span>Не услышите</span><span></span><span>Услышите</span></div>
+      <ul class="pairs">
+        <li class="pair"><span class="no">«Просто решись»</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg><span class="yes">«Что для вас в этом важно?»</span></li>
+        <li class="pair"><span class="no">«Подумай о других»</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg><span class="yes">«Чьи это слова: ваши или чьи-то ещё?»</span></li>
+        <li class="pair"><span class="no">«Ты же взрослый человек»</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg><span class="yes">«Что вы почувствуете, если выберете это?»</span></li>
+        <li class="pair"><span class="no">«Найди призвание за пять шагов»</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg><span class="yes">«Какой шаг был бы совсем небольшим?»</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec pricing" id="pricing" data-theme="light" data-name="Стоимость" aria-labelledby="pricing-title"><div class="wrap">
+  <div class="price-layout">
+    <div class="price-copy reveal"><p class="eyebrow"><span class="no">05</span><i aria-hidden="true"></i>Стоимость</p><h2 class="h2" id="pricing-title">Цена <em>без сюрпризов.</em></h2><p class="lead">Цена не зависит от запроса и не меняется по ходу работы.</p><p class="aside-quote"><svg aria-hidden="true"><use href="#compass-mark"/></svg>Знакомство ни к чему не обязывает: после него можно остановиться.</p></div>
+    <ul class="notes price-notes reveal"><li>Очные встречи в Москве по записи или онлайн по видеосвязи. Стоимость одинаковая.</li><li>Оплата переводом, после встречи или заранее.</li><li>Перенос и отмена бесплатны за 24 часа.</li></ul>
+    <div class="price-card fold reveal">
+      <p class="eyebrow">Индивидуальные консультации</p>
+      <dl class="menu">
+        <div class="row feat"><dt>Знакомство<small>30 минут, с него можно начать</small></dt><dd class="dots" aria-hidden="true"></dd><dd class="sum">1 500<span>₽</span></dd></div>
+        <div class="row"><dt>Консультация<small>50 минут, очно или онлайн</small></dt><dd class="dots" aria-hidden="true"></dd><dd class="sum">4 500<span>₽</span></dd></div>
+        <div class="row"><dt>4 встречи<small>4 000 ₽ за встречу</small></dt><dd class="dots" aria-hidden="true"></dd><dd class="sum">16 000<span>₽</span></dd></div>
+        <div class="row"><dt>8 встреч<small>3 800 ₽ за встречу</small></dt><dd class="dots" aria-hidden="true"></dd><dd class="sum">30 400<span>₽</span></dd></div>
+      </dl>
+      <a class="btn" href="#booking">Записаться на знакомство<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="faq" data-theme="light" data-name="Вопросы" aria-labelledby="faq-title"><div class="wrap faq-layout">
+  <div class="faq-side reveal"><p class="eyebrow"><span class="no">06</span><i aria-hidden="true"></i>Перед разговором</p><h2 class="h2" id="faq-title">Возможно, вы думаете…</h2><p class="lead">Остались вопросы — задайте их на знакомстве.</p><a class="text-link" href="#booking">Записаться на знакомство<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></a></div>
+  <div class="faq-list fold reveal" id="faq-list">
+    <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1" id="fq1"><span>Чем это отличается от разговора с другом?</span><span class="faq-ico" aria-hidden="true"></span></button></h3><div class="faq-a" id="fa1" role="region" aria-labelledby="fq1"><div><p>Друзья любят нас и потому часто советуют то, что кажется лучшим им. Я не подталкиваю к конкретному выбору, а помогаю яснее увидеть свои основания. У встреч есть структура и конфиденциальность. Это консультирование, а не коучинг: без обещаний быстрых результатов и готовых планов.</p></div></div></div>
+    <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2" id="fq2"><span>Нужно ли заранее знать, с чем я прихожу?</span><span class="faq-ico" aria-hidden="true"></span></button></h3><div class="faq-a" id="fa2" role="region" aria-labelledby="fq2"><div><p>Нет. Многие приходят с ощущением «что-то не так» и без внятного запроса. Найти формулировку — часть работы, и первая встреча как раз для этого.</p></div></div></div>
+    <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3" id="fq3"><span>С чем вы не работаете?</span><span class="faq-ico" aria-hidden="true"></span></button></h3><div class="faq-a" id="fa3" role="region" aria-labelledby="fq3"><div><p>Я не оказываю экстренную помощь и не лечу психические расстройства и зависимости. Если вам сейчас очень тяжело или появляются мысли причинить себе вред, позвоните по номеру 112 или обратитесь к врачу. Не ждите встречи со мной.</p></div></div></div>
+    <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4" id="fq4"><span>Всё ли остаётся между нами?</span><span class="faq-ico" aria-hidden="true"></span></button></h3><div class="faq-a" id="fa4" role="region" aria-labelledby="fq4"><div><p>Да. Содержание встреч конфиденциально. Исключения — прямая угроза жизни и случаи, прямо предусмотренные законом. Подробности я объясняю на первой встрече, до любого разговора по существу.</p></div></div></div>
+    <div class="faq-item"><h3><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5" id="fq5"><span>А если мне не подойдёт?</span><span class="faq-ico" aria-hidden="true"></span></button></h3><div class="faq-a" id="fa5" role="region" aria-labelledby="fq5"><div><p>Тогда мы остановимся, и это нормальный результат. Вы ничем не обязаны. Если вы купили пакет, обсудим, как поступить с неиспользованными встречами.</p></div></div></div>
+  </div>
+</div></section>
+
+<section class="sec booking on-dark" id="booking" data-theme="dark" data-name="Запись" aria-labelledby="booking-title"><div class="wrap book-layout">
+  <div class="book-copy reveal">
+    <p class="eyebrow"><span class="no">07</span><i aria-hidden="true"></i>Запись</p>
+    <h2 class="h2" id="booking-title">Записаться на <em>знакомство</em></h2>
+    <p class="lead">Оставьте заявку, и я отвечу в течение рабочего дня. Знакомство длится 30 минут и стоит 1 500 ₽.</p>
+    <ol class="after route"><li>Вы оставляете заявку.</li><li>Я пишу вам и согласовываю время.</li><li>Мы встречаемся, очно в Москве или онлайн, и вы решаете, продолжать ли.</li></ol>
+    <div class="direct"><p>Можно связаться напрямую</p><ul class="contacts"><li><a class="tel" href="#">+7 (000) 000-00-00</a></li><li><a href="#">Telegram</a></li><li><a href="#">Почта</a></li></ul><p class="where">Очные встречи в Москве по записи</p></div>
+  </div>
+  <div class="form-panel fold reveal" id="form-panel">
+    <form id="book-form" novalidate>
+      <div class="field"><label for="f-name">Как к вам обращаться</label><input class="inp" id="f-name" name="name" type="text" maxlength="60" autocomplete="given-name" aria-describedby="e-name"><span class="err" id="e-name" role="alert"></span></div>
+      <div class="field"><label for="f-contact">Как с вами связаться <span class="hint">· Telegram, почта или телефон</span></label><input class="inp" id="f-contact" name="contact" type="text" maxlength="80" autocomplete="off" aria-describedby="e-contact"><span class="err" id="e-contact" role="alert"></span></div>
+      <div class="field"><label for="f-msg">Что привело <span class="hint">· по желанию</span></label><textarea class="inp" id="f-msg" name="msg" rows="3" maxlength="700" placeholder="Достаточно пары фраз. Можно оставить пустым."></textarea></div>
+      <div class="field" id="attach-row" hidden><label class="check"><input type="checkbox" id="f-attach" checked><span>Приложить мою карту из компаса</span></label></div>
+      <div class="field"><label class="check" for="f-consent"><input type="checkbox" id="f-consent" aria-describedby="e-consent"><span>Я согласен(на) на обработку персональных данных, чтобы со мной связались по записи</span></label><a class="consent-link" href="#">Условия обработки персональных данных</a><span class="err" id="e-consent" role="alert"></span></div>
+      <div class="submit-row"><button class="btn" type="submit">Отправить заявку<svg class="arrow" aria-hidden="true"><use href="#arrow-right"/></svg></button></div>
+    </form>
+    <div class="done" id="done" hidden>
+      <svg class="stamp" viewBox="-56 -56 112 112" aria-hidden="true"><circle r="52"/><circle r="30" stroke-opacity=".5"/><path d="M-12 1l8 9 17-19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3 id="done-title" tabindex="-1">Заявка отправлена</h3>
+      <p>Спасибо! Я отвечу в течение рабочего дня и предложу время для знакомства.</p>
+      <p class="done-map" id="done-map" hidden></p>
+      <button type="button" class="link" id="done-edit">Изменить заявку</button>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer class="site-footer on-dark">
+  <div class="foot-scale" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="foot-main">
+      <div class="foot-brand"><a href="#top" class="brand" aria-label="Алексей Громов — в начало страницы"><svg class="brand-mark" aria-hidden="true"><use href="#compass-mark"/></svg><span><span class="brand-name">Алексей Громов</span><span class="brand-caption">Психолог</span></span></a>
+        <p class="foot-sign"><em>Свой курс</em> вместо чужой карты</p>
+        <p class="foot-line">Очные встречи в Москве по записи. Онлайн — по видеосвязи.</p></div>
+      <nav class="foot-col" aria-label="Навигация в подвале"><p class="foot-h">Разделы</p><ul><li><a href="#situations">С чем приходят</a></li><li><a href="#compass">Компас</a></li><li><a href="#about">Обо мне</a></li><li><a href="#method">Как проходит работа</a></li><li><a href="#pricing">Стоимость</a></li><li><a href="#faq">Вопросы</a></li></ul></nav>
+      <div class="foot-col"><p class="foot-h">Связаться</p><ul><li><a class="tel" href="#">+7 (000) 000-00-00</a></li><li><a href="#">Telegram</a></li><li><a href="#">Почта</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><p>Психологическое консультирование не заменяет медицинскую помощь и не является лечением. Если вам сейчас очень тяжело или появляются мысли о самоповреждении, позвоните по номеру 112.</p><p class="foot-legal"><span>© 2026 Алексей Громов</span><a href="#">Политика конфиденциальности</a></p></div>
+  </div>
+</footer>
+
+<nav class="ruler" id="ruler" aria-label="Положение на странице"><ul></ul><span class="ruler-needle" aria-hidden="true"></span></nav>
+
+<script>
+'use strict';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const NB = ' ';
+const nb = t => t.replace(/(^|[^А-Яа-яЁё-])([А-Яа-яЁё]{1,3}) (?=\S)/g, '$1$2' + NB).replace(/ (—)/g, NB + '$1');
+
+/* ссылки без адреса не прокручивают страницу */
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href="#"]');
+  if (a) e.preventDefault();
+});
+
+/* карточки запросов: кнопка растянута на всю карточку */
+$$('.sit').forEach(card => {
+  const front = $('.sit-front', card), back = $('.sit-back', card);
+  $$('.flip', card).forEach(btn => btn.addEventListener('click', () => {
+    const on = !card.classList.contains('is-flipped');
+    card.classList.toggle('is-flipped', on);
+    front.inert = on; back.inert = !on;
+    (on ? back : front).querySelector('.flip').focus({ preventScroll: true });
+  }));
+});
+
+/* появление блоков */
+if ('IntersectionObserver' in window) {
+  document.documentElement.classList.add('motion');
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+  }), { threshold: .08 });
+  $$('.reveal').forEach(el => io.observe(el));
+}
+
+/* меню */
+const menu = $('#menu-toggle'), mnav = $('#mobile-nav'), lines = $('#menu-lines');
+function setMenu(open) {
+  menu.setAttribute('aria-expanded', String(open));
+  menu.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  mnav.hidden = !open;
+  lines.setAttribute('d', open ? 'M4 4l12 12M16 4 4 16' : 'M2 6h16M2 13h16');
+}
+menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+$$('a', mnav).forEach(a => a.addEventListener('click', e => {
+  const id = a.getAttribute('href');
+  const target = id && id.length > 1 ? $(id) : null;
+  setMenu(false);
+  if (!target) return;
+  e.preventDefault();
+  requestAnimationFrame(() => {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.replaceState(null, '', id);
+  });
+}));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { setMenu(false); menu.focus(); } });
+window.addEventListener('resize', () => { if (window.innerWidth >= 1180) setMenu(false); });
+
+/* стрелка севера: следит за курсором, без курсора указывает на СВ */
+(() => {
+  const needle = $('.hero-needle'), rings = $('.hero-rings');
+  if (!needle || !rings) return;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)');
+  let angle = 0, frame = 0, px = 0, py = 0;
+  const turn = to => {
+    angle += ((to - angle) % 360 + 540) % 360 - 180;
+    needle.style.transform = `rotate(${angle}deg)`;
+  };
+  const aim = () => {
+    frame = 0;
+    const r = rings.getBoundingClientRect();
+    const dx = px - (r.left + r.width / 2), dy = py - (r.top + r.height / 2);
+    if (Math.hypot(dx, dy) > 12) turn(Math.atan2(dx, -dy) * 180 / Math.PI);
+  };
+  window.addEventListener('pointermove', e => {
+    if (e.pointerType === 'touch' || !fine.matches) return;
+    px = e.clientX; py = e.clientY;
+    if (!frame) frame = requestAnimationFrame(aim);
+  }, { passive: true });
+  const rest = () => { if (!fine.matches) turn(45); };
+  fine.addEventListener('change', rest);
+  rest();
+})();
+
+/* линейка прокрутки */
+const ruler = (() => {
+  const el = $('#ruler'), ul = $('ul', el), needle = $('.ruler-needle', el);
+  const root = document.documentElement;
+  const items = $$('main > section[id]').map(sec => {
+    const li = document.createElement('li'), a = document.createElement('a');
+    a.href = '#' + sec.id;
+    a.setAttribute('aria-label', sec.dataset.name || sec.id);
+    const tip = document.createElement('span'), dot = document.createElement('span');
+    tip.className = 'tip'; tip.textContent = sec.dataset.name || sec.id; dot.className = 'dot';
+    a.append(tip, dot); li.append(a); ul.append(li);
+    return { sec, li };
+  });
+  const navLinks = $$('.desktop-nav a');
+  let max = 1, current = null;
+  function layout() {
+    max = Math.max(1, root.scrollHeight - window.innerHeight);
+    items.forEach(it => {
+      const top = it.sec.getBoundingClientRect().top + window.scrollY;
+      it.li.style.top = (clamp(top / max, 0, 1) * 100) + '%';
+    });
+    update();
+  }
+  function update() {
+    needle.style.top = (clamp(window.scrollY / max, 0, 1) * 100) + '%';
+    const probe = window.scrollY + window.innerHeight * .4;
+    let active = items[0];
+    items.forEach(it => { if (it.sec.getBoundingClientRect().top + window.scrollY <= probe) active = it; });
+    if (active !== current) {
+      items.forEach(it => it.li.classList.remove('flash'));
+      if (current) { active.li.classList.add('flash'); clearTimeout(active.t); active.t = setTimeout(() => active.li.classList.remove('flash'), 1800); }
+      current = active;
+    }
+    items.forEach(it => it.li.classList.toggle('active', it === active));
+    el.classList.toggle('on-dark', active.sec.dataset.theme === 'dark');
+    navLinks.forEach(a => a.removeAttribute('aria-current'));
+    const cur = navLinks.find(a => a.getAttribute('href') === '#' + active.sec.id);
+    if (cur) cur.setAttribute('aria-current', 'true');
+  }
+  return { layout, update };
+})();
+
+/* компас самоопределения */
+const VALUES = [
+  { id: 'freedom', n: 'Свобода', c: 'решать самостоятельно' },
+  { id: 'closeness', n: 'Близость', c: 'тепло и опора людей' },
+  { id: 'work', n: 'Дело со смыслом', c: 'работа, в которую верите' },
+  { id: 'stability', n: 'Устойчивость', c: 'спокойствие и опора' },
+  { id: 'growth', n: 'Развитие', c: 'учиться и расти' },
+  { id: 'creativity', n: 'Творчество', c: 'создавать своё' },
+  { id: 'recognition', n: 'Признание', c: 'уважение окружающих' },
+  { id: 'care', n: 'Забота о других', c: 'быть нужным людям' },
+  { id: 'self', n: 'Забота о себе', c: 'отдых и границы' },
+  { id: 'novelty', n: 'Новизна', c: 'впечатления и перемены' }
+];
+const OWN = { mine: 'Моё', unsure: 'Не знаю', expect: 'Ожидают от меня' };
+const OWN_ORDER = ['mine', 'expect', 'unsure'];
+const RADIUS = { mine: 70, unsure: 130, expect: 190 };
+const SVGNS = 'http://www.w3.org/2000/svg';
+const valueById = id => VALUES.find(v => v.id === id);
+const st = { picks: [], own: {}, plan: {}, focus: null, screen: 'a', view: 'note' };
+
+const el = {
+  picks: $('#picks'), ownList: $('#own-list'), count: $('#cp-count'), ocount: $('#cp-ocount'), next: $('#cp-next'), show: $('#cp-show'),
+  clear: $('#cp-clear'), notice: $('#cp-notice'), a: $('#cp-a'), o: $('#cp-o'), b: $('#cp-b'), p: $('#cp-p'), bTitle: $('#cp-b-title'),
+  pTitle: $('#cp-p-title'), bSub: $('#cp-b-sub'), chips: $('#chips'), step: $('#step-text'), plan: $('#plan'),
+  dots: $('#dots'), needle: $('#needle'), svg: $('#dial-svg'), app: $('#compass-app'), steps: $$('#cp-steps li'),
+  dial: $('.dial'), toggle: $('#dial-toggle'), note: $('.step-note')
+};
+const locked = () => st.screen === 'b' || st.screen === 'p';
+const ORDER = ['a', 'o', 'b', 'p'];
+const wideMq = matchMedia('(min-width:901px)');
+const dotNodes = new Map();
+let needleAngle = 0, drag = null;
+
+const SHORT = { work: ['Дело со', 'смыслом'], care: ['Забота', 'о других'], self: ['Забота', 'о себе'] };
+function slot(id) { return VALUES.findIndex(v => v.id === id); }
+function dotPos(id, own) {
+  const a = (-90 + slot(id) * 36) * Math.PI / 180, r = RADIUS[own] || RADIUS.unsure;
+  return { x: r * Math.cos(a), y: r * Math.sin(a) };
+}
+function pointOf(id) { return drag && drag.moved && drag.pos && drag.id === id ? drag.pos : dotPos(id, st.own[id]); }
+function svgPoint(e) {
+  const m = el.svg.getScreenCTM();
+  if (!m) return null;
+  const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse());
+  return { x: p.x, y: p.y };
+}
+const sectorAt = (x, y) => ((Math.round((Math.atan2(y, x) * 180 / Math.PI + 90) / 36) % 10) + 10) % 10;
+const zoneAt = r => r < 100 ? 'mine' : r < 160 ? 'unsure' : 'expect';
+const setHot = idx => $$('.axis').forEach(a => a.classList.toggle('hot', idx !== null && a.dataset.id === VALUES[idx].id));
+
+function ensureDot(id) {
+  if (dotNodes.has(id)) return dotNodes.get(id);
+  const g = document.createElementNS(SVGNS, 'g'), h = document.createElementNS(SVGNS, 'circle'), c = document.createElementNS(SVGNS, 'circle');
+  g.setAttribute('class', 'dot'); g.dataset.id = id;
+  h.setAttribute('class', 'hit'); h.setAttribute('r', '46');
+  c.setAttribute('class', 'pt'); c.setAttribute('r', '9');
+  g.append(h, c); el.dots.append(g);
+  bindDot(g);
+  dotNodes.set(id, g);
+  requestAnimationFrame(() => requestAnimationFrame(() => g.classList.add('on')));
+  return g;
+}
+function bindDot(g) {
+  g.addEventListener('pointerdown', e => {
+    if (locked() || drag || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    e.preventDefault(); e.stopPropagation();
+    g.setPointerCapture(e.pointerId);
+    drag = { g, id: g.dataset.id, pid: e.pointerId, x: e.clientX, y: e.clientY, moved: false, pos: null, sector: null };
+  });
+  g.addEventListener('pointermove', e => {
+    if (!drag || drag.g !== g || e.pointerId !== drag.pid) return;
+    if (!drag.moved && Math.hypot(e.clientX - drag.x, e.clientY - drag.y) < 6) return;
+    const p = svgPoint(e);
+    if (!p) return;
+    drag.moved = true; g.classList.add('drag');
+    if (st.screen === 'a') {
+      const l = Math.hypot(p.x, p.y) || 1;
+      drag.pos = { x: p.x / l * RADIUS.unsure, y: p.y / l * RADIUS.unsure };
+      drag.sector = sectorAt(p.x, p.y); setHot(drag.sector);
+    } else {
+      const a = (-90 + slot(drag.id) * 36) * Math.PI / 180, ux = Math.cos(a), uy = Math.sin(a);
+      const r = clamp(p.x * ux + p.y * uy, 40, 240), z = zoneAt(r);
+      drag.pos = { x: ux * r, y: uy * r };
+      if (st.own[drag.id] !== z) { st.own[drag.id] = z; syncOwn(); }
+    }
+    renderDial();
+  });
+  const finish = (e, commit) => {
+    if (!drag || drag.g !== g || e.pointerId !== drag.pid) return;
+    const d = drag;
+    drag = null; g.classList.remove('drag'); setHot(null);
+    if (commit && st.screen === 'a') {
+      if (!d.moved) { togglePick(d.id); return; }
+      moveTo(d.id, d.sector);
+    }
+    render();
+  };
+  g.addEventListener('pointerup', e => finish(e, true));
+  g.addEventListener('pointercancel', e => finish(e, false));
+  g.addEventListener('click', e => e.stopPropagation());
+}
+function renderDial() {
+  dotNodes.forEach((g, id) => {
+    if (!st.picks.includes(id)) { g.classList.remove('on'); dotNodes.delete(id); setTimeout(() => g.remove(), 500); }
+  });
+  st.picks.forEach(id => {
+    const g = ensureDot(id), own = st.own[id], p = pointOf(id);
+    g.style.transform = `translate(${p.x.toFixed(1)}px,${p.y.toFixed(1)}px)`;
+    g.classList.toggle('hollow', !own);
+    g.classList.toggle('focus', locked() && st.focus === id);
+  });
+  $$('.axis').forEach(a => a.classList.toggle('sel', st.picks.includes(a.dataset.id)));
+  const pts = st.picks.slice().sort((a, b) => slot(a) - slot(b)).map(pointOf);
+  $('#shape').setAttribute('d', pts.length > 1 ? 'M' + pts.map(q => q.x.toFixed(1) + ' ' + q.y.toFixed(1)).join(' L') + ' Z' : '');
+}
+function aimNeedle(id) {
+  if (!st.picks.includes(id)) return;
+  const p = dotPos(id, st.own[id]);
+  const target = Math.atan2(p.y, p.x) * 180 / Math.PI + 90;
+  needleAngle += (((target - needleAngle + 540) % 360) + 360) % 360 - 180;
+  el.needle.style.transform = `rotate(${needleAngle.toFixed(1)}deg)`;
+}
+
+function buildAxes() {
+  const g = $('#axes');
+  VALUES.forEach((v, i) => {
+    const a = (-90 + i * 36) * Math.PI / 180, c = Math.cos(a), s = Math.sin(a);
+    const ax = document.createElementNS(SVGNS, 'g'); ax.setAttribute('class', 'axis'); ax.dataset.id = v.id;
+    const l = document.createElementNS(SVGNS, 'line'), k = document.createElementNS(SVGNS, 'circle'), t = document.createElementNS(SVGNS, 'text'), n = document.createElementNS(SVGNS, 'text');
+    l.setAttribute('x2', (190 * c).toFixed(1)); l.setAttribute('y2', (190 * s).toFixed(1));
+    k.setAttribute('class', 'tick'); k.setAttribute('r', '3'); k.setAttribute('cx', (190 * c).toFixed(1)); k.setAttribute('cy', (190 * s).toFixed(1));
+    t.setAttribute('class', 'lbl-w');
+    const lines = SHORT[v.id] || [v.n];
+    const lx = 212 * c, ly = 212 * s;
+    t.setAttribute('text-anchor', Math.abs(c) < .2 ? 'middle' : c > 0 ? 'start' : 'end');
+    const base = ly + (s < -.5 ? -6 - (lines.length - 1) * 20 : s > .5 ? 16 : 6 - (lines.length - 1) * 10);
+    lines.forEach((ln, j) => { const ts = document.createElementNS(SVGNS, 'tspan'); ts.setAttribute('x', lx.toFixed(1)); ts.setAttribute('y', (base + j * 20).toFixed(1)); ts.textContent = ln; t.append(ts); });
+    n.setAttribute('class', 'lbl-n'); n.setAttribute('text-anchor', 'middle'); n.setAttribute('dy', '.35em');
+    n.setAttribute('x', (228 * c).toFixed(1)); n.setAttribute('y', (228 * s).toFixed(1)); n.textContent = String(i + 1);
+    ax.append(l, k, t, n); g.append(ax);
+  });
+}
+function setLabelMode() {
+  const w = el.svg.getBoundingClientRect().width;
+  if (!w) return;
+  el.app.dataset.labels = w >= 560 ? 'word' : 'num';
+}
+function buildPicks() {
+  VALUES.forEach((v, i) => {
+    const b = document.createElement('button'), n = document.createElement('b'), c = document.createElement('span'), num = document.createElement('i');
+    b.type = 'button'; b.className = 'pick'; b.dataset.id = v.id; b.setAttribute('aria-pressed', 'false');
+    num.className = 'num'; num.textContent = String(i + 1); num.setAttribute('aria-hidden', 'true'); num.style.fontStyle = 'normal';
+    n.textContent = v.n; c.textContent = nb(v.c); b.append(num, n, c);
+    b.addEventListener('click', () => togglePick(v.id));
+    el.picks.append(b);
+  });
+}
+function togglePick(id) {
+  const i = st.picks.indexOf(id);
+  el.notice.textContent = '';
+  if (i >= 0) { st.picks.splice(i, 1); delete st.own[id]; delete st.plan[id]; }
+  else if (st.picks.length < 3) st.picks.push(id);
+  else { el.notice.textContent = nb('Можно выбрать три направления. Чтобы взять другое, снимите одно из выбранных.'); return; }
+  render();
+  if (i < 0) aimNeedle(id);
+}
+function moveTo(id, sector) {
+  const nid = VALUES[sector].id;
+  if (nid === id) return;
+  if (st.picks.includes(nid)) { el.notice.textContent = 'Это направление уже выбрано.'; return; }
+  el.notice.textContent = '';
+  st.picks[st.picks.indexOf(id)] = nid;
+  if (st.own[id]) st.own[nid] = st.own[id];
+  delete st.own[id];
+  const g = dotNodes.get(id);
+  if (g) { dotNodes.delete(id); dotNodes.set(nid, g); g.dataset.id = nid; }
+  render();
+  aimNeedle(nid);
+}
+function syncOwn() {
+  $$('.own-row', el.ownList).forEach(f => $$('input', f).forEach(i => { i.checked = st.own[f.dataset.id] === i.value; }));
+  updateCounts();
+}
+function renderOwn() {
+  const have = $$('.own-row', el.ownList).map(r => r.dataset.id);
+  if (have.join() !== st.picks.join()) {
+    el.ownList.replaceChildren();
+    st.picks.forEach(id => {
+      const f = document.createElement('fieldset'), lg = document.createElement('legend'), grp = document.createElement('div'), num = document.createElement('span');
+      f.className = 'own-row'; f.dataset.id = id; grp.className = 'seg-group';
+      num.className = 'num'; num.setAttribute('aria-hidden', 'true'); num.textContent = String(slot(id) + 1);
+      lg.append(num, document.createTextNode(valueById(id).n));
+      OWN_ORDER.forEach(k => {
+        const l = document.createElement('label'), i = document.createElement('input'), s = document.createElement('span');
+        l.className = 'seg'; i.type = 'radio'; i.name = 'own-' + id; i.value = k; s.textContent = OWN[k];
+        i.addEventListener('change', () => { st.own[id] = k; render(); aimNeedle(id); });
+        l.append(i, s); grp.append(l);
+      });
+      f.append(lg, grp); el.ownList.append(f);
+    });
+  }
+  syncOwn();
+}
+function setCount(node, n, text) {
+  $$('.cp-meter i', node).forEach((d, i) => d.classList.toggle('on', i < n));
+  $('.cp-num', node).textContent = n + '/3';
+  $('.sr', node).textContent = text;
+}
+function updateCounts() {
+  const rated = st.picks.filter(id => st.own[id]).length;
+  setCount(el.count, st.picks.length, `Выбрано ${st.picks.length} из${NB}3`);
+  setCount(el.ocount, rated, `Оценено ${rated} из${NB}3`);
+  el.next.disabled = st.picks.length !== 3;
+  el.show.disabled = !(st.picks.length === 3 && rated === 3);
+  syncSteps();
+}
+function render() {
+  $$('.pick', el.picks).forEach(b => {
+    const on = st.picks.includes(b.dataset.id);
+    b.setAttribute('aria-pressed', String(on));
+    b.classList.toggle('is-off', !on && st.picks.length >= 3);
+  });
+  el.clear.hidden = st.picks.length === 0;
+  renderOwn();
+  renderDial();
+}
+
+function summary() {
+  const m = st.picks.filter(id => st.own[id] === 'mine').length, e = st.picks.filter(id => st.own[id] === 'expect').length, u = st.picks.length - m - e;
+  if (e >= 2) return [e === 3 ? 'Все три направления — чужие ожидания.' : 'Два из трёх направлений — чужие ожидания.', 'Что в них близко и вам?'];
+  if (u >= 2) return ['Многое пока неясно.', 'Это нормальное начало. Что из этого хочется прояснить в первую очередь?'];
+  if (m === 3) return ['Все три направления — ваши.', 'Что мешает дать им больше места?'];
+  if (m >= 2) return ['Два из трёх направлений — ваши.', 'Что мешает дать им больше места?'];
+  return ['Картина смешанная.', 'Так бывает: часть направлений ваша, часть — чужие ожидания.'];
+}
+const WHAT_MINE = {
+  freedom: ['Принять одно небольшое решение самому, не спрашивая чужого мнения', 'Отказаться от одного дела, которое делаю только «потому что надо»', 'Выделить час, в который я сам решаю, чем заняться'],
+  closeness: ['Написать или позвонить близкому человеку просто так', 'Договориться о встрече с тем, рядом с кем тепло', 'Сказать кому-то, что мне нужна его поддержка'],
+  work: ['Записать, что в моей работе кажется мне значимым', 'Выделить 20 минут на дело, которое кажется мне настоящим', 'Поговорить с человеком, чья работа мне близка'],
+  stability: ['Навести порядок в одной области: деньги, быт или расписание', 'Составить спокойный распорядок на ближайшие три дня', 'Записать три вещи в моей жизни, на которые можно положиться'],
+  growth: ['Выделить 20 минут на то, чему хочу научиться', 'Выбрать книгу, курс или человека, у которого хочу учиться', 'Рассказать кому-то, чему хочу учиться, и попросить совета'],
+  creativity: ['Сделать набросок или заготовку, не оценивая результат', 'Выделить 20 минут на своё творческое дело', 'Выписать идеи, которые давно хотелось попробовать'],
+  recognition: ['Спросить человека, которому доверяю, что он ценит во мне', 'Записать три недавних дела, которыми я могу гордиться', 'Рассказать о своём результате тому, кто способен его оценить'],
+  care: ['Спросить близкого человека, чем я могу ему помочь', 'Сделать для кого-то одно небольшое доброе дело', 'Решить, чем я готов помогать, а чем нет'],
+  self: ['Выделить 30 минут на отдых без обязанностей', 'Отказаться от одной лишней просьбы или обязательства', 'Записать, что мне нужно, чтобы восстанавливаться'],
+  novelty: ['Сходить в новое место или пройти знакомым путём по-новому', 'Попробовать то, чего я ещё не пробовал', 'Изменить одну привычную мелочь в распорядке дня']
+};
+const WHAT_OTHER = {
+  expect: ['Записать, чего от меня ждут', 'Записать, чего хочется мне самому', 'Поговорить с тем, кто этого ждёт, и рассказать, как я это вижу', 'Сделать одну небольшую часть так, как хочется мне'],
+  unsure: ['Заметить, где это откликается во мне, а где нет', 'Вспомнить два-три момента, когда это было для меня важно', 'Письменно ответить себе: чего мне хочется на самом деле?', 'Спросить близкого человека, как он видит меня в этом вопросе']
+};
+function getWhat(id) {
+  const own = st.own[id];
+  const list = own === 'mine' ? WHAT_MINE[id] : WHAT_OTHER[own];
+  return (list || []).map((text, i) => ({ k: own + i, text }));
+}
+const WHEN = [
+  { k: 'w1', label: 'Сегодня', clause: 'сегодня' },
+  { k: 'w2', label: 'Завтра', clause: 'завтра' },
+  { k: 'w3', label: 'В выходные', clause: 'в выходные' },
+  { k: 'w4', label: 'В течение недели', clause: 'в течение этой недели' }
+];
+const HOW = [
+  { k: 'h1', label: 'Напоминание в телефоне', clause: 'поставлю напоминание в телефоне.' },
+  { k: 'h2', label: 'Запись в календаре', clause: 'внесу это в календарь.' },
+  { k: 'h3', label: 'Скажу близкому', clause: 'расскажу об этом близкому человеку.' },
+  { k: 'h4', label: 'Заметка на виду', clause: 'оставлю заметку на видном месте.' }
+];
+const PLAN_ROWS = [['what', 'Что сделать'], ['when', 'Когда'], ['how', 'Как не забыть']];
+function planParts(id) {
+  const p = st.plan[id] || {};
+  return { what: getWhat(id).find(o => o.k === p.what), when: WHEN.find(o => o.k === p.when), how: HOW.find(o => o.k === p.how) };
+}
+function planPhrase(id) {
+  const { what, when, how } = planParts(id);
+  if (!(what && when && how)) return '';
+  const w = what.text.charAt(0).toLowerCase() + what.text.slice(1);
+  return `${when.clause.charAt(0).toUpperCase() + when.clause.slice(1)} — ${w}${/[.!?]$/.test(w) ? '' : '.'} Чтобы не забыть, ${how.clause}`;
+}
+function buildPlan(id) {
+  el.plan.replaceChildren(); el.plan.dataset.id = id;
+  PLAN_ROWS.forEach(([key, title]) => {
+    const f = document.createElement('fieldset'), lg = document.createElement('legend'), grp = document.createElement('div');
+    f.className = 'own-row'; grp.className = 'radios'; lg.textContent = title;
+    (key === 'what' ? getWhat(id) : key === 'when' ? WHEN : HOW).forEach(o => {
+      const l = document.createElement('label'), i = document.createElement('input'), s = document.createElement('span');
+      l.className = 'radio'; i.type = 'radio'; i.name = 'plan-' + key; i.value = o.k; s.textContent = nb(o.text || o.label);
+      i.addEventListener('change', () => { (st.plan[st.focus] || (st.plan[st.focus] = {}))[key] = o.k; syncPlan(); });
+      l.append(i, s); grp.append(l);
+    });
+    f.append(lg, grp); el.plan.append(f);
+  });
+}
+function syncPlan() {
+  const id = st.focus, p = st.plan[id] || {}, ph = planPhrase(id);
+  $$('input', el.plan).forEach(i => { i.checked = p[i.name.slice(5)] === i.value; });
+  el.step.textContent = ph ? nb(ph) : 'Выберите, что сделать, когда и как не забыть. Здесь соберётся ваш шаг.';
+  el.step.classList.toggle('is-empty', !ph);
+}
+function syncFocus() {
+  if (!st.picks.includes(st.focus)) st.focus = null;
+  $$('.chip', el.chips).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.id === st.focus)));
+  syncSteps(); renderDial();
+}
+function renderB() {
+  const [t, s] = summary();
+  el.bTitle.textContent = nb(t); el.bSub.textContent = nb(s);
+  el.chips.replaceChildren();
+  st.picks.forEach(id => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.textContent = valueById(id).n; b.dataset.id = id;
+    b.addEventListener('click', () => { st.focus = id; aimNeedle(id); showScreen('p', true); });
+    el.chips.append(b);
+  });
+  syncFocus();
+}
+function reach() {
+  const full = st.picks.length === 3, rated = full && st.picks.every(id => st.own[id]);
+  return !full ? 0 : !rated ? 1 : !st.picks.includes(st.focus) ? 2 : 3;
+}
+function syncSteps() {
+  const at = ORDER.indexOf(st.screen), max = Math.max(reach(), at);
+  el.steps.forEach((li, i) => {
+    const btn = li.firstElementChild;
+    li.dataset.state = i === at ? 'current' : i <= max ? 'open' : 'todo';
+    btn.disabled = i > max;
+    if (i === at) btn.setAttribute('aria-current', 'step'); else btn.removeAttribute('aria-current');
+  });
+}
+function applyView() {
+  const wide = wideMq.matches, note = wide && st.view === 'note';
+  el.app.dataset.view = st.screen === 'p' && note ? 'note' : 'dial';
+  el.toggle.hidden = !(wide && st.screen === 'p');
+  el.toggle.setAttribute('aria-label', note ? 'Показать компас' : 'Показать шаг');
+  $('use', el.toggle).setAttribute('href', note ? '#compass-mark' : '#step-mark');
+}
+function placeNote() {
+  if (wideMq.matches) el.dial.append(el.note); else el.plan.after(el.note);
+  applyView();
+}
+function renderP() {
+  el.pTitle.textContent = nb('Небольшой шаг: «' + valueById(st.focus).n + '»');
+  buildPlan(st.focus); syncPlan(); renderDial();
+}
+function showScreen(s, focusHeading) {
+  st.screen = s;
+  el.app.dataset.screen = s;
+  el.a.hidden = s !== 'a'; el.o.hidden = s !== 'o'; el.b.hidden = s !== 'b'; el.p.hidden = s !== 'p';
+  if (s === 'p') st.view = 'note';
+  syncSteps(); applyView();
+  el.notice.textContent = '';
+  if (s === 'b') renderB(); else if (s === 'p') renderP(); else render();
+  $('#attach-row').hidden = s !== 'p';
+  const h = { a: $('#cp-a-title'), o: $('#cp-o-title'), b: el.bTitle, p: el.pTitle }[s];
+  if (focusHeading) {
+    h.focus({ preventScroll: true });
+    const r = el.app.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > window.innerHeight + 200) el.app.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  ruler.layout();
+}
+function mapText() {
+  const parts = st.picks.map(id => `${valueById(id).n} — ${OWN[st.own[id]].toLowerCase()}`);
+  let t = 'Карта компаса: ' + parts.join('; ') + '.';
+  if (st.focus) {
+    const ph = planPhrase(st.focus);
+    t += ph ? ` Мой небольшой шаг («${valueById(st.focus).n}»): ${ph}` : ` Начать хочется с направления «${valueById(st.focus).n}».`;
+  }
+  return t;
+}
+function resetAll() { st.picks = []; st.own = {}; st.plan = {}; st.focus = null; el.notice.textContent = ''; }
+el.next.addEventListener('click', () => { if (!el.next.disabled) showScreen('o', true); });
+el.show.addEventListener('click', () => { if (!el.show.disabled) showScreen('b', true); });
+el.clear.addEventListener('click', () => { resetAll(); render(); });
+$('#cp-back-o').addEventListener('click', () => showScreen('a', true));
+$('#cp-back-b').addEventListener('click', () => showScreen('o', true));
+el.toggle.addEventListener('click', () => { st.view = st.view === 'note' ? 'dial' : 'note'; applyView(); });
+wideMq.addEventListener('change', placeNote);
+$('#cp-back-p').addEventListener('click', () => showScreen('b', true));
+$('#cp-steps').addEventListener('click', e => {
+  const li = e.target.closest('li');
+  if (li && li.dataset.state === 'open') showScreen(li.dataset.s, true);
+});
+$('#cp-discuss').addEventListener('click', () => {
+  $('#attach-row').hidden = false; $('#f-attach').checked = true;
+  $('#booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setTimeout(() => $('#f-name').focus({ preventScroll: true }), 700);
+});
+el.svg.addEventListener('click', e => {
+  if (st.screen !== 'a') return;
+  const p = svgPoint(e);
+  if (!p) return;
+  const r = Math.hypot(p.x, p.y);
+  if (r < 45 || r > 305) return;
+  togglePick(VALUES[sectorAt(p.x, p.y)].id);
+});
+
+buildAxes();
+buildPicks();
+setLabelMode();
+render();
+placeNote();
+if ('ResizeObserver' in window) new ResizeObserver(setLabelMode).observe(el.svg);
+else window.addEventListener('resize', setLabelMode);
+
+/* вопросы */
+$$('.faq-q').forEach(b => b.addEventListener('click', () => {
+  const open = b.getAttribute('aria-expanded') !== 'true';
+  b.setAttribute('aria-expanded', String(open));
+  b.closest('.faq-item').classList.toggle('is-open', open);
+  ruler.layout();
+}));
+
+/* запись */
+const form = $('#book-form'), done = $('#done');
+function setErr(input, errEl, msg) {
+  errEl.textContent = msg;
+  if (input.type === 'checkbox') return;
+  input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+}
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('#f-name'), contact = $('#f-contact'), consent = $('#f-consent');
+  const eN = !name.value.trim() ? 'Укажите, как к вам обращаться.' : '';
+  const eC = contact.value.trim().length < 3 ? 'Оставьте контакт, чтобы я мог ответить.' : '';
+  const eK = !consent.checked ? 'Нужно согласие, чтобы связаться с вами.' : '';
+  setErr(name, $('#e-name'), eN); setErr(contact, $('#e-contact'), eC); setErr(consent, $('#e-consent'), eK);
+  const bad = eN ? name : eC ? contact : eK ? consent : null;
+  if (bad) { bad.focus(); return; }
+  const map = $('#done-map');
+  if (!$('#attach-row').hidden && $('#f-attach').checked && st.picks.length === 3 && st.picks.every(id => st.own[id])) {
+    map.textContent = mapText(); map.hidden = false;
+  } else { map.textContent = ''; map.hidden = true; }
+  form.hidden = true; done.hidden = false; $('#done-title').focus();
+});
+[['#f-name', '#e-name'], ['#f-contact', '#e-contact']].forEach(([i, er]) => $(i).addEventListener('input', () => setErr($(i), $(er), '')));
+$('#f-consent').addEventListener('change', () => setErr($('#f-consent'), $('#e-consent'), ''));
+$('#done-edit').addEventListener('click', () => { done.hidden = true; form.hidden = false; $('#f-name').focus(); });
+
+window.addEventListener('scroll', () => ruler.update(), { passive: true });
+window.addEventListener('resize', () => ruler.layout());
+window.addEventListener('load', () => ruler.layout());
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ruler.layout());
+ruler.layout();
+</script>
+</body>
+</html>

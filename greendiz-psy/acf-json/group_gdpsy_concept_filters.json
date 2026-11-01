@@ -1,0 +1,130 @@
+{
+    "key": "group_gdpsy_concept_filters",
+    "title": "Концепт — фильтр и карточка",
+    "fields": [
+        {
+            "key": "field_gdpsy_concept_specialty",
+            "label": "Специализация",
+            "name": "concept_specialty",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Для каких практик подходит сайт. Можно выбрать несколько или добавить новое значение.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6abc676106a99",
+                        "operator": "==",
+                        "value": "consept"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "gdpsy_c_specialty",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_gdpsy_concept_mood",
+            "label": "Настроение сайта",
+            "name": "concept_mood",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Впечатление от дизайна и подачи, а не цвета. Можно выбрать несколько.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6abc676106a99",
+                        "operator": "==",
+                        "value": "consept"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "gdpsy_c_mood",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_gdpsy_concept_approach",
+            "label": "Подходы и техники",
+            "name": "concept_approach",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Необязательно. Только то, что прямо упомянуто в тексте концепта.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6abc676106a99",
+                        "operator": "==",
+                        "value": "consept"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "gdpsy_c_approach",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "portfolio"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Значения используются в фильтре архива концептов, в карточке и на странице концепта. Тип интерактива берётся из связанных интерактивов автоматически.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793013115
+}

@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="На одной стороне — бережный квиз для родителей детей 3–17 лет. Пять направлений общения, ваши опоры и небольшой шаг к близости.">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<title>На одной стороне — квиз для родителей</title>
+<style>
+:root{--paper:#f3f0ea;--ink:#151916;--blue:#324bc5;--muted:#62665f;--line:#d6d5cc;--white:#fffdfa;--soft:#e5e7ee;--serif:'Lora',Georgia,serif;--sans:'Onest',Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}button,input,textarea,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}button{cursor:pointer;color:inherit}button:disabled{cursor:default;opacity:.5}button:focus-visible,a:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:4px}[tabindex='-1']:focus{outline:none}[hidden]{display:none!important}a{color:var(--blue);text-underline-offset:4px}::selection{background:#dbe0ff;color:var(--ink)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-weight:400}h1,h2{font-family:var(--serif);letter-spacing:-.045em;line-height:1.08;text-wrap:balance}h1{font-size:clamp(64px,7vw,92px);margin-bottom:28px}h2{font-size:54px;margin-bottom:24px}h3{font:400 28px/1.25 var(--serif);letter-spacing:-.025em}em{color:var(--blue);font-weight:400}.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:500}.small{font-size:14px;color:var(--muted)}.quiz{max-width:1240px;margin:auto;padding:44px 48px 32px;min-height:100svh}.view{animation:reveal .45s cubic-bezier(.16,1,.3,1) both}.primary,.secondary{display:inline-flex;justify-content:center;align-items:center;gap:20px;min-height:52px;padding:13px 20px;border:1px solid var(--blue);border-radius:3px;line-height:1.4;transition:background .2s,transform .2s;color:var(--white);background:var(--blue)}.primary:hover{background:#253ca9}.primary:active,.secondary:active{transform:translateY(1px)}.secondary{background:transparent;border-color:var(--line);color:var(--ink)}.secondary:hover{background:#e8e5dd}.text-button{border:0;border-bottom:1px solid #a6afd9;background:none;padding:8px 0 3px;min-height:40px;color:var(--blue);font-size:14px;text-align:left;line-height:1.45}.text-button:hover{border-bottom-color:var(--blue)}.intro{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;min-height:calc(100svh - 100px)}.intro .eyebrow{margin-bottom:24px;color:var(--muted)}.lead{font-size:19px;line-height:1.65;max-width:450px;margin-bottom:0}.intro-card{background:var(--white);border-radius:6px;padding:28px 30px 24px}.intro-card .primary{width:100%;justify-content:space-between}.intro-card .art{width:100%;height:240px;display:block;margin:0 auto 12px}.art-small{animation:float 5s ease-in-out infinite}.art-line{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.8s ease forwards}.art-caption{font:italic 22px/1.4 var(--serif);text-align:center;color:var(--blue);margin-bottom:20px}.intro-meta{text-align:center;font-size:15px;margin-bottom:18px}.privacy{text-align:center;font-size:13px;color:var(--muted);margin:16px 0 0}.intro-links{text-align:center;margin-top:10px}.bottom-note{margin-top:24px;font-size:13px;color:var(--muted)}
+.setup{max-width:880px;margin:48px auto}.setup h2{font-size:60px}.setup .lead{max-width:680px}.age-options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:36px 0 24px}.age-option{background:var(--white);padding:24px;text-align:left;border:1px solid var(--line);border-radius:4px;min-height:170px;transition:border-color .2s,background .2s}.age-option strong{font:400 32px/1.3 var(--serif);display:block;margin-bottom:16px}.age-option span{font-size:14px;color:var(--muted);display:block}.age-option:hover,.age-option[aria-pressed=true]{border-color:var(--blue)}.age-option[aria-pressed=true]{box-shadow:inset 0 0 0 1px var(--blue);background:#e9ecfa}.setup-actions{display:flex;justify-content:space-between;align-items:center;gap:24px}.setup-actions .small{max-width:420px;margin:0}
+.conversation{display:grid;grid-template-columns:250px minmax(0,1fr);gap:40px;height:calc(100dvh - 80px);min-height:670px;max-height:1000px}.side-copy{padding-top:24px;display:flex;flex-direction:column}.side-copy h2{font-size:43px}.side-copy>p{font-size:15px;color:var(--muted)}.domain-nav{list-style:none;margin:20px 0;padding:0}.domain-nav li{font-size:14px;color:var(--muted);padding:9px 0;display:flex;gap:12px;align-items:start}.domain-nav li span{font-size:11px;padding-top:3px}.domain-nav li.current{color:var(--blue);font-weight:500}.domain-nav li.done span::after{content:' ✓'}.side-bottom{margin-top:auto}.chat-panel{background:#faf8f3;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden;border-radius:6px}.chat-top{display:flex;justify-content:space-between;gap:12px;padding:16px 24px;align-items:center;font-size:13px}.chat-top .text-button{font-size:12px;min-height:32px;padding-top:0}.progress-track{height:3px;background:#e5e5de;flex-shrink:0}.progress-track span{display:block;height:100%;width:0;background:var(--blue);transition:width .4s ease}.messages{padding:24px;overflow-y:auto;flex:1;min-height:180px;scrollbar-width:thin;scrollbar-color:#bbc1dc transparent;overflow-anchor:none}.chat-line{display:flex;margin-bottom:16px}.bubble{background:white;padding:16px 18px;border-radius:14px 14px 14px 3px;max-width:94%;font-size:16px;line-height:1.55}.bubble p:last-child{margin-bottom:0}.bubble .small{font-size:13px;display:block;margin:0 0 10px}.bubble h2{font:400 19px/1.5 var(--sans);letter-spacing:-.01em;text-wrap:pretty;margin:0}.chat-line.user{justify-content:flex-end}.user .bubble{background:transparent;border:1px solid var(--line);border-radius:14px 14px 3px 14px;text-align:left;font-size:14px;padding:10px 15px}.user .bubble:hover{border-color:var(--blue)}.current-question{animation:reveal .35s ease both;scroll-margin-top:12px}.section-intro{font-size:13px;color:var(--muted);max-width:94%;margin-bottom:18px}.answer-panel{border-top:1px solid var(--line);padding:18px 24px;flex-shrink:0;max-height:64%;overflow:auto}.answer-panel p{margin:0 0 12px;font-size:13px;color:var(--muted)}.answers{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;position:relative}
+.answers::before{content:'';position:absolute;left:10%;right:10%;height:1px;top:13px;background:#afb7d5;pointer-events:none}
+.answer{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:14px;border:0;background:transparent;border-radius:4px;padding:4px 4px 10px;min-height:90px;font-size:15px;color:var(--ink);line-height:1.4;transition:background .2s,color .2s}
+.answer::before{content:'';display:block;width:20px;height:20px;flex:none;border:1.5px solid #8b95b8;background:#faf8f3;border-radius:50%;transition:background .2s,border-color .2s,box-shadow .2s}
+.answer:hover{color:var(--blue)}.answer:hover::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.answer[aria-pressed=true]{color:var(--blue)}.answer[aria-pressed=true]::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.extras{display:flex;gap:20px;margin-top:10px;flex-wrap:wrap}.extras button{font-size:12px}.extras button[aria-pressed=true]{font-weight:600;border-bottom:2px solid var(--blue)}.controls-footer{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-top:16px}.controls-footer .primary{min-width:170px;min-height:48px}.controls-footer .text-button{font-size:13px}.answers.resource-options{grid-template-columns:1fr}.resource-options .answer{text-align:left;min-height:46px;padding:12px 16px;font-size:14px}
+.result-heading{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:16px 0 28px}.result-heading h2{font-size:58px;margin-bottom:0}.result-heading>p{max-width:260px;margin:0}.result-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:24px}.profile-card{background:var(--blue);color:var(--white);padding:28px 30px;border-radius:4px}.profile-card h3{font-size:32px;margin-bottom:22px}.profile-card .eyebrow{color:#e0e5ff}.profile-card>.small{color:#e0e5ff;font-size:12px;margin:22px 0 0}.metric{padding:16px 0;border-bottom:1px solid #6c7cd4}.metric:last-child{border:0}.metric-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px}.metric-head strong{font-size:15px;font-weight:500}.metric-head span{font-size:12px;white-space:nowrap;color:#e0e5ff}.metric-track{height:5px;background:#7183da;margin:12px 0 9px;position:relative}.metric-fill{height:100%;background:var(--white);width:var(--value);transform-origin:left;animation:barIn .9s cubic-bezier(.16,1,.3,1) both}.metric-track.empty{background:repeating-linear-gradient(90deg,#9eaceb 0 5px,transparent 5px 10px)}.metric-status{font-size:12px;color:#e0e5ff;margin:0}.insight-card{background:var(--white);padding:28px 30px;border-radius:4px;display:flex;flex-direction:column}.section-number{display:block;font-size:12px;color:var(--muted);letter-spacing:.06em;margin-bottom:16px}.insight-item{padding:14px 0;border-bottom:1px solid var(--line)}.insight-item:last-child{border:0}.insight-item h4{margin:0 0 6px;font-size:15px;font-weight:500}.insight-item p{margin:0;font-size:14px;color:var(--muted)}.insight-note{background:var(--paper);padding:16px 18px;margin-top:auto;font-size:14px;border-radius:3px}.insight-note p:last-child{margin-bottom:0}.summary-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:24px;margin-top:24px}.summary-card{padding:28px 30px;background:var(--white);border-radius:4px}.summary-card h3{font-size:30px;margin-bottom:16px}.summary-card p{font-size:15px}.focus-select{width:100%;max-width:100%;padding:12px;border:1px solid var(--line);border-radius:3px;background:var(--white);color:var(--ink);margin:8px 0 16px;min-height:48px;font-size:14px}.step-card{background:var(--soft)}.step-card h3{color:var(--blue)}blockquote{font:italic 21px/1.5 var(--serif);color:var(--blue);margin:20px 0 16px;padding-left:16px;border-left:2px solid #a9b3db}.step-card .small{font-size:12px}.resource-note{border-top:1px solid #c9cdd9;padding-top:16px;margin:20px 0 0!important}.result-actions{border-top:1px solid var(--line);margin-top:28px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.action-group{display:flex;gap:12px;flex-wrap:wrap}.result-footer{display:flex;gap:24px;justify-content:space-between;margin-top:24px;align-items:start}.result-footer p{max-width:760px;font-size:12px;margin:0}.result-footer button{flex-shrink:0}.review{max-width:800px;margin:24px auto}.review-heading{display:flex;align-items:center;justify-content:space-between;gap:24px}.review h2{font-size:48px}.review-row{padding:20px 0;border-top:1px solid var(--line)}.review-row p{margin-bottom:8px}.review-row .small{font-size:12px}.review-row .text-button{font-size:14px}.review-group h3{margin:32px 0 18px}.review>.primary{margin-top:24px}.review-top{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+dialog{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;max-width:700px;width:calc(100% - 32px);padding:36px;max-height:85dvh;overflow:auto;font:15px/1.65 var(--sans)}dialog::backdrop{background:#15191680;backdrop-filter:blur(3px)}dialog h2{font-size:40px}dialog h3{font-size:25px;margin:28px 0 12px}dialog a{overflow-wrap:anywhere}dialog ul{padding-left:20px}dialog li{margin-bottom:16px}.dialog-close{position:absolute;right:12px;top:10px;width:44px;height:44px;border:0;background:transparent;font-size:28px;color:var(--muted)}.dialog-actions{display:flex;gap:12px;flex-wrap:wrap}html:has(dialog[open]){overflow:hidden}.method-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}.method-list div{padding:12px;background:var(--white);font-size:13px}.method-list strong{display:block;font-weight:500}.export-text{width:100%;min-height:220px;resize:vertical;border:1px solid var(--line);background:var(--white);padding:12px;color:var(--ink);margin-bottom:16px;font-size:14px}.notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:20;background:var(--ink);color:white;padding:12px 20px;border-radius:4px;font-size:14px;max-width:calc(100% - 32px);width:max-content;pointer-events:none}.notice:empty{display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}noscript{display:block;padding:24px;border:1px solid var(--blue)}
+@keyframes reveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes draw{to{stroke-dashoffset:0}}@keyframes barIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:1050px){.quiz{padding:32px 28px}.intro{gap:36px}.intro-card{padding:24px}.conversation{grid-template-columns:210px minmax(0,1fr);gap:24px;height:calc(100dvh - 64px)}.side-copy h2{font-size:38px}.profile-card,.insight-card,.summary-card{padding:24px}.result-heading h2{font-size:50px}.answers{gap:5px}.answer{font-size:12px}.chat-top,.messages,.answer-panel{padding-left:20px;padding-right:20px}}
+@media(max-width:800px){.conversation{display:block;height:calc(100dvh - 32px);min-height:560px;max-height:none}.quiz:has(.conversation:not([hidden])){padding:16px}.side-copy{display:none}.chat-panel{height:100%}.intro{gap:24px}h1{font-size:64px}.intro .lead{font-size:17px}.intro-card .art{height:200px}.result-heading h2{font-size:46px}.metric-head{display:block}.metric-head span{display:block;margin-top:4px}.result-grid,.summary-grid{gap:16px}.age-option{padding:20px}.age-option strong{font-size:28px}}
+@media(max-width:700px){.quiz{padding:28px 20px}.intro{display:block;min-height:0}.intro-copy{margin-bottom:28px}h1{font-size:clamp(54px,11vw,76px);margin-bottom:20px}.intro .eyebrow{margin-bottom:18px;font-size:11px}.intro .lead{font-size:18px}.intro-card .art{height:200px}.intro-card{padding:20px 24px}.intro .bottom-note{display:none}.intro-meta{font-size:14px}.intro-card .art-caption{font-size:21px;margin-bottom:16px}.setup{margin:16px auto}.setup h2{font-size:46px}.setup .lead{font-size:17px}.age-options{grid-template-columns:1fr;gap:10px;margin:24px 0}.age-option{min-height:0;padding:18px 20px;display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center}.age-option strong{font-size:27px;margin:0}.age-option span{font-size:13px}.setup-actions{display:block}.setup-actions .primary{width:100%;margin-top:20px}.result-heading{display:block;margin-top:8px}.result-heading h2{font-size:clamp(38px,8vw,50px);margin-bottom:18px}.result-heading>p{max-width:100%;font-size:13px}.result-grid,.summary-grid{grid-template-columns:1fr;gap:16px}.summary-grid{margin-top:16px}.metric-head{display:flex}.metric-head span{margin:0}.profile-card h3{font-size:29px}.insight-card h3,.summary-card h3{font-size:29px}.insight-note{margin-top:16px}.result-actions,.result-footer{display:block}.action-group{margin:0 0 16px}.action-group>.secondary{flex:1;font-size:14px}.result-footer button{margin-top:12px}.review h2{font-size:40px}.review-heading{display:block}dialog{padding:36px 24px}dialog h2{font-size:34px}.dialog-actions>*{width:100%}.method-list{grid-template-columns:1fr}}
+@media(max-width:540px){.quiz:has(.conversation:not([hidden])){padding:12px}.conversation{height:calc(100dvh - 24px);min-height:0}.chat-top{padding:12px 16px;font-size:12px}.messages{padding:16px;min-height:110px}.bubble{padding:14px 16px;max-width:96%;font-size:15px}.bubble h2{font-size:17px}.answer-panel{padding:12px 16px;max-height:65%}.answer-panel p{font-size:12px;margin-bottom:9px}.answers{grid-template-columns:1fr;gap:5px}.answer{min-height:40px;text-align:left;padding:9px 12px;font-size:14px;display:flex;align-items:center;gap:10px}.answer:before{content:'';width:14px;height:14px;border:1px solid #969eb7;border-radius:50%;flex-shrink:0}.answer[aria-pressed=true]:before{border-color:white;background:white;box-shadow:inset 0 0 0 3px var(--blue)}.extras{gap:16px;margin-top:5px}.extras .text-button{font-size:11px;min-height:34px}.controls-footer{margin-top:10px;gap:10px}.controls-footer .primary{min-width:140px;min-height:44px;font-size:14px;padding:10px 14px}.controls-footer .text-button{font-size:12px}.section-intro{font-size:12px}.resource-options .answer{font-size:13px;min-height:48px}.metric-head strong{font-size:14px}.metric-head span{font-size:11px}.metric-head{gap:10px}.profile-card,.insight-card,.summary-card{padding:22px}.age-option{grid-template-columns:100px 1fr;padding:16px}.age-option strong{font-size:25px}.review-top{gap:12px}}
+@media(max-height:650px) and (min-width:541px){.conversation{min-height:500px}.intro{min-height:0}.setup{margin:16px auto}}
+
+.primary,.secondary{min-height:54px;padding:14px 20px;gap:16px;transition:background .2s,transform .2s,color .2s}
+.primary{color:#fff}
+.text-button{min-height:44px;font-size:15px;transition:color .2s,border-color .2s}
+.text-button:hover{color:#24389d;border-bottom-color:currentColor}
+.answers::before{left:10%;right:10%}
+.answers.resource-options::before{display:none}
+.resource-options .answer{flex-direction:row;justify-content:flex-start;gap:14px}
+@media(max-width:1050px){.answer{font-size:13px}}
+@media(max-width:540px){
+.primary,.secondary{padding:14px 16px;font-size:16px}
+.answers{grid-template-columns:1fr 1fr;gap:7px}
+.answers::before{display:none}
+.answer{flex-direction:row;text-align:left;justify-content:flex-start;min-height:44px;padding:9px 10px;gap:9px;font-size:14px;align-items:center;border:1px solid #d6d9e5;background:#fff}
+.answer:last-child{grid-column:1/-1}
+.answer::before{width:16px;height:16px;background:#fff;border:1.5px solid #8b95b8}
+.answer[aria-pressed=true]::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+}
+</style>
+</head>
+<body>
+<main class="quiz" id="quiz">
+<noscript>Для прохождения квиза включите JavaScript в браузере. Ваши ответы обрабатываются только на устройстве.</noscript>
+<section class="intro view" id="intro">
+ <div class="intro-copy"><p class="eyebrow">Небольшой разговор о родительстве</p><h1>На одной<br><em>стороне.</em></h1><p class="lead">Быть рядом, слышать, иногда спорить — и снова находить друг друга.<br><br>Посмотрим, что помогает вам в отношениях с ребёнком и чему хочется дать больше внимания.</p><p class="bottom-note">Для родителей детей от 3 до 17 лет</p></div>
+ <div><div class="intro-card"><svg class="art" viewBox="0 0 380 240" fill="none" aria-hidden="true"><circle cx="190" cy="120" r="100" fill="#eeeae2"/><path d="M85 190H295" stroke="#c7c8bc"/><path d="M114 184V105C114 64 169 64 169 105V184" fill="#e1e6fa" stroke="#324bc5" stroke-width="1.5"/><circle cx="141.5" cy="66" r="18" fill="#324bc5"/><g class="art-small"><path d="M214 184V134C214 101 258 101 258 134V184" fill="#fffdfa" stroke="#324bc5" stroke-width="1.5"/><circle cx="236" cy="101" r="14" fill="#324bc5"/><path d="M239 157C208 161 194 143 169 132" stroke="#324bc5" stroke-width="2" stroke-linecap="round" class="art-line"/></g><path d="M160 135C184 142 195 151 218 155" stroke="#324bc5" stroke-width="2" stroke-linecap="round" class="art-line"/><circle cx="286" cy="61" r="7" fill="#bfc6a8"/><path d="M75 137H95M85 127V147" stroke="#bfc6a8" stroke-width="1.5"/></svg><p class="art-caption">Близость складывается из мелочей</p><p class="intro-meta">15 вопросов · около 5–7 минут</p><button class="primary" id="start">Посмотреть на наши отношения</button><p class="privacy">Ответы остаются в этой вкладке.<br>Квиз для самонаблюдения, не диагностика.</p></div><div class="intro-links"><button class="text-button about">О подходе и источниках</button></div></div>
+</section>
+<section id="setup" class="setup view" hidden><p class="eyebrow">Начнём с вашего ребёнка</p><h2 tabindex="-1">Сколько ему<br><em>сейчас лет?</em></h2><p class="lead">Если у вас несколько детей, выберите одного и отвечайте об отношениях именно с ним. Для другого ребёнка квиз можно пройти отдельно.</p><div id="age-options" class="age-options" role="group" aria-label="Возраст ребёнка"></div><div class="setup-actions"><p class="small">Вспоминайте последние две недели, включая обычные и непростые дни. Учитывайте возможности вашего ребёнка. Любой вопрос можно пропустить.</p><button class="primary" id="begin" disabled>Начать разговор</button></div><button class="text-button" id="setup-back">Вернуться к началу</button></section>
+<section class="conversation view" id="conversation" hidden><aside class="side-copy"><p class="eyebrow">Не про идеальность</p><h2>Про вас.<br>Про ребёнка.<br><em>Про связь.</em></h2><p>Отвечайте так, как было на самом деле. Здесь можно сомневаться и менять ответы.</p><ol class="domain-nav" id="domain-nav"></ol><div class="side-bottom"><button class="text-button about">О подходе и источниках</button></div></aside><div class="chat-panel"><div class="chat-top"><span id="progress-label"></span><button class="text-button about">О подходе</button></div><div class="progress-track" id="progress" role="progressbar" aria-label="Пройдено вопросов" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><span id="progress-fill"></span></div><div class="messages" id="messages" aria-label="История разговора"></div><div class="answer-panel"><p id="answer-label">Как часто это получалось за последние две недели?</p><div class="answers" id="answers" role="group" aria-labelledby="answer-label"></div><div class="extras" id="extras"></div><div class="controls-footer"><button class="text-button" id="back">← Назад</button></div></div></div></section>
+<section id="result" class="view" hidden><p class="eyebrow" id="result-meta"></p><div class="result-heading"><h2 tabindex="-1">Ваша близость.<br><em>Ваш следующий шаг.</em></h2><p class="small" id="result-intro"></p></div><div class="result-grid"><div class="profile-card"><p class="eyebrow">По вашим ответам</p><h3>Пять сторон общения</h3><div id="metrics"></div><p class="small">Длина полосы отражает среднюю частоту описанных действий. Это не процент «хорошего родительства» и не сравнение с другими семьями.</p></div><div class="insight-card"><span class="section-number">01 · Ваши опоры</span><h3 id="strength-title">Что уже помогает</h3><div id="strengths"></div><div class="insight-note" id="insight-note"></div></div></div><div class="summary-grid"><div class="summary-card"><span class="section-number">02 · Ваш фокус</span><h3 id="focus-title">Чему дать внимание</h3><p id="focus-intro"></p><label for="focus-select" class="small">Выберите направление, которое сейчас важнее</label><select id="focus-select" class="focus-select"></select><div id="focus-evidence"></div></div><div class="summary-card step-card"><span class="section-number">03 · Небольшой шаг</span><h3 id="step-title"></h3><p id="step-body"></p><blockquote id="step-phrase"></blockquote><p class="small">Пример фразы ребёнку. Можно сказать своими словами, как принято в вашей семье.</p><p class="resource-note" id="resource-note"></p></div></div><div class="result-actions"><div class="action-group"><button class="secondary" id="copy">Скопировать результат</button><button class="secondary" id="download">Сохранить текст ↓</button></div><button class="text-button" id="review-button">Посмотреть и изменить ответы</button></div><div class="result-footer"><p class="small">Это взгляд на ваши привычки за последние две недели, а не оценка личности. Квиз не показывает отношения глазами ребёнка и не определяет тип привязанности. Если трудности повторяются и вам нужна поддержка, ответы можно обсудить с психологом.</p><button class="text-button" id="restart">Пройти заново</button></div><button class="text-button about">Как устроен результат и на что мы опирались</button></section>
+<section id="review" class="review view" hidden><div class="review-heading"><h2 tabindex="-1">Можно<br><em>пересмотреть.</em></h2><button class="secondary" id="review-return-top">К результату</button></div><div class="review-top"><p id="review-age" class="small"></p><button class="text-button" id="change-age">Выбрать другой возраст</button></div><p class="small">Изменения сразу отразятся в результате. Ответы о другом ребёнке лучше собрать заново.</p><div id="review-list"></div><button class="primary" id="review-return">Вернуться к результату</button></section>
+</main>
+<dialog id="about-dialog" aria-labelledby="about-title"><button class="dialog-close" aria-label="Закрыть">×</button><h2 id="about-title">О подходе<br><em>и источниках.</em></h2><p>«На одной стороне» — авторский квиз для самонаблюдения родителей детей 3–17 лет. Он помогает замечать привычные способы общения и выбирать небольшие изменения.</p><h3>Что означает результат</h3><p>В каждой из пяти тем — три вопроса о последних двух неделях. Ответам от «Почти никогда» до «Почти всегда» соответствуют значения от 0 до 4. Все вопросы имеют одинаковый вес. Среднее по теме отображается только при двух или трёх числовых ответах.</p><div class="method-list"><div><strong>От 0 до менее 1,5</strong>«Пока редко получается»</div><div><strong>От 1,5 до менее 3</strong>«Получается по-разному»</div><div><strong>От 3 до 4</strong>«Часто получается»</div><div><strong>Менее двух ответов</strong>«Пока мало ответов»</div></div><p>Это условные описательные диапазоны, выбранные для интерфейса. Они не являются психологическими нормативами. Общего балла и сравнения с другими родителями нет. Пропуск и «Такой ситуации не было» не считаются нулём.</p><p>В опоры попадают до двух тем со средним не ниже 3, если все учтённые ответы в теме — «Часто» или «Почти всегда». Если их нет, квиз может отметить отдельное действие с таким ответом, прямо называя его отдельным наблюдением. При равных значениях используется порядок тем, а не утверждение, что одна важнее другой.</p><p>Первый фокус предлагается по конкретному действию, которое получалось реже других. Он может быть предложен и при недостатке ответов для целой темы. При равенстве используется порядок вопросов. Вы можете сменить направление. Рекомендация учитывает возраст и ответ с наименьшей частотой в выбранной теме; без числовых ответов показывается общая идея, что явно отмечается в результате.</p><p>Дополнительный вопрос о силах не входит в оценки. Он помогает подобрать посильный объём шага. Высокие отметки не доказывают отсутствия трудностей, низкие не объясняют их причины.</p><h3>Источники информации</h3><p>Открытые материалы ниже использованы как содержательная основа. Вопросы, возрастные формулировки, рекомендации и правила обобщения составлены для этого квиза. Это не воспроизведение готовой шкалы, не методика UNICEF, CDC или ВОЗ и не продукт, одобренный этими организациями.</p><ul id="sources"></ul><h3>Границы квиза</h3><p>Квиз не проходил психометрическую валидацию и не предназначен для диагностики, оценки безопасности ребёнка или принятия клинических решений. Он отражает только ответы взрослого и не заменяет индивидуальную работу со специалистом.</p><h3>Ваши ответы</h3><p>Ответы обрабатываются в памяти этой вкладки, не отправляются на сервер и исчезают при обновлении или закрытии страницы. Текст сохраняется или копируется только по вашей команде. Для шрифтов при наличии интернета используется Google Fonts; без подключения работают системные шрифты.</p></dialog>
+<dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">Новый<br><em>разговор?</em></h2><p>Текущие ответы будут удалены. Если хотите их сохранить, сначала скопируйте или скачайте результат.</p><div class="dialog-actions"><button class="secondary" id="cancel-restart">Оставить ответы</button><button class="primary" id="confirm-restart">Начать заново</button></div></dialog>
+<dialog id="export-dialog" aria-labelledby="export-title"><button class="dialog-close" aria-label="Закрыть">×</button><h2 id="export-title">Ваш <em>результат.</em></h2><p>Автоматическое копирование недоступно. Выделите текст и скопируйте его вручную.</p><label class="sr-only" for="export-text">Текст результата</label><textarea id="export-text" class="export-text" readonly></textarea><button class="secondary" id="select-export">Выделить текст</button></dialog>
+<div id="notice" class="notice" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+(() => {
+const AGES = [
+ {
+  "label": "3–6 лет",
+  "caption": "Игра, эмоции и первые «я сам»"
+ },
+ {
+  "label": "7–11 лет",
+  "caption": "Школа, дружба и новые обязанности"
+ },
+ {
+  "label": "12–17 лет",
+  "caption": "Договорённости и больше самостоятельности"
+ }
+];
+const FREQUENCY = [
+ "Почти никогда",
+ "Редко",
+ "Иногда",
+ "Часто",
+ "Почти всегда"
+];
+const DOMAINS = [
+ {
+  "name": "Контакт и внимание",
+  "short": "Быть рядом",
+  "intro": "Начнём с небольших моментов близости. Учитывайте любое время вместе — даже несколько минут.",
+  "strength": "В ваших ответах есть место вниманию к ребёнку и интересу к его миру.",
+  "questions": [
+   {
+    "title": "Время вдвоём",
+    "q": [
+     "Как часто вы находили хотя бы несколько минут для игры или занятия, которое выбрал ребёнок, без телефона и других дел?",
+     "Как часто вы проводили хотя бы несколько минут вдвоём за занятием, которое интересно ребёнку, без телефона и других дел?",
+     "Как часто вы предлагали провести немного времени вместе так, как интересно подростку, оставляя ему возможность отказаться?"
+    ],
+    "observation": "Время вдвоём не всегда удаётся выделить.",
+    "tips": [
+     [
+      "Пять минут его игры",
+      "В один из ближайших дней предложите ребёнку выбрать игру. Пять минут следуйте за его идеей, если она безопасна.",
+      "«Во что поиграем? Покажешь мне?»"
+     ],
+     [
+      "Небольшое дело вдвоём",
+      "Предложите выбрать одно совместное занятие: прогулку, игру или приготовление перекуса. Начните с пяти минут без телефона.",
+      "«У нас есть немного времени вдвоём. Чем тебе хочется заняться?»"
+     ],
+     [
+      "Приглашение без давления",
+      "Предложите подростку короткую прогулку или другое знакомое занятие вдвоём. Если сейчас не хочется, спокойно оставьте приглашение открытым.",
+      "«Я собираюсь прогуляться. Хочешь со мной? Если не сейчас — можно в другой раз»."
+     ]
+    ]
+   },
+   {
+    "title": "Интерес к его миру",
+    "q": [
+     "Как часто вы замечали, что увлекло ребёнка, и проявляли интерес к его игре или находке?",
+     "Как часто вы спрашивали ребёнка о том, что ему интересно, помимо уроков и обязанностей?",
+     "Как часто вы интересовались увлечениями подростка, выслушивая его без оценки вкусов?"
+    ],
+    "observation": "Интерес к миру ребёнка иногда теряется среди повседневных задач.",
+    "tips": [
+     [
+      "Заметить его находку",
+      "В следующий раз, когда ребёнок чем-то увлечён, опишите то, что видите, и дайте ему возможность показать больше.",
+      "«У твоего моста столько дорожек! Покажешь, куда они ведут?»"
+     ],
+     [
+      "Один вопрос из интереса",
+      "Спросите о любимой игре, книге или событии дня. Дайте ребёнку рассказать в своём темпе.",
+      "«Что тебе сейчас больше всего нравится в этой игре?»"
+     ],
+     [
+      "Попросить познакомить с увлечением",
+      "Если подросток готов, предложите показать одну любимую песню, игру или видео. Начните с любопытства.",
+      "«Покажешь, что тебя в этом зацепило?»"
+     ]
+    ]
+   },
+   {
+    "title": "Замечать усилия",
+    "q": [
+     "Как часто вы говорили ребёнку, какое именно его усилие или действие заметили, даже если получилось не всё?",
+     "Как часто вы отмечали старание или конкретное действие ребёнка независимо от оценки или победы?",
+     "Как часто вы давали подростку понять, что замечаете его усилия, даже когда результат отличается от ваших ожиданий?"
+    ],
+    "observation": "Усилия ребёнка не всегда получают заметный отклик.",
+    "tips": [
+     [
+      "Назвать одно действие",
+      "Сегодня отметьте одно небольшое усилие ребёнка без сравнения с другими детьми.",
+      "«Ты пробуешь ещё раз, хотя башня упала»."
+     ],
+     [
+      "Заметить процесс",
+      "Выберите один момент и скажите, какое усилие вы увидели. Не добавляйте сразу следом замечание.",
+      "«Ты возвращаешься к задаче, даже когда трудно. Это требует усилий»."
+     ],
+     [
+      "Сказать конкретно и спокойно",
+      "Отметьте одно усилие подростка привычным для вас способом — в разговоре или коротком сообщении.",
+      "«За этим результатом много твоей работы. Я это вижу»."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Поддержка чувств",
+  "short": "Слышать чувства",
+  "intro": "Теперь о чувствах. Можно не соглашаться с поступком и при этом признавать, что ребёнку тяжело.",
+  "strength": "По вашим ответам, вам часто удаётся давать чувствам ребёнка место в разговоре.",
+  "questions": [
+   {
+    "title": "Сначала понять",
+    "q": [
+     "Когда ребёнок расстраивался, как часто вы сначала пытались понять, что произошло, прежде чем отвлечь его или дать совет?",
+     "Когда ребёнок рассказывал о неприятности, как часто вы сначала выслушивали его, прежде чем предлагать решение?",
+     "Когда подросток делился неприятной ситуацией, как часто вы сначала выслушивали его, прежде чем давать совет?"
+    ],
+    "observation": "Советы или попытки переключить внимание иногда опережают слушание.",
+    "tips": [
+     [
+      "Немного побыть рядом",
+      "При следующем огорчении сначала назовите то, что заметили, и сделайте паузу. Если ребёнку трудно говорить, можно просто быть рядом.",
+      "«Кажется, тебе очень обидно. Я рядом»."
+     ],
+     [
+      "Дать закончить мысль",
+      "В следующий раз выслушайте рассказ до конца и коротко проверьте, верно ли вы поняли.",
+      "«Тебе было обидно, что тебя не позвали. Я правильно понимаю?»"
+     ],
+     [
+      "Уточнить, какая помощь нужна",
+      "Сначала выслушайте подростка. Перед советом спросите, хочет ли он обсуждать решения.",
+      "«Хочешь, я просто послушаю или вместе подумаем, что делать?»"
+     ]
+    ]
+   },
+   {
+    "title": "Чувству есть место",
+    "q": [
+     "Когда ребёнок злился или боялся, как часто вы давали понять словами или действиями, что замечаете его чувство?",
+     "Когда переживания ребёнка казались вам небольшими, как часто вы всё же давали понять, что относитесь к ним серьёзно?",
+     "Когда переживания подростка отличались от ваших, как часто вы давали понять, что признаёте его чувства?"
+    ],
+    "observation": "Признать переживания бывает трудно, особенно если ситуация кажется незначительной.",
+    "tips": [
+     [
+      "Назвать чувство без спора",
+      "Один раз попробуйте предположить чувство и понаблюдайте за откликом ребёнка. Если не угадали, поправьте себя.",
+      "«Похоже, тебе страшно. Давай побудем здесь вместе»."
+     ],
+     [
+      "Сначала признать переживание",
+      "Перед объяснениями скажите, что видите огорчение ребёнка. Не обязательно соглашаться с его оценкой ситуации.",
+      "«Для тебя это важно. Расскажи, что больше всего расстроило»."
+     ],
+     [
+      "Признать различие взглядов",
+      "В следующем разговоре отделите своё мнение о ситуации от чувства подростка.",
+      "«Я вижу это иначе, но понимаю, что тебе сейчас тяжело»."
+     ]
+    ]
+   },
+   {
+    "title": "Поддержка без давления",
+    "q": [
+     "Когда ребёнок сильно расстраивался, как часто вы предлагали поддержку и учитывали, хочет ли он объятий или просто вашего присутствия?",
+     "Когда ребёнку было тяжело, как часто вы уточняли, какая поддержка ему сейчас подходит?",
+     "Когда подростку было тяжело, как часто вы предлагали поддержку, уважая его просьбу поговорить позже?"
+    ],
+    "observation": "Поддержка не всегда совпадает с тем, что нужно ребёнку в этот момент.",
+    "tips": [
+     [
+      "Дать небольшой выбор",
+      "Предложите два простых способа поддержки и учитывайте не только слова, но и движения ребёнка.",
+      "«Хочешь обняться или мне просто посидеть рядом?»"
+     ],
+     [
+      "Спросить о поддержке",
+      "В спокойный момент узнайте, что помогает ребёнку при огорчении. В следующий раз напомните об этом выборе.",
+      "«Когда тебе грустно, лучше поговорить, обняться или немного побыть в тишине?»"
+     ],
+     [
+      "Оставить возможность вернуться",
+      "Если подросток не готов говорить, обозначьте доступность и предложите позже ненавязчиво уточнить, как он.",
+      "«Хорошо, сейчас можно не говорить. Я рядом, если понадоблюсь»."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Правила и границы",
+  "short": "Давать опору",
+  "intro": "Понятные правила помогают ориентироваться. Посмотрим, как получается обозначать их в обычных ситуациях.",
+  "strength": "По вашим ответам, правила часто звучат понятно и дают ребёнку ориентиры.",
+  "questions": [
+   {
+    "title": "Понятная просьба",
+    "q": [
+     "Когда нужно было что-то сделать, как часто вы давали ребёнку одну конкретную и посильную просьбу?",
+     "Когда вы просили ребёнка о чём-то, как часто вы объясняли, что именно и к какому моменту нужно сделать?",
+     "Когда вы обозначали подростку правило, как часто вы объясняли, какое конкретно поведение ожидаете?"
+    ],
+    "observation": "Ожидания не всегда удаётся выразить достаточно конкретно.",
+    "tips": [
+     [
+      "Одна просьба за раз",
+      "Вместо общей просьбы о порядке назовите одно действие, с которым ребёнок может справиться. При необходимости помогите начать.",
+      "«Пожалуйста, положи кубики в эту коробку»."
+     ],
+     [
+      "Уточнить действие и время",
+      "Для одной привычной обязанности договоритесь, что считается выполненным и когда её нужно сделать.",
+      "«Давай договоримся: посуда после ужина — в раковину»."
+     ],
+     [
+      "Сделать правило конкретным",
+      "Выберите одно важное правило и спокойно объясните его смысл. Уточните, одинаково ли вы поняли договорённость.",
+      "«Если планы меняются, напиши, где ты и когда будешь дома»."
+     ]
+    ]
+   },
+   {
+    "title": "Предсказуемость",
+    "q": [
+     "Как часто вам удавалось придерживаться заранее обозначенного правила, даже если ребёнок был им недоволен?",
+     "Как часто вы придерживались оговорённого правила, а изменения обсуждали с ребёнком?",
+     "Как часто вы соблюдали свою часть договорённостей с подростком и обсуждали изменения заранее?"
+    ],
+    "observation": "Предсказуемость правил и договорённостей иногда даётся непросто.",
+    "tips": [
+     [
+      "Выбрать одно устойчивое правило",
+      "Начните с одного посильного правила. Предупредите о переходе и помогите ребёнку пережить недовольство.",
+      "«После этой истории выключаем свет. Я побуду рядом»."
+     ],
+     [
+      "Обсудить исключение",
+      "Выберите правило, которое реально соблюдать. Если сегодня нужно исключение, объясните причину и обозначьте, что будет завтра.",
+      "«Сегодня особый случай. Давай уточним, как поступим сейчас и завтра»."
+     ],
+     [
+      "Проверить взаимную договорённость",
+      "Обсудите одну договорённость и свою часть в ней. Если выполнить обещание не получится, сообщите об этом заранее.",
+      "«Наш план изменился. Давай договоримся заново, чтобы никто не ждал зря»."
+     ]
+    ]
+   },
+   {
+    "title": "Чувство и ограничение",
+    "q": [
+     "Когда ребёнок злился из-за запрета, как часто вы спокойно повторяли ограничение, признавая его недовольство?",
+     "Когда ребёнок спорил с правилом, как часто вы объясняли ограничение, не переходя к оценке его характера?",
+     "При разногласии о границах как часто вы обсуждали конкретный поступок, не переходя к оценке личности подростка?"
+    ],
+    "observation": "В споре о правилах бывает трудно удержаться на конкретном поступке.",
+    "tips": [
+     [
+      "Коротко признать и ограничить",
+      "Выберите простую фразу для повторяющейся ситуации. Назовите чувство, границу и допустимое действие.",
+      "«Ты злишься. Бить нельзя. Можно сказать: “Я злюсь”»."
+     ],
+     [
+      "Говорить о действии",
+      "При следующем споре замените характеристику ребёнка описанием того, что произошло и что нужно сделать.",
+      "«Вещи остались в проходе. Их нужно убрать, чтобы никто не споткнулся»."
+     ],
+     [
+      "Разделить человека и поступок",
+      "Для следующего разговора сформулируйте одну конкретную проблему без слов «всегда» и «никогда».",
+      "«Мы договорились о сообщении, но его не было. Давай разберёмся, как быть в следующий раз»."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Самостоятельность",
+  "short": "Давать пробовать",
+  "intro": "У каждого возраста — своё пространство для выбора. Важно учитывать возможности ребёнка и безопасность.",
+  "strength": "В ваших ответах заметно пространство для выбора и самостоятельных попыток ребёнка.",
+  "questions": [
+   {
+    "title": "Посильный выбор",
+    "q": [
+     "Как часто вы давали ребёнку выбрать из двух подходящих вариантов — например, одежду или занятие?",
+     "Как часто вы давали ребёнку самостоятельно решать посильные повседневные вопросы?",
+     "Как часто вы оставляли подростку возможность самому решать вопросы, с которыми он уже справляется безопасно?"
+    ],
+    "observation": "Для посильного выбора не всегда находится место.",
+    "tips": [
+     [
+      "Два подходящих варианта",
+      "Предложите один настоящий выбор, в котором вас устроят оба ответа.",
+      "«Сегодня наденешь синюю футболку или зелёную?»"
+     ],
+     [
+      "Передать небольшое решение",
+      "Выберите повседневный вопрос, где ребёнок может решать сам: порядок дел, одежду по погоде или занятие в свободное время.",
+      "«С чего хочешь начать? Ты можешь выбрать порядок»."
+     ],
+     [
+      "Договориться о зоне самостоятельности",
+      "Вместе выберите один вопрос, который подросток будет решать сам в понятных безопасных границах.",
+      "«Что ты уже хочешь решать самостоятельно? Давай начнём с одного вопроса»."
+     ]
+    ]
+   },
+   {
+    "title": "Не спешить делать за него",
+    "q": [
+     "Когда ребёнок пробовал сделать что-то безопасное сам, как часто вы давали ему время, прежде чем вмешаться?",
+     "Когда ребёнок сталкивался с посильной трудностью, как часто вы давали ему попробовать самому, оставаясь доступными для помощи?",
+     "Когда подросток решал посильную задачу, как часто вы оставляли ему возможность найти свой способ, не вмешиваясь сразу?"
+    ],
+    "observation": "Желание помочь иногда оставляет мало времени на самостоятельную попытку.",
+    "tips": [
+     [
+      "Немного подождать",
+      "В одной безопасной ситуации оставьте чуть больше времени на попытку. Предложите помощь, если она понадобится.",
+      "«Попробуй. Если нужна помощь, я рядом»."
+     ],
+     [
+      "Спросить перед помощью",
+      "Когда хочется сделать за ребёнка, сначала уточните, нужна ли помощь и в каком объёме.",
+      "«Хочешь подсказку или пока попробуешь без неё?»"
+     ],
+     [
+      "Согласовать своё участие",
+      "Перед тем как включиться в задачу подростка, спросите о его плане и о том, нужна ли ваша помощь.",
+      "«Как ты планируешь поступить? Если понадобится, можно обсудить вместе»."
+     ]
+    ]
+   },
+   {
+    "title": "Право на ошибку",
+    "q": [
+     "Когда ребёнок ошибался в обычном безопасном деле, как часто вы помогали попробовать ещё раз без сравнения с другими?",
+     "Когда ребёнок ошибался, как часто вы обсуждали следующий шаг без сравнений с другими детьми?",
+     "Когда подросток ошибался, как часто вы обсуждали, что можно сделать дальше, без упрёков вроде «я же говорил»?"
+    ],
+    "observation": "После ошибки бывает трудно перейти от оценки к следующей попытке.",
+    "tips": [
+     [
+      "Помочь начать снова",
+      "При небольшой бытовой ошибке спокойно назовите, что случилось, и предложите исправить это вместе.",
+      "«Вода пролилась. Возьмём тряпку и вытрем»."
+     ],
+     [
+      "Один следующий шаг",
+      "После ошибки дайте ребёнку успокоиться, затем вместе найдите одно действие, которое он может попробовать.",
+      "«Что можно сделать теперь? С какого шага начнём?»"
+     ],
+     [
+      "Обсудить выводы без упрёка",
+      "Когда эмоции улягутся, предложите подростку самому назвать вывод и следующий шаг.",
+      "«Что ты теперь думаешь об этой ситуации? Что хочешь сделать дальше?»"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Трудные моменты",
+  "short": "Возвращаться к разговору",
+  "intro": "Все могут раздражаться. Здесь важны ваши действия в напряжении и возможность снова встретиться в разговоре.",
+  "strength": "По вашим ответам, вы часто стараетесь замечать напряжение и возвращаться к спокойному общению.",
+  "questions": [
+   {
+    "title": "Заметить напряжение",
+    "q": [
+     "Когда вы начинали раздражаться, как часто вам удавалось заметить это до того, как голос становился резче?",
+     "Когда разговор накалялся, как часто вы замечали своё напряжение до резкой реакции?",
+     "В споре с подростком как часто вам удавалось заметить своё напряжение до резкой реакции?"
+    ],
+    "observation": "Собственное напряжение не всегда получается заметить вовремя.",
+    "tips": [
+     [
+      "Найти свой ранний сигнал",
+      "Вспомните один признак раздражения: сжатые челюсти, быстрый голос или напряжённые плечи. В следующий раз используйте его как напоминание замедлиться.",
+      "Про себя: «Я напрягаюсь. Сначала выдох, потом слова»."
+     ],
+     [
+      "Заметить сигнал тела",
+      "Выберите один ранний признак напряжения и попробуйте заметить его в ближайшем непростом разговоре.",
+      "Про себя: «Я начинаю говорить быстрее. Можно замедлиться»."
+     ],
+     [
+      "Поймать момент до спора",
+      "Вспомните, как начинается ваше раздражение. Назовите себе один сигнал, после которого стоит сделать паузу.",
+      "Про себя: «Сейчас я хочу спорить. Сначала успокоюсь»."
+     ]
+    ]
+   },
+   {
+    "title": "Пауза в споре",
+    "q": [
+     "Когда раздражение усиливалось, как часто вы делали короткую паузу, оставаясь рядом с ребёнком и следя за его безопасностью?",
+     "Когда разговор становился слишком напряжённым, как часто вы предлагали паузу и возвращались к теме спокойнее?",
+     "Когда спор накалялся, как часто вы предлагали паузу и договаривались вернуться к разговору позже?"
+    ],
+    "observation": "Остановить нарастающий спор бывает трудно.",
+    "tips": [
+     [
+      "Короткая пауза рядом",
+      "Если ситуация безопасна, на несколько секунд перестаньте объяснять и сделайте спокойный выдох. Маленького ребёнка не оставляйте без необходимого присмотра.",
+      "«Я сейчас злюсь. Немного успокоюсь и помогу тебе»."
+     ],
+     [
+      "Обозначить возвращение",
+      "Заранее придумайте фразу для паузы. Назовите понятный момент, когда вернётесь к теме, и выполните это обещание.",
+      "«Я сейчас слишком резко говорю. Давай передохнём и поговорим после ужина»."
+     ],
+     [
+      "Пауза по договорённости",
+      "Предложите возвращаться к сложным темам, когда оба готовы слушать. Уточните подходящее время.",
+      "«Мы сейчас только сильнее спорим. Давай вернёмся к этому вечером»."
+     ]
+    ]
+   },
+   {
+    "title": "Восстановить контакт",
+    "q": [
+     "Если вы говорили слишком резко, как часто вы потом признавали это перед ребёнком без обвинения его в своей реакции?",
+     "После своей резкой реакции как часто вы признавали её и обсуждали, как поступить иначе в следующий раз?",
+     "После своей резкой реакции как часто вы брали за неё ответственность и предлагали вернуться к разговору, не требуя немедленного примирения?"
+    ],
+    "observation": "Возвращение к контакту после резких слов не всегда получается.",
+    "tips": [
+     [
+      "Коротко признать своё действие",
+      "Когда успокоитесь, назовите свою резкость и извинитесь простыми словами. Ребёнку можно не отвечать сразу.",
+      "«Прости за мой резкий голос. Попробую сказать спокойнее»."
+     ],
+     [
+      "Извиниться без «но»",
+      "Выберите спокойный момент, признайте свою резкую реакцию и назовите, что попробуете изменить.",
+      "«Прости за резкие слова. В следующий раз я постараюсь взять паузу»."
+     ],
+     [
+      "Вернуться без требования простить",
+      "Признайте свою часть конфликта. Дайте подростку время и возможность продолжить разговор позже.",
+      "«Мои резкие слова были лишними. Прости. Можно вернуться к разговору, когда ты захочешь»."
+     ]
+    ]
+   }
+  ]
+ }
+];
+const SOURCES = [
+ [
+  "UNICEF · Понятные правила и поддержка",
+  "https://www.unicef.org/parenting/child-care/how-discipline-your-child-smart-and-healthy-way",
+  "Время один на один, внимание к усилиям, реалистичные ожидания и спокойные ограничения."
+ ],
+ [
+  "CDC · Общение с маленьким ребёнком",
+  "https://www.cdc.gov/parenting-toddlers/communication/index.html",
+  "Внимательное слушание, распознавание чувств, уважение к предпочтениям ребёнка в общении."
+ ],
+ [
+  "UNICEF · Возрастные рекомендации родителям",
+  "https://www.unicef.cn/en/parenting-site/2023parenting",
+  "Возрастной контекст, в том числе для детей 7–11 лет: общение, ошибки, конфликты и поддержка."
+ ],
+ [
+  "CDC · Самостоятельность подростка",
+  "https://www.cdc.gov/parenting-teens/tips-encouraging-independence/",
+  "Посильные решения, участие подростка в договорённостях и ясные ожидания."
+ ],
+ [
+  "CDC · Поддержка чувств подростка",
+  "https://www.cdc.gov/parenting-teens/tips-coaching-emotions/index.html",
+  "Пауза перед реакцией, спокойное слушание и согласование помощи перед советами."
+ ],
+ [
+  "UNICEF · Общение с подростком",
+  "https://www.unicef.org/eca/stories/11-tips-communicating-your-teen",
+  "Уважительное общение, открытость и сохранение контакта."
+ ],
+ [
+  "ВОЗ · Поддержка детско-родительских отношений",
+  "https://www.who.int/publications/i/item/9789240065505",
+  "Рекомендации 2023 года по программам поддержки родителей детей 0–17 лет. Общая доказательная основа, не источник ключа этого квиза."
+ ]
+];
+const $ = id => document.getElementById(id);
+const QUESTIONS = DOMAINS.flatMap((d,domain) => d.questions.map((question,item) => ({...question,domain,item})));
+const RESOURCE_OPTIONS = ['Сил в целом хватает','По-разному: иногда нужен отдых','Сил мало, хочется больше поддержки'];
+let age = null, ageDraft = null, answers = Array(15).fill(undefined), resource, stage = 0, draft, editing = null, completed = false, focus = null, manualFocus = false, restartDestination = 'setup', noticeTimer;
+const el = (tag,cls,text) => { const n=document.createElement(tag); if(cls)n.className=cls; if(text!==undefined)n.textContent=text; return n; };
+const button = (text,cls,callback) => {const b=el('button',cls,text);b.type='button';b.addEventListener('click',callback);return b;};
+function show(id){['intro','setup','conversation','result','review'].forEach(key=>{$(key).hidden=key!==id;});window.scrollTo({top:0,behavior:'instant'});}
+function focusHeading(container){const heading=$(container).querySelector('h2');if(heading)heading.focus({preventScroll:true});}
+function answerText(value){return typeof value==='number'?FREQUENCY[value]:value==='na'?'Такой ситуации не было':value===null?'Пропущено':'Ещё нет ответа';}
+function resourceText(value){return typeof value==='number'?RESOURCE_OPTIONS[value]:value===null?'Пропущено':'Ещё нет ответа';}
+function notify(message){clearTimeout(noticeTimer);$('notice').textContent=message;noticeTimer=setTimeout(()=>$('notice').textContent='',4000);}
+function renderSetup(){show('setup');$('age-options').replaceChildren();AGES.forEach((item,i)=>{const b=button('','age-option',()=>{ageDraft=i;renderAgeSelection();});b.append(el('strong','',item.label),el('span','',item.caption));b.dataset.age=String(i);b.setAttribute('aria-pressed',String(ageDraft===i));$('age-options').append(b);});$('begin').disabled=ageDraft===null;focusHeading('setup');}
+function renderAgeSelection(){[...$('age-options').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===ageDraft)));$('begin').disabled=ageDraft===null;}
+function resetState(nextAge=null){age=nextAge;ageDraft=nextAge;answers=Array(15).fill(undefined);resource=undefined;stage=0;draft=undefined;editing=null;completed=false;focus=null;manualFocus=false;}
+function begin(){if(ageDraft===null)return;if(age!==null&&age!==ageDraft&&answers.some(v=>v!==undefined)){restartDestination='chosen-age';$('restart-dialog').showModal();return;}age=ageDraft;stage=0;editing=null;renderQuestion();}
+function addMessage(text,cls=''){const line=el('div','chat-line '+cls),bubble=el('div','bubble',text);line.append(bubble);$('messages').append(line);return bubble;}
+function editQuestion(index,returnTo){editing={returnTo,stage};stage=index;renderQuestion();}
+function renderQuestion(){show('conversation');draft=stage===15?resource:answers[stage];const currentDomain=stage===15?null:QUESTIONS[stage].domain;
+ $('progress-label').textContent=(editing?'Изменить ответ':stage===15?'Ещё немного о вас':`Вопрос ${stage+1} из 15`)+` · ${AGES[age].label}`;
+ const done=answers.filter(v=>v!==undefined).length+(resource!==undefined?1:0);$('progress').setAttribute('aria-valuenow',String(done));$('progress').setAttribute('aria-valuetext',`${done} из 16 шагов, последний — необязательный`);$('progress-fill').style.width=(done/16*100)+'%';
+ $('domain-nav').replaceChildren();DOMAINS.forEach((d,i)=>{const li=el('li',i===currentDomain?'current':i<currentDomain||stage===15?'done':'');li.append(el('span','',String(i+1).padStart(2,'0')),document.createTextNode(d.short));$('domain-nav').append(li);});
+ $('messages').replaceChildren();addMessage(`Ребёнку ${AGES[age].label}. Будем вспоминать последние две недели. Отвечайте о своих действиях, учитывая возможности ребёнка.`);
+ for(let i=0;i<stage;i++){if(answers[i]===undefined)continue;addMessage(QUESTIONS[i].q[age]);const row=el('div','chat-line user');const b=button(answerText(answers[i]),'bubble',()=>editQuestion(i,'conversation'));b.setAttribute('aria-label',`Изменить ответ на вопрос ${i+1}: ${answerText(answers[i])}`);row.append(b);$('messages').append(row);}
+ if(stage<15&&QUESTIONS[stage].item===0)$('messages').append(el('p','section-intro',DOMAINS[currentDomain].intro));
+ const row=el('div','chat-line current-question'),bubble=el('div','bubble');bubble.append(el('span','small',stage===15?'Необязательный вопрос · без оценки':`${String(currentDomain+1).padStart(2,'0')} · ${DOMAINS[currentDomain].name}`));const h=el('h2','',stage===15?'Как у вас сейчас с силами на общение и повседневные заботы?':QUESTIONS[stage].q[age]);h.id='current-question';h.tabIndex=-1;bubble.append(h);row.append(bubble);$('messages').append(row);
+ $('answer-label').textContent=stage===15?'Это поможет предложить посильный шаг. На оценки ответ не влияет.':'Как часто это получалось за последние две недели?';
+ $('answers').classList.toggle('resource-options',stage===15);$('answers').replaceChildren();(stage===15?RESOURCE_OPTIONS:FREQUENCY).forEach((text,i)=>{const b=button(text,'answer',()=>selectAnswer(i));b.dataset.value=String(i);$('answers').append(b);});
+ $('extras').replaceChildren();if(stage<15){const b=button('Такой ситуации не было','text-button',()=>selectAnswer('na'));b.dataset.value='na';$('extras').append(b);}const skip=button('Пропустить','text-button',()=>selectAnswer(null));skip.dataset.value='skip';$('extras').append(skip);
+ $('back').textContent=editing?'Отменить изменение':stage===0?'← Возраст ребёнка':'← Назад';updateSelection();h.focus({preventScroll:true});
+ requestAnimationFrame(()=>{const box=$('messages');box.scrollTo({top:Math.max(0,row.offsetTop-box.offsetTop-12),behavior:'smooth'});});
+}
+function selectAnswer(value){draft=value;next();}
+function updateSelection(){[...$('answers').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(draft===i)));[...$('extras').children].forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.value==='na'?draft==='na':draft===null)));}
+function finishEditing(){const destination=editing;editing=null;if(destination.returnTo==='review'){renderReview();}else{stage=destination.stage;renderQuestion();}}
+function next(){if(draft===undefined)return;if(stage===15)resource=draft;else answers[stage]=draft;if(editing){finishEditing();return;}if(stage===15){completed=true;renderResult();}else{stage++;renderQuestion();}}
+function back(){if(editing){finishEditing();return;}if(stage===0){ageDraft=age;renderSetup();}else{stage--;renderQuestion();}}
+function domainStats(){return DOMAINS.map((d,index)=>{const entries=answers.slice(index*3,index*3+3).filter(v=>typeof v==='number');return {index,count:entries.length,mean:entries.length>=2?entries.reduce((a,b)=>a+b,0)/entries.length:null,minimum:entries.length?Math.min(...entries):null};});}
+function statusText(stat){return stat.mean===null?'Пока мало ответов':stat.mean>=3?'Часто получается':stat.mean>=1.5?'Получается по-разному':'Пока редко получается';}
+function lowestQuestion(domain){const indices=QUESTIONS.map((q,i)=>i).filter(i=>(domain===undefined||QUESTIONS[i].domain===domain)&&typeof answers[i]==='number');return indices.sort((a,b)=>answers[a]-answers[b]||a-b)[0];}
+function getFocusItem(){const index=lowestQuestion(focus);return index===undefined?{question:QUESTIONS[focus*3],index:focus*3,hasAnswer:false}:{question:QUESTIONS[index],index,hasAnswer:true};}
+function resourceAdvice(){if(resource===2)return 'Если сил мало, достаточно один раз попробовать только фразу — без дополнительных задач. Если есть возможность, попросите близкого человека о конкретной помощи. Поддержка нужна и вам.';if(resource===1)return 'Выберите для попытки момент, когда у вас есть немного сил. Одного раза достаточно для начала; в трудный день шаг можно отложить.';if(resource===0)return 'Попробуйте этот шаг один-два раза на неделе. Потом отметьте, что помогло общению и что хочется изменить. Это наблюдение, а не проверка на успех.';return 'Начните с одной подходящей ситуации на этой неделе. Уменьшите шаг или отложите его, если сейчас не хватает сил.';}
+function renderResult(){show('result');const stats=domainStats(),count=answers.filter(v=>typeof v==='number').length,lowest=lowestQuestion();if(!manualFocus||focus===null)focus=lowest===undefined?0:QUESTIONS[lowest].domain;
+ $('result-meta').textContent=`Ребёнку ${AGES[age].label} · последние две недели`;$('result-intro').textContent=count===0?'Вы пока не оценили ни одной ситуации. Здесь можно выбрать общую идею или вернуться к вопросам.':`Учтено ${count} из 15 ответов. Это ваш взгляд на привычные действия сейчас — без общей оценки родительства.`;
+ $('metrics').replaceChildren();stats.forEach(s=>{const row=el('div','metric'),head=el('div','metric-head');head.append(el('strong','',DOMAINS[s.index].name),el('span','',`${s.count} из 3 ответов`));const track=el('div','metric-track'+(s.mean===null?' empty':''));track.setAttribute('aria-hidden','true');if(s.mean!==null){const fill=el('div','metric-fill');fill.style.setProperty('--value',(s.mean/4*100)+'%');track.append(fill);}const text=el('p','metric-status',statusText(s));if(s.mean!==null)text.append(el('span','sr-only',`. Среднее ${s.mean.toFixed(1).replace('.',',')} из 4.`));row.append(head,track,text);$('metrics').append(row);});
+ const strengths=stats.filter(s=>s.mean!==null&&s.mean>=3&&s.minimum>=3).sort((a,b)=>b.mean-a.mean||a.index-b.index).slice(0,2);$('strengths').replaceChildren();$('strength-title').textContent=strengths.length?'Что уже помогает':'Что можно заметить';
+ if(strengths.length){strengths.forEach(s=>{const div=el('div','insight-item');div.append(el('h4','',DOMAINS[s.index].name),el('p','',DOMAINS[s.index].strength));$('strengths').append(div);});}
+ else {const high=answers.findIndex(v=>typeof v==='number'&&v>=3);if(high>=0){const div=el('div','insight-item');div.append(el('h4','',QUESTIONS[high].title),el('p','',`На вопрос «${QUESTIONS[high].q[age]}» вы ответили: «${answerText(answers[high])}». Это отдельная опора; для вывода обо всей теме ответов пока недостаточно или они различаются.`));$('strengths').append(div);}else $('strengths').append(el('p','small',count?'По этим ответам пока трудно выделить действия, которые устойчиво получаются часто. Это не означает, что у вас нет сильных сторон: квиз охватывает только часть общения.':'Без оценок нельзя определить ваши сильные стороны. Можно вернуться к вопросам или выбрать направление для размышления.'));}
+ $('insight-note').replaceChildren(el('p','',count===0?'Общие идеи ниже — приглашение попробовать, а не персональный вывод.':lowest!==undefined&&answers[lowest]>=3?'Вы часто используете описанные способы общения. Можно выбрать привычку, которую хочется сохранить, или пересмотреть ответы.':'Достаточно одного направления. Вам не нужно менять всё сразу; полезно начать с того, что сейчас посильно.'));
+ $('focus-select').replaceChildren();DOMAINS.forEach((d,i)=>{const option=el('option','',d.name);option.value=String(i);option.selected=i===focus;$('focus-select').append(option);});renderFocus();focusHeading('result');
+}
+function renderFocus(){const item=getFocusItem(),tip=item.question.tips[age],good=item.hasAnswer&&answers[item.index]>=3;$('focus-title').textContent=good?'Что хочется сохранить':item.hasAnswer?'Чему дать внимание':'Идея для начала';$('focus-intro').textContent=manualFocus?'Вы выбрали это направление сами. Его можно поменять в любой момент.':item.hasAnswer?(good?'По вашим ответам эти действия уже часто получаются. Предлагаем один из способов поддержать знакомую привычку.':'Начать можно с конкретной ситуации, которая получалась реже. Это предложение, а не обязательный приоритет.'):'Оценок пока недостаточно для персонального фокуса. Выберите тему, о которой хочется подумать.';
+ $('focus-evidence').replaceChildren();if(item.hasAnswer){if(!good)$('focus-evidence').append(el('p','',item.question.observation));$('focus-evidence').append(el('p','small',`Вопрос: «${item.question.q[age]}»`),el('p','small',`Ваш ответ: «${answerText(answers[item.index])}».`));if(domainStats()[focus].mean===null)$('focus-evidence').append(el('p','small','Это подсказка по одному ответу, а не вывод обо всей теме.'));}else $('focus-evidence').append(el('p','small','В этой теме вы пока не указали, как часто это получалось. Ниже — общая идея для выбранного возраста.'));
+ $('step-title').textContent=tip[0];$('step-body').textContent=tip[1];$('step-phrase').textContent=tip[2];$('resource-note').textContent=resourceAdvice();
+}
+function renderReview(){show('review');$('review-age').textContent=`Ребёнку ${AGES[age].label}`;$('review-list').replaceChildren();DOMAINS.forEach((domain,d)=>{const group=el('div','review-group');group.append(el('h3','',domain.name));domain.questions.forEach((q,item)=>{const index=d*3+item,row=el('div','review-row');row.append(el('p','small',`Вопрос ${index+1} из 15`),el('p','',q.q[age]),button(answerText(answers[index])+' · изменить','text-button',()=>editQuestion(index,'review')));group.append(row);});$('review-list').append(group);});const row=el('div','review-row');row.append(el('h3','','Ваши силы'),el('p','small','Не влияет на оценки'),button(resourceText(resource)+' · изменить','text-button',()=>editQuestion(15,'review')));$('review-list').append(row);focusHeading('review');}
+function exportText(){const item=getFocusItem(),tip=item.question.tips[age],stats=domainStats();return ['НА ОДНОЙ СТОРОНЕ',`Ребёнку ${AGES[age].label}. Мои ответы о последних двух неделях.`, '', 'ПЯТЬ НАПРАВЛЕНИЙ',...stats.map(s=>`${DOMAINS[s.index].name}: ${statusText(s)} (${s.count} из 3 ответов${s.mean===null?'':`; среднее ${s.mean.toFixed(1).replace('.',',')} из 4`}).`),'','МОИ ОПОРЫ',$('strengths').textContent,'','МОЙ ФОКУС',DOMAINS[focus].name,item.hasAnswer?`${item.question.q[age]} — ${answerText(answers[item.index])}`:'Общая идея, без оценки ответов.','','НЕБОЛЬШОЙ ШАГ',tip[0],tip[1],tip[2],resourceAdvice(),'','МОИ ОТВЕТЫ',...QUESTIONS.map((q,i)=>`${i+1}. ${q.q[age]}\n${answerText(answers[i])}`),'',`Мои силы: ${resourceText(resource)}`,'','Авторский квиз для самонаблюдения. Не является валидированным тестом или диагностикой. Пропуски не равны нулю. Общего балла нет.','Условные диапазоны среднего: менее 1,5 — пока редко получается; от 1,5 до менее 3 — получается по-разному; от 3 — часто получается. Минимум два ответа на тему.','','ИСТОЧНИКИ',...SOURCES.map(s=>`${s[0]}\n${s[1]}`)].join('\n');}
+async function copyResult(){const text=exportText();try{if(!navigator.clipboard||!window.isSecureContext)throw new Error('unavailable');await navigator.clipboard.writeText(text);notify('Результат скопирован');}catch{$('export-text').value=text;$('export-dialog').showModal();$('export-text').focus();$('export-text').select();}}
+function downloadResult(){const url=URL.createObjectURL(new Blob([exportText()],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='na-odnoy-storone-result.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);notify('Текст результата подготовлен к сохранению');}
+function askRestart(){restartDestination='setup';$('restart-dialog').showModal();}
+SOURCES.forEach(source=>{const li=el('li'),a=el('a','',source[0]);a.href=source[1];a.target='_blank';a.rel='noopener noreferrer';li.append(a,document.createTextNode(' — '+source[2]));$('sources').append(li);});
+$('start').addEventListener('click',renderSetup);$('setup-back').addEventListener('click',()=>{show('intro');$('start').focus();});$('begin').addEventListener('click',begin);$('back').addEventListener('click',back);$('focus-select').addEventListener('change',()=>{focus=Number($('focus-select').value);manualFocus=true;renderFocus();notify('Шаг обновлён для выбранного направления');});
+$('review-button').addEventListener('click',renderReview);$('review-return').addEventListener('click',renderResult);$('review-return-top').addEventListener('click',renderResult);$('restart').addEventListener('click',askRestart);$('change-age').addEventListener('click',askRestart);$('cancel-restart').addEventListener('click',()=>$('restart-dialog').close());$('confirm-restart').addEventListener('click',()=>{const chosen=restartDestination==='chosen-age'?ageDraft:null;$('restart-dialog').close();resetState(chosen);if(chosen===null)renderSetup();else renderQuestion();});
+$('copy').addEventListener('click',copyResult);$('download').addEventListener('click',downloadResult);$('select-export').addEventListener('click',()=>{$('export-text').focus();$('export-text').select();});document.querySelectorAll('.about').forEach(b=>b.addEventListener('click',()=>$('about-dialog').showModal()));document.querySelectorAll('dialog').forEach(d=>{d.querySelector('.dialog-close')?.addEventListener('click',()=>d.close());d.addEventListener('click',event=>{if(event.target!==d)return;const r=d.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)d.close();});});
+
+})();
+</script>
+</body></html>

@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Чекап потребностей: 12 вопросов, шесть направлений и небольшой шаг для себя. Авторский интерактив для самонаблюдения.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Чекап потребностей — Greendiz</title>
+<style>
+
+:root{--paper:#f3f0ea;--ink:#151916;--blue:#324bc5;--muted:#62665f;--line:#d6d5cc;--white:#fffdfa;--serif:'Lora',serif;--sans:'Onest',sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{font:inherit;cursor:pointer}button:disabled{cursor:default}
+button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}
+[tabindex='-1']:focus{outline:none}
+a{color:var(--blue);text-underline-offset:4px}
+::selection{background:#dbe0ff;color:var(--ink)}
+.quiz{max-width:1240px;margin:auto;padding:48px 48px 40px;min-height:100svh}
+.view{animation:reveal .45s cubic-bezier(.16,1,.3,1) both}
+[hidden]{display:none!important}
+h1,h2,h3,p{margin-top:0}h1,h2,h3{font-weight:400}
+h1,h2{font-family:var(--serif);letter-spacing:-.04em;line-height:1.06;text-wrap:balance}
+h1{font-size:clamp(64px,7.2vw,92px);margin-bottom:28px}
+h2{font-size:54px;margin-bottom:24px}
+h3{font:400 29px/1.25 var(--serif);letter-spacing:-.025em;text-wrap:balance}
+em{font-weight:400;color:var(--blue)}.title-dot{color:var(--blue)}
+.eyebrow{font-size:14px;letter-spacing:.07em;line-height:1.5;font-weight:500;text-transform:uppercase}
+.intro{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;min-height:calc(100svh - 88px)}
+.lead{font-size:19px;line-height:1.6;max-width:390px;margin-bottom:0}
+.intro-aside{background:var(--white);padding:28px 30px 24px;border-radius:6px}
+.art{width:100%;margin:0 auto 20px;max-width:360px}
+.art svg{display:block;width:100%;height:auto}
+.art-orb{animation:orbFloat 6s ease-in-out infinite}
+.art-caption{font:italic 22px/1.4 var(--serif);color:var(--blue);text-align:center;margin:0 0 22px}
+.intro-meta{font-size:16px;text-align:center;margin:0 0 18px}
+.primary,.secondary{min-height:54px;padding:14px 20px;border:1px solid var(--blue);border-radius:3px;display:inline-flex;align-items:center;justify-content:center;gap:16px;line-height:1.4;text-decoration:none;transition:background .2s,transform .2s,color .2s}
+.primary{background:var(--blue);color:#fff}.primary:hover{background:#253ca9}.primary:active,.secondary:active{transform:translateY(1px)}
+.primary svg,.secondary svg{width:20px;height:20px;flex:none}
+.secondary{background:transparent;border-color:var(--line);color:var(--ink)}.secondary:hover{background:#e8e5dd}
+.intro-aside>.primary{width:100%;justify-content:space-between}
+.text-button{background:none;border:0;border-bottom:1px solid #a6afd9;padding:8px 0 3px;min-height:40px;font-size:15px;color:var(--blue);text-align:left;line-height:1.45;transition:color .2s,border-color .2s}
+.text-button:hover{color:#24389d;border-bottom-color:currentColor}
+.privacy{font-size:14px;line-height:1.6;color:var(--muted);margin:16px 0 0;text-align:center}
+.intro-links{text-align:center;margin-top:8px}
+.small{font-size:14px;color:var(--muted);line-height:1.6}
+.conversation{display:grid;grid-template-columns:260px minmax(0,1fr);gap:44px;height:calc(100svh - 88px);min-height:620px;max-height:1000px}
+.side-copy{display:flex;flex-direction:column;padding-top:30px}
+.side-copy h2{font-size:43px;line-height:1.13}.side-copy>p{font-size:16px;color:var(--muted)}
+.side-bottom{margin-top:auto;padding-bottom:12px}
+.chat-panel{min-width:0;min-height:0;display:flex;flex-direction:column;background:#faf8f3;border-radius:6px;overflow:hidden}
+.chat-top{display:flex;align-items:center;padding:18px 24px;gap:10px;font-size:14px}
+.chat-top .eyebrow{margin:0;text-transform:none;letter-spacing:0;font-size:15px}
+.progress-track{height:4px;background:#fff;flex-shrink:0}.progress-track span{display:block;height:100%;background:var(--blue);width:0;transition:width .4s ease}
+.messages{overflow-y:auto;padding:24px 24px 16px;flex:1;min-height:160px;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#c6c8d3 transparent}
+.chat-line{display:flex;margin-bottom:18px;align-items:flex-end}.chat-line:last-child{animation:reveal .3s ease both}
+.bubble{max-width:94%;background:#fff;border-radius:14px 14px 14px 3px;padding:16px 18px;font-size:17px;line-height:1.55}
+.bubble p:last-child{margin-bottom:0}
+.chat-line.user{justify-content:flex-end}.user .bubble{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:14px 14px 3px 14px;text-align:left;max-width:90%;padding:12px 17px;font-size:16px;transition:background .2s}
+.user .bubble:hover{background:var(--paper)}.user .bubble:focus-visible{outline-offset:3px}
+.answer-panel{border-top:1px solid var(--line);padding:18px 24px 16px;background:#faf8f3}
+.answer-prompt{font-size:16px;margin-bottom:14px}
+.choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;position:relative}
+.choices::before{content:'';position:absolute;left:12.5%;right:12.5%;height:1px;top:13px;background:#afb7d5;pointer-events:none}
+.choice{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:14px;border:0;background:transparent;border-radius:4px;padding:4px 4px 10px;min-height:100px;font-size:15px;color:var(--ink);line-height:1.4;transition:background .2s,color .2s}
+.choice::before{content:'';display:block;width:20px;height:20px;flex:none;border:1.5px solid #8b95b8;background:#faf8f3;border-radius:50%;transition:background .2s,border-color .2s,box-shadow .2s}
+.choice:hover{color:var(--blue)}.choice:hover::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.choice[aria-pressed=true]{color:var(--blue)}.choice[aria-pressed=true]::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.answer-help{font-size:14px;color:var(--muted);margin:12px 0 0}.choices>.primary{grid-column:1/-1;width:100%}.choices.is-complete::before{display:none}
+.result-heading{margin-bottom:28px}.result-heading h2{font-size:58px;margin-bottom:0}
+.result-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
+.score-card{background:var(--blue);color:#fff;padding:28px 30px;border-radius:4px}.score-card .eyebrow{color:#e0e5ff;margin-bottom:8px}
+.score-number{display:flex;align-items:baseline;gap:16px;line-height:1.2;margin-bottom:26px}.score-number strong{font:400 100px/1.2 var(--serif);letter-spacing:-.04em;font-variant-numeric:lining-nums tabular-nums}.score-number>span{color:#e0e5ff;font-size:18px}
+.score-track{height:3px;background:#8494ef;position:relative;margin:12px 7px}.score-track>span{position:absolute;top:50%;width:14px;height:14px;background:var(--paper);border-radius:50%;transform:translate(-50%,-50%);left:0;transition:left 1s cubic-bezier(.2,.8,.2,1)}
+.scale-labels{display:flex;justify-content:space-between;font-size:14px;color:#e0e5ff;margin-bottom:22px;font-variant-numeric:tabular-nums}
+.score-card>p:not(.eyebrow){font-size:16px;line-height:1.6}.score-card .score-note{border-top:1px solid #7180d7;padding-top:18px;margin:20px 0 0;color:#e0e5ff;font-size:14px}
+.insight-card{display:flex;flex-direction:column;padding:28px 30px;background:var(--white);border-radius:4px;min-width:0}
+.section-number{font-size:14px;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:18px}
+.insight-card h3{font-size:32px;margin-bottom:18px}.insight-card #observations p{font-size:17px;line-height:1.65;margin-bottom:16px}
+.result-actions{display:flex;flex-direction:column;gap:10px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.result-actions>.primary,.result-actions>.secondary{width:100%}
+.result-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:2px}
+.reflection{display:grid;grid-template-columns:190px minmax(0,1fr);gap:30px;border-top:1px solid var(--line);padding:26px 0 8px;margin-top:30px}
+.reflection .section-number{padding-top:5px}.reflection h3{font-size:27px;max-width:710px;margin-bottom:10px}
+.result-method{margin-top:10px}
+.review-view{max-width:800px;margin:auto}.review-view h2{font-size:54px}.review-view>p{color:var(--muted)}
+.review-row{border-top:1px solid var(--line);padding:20px 0;display:grid;grid-template-columns:35px minmax(0,1fr);gap:12px}.review-row>.small{padding-top:3px}.review-row p{margin-bottom:8px;font-size:17px}.review-row button{font-size:16px}.review-view>.primary{margin-top:25px}
+dialog{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;max-width:680px;width:calc(100% - 32px);padding:42px;max-height:85svh;overflow-y:auto;font:16px/1.65 var(--sans)}
+dialog::backdrop{background:#15191680;backdrop-filter:blur(3px)}dialog h2{font-size:42px}dialog ul{padding-left:20px}dialog h3{font-size:25px;margin:25px 0 15px}
+.dialog-close{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;font-size:29px;color:var(--muted)}.dialog-actions{display:flex;gap:12px;flex-wrap:wrap}
+.notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:10;background:var(--ink);color:#fff;padding:12px 20px;border-radius:4px;font-size:15px;box-shadow:0 5px 20px #0002;max-width:calc(100% - 32px);width:max-content;pointer-events:none}.notice:empty{display:none}
+@keyframes reveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(min-width:1450px){.quiz{padding-top:64px}.intro{min-height:calc(100svh - 112px)}}
+@media(max-width:1050px){.quiz{padding:32px 28px}.intro{gap:36px}.intro-aside{padding:24px}.conversation{grid-template-columns:210px minmax(0,1fr);gap:26px;height:calc(100svh - 64px)}.side-copy h2{font-size:37px}.result-grid{grid-template-columns:.8fr 1.2fr;gap:18px}.score-card,.insight-card{padding:25px}.choice{font-size:14px}}
+@media(max-width:800px){.conversation{display:block;height:calc(100svh - 32px);min-height:560px;max-height:none}.quiz:has(.conversation:not([hidden])){padding:16px}.side-copy{display:none}.chat-panel{height:100%}.bubble{max-width:94%}.result-grid{grid-template-columns:1fr 1.25fr}.score-number strong{font-size:80px}.score-number{gap:10px}.result-heading h2{font-size:50px}}
+@media(max-width:700px){.quiz{padding:30px 20px}.intro{display:block;min-height:0}.intro-copy{margin-bottom:28px}h1{font-size:clamp(52px,11vw,72px);margin-bottom:20px}.lead{font-size:18px;max-width:440px}.intro-aside{padding:20px 24px}.art{max-width:260px;margin-bottom:10px}.art-caption{font-size:21px;margin-bottom:18px}.intro-meta{margin-bottom:16px}.privacy{font-size:14px}.result-heading h2{font-size:clamp(38px,8vw,49px)}.result-grid{grid-template-columns:1fr;gap:16px}.score-card,.insight-card{padding:24px}.score-number strong{font-size:86px}.score-number{margin-bottom:20px}.score-card>p:not(.eyebrow){max-width:470px}.insight-card h3{font-size:29px}.reflection{grid-template-columns:1fr;gap:0;margin-top:24px;padding-top:24px}.reflection .section-number{margin-bottom:14px}.reflection h3{font-size:25px}.review-view h2{font-size:42px}.review-row{grid-template-columns:26px minmax(0,1fr)}dialog{padding:36px 24px}dialog h2{font-size:34px}.dialog-actions>*{width:100%}}
+@media(max-width:540px){.chat-top{padding:15px 18px}.messages{padding:18px 16px 12px}.bubble{padding:14px 16px;font-size:17px}.answer-panel{padding:16px}.answer-prompt{margin-bottom:12px}.choices{grid-template-columns:1fr;gap:7px}.choices::before{display:none}.choice{flex-direction:row;text-align:left;justify-content:flex-start;gap:14px;font-size:16px;min-height:52px;padding:12px 14px;border:1px solid #d6d9e5;background:#fff}.choice::before{width:18px;height:18px;background:#fff}.answer-help{font-size:14px;margin-top:10px}.conversation{min-height:650px}.result-links{gap:5px 20px}.intro-aside{padding:20px}.primary,.secondary{padding:14px 16px;font-size:16px}}
+
+
+html:has(dialog[open]){overflow:hidden}
+#about-dialog{padding:0;overflow:hidden}
+#about-dialog[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.dialog-header{position:relative;padding:36px 70px 20px 38px}
+.dialog-header h2{margin:0}
+#about-dialog .dialog-close{top:16px;right:16px;border-radius:50%;transition:background .2s,color .2s}
+#about-dialog .dialog-close:hover{background:#e4e5ef;color:var(--blue)}
+.dialog-body{padding:0 30px 30px 38px;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#8996d9 #e9e7df}
+.dialog-body>:last-child{margin-bottom:0}
+.dialog-body::-webkit-scrollbar{width:9px}
+.dialog-body::-webkit-scrollbar-track{background:#e9e7df;border-radius:10px;margin-block:4px 12px}
+.dialog-body::-webkit-scrollbar-thumb{background:#8996d9;border:2px solid #e9e7df;border-radius:10px}
+.dialog-body::-webkit-scrollbar-thumb:hover{background:var(--blue)}
+@media(max-width:700px){
+#about-dialog{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100svh;height:100dvh;max-height:100svh;max-height:100dvh;border:0;border-radius:0}
+.dialog-header{padding:calc(30px + env(safe-area-inset-top)) calc(64px + env(safe-area-inset-right)) 22px calc(24px + env(safe-area-inset-left))}
+#about-dialog .dialog-close{top:calc(14px + env(safe-area-inset-top));right:calc(12px + env(safe-area-inset-right))}
+.dialog-body{padding:0 calc(20px + env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) calc(24px + env(safe-area-inset-left))}
+}
+
+
+.choices{grid-template-columns:repeat(5,minmax(0,1fr))}.choices::before{left:10%;right:10%}
+.choice{min-height:90px}.skip-answer{display:block;margin:5px auto 0;min-height:44px}
+.chat-top{justify-content:space-between}.chat-back{min-height:44px;padding:8px 0;font-size:14px}
+.chat-top .eyebrow{font-size:14px}.period{color:var(--muted);font-size:14px;margin:0 0 12px}
+.conversation{height:calc(100dvh - 88px)}
+.result-heading{max-width:780px}.result-heading>p{max-width:670px;color:var(--muted);margin:20px 0 0;font-size:17px}
+.result-grid{grid-template-columns:1fr 1.15fr;gap:24px}
+.needs-card{background:var(--blue);color:#fff;padding:30px;border-radius:4px;min-width:0}
+.needs-card h3{font-size:30px;margin:0 0 12px}.needs-card>.small{color:#e0e5ff;margin:0 0 24px}
+.need-row{margin:0 0 23px}.need-top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:10px}
+.need-top h4{font-size:16px;font-weight:500;margin:0;line-height:1.4}.need-top>span{font-size:13px;color:#e0e5ff;text-align:right;line-height:1.4}
+.need-track{height:5px;background:#7180d7;border-radius:5px;position:relative;margin:0 7px}
+.need-dot{position:absolute;top:50%;width:13px;height:13px;border-radius:50%;background:var(--white);transform:translate(-50%,-50%);transition:left .8s cubic-bezier(.2,.8,.2,1)}
+.need-row.no-data .need-track{background:repeating-linear-gradient(90deg,#8492db 0 10px,transparent 10px 17px)}
+.need-caption{display:flex;justify-content:space-between;font-size:12px;color:#e0e5ff;margin-top:7px;gap:8px}
+.need-note{font-size:13px;color:#e0e5ff;margin:6px 0 0}.needs-foot{border-top:1px solid #7180d7;padding-top:18px;margin:24px 0 0;font-size:14px;color:#e0e5ff}
+.insight-card{padding:30px}.insight-card h3{font-size:30px}.priority-copy{color:var(--muted);font-size:15px}
+.priorities{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0 8px}
+.priority{border:1px solid var(--line);background:transparent;border-radius:3px;padding:12px;text-align:left;line-height:1.4;min-height:52px;font-size:14px;color:var(--ink);transition:background .2s,border-color .2s}
+.priority:hover{border-color:var(--blue)}.priority[aria-pressed=true]{border-color:var(--blue);background:#edf0ff;color:#253ca9}
+.detail{border-top:1px solid var(--line);padding-top:22px;margin-top:22px;animation:reveal .4s ease both}.detail h4{font:400 26px/1.3 var(--serif);margin:0 0 16px;letter-spacing:-.02em}
+.detail>p{font-size:16px}.detail .small{font-size:14px}.steps{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.step{border:1px solid var(--line);background:transparent;border-radius:3px;display:flex;gap:12px;align-items:flex-start;padding:12px;text-align:left;color:var(--ink);font-size:15px;line-height:1.5;transition:border-color .2s,background .2s}
+.step::before{content:'';width:18px;height:18px;margin-top:2px;flex:none;border:1px solid #8b95b8;border-radius:50%}.step:hover{border-color:var(--blue)}
+.step[aria-pressed=true]{border-color:var(--blue);background:#edf0ff}.step[aria-pressed=true]::before{background:var(--blue);box-shadow:inset 0 0 0 4px #fff;border-color:var(--blue)}
+.my-step{background:#e8ebf8;border-left:3px solid var(--blue);padding:18px;margin:18px 0 0;animation:reveal .4s ease both}.my-step h4{font:400 23px/1.3 var(--serif);margin:0 0 8px}.my-step p{margin:0;font-size:15px}
+.result-actions{margin-top:auto}.result-actions-wrap{margin-top:auto;padding-top:24px}.result-actions .primary{cursor:default}
+.reflection h3{font-size:25px}.review-row{grid-template-columns:1fr}.review-row .small{padding:0}.review-row p{margin-top:6px}
+.copy-fallback{display:block;width:100%;min-height:180px;margin-top:16px;padding:12px;border:1px solid var(--line);background:#fff;font:14px/1.5 var(--sans);color:var(--ink)}
+.text-button{min-height:44px}.intro-copy .small{margin:24px 0 0;max-width:390px}
+@media(max-width:1050px){.needs-card,.insight-card{padding:24px}.result-grid{grid-template-columns:1fr 1.1fr}.conversation{height:calc(100dvh - 64px)}.need-top{flex-direction:column;gap:3px}.choice{font-size:13px}}
+@media(max-width:800px){.conversation{height:calc(100dvh - 32px);min-height:600px}.result-grid{grid-template-columns:1fr 1.1fr}.chat-panel{height:100%}}
+@media(max-width:700px){.result-grid{grid-template-columns:1fr}.need-top{flex-direction:row}.result-heading>p{font-size:16px}.needs-card,.insight-card{padding:24px}.result-actions{margin-top:0}.intro-copy .small{margin-top:16px}.priorities{gap:8px}}
+@media(max-width:540px){.conversation{min-height:650px}.choices{grid-template-columns:1fr 1fr;gap:7px}.choices::before{display:none}.choice{min-height:44px;padding:9px 10px;gap:9px;font-size:14px;align-items:center}.choice:last-child{grid-column:1/-1}.choice::before{width:16px;height:16px}.skip-answer{margin:4px auto 0;font-size:14px}.answer-panel{padding:12px 16px}.answer-prompt{margin-bottom:8px;font-size:15px}.answer-help{margin-top:6px;font-size:12px}.period{font-size:13px;margin-bottom:8px}.chat-top{padding:6px 16px;gap:10px}.chat-back{font-size:13px}.chat-top .eyebrow{font-size:13px}.bubble{font-size:16px}.need-top>span{font-size:12px}.need-top h4{font-size:15px}.need-top{gap:8px}.priorities{grid-template-columns:1fr 1fr}.priority{font-size:13px;padding:10px}.result-heading h2{font-size:42px}}
+@media(max-height:700px) and (max-width:800px){.conversation{min-height:560px}.messages{min-height:100px}}
+</style></head>
+<body>
+<main class="quiz" id="quiz" aria-label="Чекап потребностей">
+<section id="intro" class="intro view">
+ <div class="intro-copy"><h1>Чего вам<br>сейчас<br><em>не хватает</em><span class="title-dot">?</span></h1>
+ <p class="lead">Небольшая пауза, чтобы прислушаться к себе и понять, каким потребностям хочется уделить внимание.</p>
+ <p class="small">Вспомните последние две недели. Здесь нет правильных ответов — только ваш опыт.</p></div>
+ <div><div class="intro-aside"><div class="art"><svg viewBox="0 0 380 270" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false">
+<circle cx="190" cy="136" r="105" stroke="#e9e5dc" stroke-width="1.5" stroke-dasharray="3 7"/>
+<ellipse cx="190" cy="91" rx="29" ry="47" fill="#324bc5"/>
+<ellipse cx="190" cy="91" rx="29" ry="47" transform="rotate(60 190 136)" fill="#d5dcf6"/>
+<ellipse cx="190" cy="91" rx="29" ry="47" transform="rotate(120 190 136)" fill="#bfc6a8"/>
+<ellipse cx="190" cy="91" rx="29" ry="47" transform="rotate(180 190 136)" fill="#e9e5dc"/>
+<ellipse cx="190" cy="91" rx="29" ry="47" transform="rotate(240 190 136)" fill="#abb6e7"/>
+<ellipse cx="190" cy="91" rx="29" ry="47" transform="rotate(300 190 136)" fill="#ece9e1"/>
+<path d="M190 47C174 47 162 65 162 91" stroke="#242b29" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M113 181C122 196 143 201 165 188" stroke="#242b29" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M268 92C260 77 238 72 216 85" stroke="#242b29" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="190" cy="136" r="28" fill="#fffdfa"/>
+<g class="art-orb"><circle cx="190" cy="136" r="17" fill="#324bc5"/><path d="M184 131C186 128 189 127 192 128" stroke="#d5dcf6" stroke-width="1.5" stroke-linecap="round"/></g>
+<circle cx="292" cy="58" r="10" fill="#bfc6a8"/>
+<circle cx="85" cy="201" r="7" fill="#324bc5"/>
+<path d="M80 74H94M87 67V81" stroke="#abb6e7" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M285 214C294 209 300 211 304 218" stroke="#abb6e7" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div>
+ <p class="art-caption">Найти место для себя</p><p class="intro-meta">12 вопросов · около 4 минут</p>
+ <button class="primary" id="start" type="button">Начать</button>
+ <p class="privacy">Ответы обрабатываются на этой странице.<br>Для самонаблюдения; не заменяет консультацию.</p></div>
+ <div class="intro-links"><button class="text-button about" type="button">О подходе и источниках</button></div></div>
+</section>
+<section id="conversation" class="conversation view" hidden>
+ <aside class="side-copy"><h2>Сначала —<br><em>прислушаться.</em></h2><p>Вспомните последние две недели. Выбирайте то, что ближе вашему опыту.</p><div class="side-bottom"><button class="text-button about" type="button">О подходе и источниках</button></div></aside>
+ <div class="chat-panel"><div class="chat-top"><span id="progress-label" class="eyebrow"></span><button id="back" class="text-button chat-back" type="button">Назад</button></div>
+ <div class="progress-track" role="progressbar" aria-label="Дано ответов" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0"><span id="progress-fill"></span></div>
+ <div id="messages" class="messages" aria-label="История разговора"></div>
+ <div class="answer-panel"><p class="period">В последние две недели…</p><p id="answer-prompt" class="answer-prompt">Как часто это было?</p>
+ <div id="choices" class="choices" role="group" aria-labelledby="answer-prompt"></div>
+ <button id="skip" class="text-button skip-answer" type="button">Затрудняюсь ответить</button><p id="answer-help" class="answer-help">Ответ можно изменить — нажмите на него в переписке.</p></div></div>
+</section>
+<section id="result" class="result view" hidden>
+ <div class="result-heading"><h2>Что сейчас<br><em>важно для вас.</em></h2><p>Перед вами — ваши ответы о последних двух неделях. Посмотрите, чего было достаточно, а чего хотелось бы больше.</p></div>
+ <div class="result-grid"><div class="needs-card"><p class="eyebrow">ВАШИ ОТВЕТЫ</p><h3>Шесть направлений</h3><p class="small">Положение точки отражает средний ответ по направлению. Это не оценка вас и не сравнение с другими.</p><div id="needs-chart"></div><p class="needs-foot">Чем правее точка, тем чаще нужное вам присутствовало в повседневной жизни. Отсутствие точки означает, что ответов пока недостаточно.</p></div>
+ <div class="insight-card"><h3 id="priority-heading">Чему хочется<br>уделить внимание?</h3><p class="priority-copy">Выберите любое направление — даже если по ответам там всё относительно благополучно.</p>
+ <div id="priorities" class="priorities" role="group" aria-labelledby="priority-heading"></div>
+ <button id="no-priority" class="text-button" type="button">Пока просто посмотрю результат</button>
+ <p id="browse-note" class="small" hidden>Можно остановиться здесь. Если захотите, выберите направление позже.</p>
+ <div id="detail" class="detail" hidden><p class="eyebrow">ВАШ ФОКУС</p><h4 id="detail-title"></h4><p id="detail-observation"></p><p id="detail-copy"></p><p class="small">Выберите один шаг, который подходит вам сейчас. Можно ничего не выбирать и вернуться к этому позже.</p><div id="steps" class="steps" role="group" aria-label="Небольшой шаг"></div></div>
+ <div id="my-step" class="my-step" role="status" hidden><h4>Мой небольшой шаг</h4><p id="my-step-copy"></p></div>
+ <div class="result-actions-wrap"><div class="result-actions"><button type="button" class="primary" id="discuss">Обсудить со специалистом</button><button type="button" id="copy" class="secondary">Скопировать результат</button><div class="result-links"><button type="button" id="review" class="text-button">Посмотреть ответы</button><button type="button" class="text-button restart">Пройти заново</button></div></div></div>
+ </div></div>
+ <div class="reflection"><span class="section-number">ВОПРОС ДЛЯ СЕБЯ</span><div><h3 id="reflection-question">Какое небольшое изменение сделало бы ближайшие дни чуть комфортнее для вас?</h3></div></div>
+ <div class="result-method"><button class="text-button about" type="button">О подходе и источниках</button><p class="small">Авторский инструмент для самонаблюдения. Не является диагностическим тестом.</p></div>
+</section>
+<section id="review-view" class="review-view view" hidden><h2>Можно <em>пересмотреть.</em></h2><p>Нажмите на ответ, если хотите его изменить. Остальные ответы сохранятся.</p><div id="review-list"></div><button type="button" class="primary" id="back-result">Вернуться к результату</button></section>
+</main>
+<dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-header"><h2 id="about-title">Немного<br><em>о подходе.</em></h2><button type="button" class="dialog-close" aria-label="Закрыть">×</button></div><div class="dialog-body">
+ <p>«Чекап потребностей» — авторский интерактив для самонаблюдения. Он предлагает вспомнить последние две недели и посмотреть, насколько в повседневной жизни находилось место для отдыха, устойчивости, близости, свободы выбора, развития и радости.</p>
+ <p>Шесть направлений — рабочая группировка для этого интерактива, а не универсальная классификация потребностей. Вопросы, тексты и рекомендации написаны специально для него. Инструмент не проходил психометрическую валидацию, не определяет причины состояния и не ставит диагноз.</p>
+ <h3>Как читать результат</h3><p>Ответы от «Почти никогда» до «Почти всегда» получают значения от 0 до 4. Для каждого направления рассчитывается среднее двух ответов. На шкале показывается положение этого среднего, без диагностических порогов, процентов и общего балла.</p>
+ <p>Ответ «Затрудняюсь ответить» исключается из расчёта. Если остаётся один ответ, рядом появляется соответствующая пометка. Если оба ответа пропущены, точка не показывается. Выбранный фокус — ваш личный приоритет, а не заключение алгоритма.</p>
+ <h3>Источники и границы использования</h3><ul>
+ <li><a href="https://www.cnvc.org/images/pdf/Feelings-Needs-CNVC.pdf" target="_blank" rel="noopener noreferrer">CNVC — Feelings and Needs Inventory ↗</a><br>Ориентир для тем потребностей: отдыха, поддержки, безопасности, выбора, развития и радости. Готовый перечень не воспроизводится.</li>
+ <li><a href="https://selfdeterminationtheory.org/theory/" target="_blank" rel="noopener noreferrer">Self-Determination Theory — обзор теории ↗</a><br>Теоретическая опора для тем автономии, компетентности и связи с другими людьми. Опросники SDT, их вопросы и ключи не используются.</li>
+ </ul><p>Теоретические источники не подтверждают валидность именно этого интерактива. Его результат — повод для размышления или разговора со специалистом.</p>
+ <p class="small">Ответы и выбранный шаг хранятся только в памяти открытой страницы и удаляются при перезагрузке. Отправки ответов на сервер и регистрации нет. Шрифты Lora и Onest загружаются из Google Fonts; при отсутствии интернета используются системные шрифты.</p>
+</div></dialog>
+<dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">Начать <em>заново?</em></h2><p>Текущие ответы и выбранный шаг будут очищены.</p><div class="dialog-actions"><button type="button" id="confirm-restart" class="primary">Начать заново</button><button type="button" id="cancel-restart" class="secondary" autofocus>Оставить ответы</button></div></dialog>
+<p id="notice" role="status" class="notice"></p><noscript>Для прохождения чекапа включите JavaScript в браузере.</noscript>
+<script>
+'use strict';
+const domains = [
+ {title:'Отдых и восстановление', short:'Отдых', copy:'Какой отдых помогает именно вам? Иногда хочется тишины, иногда — смены занятия или возможности ничего не решать.', steps:['Освободить десять минут от задач.','Перенести одно необязательное дело.','Подумать, какую нагрузку можно разделить.'], reflection:'Как вы обычно замечаете, что вам пора отдохнуть?'},
+ {title:'Безопасность и устойчивость', short:'Устойчивость', copy:'Присмотритесь, что даёт вам ощущение опоры: понятный план, спокойное место, доступная помощь или привычный порядок дня.', steps:['Уточнить один вопрос, который создаёт неопределённость.','Составить посильный план на завтра.','Определить, к кому можно обратиться за практической помощью.'], reflection:'Что помогает вам чувствовать чуть больше опоры в повседневной жизни?'},
+ {title:'Близость и поддержка', short:'Поддержка', copy:'Поддержка бывает разной. Возможно, вам хочется быть услышанными, провести время вместе или получить конкретную помощь.', steps:['Написать человеку, с которым комфортно.','Предложить короткую встречу.','Прямо попросить о подходящей вам поддержке.'], reflection:'Какую поддержку вам хотелось бы получить и как можно о ней попросить?'},
+ {title:'Свобода выбора и личное пространство', short:'Свобода выбора', copy:'Где сейчас есть место вашему собственному решению? Это может быть небольшой выбор в повседневной жизни.', steps:['Выбрать одно дело по своему желанию.','Взять паузу перед ответом на просьбу.','Обозначить одну границу там, где это безопасно.'], reflection:'В каком небольшом решении вам хотелось бы больше учитывать собственное желание?'},
+ {title:'Развитие и ощущение «я справляюсь»', short:'Развитие', copy:'Попробуйте заметить не только то, что ещё предстоит, но и то, что уже получается. Развитие может идти в удобном вам темпе.', steps:['Отметить одно завершённое дело.','Разбить сложную задачу на посильные части.','Уделить немного времени интересному навыку.'], reflection:'Что у вас получилось недавно, даже если это кажется чем-то небольшим?'},
+ {title:'Радость и интерес к жизни', short:'Радость', copy:'Что обычно вызывает у вас хотя бы небольшой интерес или удовольствие? Можно начать с чего-то знакомого и доступного.', steps:['Вернуться к приятному занятию.','Запланировать небольшое событие, которого хочется ждать.','Попробовать что-то новое без требования получить результат.'], reflection:'Чего приятного вам хотелось бы добавить в один из ближайших дней?'}
+];
+const questions = [
+ {d:0,t:'Удавалось ли вам отдыхать так, чтобы почувствовать восстановление?'},
+ {d:1,t:'Было ли у вас место, где вы могли чувствовать себя спокойно и безопасно?'},
+ {d:2,t:'Был ли рядом человек, с которым вы могли поделиться важным и почувствовать, что вас слышат?'},
+ {d:3,t:'Получалось ли учитывать собственные желания, принимая повседневные решения?'},
+ {d:4,t:'Получалось ли замечать, что вы справляетесь хотя бы с частью повседневных задач?'},
+ {d:5,t:'Находилось ли время для занятий, которые приносят вам удовольствие?'},
+ {d:0,t:'Получалось ли делать паузу, когда вы замечали усталость?'},
+ {d:1,t:'Было ли в повседневной жизни достаточно понятности, чтобы планировать ближайшие дни?'},
+ {d:2,t:'Хватало ли вам тёплого общения?'},
+ {d:3,t:'Удавалось ли обозначать свои границы, когда вам что-то не подходило?'},
+ {d:4,t:'Была ли возможность учиться или пробовать то, что вам интересно?'},
+ {d:5,t:'Было ли в ваших днях что-то, чего вы ждали с интересом?'}
+];
+const labels = ['Почти никогда','Редко','Иногда','Часто','Почти всегда'];
+const SKIP = 'skip', $ = id => document.getElementById(id);
+let answers=Array(12).fill(null), current=0, editing=false, editOrigin='conversation', editReturn=0, focusDomain=null, chosenStep=null, noticeTimer;
+function node(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;}
+function meanLabel(value){return Number.isInteger(value)?labels[value]:labels[Math.floor(value)]+' / '+labels[Math.ceil(value)];}
+function answerLabel(value){return value===SKIP?'Затрудняюсь ответить':labels[value];}
+function summarize(values){
+ if(values.length!==12||values.some(v=>v!==SKIP&&(!Number.isInteger(v)||v<0||v>4)))throw new Error('Нужны все 12 ответов');
+ return domains.map((_,d)=>{const valid=values.filter((v,i)=>questions[i].d===d&&v!==SKIP);return {count:valid.length,mean:valid.length?valid.reduce((sum,v)=>sum+v,0)/valid.length:null};});
+}
+function show(id){document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==id);const h=$(id).querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}window.scrollTo({top:0,behavior:'smooth'});}
+function speak(text){const line=node('div','chat-line'),bubble=node('div','bubble');bubble.append(node('p','',text));line.append(bubble);$('messages').append(line);return bubble;}
+function renderChat(){
+ $('messages').replaceChildren();speak('Вспомните последние две недели. Можно отвечать приблизительно или выбрать «Затрудняюсь ответить».');
+ const end=Math.min(current,11);
+ for(let i=0;i<=end;i++){speak(questions[i].t);if(answers[i]!==null&&!(editing&&i===current)){const line=node('div','chat-line user'),b=node('button','bubble',answerLabel(answers[i]));b.type='button';b.setAttribute('aria-label','Изменить ответ: '+questions[i].t+' '+answerLabel(answers[i]));b.addEventListener('click',()=>edit(i,'conversation'));line.append(b);$('messages').append(line);}}
+ const count=answers.filter(v=>v!==null).length,complete=current===12&&!editing;
+ $('progress-label').textContent=editing?'Изменение ответа':complete?'Все ответы готовы':'Вопрос '+(current+1)+' из 12';
+ $('progress-fill').style.width=count/12*100+'%';document.querySelector('.progress-track').setAttribute('aria-valuenow',String(count));
+ $('back').hidden=current===0&&!editing;$('back').textContent=editing?'Отмена':'Назад';
+ $('choices').replaceChildren();$('choices').classList.toggle('is-complete',complete);$('skip').hidden=complete;document.querySelector('.period').hidden=complete;
+ if(complete){$('answer-prompt').textContent='Можно посмотреть, что получилось';const b=node('button','primary','Посмотреть результат');b.type='button';b.addEventListener('click',renderResult);$('choices').append(b);$('answer-help').textContent='Перед просмотром можно изменить любой ответ.';}
+ else{$('answer-prompt').textContent=editing?'Выберите новый ответ':'Как часто это было?';labels.forEach((label,value)=>{const b=node('button','choice',label);b.type='button';b.setAttribute('aria-pressed',String(answers[current]===value));b.addEventListener('click',()=>choose(value));b.addEventListener('keydown',event=>{const step=['ArrowRight','ArrowDown'].includes(event.key)?1:['ArrowLeft','ArrowUp'].includes(event.key)?-1:0;if(!step&&!['Home','End'].includes(event.key))return;event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?4:(value+step+5)%5;$('choices').children[next].focus();});$('choices').append(b);});$('answer-help').textContent=editing?'Остальные ответы сохранятся.':'Ответ можно изменить — нажмите на него в переписке.';}
+ requestAnimationFrame(()=>{$('messages').scrollTo({top:$('messages').scrollHeight,behavior:'smooth'});const active=complete?$('choices').querySelector('button'):$('messages').lastElementChild?.querySelector('.bubble');if(active){active.tabIndex=active.tagName==='BUTTON'?0:-1;active.focus({preventScroll:true});}});
+}
+function choose(value){answers[current]=value;if(editing){editing=false;if(editOrigin==='review-view'){renderReview();return;}current=answers.findIndex(v=>v===null);if(current===-1)current=12;}else current++;renderChat();}
+function edit(index,origin){editReturn=current;current=index;editing=true;editOrigin=origin;show('conversation');renderChat();}
+function cancelEdit(){editing=false;if(editOrigin==='review-view'){renderReview();return;}current=editReturn;renderChat();}
+function drawChart(stats){
+ $('needs-chart').replaceChildren();stats.forEach((stat,i)=>{const row=node('div','need-row'+(stat.count?'':' no-data')),top=node('div','need-top');top.append(node('h4','',domains[i].short));top.append(node('span','',stat.count?meanLabel(stat.mean):'Нет ответов'));row.append(top);
+ const track=node('div','need-track');track.setAttribute('role','img');track.setAttribute('aria-label',domains[i].title+': '+(stat.count?'средний ответ '+stat.mean.toLocaleString('ru-RU')+' из 4; '+stat.count+' из 2 ответов':'недостаточно ответов'));
+ if(stat.count){const dot=node('span','need-dot');dot.style.left='0%';track.append(dot);requestAnimationFrame(()=>requestAnimationFrame(()=>dot.style.left=stat.mean/4*100+'%'));}row.append(track);
+ const captions=node('div','need-caption');captions.append(node('span','','Почти никогда'),node('span','','Почти всегда'));row.append(captions);
+ if(stat.count===1)row.append(node('p','need-note','По одному ответу · второй не учтён'));if(stat.count===0)row.append(node('p','need-note','Оба ответа — «Затрудняюсь ответить»'));
+ if(stat.count===2&&Math.abs(answers[i]-answers[i+6])>=3)row.append(node('p','need-note','Ответы заметно различаются — можно рассмотреть каждый отдельно.'));
+ $('needs-chart').append(row);});
+}
+function renderResult(){const stats=summarize(answers);drawChart(stats);$('priorities').replaceChildren();domains.forEach((domain,i)=>{const b=node('button','priority',domain.short);b.type='button';b.setAttribute('aria-pressed',String(focusDomain===i));b.addEventListener('click',()=>selectDomain(i));$('priorities').append(b);});$('copy-fallback')?.remove();renderDetail(stats);show('result');}
+function selectDomain(i){if(focusDomain!==i)chosenStep=null;focusDomain=i;$('browse-note').hidden=true;renderDetail(summarize(answers));[...$('priorities').children].forEach((el,index)=>el.setAttribute('aria-pressed',String(index===i)));}
+function renderDetail(stats){
+ $('detail').hidden=focusDomain===null;$('my-step').hidden=focusDomain===null||chosenStep===null;
+ $('reflection-question').textContent=focusDomain===null?'Какое небольшое изменение сделало бы ближайшие дни чуть комфортнее для вас?':domains[focusDomain].reflection;
+ if(focusDomain===null)return;const domain=domains[focusDomain],stat=stats[focusDomain];$('detail-title').textContent=domain.title;
+ const rows=questions.map((q,i)=>({q,v:answers[i]})).filter(row=>row.q.d===focusDomain);
+ const observed=rows.map(row=>'«'+row.q.t+'» — '+answerLabel(row.v).toLowerCase()+'.').join(' ');
+ $('detail-observation').textContent=observed;
+ const valid=rows.filter(row=>row.v!==SKIP);let lead='';
+ if(!stat.count)lead='По ответам пока недостаточно информации. При этом вы можете выбрать это направление по собственному ощущению. ';
+ else if(valid.every(row=>row.v>=3))lead='В обоих ответах вы отметили «Часто» или «Почти всегда». Можно подумать, что помогает сохранять эту опору. ';
+ else if(valid.every(row=>row.v<=1))lead='Здесь вы выбирали «Редко» или «Почти никогда». Можно начать с небольшого доступного шага или поддержки другого человека. ';
+ if(stat.count===1&&lead)lead=lead.replace('В обоих ответах вы отметили','В единственном содержательном ответе вы отметили');
+ $('detail-copy').textContent=lead+domain.copy;$('steps').replaceChildren();domain.steps.forEach((text,i)=>{const b=node('button','step',text);b.type='button';b.setAttribute('aria-pressed',String(chosenStep===i));b.addEventListener('click',()=>{chosenStep=chosenStep===i?null:i;renderDetail(summarize(answers));$('steps').children[i].focus({preventScroll:true});});$('steps').append(b);});
+ if(chosenStep!==null)$('my-step-copy').textContent=domain.steps[chosenStep];
+}
+function renderReview(){$('review-list').replaceChildren();questions.forEach((q,i)=>{const row=node('div','review-row'),body=node('div');body.append(node('span','small',domains[q.d].title),node('p','',q.t));const b=node('button','text-button',answerLabel(answers[i])+' · изменить');b.type='button';b.addEventListener('click',()=>edit(i,'review-view'));body.append(b);row.append(body);$('review-list').append(row);});show('review-view');}
+function resultText(){const stats=summarize(answers);return ['Чекап потребностей','Мои ответы о последних двух неделях.',...domains.map((d,i)=>d.title+': '+(stats[i].count?'средний ответ '+stats[i].mean.toLocaleString('ru-RU')+' из 4 ('+stats[i].count+' из 2 ответов).':'недостаточно ответов.')),'Шкала: 0 — почти никогда, 1 — редко, 2 — иногда, 3 — часто, 4 — почти всегда. Ответы «Затрудняюсь ответить» не учитываются.',focusDomain!==null?'Мой фокус: '+domains[focusDomain].title+'.':'',chosenStep!==null&&focusDomain!==null?'Мой небольшой шаг: '+domains[focusDomain].steps[chosenStep]:'','Авторский инструмент для самонаблюдения, без психометрической валидации. Не заменяет консультацию специалиста.'].filter(Boolean).join('\n');}
+function notify(text){clearTimeout(noticeTimer);$('notice').textContent=text;noticeTimer=setTimeout(()=>$('notice').textContent='',4500);}
+$('start').addEventListener('click',()=>{show('conversation');renderChat();});$('skip').addEventListener('click',()=>choose(SKIP));
+$('back').addEventListener('click',()=>{if(editing){cancelEdit();return;}if(current>0)edit(current-1,'conversation');});
+$('review').addEventListener('click',renderReview);$('back-result').addEventListener('click',renderResult);
+$('no-priority').addEventListener('click',()=>{focusDomain=null;chosenStep=null;[...$('priorities').children].forEach(el=>el.setAttribute('aria-pressed','false'));renderDetail(summarize(answers));$('browse-note').hidden=false;});
+document.querySelectorAll('.about').forEach(b=>b.addEventListener('click',()=>$('about-dialog').showModal()));document.querySelector('.dialog-close').addEventListener('click',()=>$('about-dialog').close());
+document.querySelectorAll('dialog').forEach(d=>{let press=false;const outside=e=>{const r=d.getBoundingClientRect();return e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;};d.addEventListener('pointerdown',e=>{press=e.target===d&&outside(e);});d.addEventListener('pointercancel',()=>{press=false;});d.addEventListener('click',e=>{if(press&&e.target===d&&outside(e))d.close();press=false;});d.addEventListener('close',()=>{press=false;});});
+document.querySelectorAll('.restart').forEach(b=>b.addEventListener('click',()=>$('restart-dialog').showModal()));$('cancel-restart').addEventListener('click',()=>$('restart-dialog').close());
+$('confirm-restart').addEventListener('click',()=>{$('restart-dialog').close();answers=Array(12).fill(null);current=0;editing=false;editOrigin='conversation';focusDomain=null;chosenStep=null;$('browse-note').hidden=true;$('copy-fallback')?.remove();show('conversation');renderChat();});
+$('copy').addEventListener('click',async()=>{const text=resultText();try{await navigator.clipboard.writeText(text);$('copy-fallback')?.remove();notify('Результат скопирован');}catch{let field=$('copy-fallback');if(!field){field=node('textarea','copy-fallback');field.id='copy-fallback';field.readOnly=true;field.setAttribute('aria-label','Результат для ручного копирования');$('copy').after(field);}field.value=text;field.focus();field.select();notify('Выделенный текст можно скопировать вручную.');}});
+</script>
+</body></html>

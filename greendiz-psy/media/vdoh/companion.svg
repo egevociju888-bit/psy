@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" color="#1b1b1b"><defs><clipPath id="frame"><circle cx="120" cy="120" r="112"/></clipPath></defs><circle cx="120" cy="120" r="112" fill="#2b44d6"/><g clip-path="url(#frame)">
+    <g class="bp-ch" fill="none" stroke="currentColor" stroke-width="2">
+      <g transform="translate(-12 -30) scale(1.1)">
+        <path fill="#fffdf9" d="M112 132v30h16v-30"/>
+        <g class="ch-body">
+          <path fill="#fffdf9" d="M34 250c0-44 14-74 44-86 12-5 26-7 42-7s30 2 42 7c30 12 44 42 44 86"/>
+          <path d="M100 158c3 9 11 14 20 14s17-5 20-14"/>
+          <path d="M58 186c7 3 12 9 14 18M52 202c7 3 12 9 14 18M64 174c6 3 10 8 12 15M182 186c-7 3-12 9-14 18M188 202c-7 3-12 9-14 18M176 174c-6 3-10 8-12 15" stroke-width="1.5"/>
+          <path fill="#fffdf9" d="M66 176c-4 20 0 38 14 46 10 6 24 6 36 2"/>
+          <path d="M78 228c10 4 24 4 38-2M112 222l4 6M106 224l4 6"/>
+        </g>
+        <g class="ch-head">
+          <path fill="#1b1b1b" d="M141 100c11 5 16 17 14 30-1 9-5 17-10 22 2-9 2-17-1-24-2-6-5-10-7-15z"/>
+          <ellipse fill="#2b44d6" cx="142" cy="103" rx="4" ry="5.5" transform="rotate(-25 142 103)"/>
+          <path fill="#fffdf9" d="M96 104c0-20 10-33 24-33s24 13 24 33c0 23-11 40-24 40s-24-17-24-40z"/>
+          <path fill="#fffdf9" d="M96 110c-6-2-9 3-7 8s6 7 9 5M144 110c6-2 9 3 7 8s-6 7-9 5"/>
+          <path fill="#1b1b1b" d="M92 118c-9-32 4-56 31-56 27 0 37 24 31 54-1-9-4-15-8-19-3 7-9 10-15 10 3-4 4-8 3-13-7 8-20 12-32 11-3 4-6 8-7 13z"/>
+          <path d="M107 112q5 4 10 0M123 112q5 4 10 0" stroke-width="1.8"/>
+          <path d="M120 116c-2 6-3 9 0 11" stroke-width="1.6"/>
+          <path d="M114 132q6 4 12 0" stroke-width="1.8"/>
+          <circle fill="#2b44d6" opacity=".25" cx="105" cy="124" r="4.5" stroke="none"/><circle fill="#2b44d6" opacity=".25" cx="135" cy="124" r="4.5" stroke="none"/>
+        </g>
+        <g class="ch-hand">
+          <path fill="#fffdf9" d="M114 220c4-8 14-12 26-11 8 1 16 4 20 8 3 3 2 7-2 7l-10-1c4 2 5 5 2 7-10 3-24 2-32-1-4-2-5-6-4-9z"/>
+          <path d="M138 212c6 1 12 3 16 6M136 218c6 1 11 2 14 4" stroke-width="1.4"/>
+        </g>
+      </g>
+    </g></g></svg>

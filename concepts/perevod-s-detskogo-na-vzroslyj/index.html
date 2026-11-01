@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вера Климова — детский и подростковый психолог</title>
+<meta name="description" content="Детский и подростковый психолог. Индивидуальная работа с детьми 4–17 лет, семейные консультации и консультации для родителей. Москва и онлайн.">
+<meta name="theme-color" content="#F2F6F1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='14' cy='20' r='11' fill='%23BBD7C1'/%3E%3Ccircle cx='26' cy='20' r='11' fill='%23F3DC8A' style='mix-blend-mode:multiply'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Вера Климова, на главную">
+      <span class="venn venn--brand" aria-hidden="true"></span>
+      <span><strong>Вера Климова</strong><small>детский и подростковый психолог</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Меню</button>
+    <nav class="nav" id="nav" aria-label="Разделы сайта">
+      <a href="#about">Обо мне</a>
+      <a href="#signs">Когда нужна помощь</a>
+      <a href="#formats">Форматы</a>
+      <a href="#privacy">Конфиденциальность</a>
+      <a href="#memos">Памятки</a>
+      <a class="btn btn--small btn--ghost" href="#booking">Записаться</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="hero-role"><span class="venn" aria-hidden="true"></span>Вера Климова, клинический психолог</p>
+      <h1><span class="h1-main">Вы видите поведение.</span> <span class="h1-sub">Я помогаю понять, что за ним стоит.</span></h1>
+      <p class="lead">Работаю с детьми от 4 до 17 лет, с семьями и с родителями отдельно. Ребёнку — безопасное место, где его слышат. Вам — понятное объяснение, что происходит, и конкретные шаги.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#booking">Записаться на консультацию</a>
+        <a class="link" href="#signs">Понять, нужна ли помощь</a>
+        <p class="hero-place">Очные встречи в Москве по записи и онлайн</p>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <div class="venn-art" aria-hidden="true"></div>
+      <div class="hero-photo__frame">
+        <img src="assets/photo.webp" alt="Вера Климова, клинический психолог, портрет" width="1122" height="1402" fetchpriority="high" decoding="async">
+      </div>
+    </figure>
+  </div>
+  <ul class="hero-facts">
+    <li><b>12 лет</b><span>практики с детьми и семьями</span></li>
+    <li><b>4–⁠17 лет</b><span>возраст детей в работе</span></li>
+    <li><b>15 минут</b><span>первый звонок, бесплатно</span></li>
+  </ul>
+  </div>
+</section>
+
+<!-- DUO -->
+<section class="section duo" id="duo">
+  <div class="wrap duo-grid">
+    <div class="duo-head">
+      <span class="eyebrow">Как я смотрю на ситуацию</span>
+      <h2>Один случай — два взгляда</h2>
+      <p>Взрослый видит поведение, ребёнок переживает причину. Выберите ситуацию и сдвиньте границу, чтобы услышать обе стороны.</p>
+      <div class="duo-me" id="voicesMe"><div class="me-stack" id="meText"></div></div>
+    </div>
+    <div class="hero-voices">
+      <div class="sit-tabs" id="situations" role="group" aria-label="Выберите ситуацию"></div>
+      <div class="voices" id="voices">
+        <div class="layer layer--parent">
+          <span class="layer__who" id="parentWho"></span>
+          <p class="layer__quote" id="parentQuote"></p>
+        </div>
+        <div class="layer layer--child">
+          <span class="layer__who" id="childWho"></span>
+          <p class="layer__quote" id="childQuote"></p>
+        </div>
+        <input class="voices__range sr-only" id="voicesRange" type="range" min="0" max="100" value="88" aria-label="Граница между голосом родителя и голосом ребёнка">
+        <div class="voices__divider" aria-hidden="true">
+          <span class="voices__handle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </div>
+      <p class="voices__hint">Сдвиньте границу влево — услышите ту же ситуацию глазами ребёнка.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-side">
+      <div class="section-head">
+        <span class="eyebrow">Обо мне</span>
+        <h2 class="about-name">Вера Андреевна Климова</h2>
+        <p class="about-role">Кто будет работать с вашим ребёнком</p>
+      </div>
+      <blockquote class="kredo">Ребёнку со мной не нужно сразу говорить.</blockquote>
+      <div class="venn-art venn-art--about" aria-hidden="true"></div>
+    </div>
+
+    <div class="about-text">
+      <p>Я клинический психолог. Двенадцать лет работаю с детьми, подростками и их родителями: сначала в городском центре психолого-педагогической помощи, последние семь лет — в частной практике.</p>
+      <p>С маленькими мы играем и рисуем, с подростками разговариваем на равных. Родителям я объясняю, что вижу, простыми словами и без обвинений.</p>
+
+      <dl class="creds">
+        <dt>Образование</dt>
+        <dd>МГППУ, клиническая психология. Переподготовка по детской нейропсихологии.</dd>
+        <dt>Методы</dt>
+        <dd>Игровая терапия, когнитивно-поведенческая терапия для детей и подростков, системная семейная терапия и нейропсихологические методы.</dd>
+        <dt>Супервизия</dt>
+        <dd>Регулярно разбираю случаи с супервизором. Это стандарт этичной практики, а не формальность.</dd>
+        <dt>Этика</dt>
+        <dd>Работаю по этическому кодексу Российского психологического общества.</dd>
+      </dl>
+      <p class="creds-note">Копии дипломов и сертификатов покажу на первой встрече или пришлю по запросу.</p>
+
+      <div class="not-doing">
+        <h3>Чего я не делаю</h3>
+        <ul>
+          <li><b>Не ставлю диагнозы</b><span>И не назначаю лекарства. Если нужен врач, скажу прямо и подскажу, к кому.</span></li>
+          <li><b>Не пересказываю разговоры с ребёнком</b><span>Но держу родителей в курсе главного.</span></li>
+          <li><b>Не встаю на чью-то сторону в семье</b><span>Моя сторона — интересы ребёнка.</span></li>
+          <li><b>Не обещаю результат за три встречи</b><span>Говорю честно, сколько может занять работа.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNS -->
+<section class="section signs" id="signs">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Признаки</span>
+      <h2>Как понять, что ребёнку нужна помощь</h2>
+      <p>Отметьте, что вы замечаете последние 2–⁠3 недели. Один признак сам по себе ни о чём не говорит. Важно, как долго это длится, насколько сильно и мешает ли жить: учиться, дружить, спать.</p>
+    </div>
+
+    <div class="signs-grid">
+      <div>
+        <div class="age-tabs" role="tablist" aria-label="Возраст ребёнка" id="ageTabs">
+          <button role="tab" id="ageTab-small" aria-selected="true" aria-controls="agePanel" data-age="small">4–⁠6 лет</button>
+          <button role="tab" id="ageTab-school" aria-selected="false" aria-controls="agePanel" tabindex="-1" data-age="school">7–⁠11 лет</button>
+          <button role="tab" id="ageTab-teen" aria-selected="false" aria-controls="agePanel" tabindex="-1" data-age="teen">12–⁠17 лет</button>
+        </div>
+        <div id="agePanel" role="tabpanel" aria-labelledby="ageTab-small"><ul class="checklist" id="checklist"></ul></div>
+        <p class="signs-note">Это не диагностика, а ориентир для разговора со специалистом.</p>
+      </div>
+
+      <aside class="signs-side">
+        <div class="result" aria-live="polite">
+          <p class="result__count" id="resultCount"></p>
+          <div class="meter" id="meter" aria-hidden="true"></div>
+          <h3 id="resultTitle">Отметьте, что вы замечаете</h3>
+          <p id="resultText">Результат появится здесь. Никакие данные не сохраняются и никуда не отправляются.</p>
+          <a class="btn" href="#booking" id="resultCta" hidden>Записаться на встречу для родителей</a>
+        </div>
+        <div class="urgent">
+          <h3>Когда не нужно ждать</h3>
+          <p>Если ребёнок говорит о желании умереть или исчезнуть, наносит себе повреждения, рассказал о насилии или угрозах — обратитесь за помощью сразу, не дожидаясь записи.</p>
+          <p>В опасной ситуации звоните <a class="tel" href="#">112</a>. Детский телефон доверия: <a class="tel" href="#">8 800 2000 122</a> — бесплатно и анонимно, для детей и родителей.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="section" id="formats">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow">Форматы</span>
+        <h2>Кто будет в кабинете</h2>
+      </div>
+      <p>Часто всё начинается со встречи с родителями. Дальше мы вместе решаем, кому и в каком составе приходить.</p>
+    </div>
+
+    <div class="legend" aria-hidden="true">
+      <span><i class="dot-psy"></i>Психолог</span>
+      <span><i class="dot-child"></i>Ребёнок</span>
+      <span><i class="dot-parent"></i>Родитель</span>
+    </div>
+
+    <div class="format-grid">
+      <article class="format format--sage">
+        <div class="format__art"><svg viewBox="0 0 170 110" role="img" aria-label="Психолог и ребёнок">
+        <path d="M20 92 Q85 60 150 92" fill="none" stroke="#D3DDD5" stroke-width="2" stroke-dasharray="4 5"/>
+        <circle cx="60" cy="52" r="24" fill="#BBD7C1" stroke="#2F6B48" stroke-width="3"/>
+        <circle cx="112" cy="60" r="17" fill="#F3DC8A"/>
+      </svg></div>
+        <div class="format__body"><h3>Индивидуальная работа с ребёнком</h3>
+        <p>Встречи один на один. С дошкольниками и младшими школьниками — через игру, рисунок, песочницу. С подростками — разговор, в котором не оценивают и не воспитывают.</p>
+        <p class="fits">Подходит при тревоге и страхах, трудностях в школе и травле, вспышках злости, сложностях с ровесниками, подростковых кризисах, сепарации от родителей, после переезда, развода, потери.</p></div>
+        <div class="format__price"><b>4 500 ₽</b><span>50 минут</span></div>
+          <dl><dt>Возраст</dt><dd>4–⁠17 лет</dd><dt>Как часто</dt><dd>раз в неделю</dd><dt>С родителями</dt><dd>раз в 4–⁠6 встреч</dd></dl>
+      </article>
+
+      <article class="format format--sun">
+        <div class="format__art"><svg viewBox="0 0 170 110" role="img" aria-label="Психолог, ребёнок и двое родителей">
+        <path d="M14 92 Q85 56 156 92" fill="none" stroke="#D3DDD5" stroke-width="2" stroke-dasharray="4 5"/>
+        <circle cx="36" cy="54" r="20" fill="#BBD7C1" stroke="#2F6B48" stroke-width="3"/>
+        <circle cx="84" cy="40" r="16" fill="#fff" stroke="#1C2B26" stroke-width="2"/>
+        <circle cx="134" cy="48" r="16" fill="#fff" stroke="#1C2B26" stroke-width="2"/>
+        <circle cx="108" cy="78" r="13" fill="#F3DC8A"/>
+      </svg></div>
+        <div class="format__body"><h3>Семейная консультация</h3>
+        <p>Родители и ребёнок вместе. Я помогаю услышать друг друга: замечаю, где разговор каждый раз ломается, и предлагаю, как говорить иначе.</p>
+        <p class="fits">Подходит, когда дома постоянные конфликты, появился новый член семьи, семья переживает развод или ребёнок оказался «между» взрослыми.</p></div>
+        <div class="format__price"><b>6 500 ₽</b><span>80 минут</span></div>
+          <dl><dt>Возраст</dt><dd>от 5 лет</dd><dt>Как часто</dt><dd>раз в 1–⁠2 недели</dd></dl>
+      </article>
+
+      <article class="format">
+        <div class="format__art"><svg viewBox="0 0 170 110" role="img" aria-label="Психолог и двое родителей, без ребёнка">
+        <path d="M20 92 Q85 60 150 92" fill="none" stroke="#D3DDD5" stroke-width="2" stroke-dasharray="4 5"/>
+        <circle cx="46" cy="52" r="22" fill="#BBD7C1" stroke="#2F6B48" stroke-width="3"/>
+        <circle cx="98" cy="46" r="16" fill="#fff" stroke="#1C2B26" stroke-width="2"/>
+        <circle cx="136" cy="56" r="16" fill="#fff" stroke="#1C2B26" stroke-width="2"/>
+      </svg></div>
+        <div class="format__body"><h3>Консультация для родителей</h3>
+        <p>Встреча без ребёнка. Разбираемся, что стоит за его поведением, и что можно изменить дома. Можно прийти одному или вдвоём, очно или онлайн.</p>
+        <p class="fits">Подходит, если ребёнку меньше 4 лет, если он отказывается идти к психологу, если вы хотите сначала понять, нужна ли помощь, или если вы чувствуете родительское выгорание.</p></div>
+        <div class="format__price"><b>4 500 ₽</b><span>60 минут</span></div>
+          <dl><dt>Формат</dt><dd>очно или онлайн</dd></dl>
+      </article>
+    </div>
+
+    <div class="start">
+      <h3>Как начинается работа</h3>
+      <ol class="steps">
+        <li><b>Заявка и звонок</b><span>Перезваниваю в течение рабочего дня. 15 минут, бесплатно: расскажете коротко, я отвечу, смогу ли помочь.</span></li>
+        <li><b>Встреча с родителями</b><span>Без ребёнка. История, развитие, что беспокоит, чего вы ждёте от работы.</span></li>
+        <li><b>Знакомство с ребёнком</b><span>Две-три встречи: присматриваемся друг к другу, я наблюдаю за игрой и общением.</span></li>
+        <li><b>План работы</b><span>Рассказываю вам, что вижу, предлагаю формат и частоту. Решение за вами.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="section privacy" id="privacy">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Конфиденциальность</span>
+      <h2>Что остаётся между мной и ребёнком</h2>
+      <p>Ребёнок откроется, только если уверен, что его слова не передадут дальше. Родителю важно знать, что происходит. Чтобы это не противоречило друг другу, у нас есть три понятных правила. Выберите, что мог бы рассказать ребёнок, и посмотрите, что будет дальше.</p>
+    </div>
+
+    <div class="triage">
+      <div>
+        <p class="triage-label">Что ребёнок может сказать мне на встрече</p>
+        <div class="cases" id="caseList" role="group" aria-label="Примеры того, что рассказывает ребёнок"></div>
+      </div>
+      <div class="triage-result" id="triageResult" aria-live="polite">
+        <div class="route" id="route" data-level="inner" aria-hidden="true">
+          <div class="node node--child"><i></i><span><b>Ребёнок</b><small>Делится тем, что его волнует</small></span></div>
+          <div class="flow flow--1"></div>
+          <div class="node node--me"><i></i><span><b>Психолог</b><small>Бережно храню личное</small></span></div>
+          <div class="flow flow--2"></div>
+          <div class="node node--parent"><i></i><span><b>Родители</b><small>Взрослые рядом с ребёнком</small></span></div>
+          <p class="route__cap"><b id="flowLabel">ничего не передаётся</b><span id="parentRouteNote">Родители получают совет, а не слова ребёнка</span></p>
+        </div>
+        <span class="zone-chip" id="zoneChip"></span>
+        <h3 id="tTitle"></h3>
+        <p id="tText"></p>
+      </div>
+    </div>
+
+    <div class="privacy-notes">
+      <div>
+        <h3>Правила звучат вслух</h3>
+        <p>На первой совместной встрече я проговариваю их при ребёнке и родителе. Так всем понятно, чего ждать, и никто не чувствует себя обманутым.</p>
+      </div>
+      <div>
+        <h3>Возраст и согласие</h3>
+        <p>С детьми до 15 лет я работаю с письменного согласия законного представителя. Подростки с 15 лет могут обратиться сами, но я всегда предлагаю подключить родителей.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMOS -->
+<section class="section" id="memos">
+  <div class="wrap">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow">Памятки</span>
+        <h2>Памятки для родителей</h2>
+      </div>
+      <p>Короткие и практичные: что сказать, чего избегать и когда пора к специалисту.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Темы памяток"></div>
+    <ul class="memo-list" id="memoList"></ul>
+  </div>
+</section>
+
+<dialog class="memo-dialog" id="memoDialog" aria-labelledby="memoTitle">
+  <div class="memo-top">
+    <small id="memoMeta"></small>
+    <button class="memo-close" id="memoClose" type="button">Закрыть</button>
+  </div>
+  <article class="memo-body" id="memoBody"></article>
+</dialog>
+
+<!-- QUIZ: стартовая карточка опросника -->
+<section class="section quiz-section" id="quiz">
+  <div class="wrap">
+    <div class="quiz-card" id="quizCard">
+      <div class="quiz-card__text">
+        <div class="quiz-view" id="quizIntro">
+        <span class="eyebrow">Опросник для родителей</span>
+        <h2>Что сейчас даётся вам труднее всего?</h2>
+        <p>Короткие вопросы не о ребёнке, а о вас: как вы разговариваете, где чаще всего возникает напряжение, на что хватает сил. В конце — короткий разбор и памятка под ваш результат.</p>
+        <ul class="quiz-meta">
+          <li>12 вопросов</li>
+          <li>около 5 минут</li>
+          <li>Ответы никуда не отправляются</li>
+        </ul>
+        <fieldset class="choices quiz-mode">
+          <legend class="label">Как будете проходить</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="quizMode" value="solo" checked><span>Только я</span></label>
+            <label class="choice"><input type="radio" name="quizMode" value="pair"><span>Вдвоём: по очереди, ответы скрыты</span></label>
+          </div>
+        </fieldset>
+        </div>
+
+        <div class="quiz-view" id="quizRun" hidden></div>
+
+        <div class="quiz-view" id="quizHand" hidden>
+          <span class="eyebrow">Передайте устройство</span>
+          <h2>Теперь отвечает второй родитель</h2>
+          <p>Первый родитель закончил, его ответы скрыты. Передайте телефон или компьютер второму: он отвечает сам, не заглядывая в чужие ответы. Результаты вы увидите вместе в конце.</p>
+        </div>
+
+        <div class="quiz-view" id="quizResult" hidden></div>
+
+        <div class="quiz-actions">
+          <button class="btn btn--ghost" type="button" id="quizBack" hidden>Назад</button>
+          <button class="btn" type="button" id="quizMain">Начать опросник</button>
+          <small id="quizNote" aria-live="polite">Это не диагностика, а повод посмотреть на ситуацию со стороны.</small>
+        </div>
+        <p class="quiz-src"><button class="link-btn" type="button" id="srcOpen">На чём основан опросник</button></p>
+      </div>
+
+      <div class="quiz-card__art" aria-hidden="true">
+        <div class="qsheet qsheet--back2"></div>
+        <div class="qsheet qsheet--back1"></div>
+        <div class="qsheet qsheet--front">
+          <div class="qsheet__top"><span>Вопрос 1 из 12</span><span class="qsheet__dots"><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+          <p class="qsheet__q">Ребёнок вернулся из школы расстроенный и молчит. Что вы обычно делаете?</p>
+          <ul class="qsheet__opts">
+            <li>Предлагаете отвлечься</li>
+            <li class="is-picked">Говорите, что видите, и оставляете время</li>
+            <li>Говорите, что переживать не из-за чего</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dialog class="memo-dialog" id="srcDialog" aria-labelledby="srcTitle">
+  <div class="memo-top">
+    <small>Опросник для родителей</small>
+    <button class="memo-close" id="srcClose" type="button">Закрыть</button>
+  </div>
+  <article class="memo-body">
+    <h2 id="srcTitle">На чём основан опросник</h2>
+    <p class="memo-lead">Вопросы опираются на исследования о том, что помогает в отношениях родителей и детей, но не копируют чужие шкалы.</p>
+
+    <h3>Как это устроено</h3>
+    <ul>
+      <li><b>Четыре темы:</b> эмоции ребёнка, границы и последовательность, контакт и самостоятельность, силы самого родителя.</li>
+      <li><b>Три варианта в каждом вопросе.</b> Больше баллов начисляется за то, что исследования чаще связывают с поддерживающим родительством. Итог по теме: от 0 до 6.</li>
+      <li><b>Ответы нигде не сохраняются</b> и никуда не отправляются.</li>
+    </ul>
+
+    <h3>Источники в открытом доступе</h3>
+    <ul>
+      <li>Roskam I., Brianda M.-E., Mikolajczak M. (2018). A Step Forward in the Conceptualization and Measurement of Parental Burnout: The Parental Burnout Assessment (PBA). <i>Frontiers in Psychology</i>, 9:758. Лицензия CC BY. Тема «Ваши силы»: истощение, эмоциональная дистанция. <a class="link" href="#">Статья</a></li>
+      <li>Mikolajczak M., Roskam I. (2018). A Theoretical and Clinical Framework for Parental Burnout: The Balance Between Risks and Resources (BR2). <i>Frontiers in Psychology</i>, 9:886. Идея баланса нагрузки и ресурсов родителя. <a class="link" href="#">Статья</a></li>
+      <li>Skinner E., Johnson S., Snyder T. (2005). Шесть измерений родительства: тепло, структура, поддержка автономии, а также отвержение, хаос и принуждение. <i>Parenting: Science and Practice</i>. Темы «Границы» и «Контакт». <a class="link" href="#">PDF</a></li>
+      <li>Обзор о стилях родительства (тепло и требовательность по Baumrind, Maccoby и Martin) и отношениях родителей с подростками. <i>Frontiers in Psychology</i>, 2018, 9:2187. <a class="link" href="#">Статья</a></li>
+      <li>Анализ шкал чрезмерной реактивности и излишней мягкости в дисциплине (Parenting Scale), PubMed Central. Тема «Границы». <a class="link" href="#">Статья</a></li>
+      <li>Всемирная организация здравоохранения, Parenting for Lifelong Health: открытые некоммерческие программы поддержки родителей. Ориентир для практических шагов. <a class="link" href="#">Страница ВОЗ</a></li>
+    </ul>
+
+    <h3>Платные или защищённые лицензией (только ориентир)</h3>
+    <ul>
+      <li>Gottman J.M., Katz L.F., Hooven C. (1996). Parental meta-emotion philosophy and the emotional life of families. <i>Journal of Family Psychology</i>, 10(3), 243–⁠268. Тема «Эмоции ребёнка»: замечать чувство, называть его, поддерживать, затем искать решение.</li>
+      <li>Arnold D.S., O'Leary S.G., Wolff L.S., Acker M.M. (1993). The Parenting Scale. <i>Psychological Assessment</i>, 5, 137–⁠144. Конструкты «чрезмерная реактивность» и «мягкость».</li>
+      <li>Berry J.O., Jones W.H. (1995). The Parental Stress Scale: Initial psychometric evidence. <i>Journal of Social and Personal Relationships</i>, 12(3), 463–⁠472. Шкала бесплатна, но адаптации допускаются только с письменного разрешения авторов, поэтому её пункты не использованы.</li>
+    </ul>
+
+    <div class="memo-when"><h3>Важно</h3><p>Опросник не проходил психометрическую проверку, не диагностирует и не оценивает вас как родителя. Это повод посмотреть на привычки со стороны и обсудить их со специалистом. Формулировки из лицензируемых методик не заимствованы.</p></div>
+  </article>
+</dialog>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-intro">
+      <span class="eyebrow">Вопросы</span>
+      <h2>О чём обычно спрашивают</h2>
+      <p>Не нашли свой вопрос? Напишите его <a class="link" href="#booking">в заявке</a>: отвечу в течение рабочего дня.</p>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Ребёнок не хочет идти. Что делать?</summary>
+        <div class="faq-body"><p>Не заставляйте. Начнём со встречи с вами: разберёмся в ситуации, и я подскажу, как предложить ребёнку прийти. Подросткам часто проще согласиться на одну пробную встречу, чем на «терапию».</p></div>
+      </details>
+      <details>
+        <summary>Сколько понадобится встреч?</summary>
+        <div class="faq-body"><p>Зависит от запроса. Иногда хватает 5–⁠8 встреч, чтобы разобраться с конкретной трудностью. Более глубокая работа занимает от трёх до шести месяцев. После знакомства с ребёнком я скажу, как вижу план, и мы будем сверять его по ходу.</p></div>
+      </details>
+      <details>
+        <summary>Можно ли заниматься онлайн?</summary>
+        <div class="faq-body"><p>Да, с подростками и родителями. С детьми младше 10 лет лучше встречаться очно: игра и рисование через экран работают хуже.</p></div>
+      </details>
+      <details>
+        <summary>Мы с бывшим мужем по-разному видим ситуацию. Вы нас рассудите?</summary>
+        <div class="faq-body"><p>Нет, и это важно. Я не встаю на чью-то сторону. Могу встречаться с каждым родителем отдельно или с обоими вместе — так, как лучше для ребёнка.</p></div>
+      </details>
+      <details>
+        <summary>Что, если нужен врач?</summary>
+        <div class="faq-body"><p>Если я увижу признаки, при которых нужна консультация психиатра, невролога или другого врача, скажу об этом прямо и порекомендую специалиста. Работа с психологом при этом может продолжаться параллельно.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="booking">
+  <div class="wrap booking-grid">
+    <div class="booking-aside">
+      <span class="eyebrow">Запись</span>
+      <h2>Записаться на первую консультацию</h2>
+      <p>Расскажите коротко, что происходит. Этого достаточно, чтобы понять, смогу ли я помочь, и с какого формата лучше начать.</p>
+      <ul class="promises">
+        <li>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F6B48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b>Отвечаю в течение рабочего дня</b><span>Вечером и в выходные — на следующий день.</span></div>
+        </li>
+        <li>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F6B48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>
+          <div><b>Первый звонок бесплатный</b><span>15 минут. Ни к чему не обязывает.</span></div>
+        </li>
+        <li>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F6B48" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+          <div><b>Заявку вижу только я</b><span>Данные не передаются третьим лицам.</span></div>
+        </li>
+      </ul>
+      <div class="alt-contact">
+        <p>Удобнее написать самим?</p>
+        <ul class="contact-list">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 4z"/><path d="M9 13l12-9"/></svg><a href="#">Telegram</a></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg><a class="tel" href="#">+7(000)000-00-00</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="bookingForm" novalidate>
+        <div class="form-alert" id="formAlert" role="alert"></div>
+
+        <div class="field" data-field="name">
+          <label class="label" for="fName">Как к вам обращаться</label>
+          <input class="input" id="fName" name="name" type="text" autocomplete="given-name" autocapitalize="words" enterkeyhint="next" required aria-required="true" aria-describedby="eName">
+          <span class="field-error" id="eName">Напишите, как к вам обращаться.</span>
+        </div>
+
+        <fieldset class="choices">
+          <legend class="label">Как удобнее связаться</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="channel" value="Телефон" checked><span>Позвонить по телефону</span></label>
+            <label class="choice"><input type="radio" name="channel" value="Telegram"><span>Написать в Telegram</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field" data-field="contact">
+          <label class="label" for="fContact" id="lContact">Номер телефона</label>
+          <input class="input" id="fContact" name="contact" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" placeholder="+7(000)000-00-00" required aria-required="true" aria-describedby="hContact eContact">
+          <span class="hint" id="hContact">Перезвоню в рабочее время.</span>
+          <span class="field-error" id="eContact">Введите номер полностью, например +7(000)000-00-00.</span>
+        </div>
+
+        <div class="field" data-field="age">
+          <label class="label" for="fAge">Возраст ребёнка</label>
+          <select class="input" id="fAge" name="age" autocomplete="off" required aria-required="true" aria-describedby="eAge ageHint">
+            <option value="">Выберите возраст</option>
+            <option value="u4">Младше 4 лет</option>
+          </select>
+          <span class="field-error" id="eAge">Выберите возраст: от него зависит формат работы.</span>
+          <p class="age-hint" id="ageHint" aria-live="polite" hidden></p>
+        </div>
+
+        <fieldset class="choices">
+          <legend class="label">Формат <small>— если пока не знаете, это нормально</small></legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="format" value="Пока не знаю" checked><span>Пока не знаю</span></label>
+            <label class="choice"><input type="radio" name="format" value="С ребёнком"><span>С ребёнком</span></label>
+            <label class="choice"><input type="radio" name="format" value="Семейная"><span>Семейная</span></label>
+            <label class="choice"><input type="radio" name="format" value="Для родителей"><span>Для родителей</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field" data-field="request">
+          <label class="label" for="fRequest">Что вас беспокоит</label>
+          <div class="chips" id="chips" role="group" aria-label="Добавить тему в описание"></div>
+          <textarea class="input" id="fRequest" name="request" rows="4" maxlength="1500" autocomplete="off" required aria-required="true" placeholder="Например: сыну 9 лет, последние два месяца каждое утро плачет перед школой. Учительница говорит, что на уроках всё спокойно." aria-describedby="hRequest eRequest"></textarea>
+          <span class="hint" id="hRequest">Достаточно одного-двух предложений. Имя ребёнка писать не нужно: обсудим при встрече.</span>
+          <span class="field-error" id="eRequest">Опишите ситуацию хотя бы в одном-двух предложениях.</span>
+        </div>
+
+        <fieldset class="choices">
+          <legend class="label">Где удобнее встречаться</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="place" value="Очно" checked><span>Очно, Москва</span></label>
+            <label class="choice"><input type="radio" name="place" value="Онлайн"><span>Онлайн</span></label>
+            <label class="choice"><input type="radio" name="place" value="Не важно"><span>Не важно</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field" data-field="consent">
+          <label class="consent"><input type="checkbox" id="fConsent" name="consent" required aria-required="true" aria-describedby="eConsent"><span>Согласен(на) на <a href="#">обработку персональных данных</a> для связи со мной</span></label>
+          <span class="field-error" id="eConsent">Без согласия я не смогу с вами связаться.</span>
+        </div>
+
+        <div class="form-foot">
+          <button class="btn" type="submit" id="submitBtn">Отправить заявку</button>
+          <p>Если ситуация срочная, не ждите ответа: звоните 112.</p>
+        </div>
+      </form>
+
+      <div class="success" id="success" role="status" hidden tabindex="-1">
+        <div class="success__mark" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F6B48" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <h3>Заявка отправлена</h3>
+        <p id="successText"></p>
+        <ol>
+          <li>Короткий разговор: уточню пару деталей.</li>
+          <li>Договоримся о первой встрече — чаще всего с вами, без ребёнка.</li>
+          <li>Пришлю адрес или ссылку и памятку, как подготовиться.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top"><span class="venn venn--brand" aria-hidden="true"></span><span><strong>Вера Климова</strong><small>детский и подростковый психолог</small></span></a>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul class="footer-list"><li><a class="tel" href="#">+7(000)000-00-00</a></li><li><a href="#">Telegram</a></li><li>Очные встречи в Москве по записи</li></ul>
+      </div>
+      <div>
+        <h3>Экстренная помощь</h3>
+        <ul class="footer-list"><li>Детский телефон доверия: <a class="tel" href="#">8 800 2000 122</a></li><li>Экстренные службы: <a class="tel" href="#">112</a></li></ul>
+      </div>
+    </div>
+    <p class="footer-bottom">Сайт не заменяет экстренную помощь и консультацию врача.</p>
+  </div>
+</footer>
+
+<div class="mobile-bar" id="mobileBar">
+  <a href="#">Позвонить</a>
+  <a href="#">Telegram</a>
+  <a class="is-primary" href="#booking">Записаться</a>
+</div>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>

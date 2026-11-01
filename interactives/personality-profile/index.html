@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Ваш личностный почерк: 20 утверждений и профиль по пяти чертам на основе Mini-IPIP.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Ваш личностный почерк — Greendiz</title>
+<style>
+
+:root{--paper:#f3f0ea;--ink:#151916;--blue:#324bc5;--muted:#62665f;--line:#d6d5cc;--white:#fffdfa;--serif:'Lora',serif;--sans:'Onest',sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{font:inherit;cursor:pointer}button:disabled{cursor:default}
+button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}
+[tabindex='-1']:focus{outline:none}
+a{color:var(--blue);text-underline-offset:4px}
+::selection{background:#dbe0ff;color:var(--ink)}
+.quiz{max-width:1240px;margin:auto;padding:48px 48px 40px;min-height:100svh}
+.view{animation:reveal .45s cubic-bezier(.16,1,.3,1) both}
+[hidden]{display:none!important}
+h1,h2,h3,p{margin-top:0}h1,h2,h3{font-weight:400}
+h1,h2{font-family:var(--serif);letter-spacing:-.04em;line-height:1.06;text-wrap:balance}
+h1{font-size:clamp(64px,7.2vw,92px);margin-bottom:28px}
+h2{font-size:54px;margin-bottom:24px}
+h3{font:400 29px/1.25 var(--serif);letter-spacing:-.025em;text-wrap:balance}
+em{font-weight:400;color:var(--blue)}.title-dot{color:var(--blue)}
+.eyebrow{font-size:14px;letter-spacing:.07em;line-height:1.5;font-weight:500;text-transform:uppercase}
+.intro{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;min-height:calc(100svh - 88px)}
+.lead{font-size:19px;line-height:1.6;max-width:390px;margin-bottom:0}
+.intro-aside{background:var(--white);padding:28px 30px 24px;border-radius:6px}
+.art{width:100%;margin:0 auto 20px;max-width:360px}
+.art svg{display:block;width:100%;height:auto}
+.art-orb{animation:orbFloat 6s ease-in-out infinite}
+.art-caption{font:italic 22px/1.4 var(--serif);color:var(--blue);text-align:center;margin:0 0 22px}
+.intro-meta{font-size:16px;text-align:center;margin:0 0 18px}
+.primary,.secondary{min-height:54px;padding:14px 20px;border:1px solid var(--blue);border-radius:3px;display:inline-flex;align-items:center;justify-content:center;gap:16px;line-height:1.4;text-decoration:none;transition:background .2s,transform .2s,color .2s}
+.primary{background:var(--blue);color:#fff}.primary:hover{background:#253ca9}.primary:active,.secondary:active{transform:translateY(1px)}
+.primary svg,.secondary svg{width:20px;height:20px;flex:none}
+.secondary{background:transparent;border-color:var(--line);color:var(--ink)}.secondary:hover{background:#e8e5dd}
+.intro-aside>.primary{width:100%;justify-content:space-between}
+.text-button{background:none;border:0;border-bottom:1px solid #a6afd9;padding:8px 0 3px;min-height:40px;font-size:15px;color:var(--blue);text-align:left;line-height:1.45;transition:color .2s,border-color .2s}
+.text-button:hover{color:#24389d;border-bottom-color:currentColor}
+.privacy{font-size:14px;line-height:1.6;color:var(--muted);margin:16px 0 0;text-align:center}
+.intro-links{text-align:center;margin-top:8px}
+.small{font-size:14px;color:var(--muted);line-height:1.6}
+.conversation{display:grid;grid-template-columns:260px minmax(0,1fr);gap:44px;height:calc(100svh - 88px);min-height:620px;max-height:1000px}
+.side-copy{display:flex;flex-direction:column;padding-top:30px}
+.side-copy h2{font-size:43px;line-height:1.13}.side-copy>p{font-size:16px;color:var(--muted)}
+.side-bottom{margin-top:auto;padding-bottom:12px}
+.chat-panel{min-width:0;min-height:0;display:flex;flex-direction:column;background:#faf8f3;border-radius:6px;overflow:hidden}
+.chat-top{display:flex;align-items:center;padding:18px 24px;gap:10px;font-size:14px}
+.chat-top .eyebrow{margin:0;text-transform:none;letter-spacing:0;font-size:15px}
+.progress-track{height:4px;background:#fff;flex-shrink:0}.progress-track span{display:block;height:100%;background:var(--blue);width:0;transition:width .4s ease}
+.messages{overflow-y:auto;padding:24px 24px 16px;flex:1;min-height:160px;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#c6c8d3 transparent}
+.chat-line{display:flex;margin-bottom:18px;align-items:flex-end}.chat-line:last-child{animation:reveal .3s ease both}
+.bubble{max-width:94%;background:#fff;border-radius:14px 14px 14px 3px;padding:16px 18px;font-size:17px;line-height:1.55}
+.bubble p:last-child{margin-bottom:0}
+.chat-line.user{justify-content:flex-end}.user .bubble{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:14px 14px 3px 14px;text-align:left;max-width:90%;padding:12px 17px;font-size:16px;transition:background .2s}
+.user .bubble:hover{background:var(--paper)}.user .bubble:focus-visible{outline-offset:3px}
+.answer-panel{border-top:1px solid var(--line);padding:18px 24px 16px;background:#faf8f3}
+.answer-prompt{font-size:16px;margin-bottom:14px}
+.choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;position:relative}
+.choices::before{content:'';position:absolute;left:12.5%;right:12.5%;height:1px;top:13px;background:#afb7d5;pointer-events:none}
+.choice{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:14px;border:0;background:transparent;border-radius:4px;padding:4px 4px 10px;min-height:100px;font-size:15px;color:var(--ink);line-height:1.4;transition:background .2s,color .2s}
+.choice::before{content:'';display:block;width:20px;height:20px;flex:none;border:1.5px solid #8b95b8;background:#faf8f3;border-radius:50%;transition:background .2s,border-color .2s,box-shadow .2s}
+.choice:hover{color:var(--blue)}.choice:hover::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.choice[aria-pressed=true]{color:var(--blue)}.choice[aria-pressed=true]::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.answer-help{font-size:14px;color:var(--muted);margin:12px 0 0}.choices>.primary{grid-column:1/-1;width:100%}.choices.is-complete::before{display:none}
+.result-heading{margin-bottom:28px}.result-heading h2{font-size:58px;margin-bottom:0}
+.result-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
+.score-card{background:var(--blue);color:#fff;padding:28px 30px;border-radius:4px}.score-card .eyebrow{color:#e0e5ff;margin-bottom:8px}
+.score-number{display:flex;align-items:baseline;gap:16px;line-height:1.2;margin-bottom:26px}.score-number strong{font:400 100px/1.2 var(--serif);letter-spacing:-.04em;font-variant-numeric:lining-nums tabular-nums}.score-number>span{color:#e0e5ff;font-size:18px}
+.score-track{height:3px;background:#8494ef;position:relative;margin:12px 7px}.score-track>span{position:absolute;top:50%;width:14px;height:14px;background:var(--paper);border-radius:50%;transform:translate(-50%,-50%);left:0;transition:left 1s cubic-bezier(.2,.8,.2,1)}
+.scale-labels{display:flex;justify-content:space-between;font-size:14px;color:#e0e5ff;margin-bottom:22px;font-variant-numeric:tabular-nums}
+.score-card>p:not(.eyebrow){font-size:16px;line-height:1.6}.score-card .score-note{border-top:1px solid #7180d7;padding-top:18px;margin:20px 0 0;color:#e0e5ff;font-size:14px}
+.insight-card{display:flex;flex-direction:column;padding:28px 30px;background:var(--white);border-radius:4px;min-width:0}
+.section-number{font-size:14px;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:18px}
+.insight-card h3{font-size:32px;margin-bottom:18px}.insight-card #observations p{font-size:17px;line-height:1.65;margin-bottom:16px}
+.result-actions{display:flex;flex-direction:column;gap:10px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.result-actions>.primary,.result-actions>.secondary{width:100%}
+.result-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:2px}
+.reflection{display:grid;grid-template-columns:190px minmax(0,1fr);gap:30px;border-top:1px solid var(--line);padding:26px 0 8px;margin-top:30px}
+.reflection .section-number{padding-top:5px}.reflection h3{font-size:27px;max-width:710px;margin-bottom:10px}
+.result-method{margin-top:10px}
+.review-view{max-width:800px;margin:auto}.review-view h2{font-size:54px}.review-view>p{color:var(--muted)}
+.review-row{border-top:1px solid var(--line);padding:20px 0;display:grid;grid-template-columns:35px minmax(0,1fr);gap:12px}.review-row>.small{padding-top:3px}.review-row p{margin-bottom:8px;font-size:17px}.review-row button{font-size:16px}.review-view>.primary{margin-top:25px}
+dialog{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;max-width:680px;width:calc(100% - 32px);padding:42px;max-height:85svh;overflow-y:auto;font:16px/1.65 var(--sans)}
+dialog::backdrop{background:#15191680;backdrop-filter:blur(3px)}dialog h2{font-size:42px}dialog ul{padding-left:20px}dialog h3{font-size:25px;margin:25px 0 15px}
+.dialog-close{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;font-size:29px;color:var(--muted)}.dialog-actions{display:flex;gap:12px;flex-wrap:wrap}
+.notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:10;background:var(--ink);color:#fff;padding:12px 20px;border-radius:4px;font-size:15px;box-shadow:0 5px 20px #0002;max-width:calc(100% - 32px);width:max-content;pointer-events:none}.notice:empty{display:none}
+@keyframes reveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(min-width:1450px){.quiz{padding-top:64px}.intro{min-height:calc(100svh - 112px)}}
+@media(max-width:1050px){.quiz{padding:32px 28px}.intro{gap:36px}.intro-aside{padding:24px}.conversation{grid-template-columns:210px minmax(0,1fr);gap:26px;height:calc(100svh - 64px)}.side-copy h2{font-size:37px}.result-grid{grid-template-columns:.8fr 1.2fr;gap:18px}.score-card,.insight-card{padding:25px}.choice{font-size:14px}}
+@media(max-width:800px){.conversation{display:block;height:calc(100svh - 32px);min-height:560px;max-height:none}.quiz:has(.conversation:not([hidden])){padding:16px}.side-copy{display:none}.chat-panel{height:100%}.bubble{max-width:94%}.result-grid{grid-template-columns:1fr 1.25fr}.score-number strong{font-size:80px}.score-number{gap:10px}.result-heading h2{font-size:50px}}
+@media(max-width:700px){.quiz{padding:30px 20px}.intro{display:block;min-height:0}.intro-copy{margin-bottom:28px}h1{font-size:clamp(52px,11vw,72px);margin-bottom:20px}.lead{font-size:18px;max-width:440px}.intro-aside{padding:20px 24px}.art{max-width:260px;margin-bottom:10px}.art-caption{font-size:21px;margin-bottom:18px}.intro-meta{margin-bottom:16px}.privacy{font-size:14px}.result-heading h2{font-size:clamp(38px,8vw,49px)}.result-grid{grid-template-columns:1fr;gap:16px}.score-card,.insight-card{padding:24px}.score-number strong{font-size:86px}.score-number{margin-bottom:20px}.score-card>p:not(.eyebrow){max-width:470px}.insight-card h3{font-size:29px}.reflection{grid-template-columns:1fr;gap:0;margin-top:24px;padding-top:24px}.reflection .section-number{margin-bottom:14px}.reflection h3{font-size:25px}.review-view h2{font-size:42px}.review-row{grid-template-columns:26px minmax(0,1fr)}dialog{padding:36px 24px}dialog h2{font-size:34px}.dialog-actions>*{width:100%}}
+@media(max-width:540px){.chat-top{padding:15px 18px}.messages{padding:18px 16px 12px}.bubble{padding:14px 16px;font-size:17px}.answer-panel{padding:16px}.answer-prompt{margin-bottom:12px}.choices{grid-template-columns:1fr;gap:7px}.choices::before{display:none}.choice{flex-direction:row;text-align:left;justify-content:flex-start;gap:14px;font-size:16px;min-height:52px;padding:12px 14px;border:1px solid #d6d9e5;background:#fff}.choice::before{width:18px;height:18px;background:#fff}.answer-help{font-size:14px;margin-top:10px}.conversation{min-height:650px}.result-links{gap:5px 20px}.intro-aside{padding:20px}.primary,.secondary{padding:14px 16px;font-size:16px}}
+
+
+html:has(dialog[open]){overflow:hidden}
+#about-dialog{padding:0;overflow:hidden}
+#about-dialog[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.dialog-header{position:relative;padding:36px 70px 20px 38px}
+.dialog-header h2{margin:0}
+#about-dialog .dialog-close{top:16px;right:16px;border-radius:50%;transition:background .2s,color .2s}
+#about-dialog .dialog-close:hover{background:#e4e5ef;color:var(--blue)}
+.dialog-body{padding:0 30px 30px 38px;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#8996d9 #e9e7df}
+.dialog-body>:last-child{margin-bottom:0}
+.dialog-body::-webkit-scrollbar{width:9px}
+.dialog-body::-webkit-scrollbar-track{background:#e9e7df;border-radius:10px;margin-block:4px 12px}
+.dialog-body::-webkit-scrollbar-thumb{background:#8996d9;border:2px solid #e9e7df;border-radius:10px}
+.dialog-body::-webkit-scrollbar-thumb:hover{background:var(--blue)}
+@media(max-width:700px){
+#about-dialog{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100svh;height:100dvh;max-height:100svh;max-height:100dvh;border:0;border-radius:0}
+.dialog-header{padding:calc(30px + env(safe-area-inset-top)) calc(64px + env(safe-area-inset-right)) 22px calc(24px + env(safe-area-inset-left))}
+#about-dialog .dialog-close{top:calc(14px + env(safe-area-inset-top));right:calc(12px + env(safe-area-inset-right))}
+.dialog-body{padding:0 calc(20px + env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) calc(24px + env(safe-area-inset-left))}
+}
+
+
+.choices{grid-template-columns:repeat(5,minmax(0,1fr))}.choices::before{left:10%;right:10%}
+.choice{min-height:90px}.skip-answer{display:block;margin:5px auto 0;min-height:44px}
+.chat-top{justify-content:space-between}.chat-back{min-height:44px;padding:8px 0;font-size:14px}
+.chat-top .eyebrow{font-size:14px}.period{color:var(--muted);font-size:14px;margin:0 0 12px}
+.conversation{height:calc(100dvh - 88px)}
+.result-heading{max-width:780px}.result-heading>p{max-width:670px;color:var(--muted);margin:20px 0 0;font-size:17px}
+.result-grid{grid-template-columns:1fr 1.15fr;gap:24px}
+.needs-card{background:var(--blue);color:#fff;padding:30px;border-radius:4px;min-width:0}
+.needs-card h3{font-size:30px;margin:0 0 12px}.needs-card>.small{color:#e0e5ff;margin:0 0 24px}
+.need-row{margin:0 0 23px}.need-top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:10px}
+.need-top h4{font-size:16px;font-weight:500;margin:0;line-height:1.4}.need-top>span{font-size:13px;color:#e0e5ff;text-align:right;line-height:1.4}
+.need-track{height:5px;background:#7180d7;border-radius:5px;position:relative;margin:0 7px}
+.need-dot{position:absolute;top:50%;width:13px;height:13px;border-radius:50%;background:var(--white);transform:translate(-50%,-50%);transition:left .8s cubic-bezier(.2,.8,.2,1)}
+.need-row.no-data .need-track{background:repeating-linear-gradient(90deg,#8492db 0 10px,transparent 10px 17px)}
+.need-caption{display:flex;justify-content:space-between;font-size:12px;color:#e0e5ff;margin-top:7px;gap:8px}
+.need-note{font-size:13px;color:#e0e5ff;margin:6px 0 0}.needs-foot{border-top:1px solid #7180d7;padding-top:18px;margin:24px 0 0;font-size:14px;color:#e0e5ff}
+.insight-card{padding:30px}.insight-card h3{font-size:30px}.priority-copy{color:var(--muted);font-size:15px}
+.priorities{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0 8px}
+.priority{border:1px solid var(--line);background:transparent;border-radius:3px;padding:12px;text-align:left;line-height:1.4;min-height:52px;font-size:14px;color:var(--ink);transition:background .2s,border-color .2s}
+.priority:hover{border-color:var(--blue)}.priority[aria-pressed=true]{border-color:var(--blue);background:#edf0ff;color:#253ca9}
+.detail{border-top:1px solid var(--line);padding-top:22px;margin-top:22px;animation:reveal .4s ease both}.detail h4{font:400 26px/1.3 var(--serif);margin:0 0 16px;letter-spacing:-.02em}
+.detail>p{font-size:16px}.detail .small{font-size:14px}.steps{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.step{border:1px solid var(--line);background:transparent;border-radius:3px;display:flex;gap:12px;align-items:flex-start;padding:12px;text-align:left;color:var(--ink);font-size:15px;line-height:1.5;transition:border-color .2s,background .2s}
+.step::before{content:'';width:18px;height:18px;margin-top:2px;flex:none;border:1px solid #8b95b8;border-radius:50%}.step:hover{border-color:var(--blue)}
+.step[aria-pressed=true]{border-color:var(--blue);background:#edf0ff}.step[aria-pressed=true]::before{background:var(--blue);box-shadow:inset 0 0 0 4px #fff;border-color:var(--blue)}
+.my-step{background:#e8ebf8;border-left:3px solid var(--blue);padding:18px;margin:18px 0 0;animation:reveal .4s ease both}.my-step h4{font:400 23px/1.3 var(--serif);margin:0 0 8px}.my-step p{margin:0;font-size:15px}
+.result-actions{margin-top:auto}.result-actions-wrap{margin-top:auto;padding-top:24px}.result-actions .primary{cursor:default}
+.reflection h3{font-size:25px}.review-row{grid-template-columns:1fr}.review-row .small{padding:0}.review-row p{margin-top:6px}
+.copy-fallback{display:block;width:100%;min-height:180px;margin-top:16px;padding:12px;border:1px solid var(--line);background:#fff;font:14px/1.5 var(--sans);color:var(--ink)}
+.text-button{min-height:44px}.intro-copy .small{margin:24px 0 0;max-width:390px}
+@media(max-width:1050px){.needs-card,.insight-card{padding:24px}.result-grid{grid-template-columns:1fr 1.1fr}.conversation{height:calc(100dvh - 64px)}.need-top{flex-direction:column;gap:3px}.choice{font-size:13px}}
+@media(max-width:800px){.conversation{height:calc(100dvh - 32px);min-height:600px}.result-grid{grid-template-columns:1fr 1.1fr}.chat-panel{height:100%}}
+@media(max-width:700px){.result-grid{grid-template-columns:1fr}.need-top{flex-direction:row}.result-heading>p{font-size:16px}.needs-card,.insight-card{padding:24px}.result-actions{margin-top:0}.intro-copy .small{margin-top:16px}.priorities{gap:8px}}
+@media(max-width:540px){.conversation{min-height:650px}.choices{grid-template-columns:1fr 1fr;gap:7px}.choices::before{display:none}.choice{min-height:44px;padding:9px 10px;gap:9px;font-size:14px;align-items:center}.choice:last-child{grid-column:1/-1}.choice::before{width:16px;height:16px}.skip-answer{margin:4px auto 0;font-size:14px}.answer-panel{padding:12px 16px}.answer-prompt{margin-bottom:8px;font-size:15px}.answer-help{margin-top:6px;font-size:12px}.period{font-size:13px;margin-bottom:8px}.chat-top{padding:6px 16px;gap:10px}.chat-back{font-size:13px}.chat-top .eyebrow{font-size:13px}.bubble{font-size:16px}.need-top>span{font-size:12px}.need-top h4{font-size:15px}.need-top{gap:8px}.priorities{grid-template-columns:1fr 1fr}.priority{font-size:13px;padding:10px}.result-heading h2{font-size:42px}}
+@media(max-height:700px) and (max-width:800px){.conversation{min-height:560px}.messages{min-height:100px}}
+
+.choices{grid-template-columns:repeat(5,minmax(0,1fr))}.choices::before{left:10%;right:10%}.choice{background:transparent;min-height:104px}
+.profile-card{background:var(--blue);color:var(--white);border-radius:4px;padding:30px;min-width:0}.profile-card h3{font-size:32px;margin-bottom:12px}.profile-card .small{color:#e0e5ff}.profile-card>.small{margin-bottom:28px}
+.trait{display:block;width:100%;border:0;border-top:1px solid #7584df;padding:18px 8px 19px;background:transparent;color:inherit;text-align:left;border-radius:3px;transition:background .2s}.trait:hover,.trait[aria-pressed=true]{background:#ffffff12}.trait:focus-visible{outline-color:#fff;outline-offset:2px}.trait:first-child{border-top:0}.trait-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:15px}.trait-title strong{font-size:16px;font-weight:500}.trait-title span{font-size:13px;color:#e0e5ff;font-variant-numeric:tabular-nums}.trait-track{height:4px;background:#8493e4;position:relative;display:block;margin:0 7px 11px}.trait-track::before{content:'';position:absolute;left:50%;height:10px;top:-3px;width:1px;background:#bac3f0}.trait-dot{position:absolute;top:50%;left:0%;width:13px;height:13px;background:var(--white);border-radius:50%;transform:translate(-50%,-50%);transition:left .8s cubic-bezier(.2,.8,.2,1)}.trait-poles{display:flex;justify-content:space-between;gap:22px;font-size:12px;line-height:1.45;color:#eef0ff}.trait-poles span{max-width:48%}.trait-poles span:last-child{text-align:right}.profile-foot{font-size:13px;line-height:1.6;color:#e0e5ff;margin:20px 0 0;padding-top:18px;border-top:1px solid #7584df}
+.result-grid{grid-template-columns:1.05fr 1fr}.insight-card{padding:30px}.insight-card h3{font-size:32px}.detail{margin-top:20px;padding-top:22px;border-top:1px solid var(--line);animation:reveal .35s ease both}.detail h4{font:400 28px/1.3 var(--serif);margin:0 0 15px}.detail p{font-size:16px}.detail .small{font-size:14px}.detail-score{color:var(--blue);font-size:14px!important;margin-bottom:12px}.detail ul{padding-left:20px;font-size:14px;color:var(--muted)}.result-actions-wrap{margin-top:auto;padding-top:6px}.result-actions .primary{cursor:default}.review-row{grid-template-columns:1fr}.review-row p{margin-top:4px}.review-row .small{padding:0}.copy-fallback{display:block;width:100%;min-height:200px;margin-top:14px;border:1px solid var(--line);padding:12px;background:#fffdfa;font:14px/1.5 var(--sans);color:var(--ink)}
+.art-piece{transform-box:fill-box;transform-origin:center;animation:orbFloat 6s ease-in-out infinite}.art-piece:nth-child(2){animation-delay:-2s}.art-piece:nth-child(3){animation-delay:-4s}
+.result-heading>p{max-width:700px}.summary{font-size:16px;color:var(--muted)}.chat-top .eyebrow{font-size:14px}.chat-back{min-height:44px}.conversation{max-height:none;min-height:560px}.answer-prompt{margin-bottom:14px}.primary,.secondary{min-height:48px}.text-button{min-height:44px}.intro-copy .small{margin:24px 0 0;max-width:390px}
+@media(max-width:1050px){.profile-card,.insight-card{padding:24px}.choice{font-size:13px}.result-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.conversation{min-height:540px;height:calc(100dvh - 32px)}.result-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){h1{font-size:clamp(42px,10.5vw,72px)}.result-grid{grid-template-columns:1fr}.trait{padding:17px 4px}.profile-card,.insight-card{padding:24px}.result-heading h2{font-size:44px}}
+@media(max-width:540px){.choices{grid-template-columns:1fr 1fr;gap:7px}.choice{min-height:48px;padding:8px 10px;font-size:13px;background:transparent;gap:9px;border:1px solid var(--line)}.choice:last-child{grid-column:1/-1}.choice::before{width:16px;height:16px;background:#faf8f3}.answer-panel{padding:12px 16px}.answer-help{font-size:12px;margin-top:8px}.answer-prompt{font-size:14px;margin-bottom:10px}.messages{min-height:110px}.chat-top{padding:8px 16px}.chat-top .eyebrow{font-size:12px}.bubble{font-size:16px}.intro-aside{padding:20px}.trait-title{gap:8px}.trait-title strong{font-size:15px}.trait-title span{font-size:12px}.conversation{min-height:540px}.result-heading h2{font-size:42px}}
+</style></head><body>
+<main class="quiz" id="quiz" aria-label="Ваш личностный почерк">
+<section id="intro" class="intro view"><div class="intro-copy"><h1>Ваш<br>личностный<br><em>почерк.</em></h1><p class="lead">У каждого — свой способ общаться, строить планы и смотреть на мир. Какой ближе вам?</p><p class="small">Небольшой разговор о привычных особенностях. Здесь не нужно стараться выглядеть лучше — можно просто быть собой.</p></div>
+<div><div class="intro-aside"><div class="art"><svg viewBox="0 0 380 270" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false"><path d="M52 228H328" stroke="#d6d5cc"/><circle cx="190" cy="134" r="104" stroke="#e2dfd7" stroke-dasharray="3 7"/>
+<g class="art-piece"><path d="M101 112C101 79 128 52 161 52V172H101Z" fill="#324bc5"/><path d="M116 112C116 88 135 69 159 69" stroke="#8e9de3" stroke-width="1.5"/></g>
+<g class="art-piece"><circle cx="227" cy="97" r="38" fill="#c2c9af"/><path d="M201 100L219 117L249 83" stroke="#f3f0ea" stroke-width="2"/></g>
+<g class="art-piece"><path d="M186 142H278V217H186Z" fill="#cbd2ef"/><path d="M200 161C215 148 222 191 240 172S256 157 265 171M200 188C216 175 227 208 248 192" stroke="#324bc5" stroke-width="1.7" stroke-linecap="round"/></g>
+<path d="M103 190L141 162L169 201L132 228Z" fill="#ded7c8"/><circle cx="294" cy="139" r="8" fill="#324bc5"/><circle cx="80" cy="153" r="5" fill="#b7c1e8"/><path d="M283 45V59M276 52H290" stroke="#324bc5" stroke-width="1.5"/></svg></div>
+<p class="art-caption">Узнать свой способ быть собой</p><p class="intro-meta">20 утверждений · около 5 минут</p><button class="primary" id="start" type="button">Начать</button><p class="privacy">Без регистрации. Ответы остаются на странице.<br>Для самонаблюдения, без диагнозов и ярлыков.</p></div><div class="intro-links"><button class="text-button about" type="button">О методике и источниках</button></div></div></section>
+<section id="conversation" class="conversation view" hidden><aside class="side-copy"><h2>По-своему —<br>значит,<br><em>по-вашему.</em></h2><p>Думайте о том, что обычно вам свойственно, а не только о сегодняшнем настроении.</p><p>Ни один ответ не делает вас лучше или хуже.</p><div class="side-bottom"><button type="button" class="text-button about">О методике и источниках</button></div></aside>
+<div class="chat-panel"><div class="chat-top"><span id="progress-label" class="eyebrow" aria-live="polite"></span><button id="back" class="text-button chat-back" type="button">Назад</button></div><div class="progress-track" role="progressbar" aria-label="Дано ответов" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><span id="progress-fill"></span></div><div id="messages" class="messages" aria-label="История разговора"></div><div class="answer-panel"><p id="answer-prompt" class="answer-prompt">Насколько это похоже на вас?</p><div id="choices" class="choices" role="group" aria-labelledby="answer-prompt"></div><p id="answer-help" class="answer-help">Ответ можно изменить — нажмите на него в переписке.</p></div></div></section>
+<section id="result" class="result view" hidden><div class="result-heading"><h2>Пять черт.<br><em>Ваше сочетание.</em></h2><p>Личность не помещается в один тип. Здесь — профиль по вашим ответам: у каждой черты есть разные проявления, и оба края шкалы имеют свои особенности.</p></div><div class="result-grid"><div class="profile-card"><p class="eyebrow">ВАШ ЛИЧНОСТНЫЙ ПОЧЕРК</p><h3>Как складывается профиль</h3><p class="small">Нажмите на любую шкалу, чтобы прочитать пояснение.</p><div id="profile-chart" role="group" aria-label="Пять черт личности"></div><p class="profile-foot">Точка показывает средний балл от 1 до 5 с учётом обратных утверждений. Это не процент и не сравнение с другими людьми.</p></div><div class="insight-card"><h3>Что говорят<br>ваши ответы</h3><p id="summary" class="summary"></p><div id="detail" class="detail" aria-live="polite"><p id="detail-score" class="detail-score"></p><h4 id="detail-title"></h4><p id="detail-copy"></p><p id="detail-context" class="small"></p><details><summary class="small">Из чего сложилась эта шкала</summary><ul id="detail-answers"></ul></details></div><div class="result-actions-wrap"><div class="result-actions"><button type="button" class="primary" id="discuss" aria-label="Обсудить со специалистом — демонстрационная кнопка">Обсудить со специалистом</button><button type="button" id="copy" class="secondary">Скопировать результат</button><div class="result-links"><button type="button" id="review" class="text-button">Посмотреть ответы</button><button type="button" class="text-button restart">Пройти заново</button></div></div></div></div></div><div class="reflection"><span class="section-number">ВОПРОС ДЛЯ СЕБЯ</span><div><h3 id="reflection-question"></h3></div></div><div class="result-method"><button class="text-button about" type="button">О методике и источниках</button><p class="small">На основе Mini-IPIP. Русскоязычная версия для самонаблюдения без отдельной психометрической проверки. Не заменяет консультацию психолога.</p></div></section>
+<section id="review-view" class="review-view view" hidden><h2>Можно <em>пересмотреть.</em></h2><p>Нажмите на ответ, чтобы изменить его. Остальные ответы сохранятся.</p><div id="review-list"></div><button type="button" class="primary" id="back-result">Вернуться к результату</button></section></main>
+<dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-header"><h2 id="about-title">Немного<br><em>о методике.</em></h2><button type="button" class="dialog-close" aria-label="Закрыть">×</button></div><div class="dialog-body"><p>«Ваш личностный почерк» — интерактив для самонаблюдения на основе Mini-IPIP: краткого опросника из 20 утверждений о пяти чертах личности.</p><p>Русские формулировки — перевод, подготовленный для этого интерактива. Эта версия не проходила отдельной психометрической проверки; свойства оригинального опросника нельзя автоматически переносить на неё. Результат не является диагнозом, оценкой психического здоровья или основанием для кадровых решений.</p><h3>Как устроен подсчёт</h3><p>Пять ответов получают от 1 до 5 баллов. Для обратных утверждений используется значение 6 минус балл ответа. В каждой шкале четыре утверждения: их баллы суммируются (от 4 до 20), а для отображения делятся на четыре — получается среднее от 1 до 5. Общий балл личности не рассчитывается. Для результата нужны все 20 ответов.</p><p>Шкалы: экстраверсия, доброжелательность, организованность (добросовестность), эмоциональная чувствительность (нейротизм в исходном ключе), воображение и интерес к идеям (Intellect/Imagination). Последняя шкала не измеряет интеллект или IQ, а шкала эмоциональной чувствительности не диагностирует расстройства.</p><h3>Как читать пояснения</h3><p>Тексты результатов и вопросы для размышления — авторские. Для их выбора средние баллы условно разделены на три диапазона: ниже 2,5; от 2,5 до 3,5 включительно; выше 3,5. Это правила интерфейса, а не нормативные границы «низкого», «нормального» или «высокого» уровня. Направления шкал не ранжируются между собой; первым открывается пояснение об экстраверсии.</p><p>Ответы отражают ваше представление о себе и зависят от контекста. Средняя точка может означать как умеренные ответы, так и сочетание противоположных ответов. Под каждой расшифровкой можно посмотреть исходные утверждения и свои ответы.</p><h3>Источники</h3><ul><li><a href="https://ipip.ori.org/MiniIPIPKey.htm" target="_blank" rel="noopener noreferrer">Mini-IPIP: утверждения и ключ ↗</a><br>Основа содержания и распределения утверждений по пяти шкалам. Donnellan, M. B., Oswald, F. L., Baird, B. M., &amp; Lucas, R. E. (2006). The Mini-IPIP scales: Tiny-yet-effective measures of the Big Five factors of personality. Psychological Assessment, 18, 192–203.</li><li><a href="https://ipip.ori.org/newScoringInstructions.htm" target="_blank" rel="noopener noreferrer">IPIP: правила начисления баллов ↗</a><br>Прямой и обратный подсчёт.</li><li><a href="https://ipip.ori.org/newPermission.htm" target="_blank" rel="noopener noreferrer">IPIP: условия использования ↗</a><br>Материалы IPIP находятся в общественном достоянии; разрешено коммерческое и некоммерческое использование без оплаты.</li></ul><p class="small">Ответы хранятся в памяти открытой страницы, не отправляются на сервер и удаляются при перезагрузке. Скопированный результат остаётся в вашем буфере обмена. Шрифты Lora и Onest загружаются из Google Fonts; без интернета используются системные шрифты. Кнопка «Обсудить со специалистом» в этой демонстрации не выполняет действий.</p></div></dialog>
+<dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">Начать <em>заново?</em></h2><p>Текущие ответы будут очищены.</p><div class="dialog-actions"><button type="button" id="confirm-restart" class="primary">Начать заново</button><button type="button" id="cancel-restart" class="secondary" autofocus>Оставить ответы</button></div></dialog><p id="notice" role="status" class="notice"></p><noscript>Для прохождения квиза включите JavaScript в браузере.</noscript>
+<script>
+'use strict';
+const domains=[
+ {title:'Экстраверсия',left:'Спокойное общение',right:'Активное общение',text:[
+ 'По вашим ответам вам может быть комфортнее говорить меньше, оставаться в стороне от общего внимания и выбирать спокойный формат общения. Это не обязательно означает застенчивость или трудности в отношениях.',
+ 'В ответах нет явного смещения к одному краю шкалы. Возможно, в одних ситуациях вы охотно включаетесь в общение, а в других предпочитаете оставаться в стороне. Посмотрите, какие именно утверждения вам ближе.',
+ 'По вашим ответам вы охотно разговариваете с разными людьми и можете оказываться в центре общения. Живой обмен с окружающими, вероятно, занимает заметное место в вашей жизни. Это не означает, что вам никогда не нужно побыть наедине с собой.'
+ ],context:'Здесь речь об активности в общении, а не о том, насколько хорошо вы умеете дружить или поддерживать отношения.',question:'Какой формат общения помогает вам чувствовать себя свободно и не уставать?',summary:['В общении вам ближе спокойный формат.','В общении ваши ответы сочетают разные предпочтения.','В общении вам близка активность.']},
+ {title:'Доброжелательность',left:'Меньше вовлечённости',right:'Больше сопереживания',text:[
+ 'По вашим ответам вы реже вовлекаетесь в переживания и проблемы других людей. Возможно, вам ближе дистанция и внимание к собственным задачам. Эти ответы не позволяют судить о вашей доброте, нравственности или способности помогать.',
+ 'Ваши ответы сочетают разную степень интереса к переживаниям других. Возможно, ваша вовлечённость зависит от человека и обстоятельств. Средний балл не означает, что вы всегда одинаково реагируете на чужие чувства.',
+ 'По вашим ответам вы замечаете чувства других людей и склонны сопереживать. В отношениях это может помогать вам понимать чужой опыт. При этом сопереживать не обязательно означает соглашаться или брать на себя решение чужих проблем.'
+ ],context:'Четыре утверждения этой краткой шкалы касаются прежде всего сопереживания и интереса к другим; они не описывают всё многообразие отношений.',question:'Как вы замечаете переживания другого человека, сохраняя внимание к собственным потребностям?',summary:['В чужие переживания вы вовлекаетесь избирательно.','Вовлечённость в чужие переживания в ваших ответах различается.','Вы отмечаете внимание к чувствам других.']},
+ {title:'Организованность',left:'Меньше порядка',right:'Больше порядка',text:[
+ 'По вашим ответам порядок и немедленное выполнение повседневных дел не всегда вам свойственны. Возможно, вам удобнее менее упорядоченный ритм. Такой результат сам по себе ничего не говорит о вашей ответственности в важных для вас делах.',
+ 'В ответах есть сочетание порядка и менее организованных привычек. Возможно, одни задачи вы выполняете сразу, а другие откладываете, или поддерживаете порядок только там, где он вам нужен.',
+ 'По вашим ответам вам близки порядок и привычка выполнять повседневные дела без промедления. Понятная организация может помогать вам в быту. Этот результат не означает, что вы обязаны постоянно быть продуктивными или всё контролировать.'
+ ],context:'В Mini-IPIP эта шкала представлена преимущественно бытовым порядком и выполнением дел. Она не измеряет вашу ценность или успешность.',question:'Какой порядок помогает вам в делах, а где можно оставить себе больше свободы?',summary:['В повседневных делах порядок не всегда выходит на первый план.','В организации дел у вас сочетаются разные привычки.','В повседневных делах вам близок порядок.']},
+ {title:'Эмоциональная чувствительность',left:'Больше спокойствия',right:'Больше реактивности',text:[
+ 'По вашим ответам вам часто свойственно спокойствие, а резкие перемены настроения и огорчение менее характерны. Это не означает отсутствия чувств: возможно, повседневные переживания реже выбивают вас из равновесия.',
+ 'Ответы сочетают спокойствие и эмоциональную отзывчивость на события. Возможно, ваше состояние заметно зависит от ситуации. Можно посмотреть на отдельные ответы, чтобы понять, что именно вы имели в виду.',
+ 'По вашим ответам вас бывает легко расстроить, а настроение может меняться. Возможно, события вызывают у вас заметный эмоциональный отклик. Это не диагноз и не признак «слабости»; на ответы также может влиять текущая нагрузка.'
+ ],context:'В исходном ключе шкала называется Neuroticism. Здесь она обозначена как эмоциональная чувствительность; она не измеряет эмпатию и не определяет наличие тревожного или другого расстройства.',question:'Что помогает вам оставаться рядом со своими чувствами и находить опору в непростые дни?',summary:['В эмоциональных реакциях вы чаще отмечаете спокойствие.','В эмоциональных реакциях сочетаются спокойствие и чувствительность.','Вы отмечаете заметную эмоциональную реактивность.']},
+ {title:'Воображение и идеи',left:'Меньше интереса к абстракциям',right:'Больше интереса к абстракциям',text:[
+ 'По вашим ответам абстрактные идеи и воображаемые образы не всегда вызывают интерес или даются легко. Возможно, вам ближе конкретные примеры и понятный практический контекст. Это не оценка интеллекта или творческих способностей.',
+ 'Ваши ответы не смещены явно к одному краю шкалы. Интерес к абстрактным идеям и воображению может различаться в зависимости от темы. Посмотрите на отдельные ответы: они могут отражать разные стороны вашего опыта.',
+ 'По вашим ответам вам близки воображение и интерес к абстрактным идеям. Возможно, вам нравится представлять разные возможности и размышлять о том, что нельзя сразу потрогать или увидеть. Это не означает, что практические дела вам менее доступны.'
+ ],context:'Исходное название — Intellect/Imagination. Четыре утверждения касаются воображения и абстрактных идей; это не тест IQ и не полная оценка открытости новому опыту.',question:'Какая тема увлекает вас настолько, что хочется узнать о ней больше — в своём темпе?',summary:['В ваших ответах меньше интереса к абстрактным идеям.','В отношении воображения и идей ваши ответы различаются.','Вам близки воображение и абстрактные идеи.']}
+];
+const questions=[
+ {d:0,r:false,t:'Я часто бываю душой компании.'},
+ {d:1,r:false,t:'Я сочувствую переживаниям других людей.'},
+ {d:2,r:false,t:'Я выполняю повседневные дела без промедления.'},
+ {d:3,r:false,t:'У меня часто бывают перепады настроения.'},
+ {d:4,r:false,t:'У меня живое воображение.'},
+ {d:0,r:true,t:'Обычно я мало разговариваю.'},
+ {d:1,r:true,t:'Другие люди не особенно меня интересуют.'},
+ {d:2,r:true,t:'Я часто забываю возвращать вещи на место.'},
+ {d:3,r:true,t:'Большую часть времени я чувствую себя спокойно и расслабленно.'},
+ {d:4,r:true,t:'Мне трудно понимать абстрактные идеи.'},
+ {d:0,r:false,t:'На встречах и вечеринках я общаюсь со многими разными людьми.'},
+ {d:1,r:false,t:'Я чувствую эмоции других людей.'},
+ {d:2,r:false,t:'Я люблю порядок.'},
+ {d:3,r:false,t:'Меня легко расстроить.'},
+ {d:4,r:true,t:'Абстрактные идеи меня не интересуют.'},
+ {d:0,r:true,t:'В компании я предпочитаю оставаться в стороне от общего внимания.'},
+ {d:1,r:true,t:'Проблемы других людей меня не интересуют.'},
+ {d:2,r:true,t:'Я оставляю после себя беспорядок.'},
+ {d:3,r:true,t:'Мне редко бывает грустно.'},
+ {d:4,r:true,t:'У меня не очень развитое воображение.'}
+];
+const labels=['Совсем не похоже на меня','Скорее не похоже на меня','И да, и нет','Скорее похоже на меня','Очень похоже на меня'];
+const $=id=>document.getElementById(id);
+let answers=Array(20).fill(null),current=0,editing=false,editOrigin='conversation',editReturn=0,selected=0,noticeTimer;
+function node(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;}
+function band(mean){return mean<2.5?0:mean>3.5?2:1;}
+function summarize(values){if(values.length!==20||values.some(v=>!Number.isInteger(v)||v<1||v>5))throw new Error('Нужны все 20 ответов');return domains.map((_,d)=>{const sum=questions.reduce((s,q,i)=>s+(q.d===d?(q.r?6-values[i]:values[i]):0),0);return {sum,mean:sum/4};});}
+function show(id){document.querySelectorAll('.view').forEach(el=>el.hidden=el.id!==id);const h=$(id).querySelector('h1,h2');if(h){h.tabIndex=-1;h.focus({preventScroll:true});}window.scrollTo({top:0,behavior:'smooth'});}
+function speak(text){const line=node('div','chat-line'),bubble=node('div','bubble');bubble.append(node('p','',text));line.append(bubble);$('messages').append(line);return bubble;}
+function renderChat(){
+ $('messages').replaceChildren();speak('Думайте о себе в целом. Если многое зависит от ситуации, можно выбрать «И да, и нет». Здесь нет правильных ответов.');
+ for(let i=0;i<=Math.min(current,19);i++){speak(questions[i].t);if(answers[i]!==null&&!(editing&&i===current)){const line=node('div','chat-line user'),b=node('button','bubble',labels[answers[i]-1]);b.type='button';b.setAttribute('aria-label','Изменить ответ: '+questions[i].t+' '+labels[answers[i]-1]);b.addEventListener('click',()=>edit(i,'conversation'));line.append(b);$('messages').append(line);}}
+ const count=answers.filter(v=>v!==null).length,complete=current===20&&!editing;
+ $('progress-label').textContent=editing?'Изменение ответа':complete?'Все ответы готовы':'Утверждение '+(current+1)+' из 20';$('progress-fill').style.width=count/20*100+'%';document.querySelector('.progress-track').setAttribute('aria-valuenow',String(count));$('back').hidden=current===0&&!editing;$('back').textContent=editing?'Отмена':'Назад';$('choices').replaceChildren();$('choices').classList.toggle('is-complete',complete);
+ if(complete){$('answer-prompt').textContent='Можно посмотреть, что получилось';const b=node('button','primary','Посмотреть результат');b.type='button';b.addEventListener('click',renderResult);$('choices').append(b);$('answer-help').textContent='Перед просмотром можно изменить любой ответ.';}
+ else{$('answer-prompt').textContent=editing?'Выберите новый ответ':'Насколько это похоже на вас?';labels.forEach((label,index)=>{const b=node('button','choice',label);b.type='button';b.setAttribute('aria-pressed',String(answers[current]===index+1));b.addEventListener('click',()=>choose(index+1));b.addEventListener('keydown',event=>{const step=['ArrowRight','ArrowDown'].includes(event.key)?1:['ArrowLeft','ArrowUp'].includes(event.key)?-1:0;if(!step&&!['Home','End'].includes(event.key))return;event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?4:(index+step+5)%5;$('choices').children[next].focus();});$('choices').append(b);});$('answer-help').textContent=editing?'Остальные ответы сохранятся.':'Ответ можно изменить — нажмите на него в переписке.';}
+ requestAnimationFrame(()=>{const active=complete?$('choices').querySelector('button'):$('messages').lastElementChild?.querySelector('.bubble');if(active){active.tabIndex=active.tagName==='BUTTON'?0:-1;active.focus({preventScroll:true});}$('messages').scrollTo({top:$('messages').scrollHeight,behavior:'smooth'});});
+}
+function choose(value){if(!Number.isInteger(value)||value<1||value>5||current<0||current>=20)return;answers[current]=value;if(editing){editing=false;if(editOrigin==='review-view'){renderReview();return;}current=answers.findIndex(v=>v===null);if(current===-1)current=20;}else current++;renderChat();}
+function edit(index,origin){editReturn=current;current=index;editing=true;editOrigin=origin;show('conversation');renderChat();}
+function cancelEdit(){editing=false;if(editOrigin==='review-view'){renderReview();return;}current=editReturn;renderChat();}
+function format(n){return n.toLocaleString('ru-RU',{maximumFractionDigits:2});}
+function drawChart(stats){$('profile-chart').replaceChildren();stats.forEach((s,i)=>{const d=domains[i],b=node('button','trait'),top=node('span','trait-title');b.type='button';b.setAttribute('aria-pressed',String(selected===i));b.setAttribute('aria-label',d.title+': '+format(s.mean)+' из 5. '+d.left+' — '+d.right+'. Открыть пояснение');b.setAttribute('aria-controls','detail');top.append(node('strong','',d.title),node('span','',format(s.mean)+' / 5'));const track=node('span','trait-track'),dot=node('span','trait-dot');track.append(dot);const poles=node('span','trait-poles');poles.append(node('span','',d.left),node('span','',d.right));b.append(top,track,poles);b.addEventListener('click',()=>{selected=i;renderDetail(stats);[...$('profile-chart').children].forEach((el,j)=>el.setAttribute('aria-pressed',String(i===j)));});$('profile-chart').append(b);requestAnimationFrame(()=>requestAnimationFrame(()=>{dot.style.left=(s.mean-1)/4*100+'%';}));});}
+function renderDetail(stats){const d=domains[selected],s=stats[selected];$('detail-score').textContent='Средний балл: '+format(s.mean)+' из 5 · сумма: '+s.sum+' из 20';$('detail-title').textContent=d.title;$('detail-copy').textContent=d.text[band(s.mean)];$('detail-context').textContent=d.context;$('reflection-question').textContent=d.question;$('detail-answers').replaceChildren();questions.forEach((q,i)=>{if(q.d===selected)$('detail-answers').append(node('li','',q.t+' — '+labels[answers[i]-1]+'.'));});$('detail').querySelector('details').open=false;const corrected=questions.map((q,i)=>q.d===selected?(q.r?6-answers[i]:answers[i]):null).filter(v=>v!==null);if(Math.max(...corrected)-Math.min(...corrected)>=3)$('detail-context').textContent+=' После учёта обратных формулировок ответы заметно различаются: среднее не передаёт всех деталей. Посмотрите отдельные ответы ниже.';}
+function renderResult(){const stats=summarize(answers);$('summary').textContent=domains.map((d,i)=>d.summary[band(stats[i].mean)]).join(' ');drawChart(stats);renderDetail(stats);$('copy-fallback')?.remove();show('result');}
+function renderReview(){$('review-list').replaceChildren();questions.forEach((q,i)=>{const row=node('div','review-row'),body=node('div');body.append(node('span','small',domains[q.d].title),node('p','',q.t));const b=node('button','text-button',labels[answers[i]-1]+' · изменить');b.type='button';b.addEventListener('click',()=>edit(i,'review-view'));body.append(b);row.append(body);$('review-list').append(row);});show('review-view');}
+function resultText(){const stats=summarize(answers);return ['Ваш личностный почерк','Профиль на основе Mini-IPIP. Средние баллы от 1 до 5 с учётом обратных формулировок.',...domains.flatMap((d,i)=>[d.title+': '+format(stats[i].mean)+' из 5 ('+stats[i].sum+' из 20).',d.text[band(stats[i].mean)],'Вопрос для себя: '+d.question,'']),'Баллы не являются процентами, оценкой качества личности или сравнением с другими людьми.','Русскоязычная версия для самонаблюдения без отдельной психометрической проверки. Пояснения — авторские, не диагноз.','Источник: https://ipip.ori.org/MiniIPIPKey.htm'].join('\n');}
+function notify(text){clearTimeout(noticeTimer);$('notice').textContent=text;noticeTimer=setTimeout(()=>$('notice').textContent='',4500);}
+$('start').addEventListener('click',()=>{show('conversation');renderChat();});$('back').addEventListener('click',()=>{if(editing){cancelEdit();return;}if(current>0)edit(current-1,'conversation');});$('review').addEventListener('click',renderReview);$('back-result').addEventListener('click',renderResult);
+document.querySelectorAll('.about').forEach(b=>b.addEventListener('click',()=>$('about-dialog').showModal()));document.querySelector('.dialog-close').addEventListener('click',()=>$('about-dialog').close());
+document.querySelectorAll('dialog').forEach(d=>{let press=false;const outside=e=>{const r=d.getBoundingClientRect();return e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;};d.addEventListener('pointerdown',e=>{press=e.target===d&&outside(e);});d.addEventListener('pointercancel',()=>{press=false;});d.addEventListener('click',e=>{if(press&&e.target===d&&outside(e))d.close();press=false;});d.addEventListener('close',()=>{press=false;});});
+document.querySelectorAll('.restart').forEach(b=>b.addEventListener('click',()=>$('restart-dialog').showModal()));$('cancel-restart').addEventListener('click',()=>$('restart-dialog').close());$('confirm-restart').addEventListener('click',()=>{$('restart-dialog').close();answers=Array(20).fill(null);current=0;editing=false;selected=0;editOrigin='conversation';$('copy-fallback')?.remove();show('conversation');renderChat();});
+$('copy').addEventListener('click',async()=>{const text=resultText();try{await navigator.clipboard.writeText(text);$('copy-fallback')?.remove();notify('Результат скопирован');}catch{let field=$('copy-fallback');if(!field){field=node('textarea','copy-fallback');field.id='copy-fallback';field.readOnly=true;field.setAttribute('aria-label','Результат для ручного копирования');$('copy').after(field);}field.value=text;field.focus();field.select();notify('Выделенный текст можно скопировать вручную.');}});
+</script></body></html>

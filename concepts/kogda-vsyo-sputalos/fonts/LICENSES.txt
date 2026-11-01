@@ -1,0 +1,3 @@
+Literata, Onest, Excalifont: SIL Open Font License 1.1 (https://openfontlicense.org).
+Files are unmodified subsets. When redistributing, keep this notice and include the OFL text.
+Sources: Google Fonts (Literata, Onest), https://plus.excalidraw.com/excalifont (Excalifont).

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Небольшой разговор о вашем отношении к себе. 10 утверждений по шкале самооценки Розенберга.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Как вы относитесь к себе — Greendiz</title>
+<style>
+
+:root{--paper:#f3f0ea;--ink:#151916;--blue:#324bc5;--muted:#62665f;--line:#d6d5cc;--white:#fffdfa;--serif:'Lora',serif;--sans:'Onest',sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{font:inherit;cursor:pointer}button:disabled{cursor:default}
+button:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}
+[tabindex='-1']:focus{outline:none}
+a{color:var(--blue);text-underline-offset:4px}
+::selection{background:#dbe0ff;color:var(--ink)}
+.quiz{max-width:1240px;margin:auto;padding:48px 48px 40px;min-height:100svh}
+.view{animation:reveal .45s cubic-bezier(.16,1,.3,1) both}
+[hidden]{display:none!important}
+h1,h2,h3,p{margin-top:0}h1,h2,h3{font-weight:400}
+h1,h2{font-family:var(--serif);letter-spacing:-.04em;line-height:1.06;text-wrap:balance}
+h1{font-size:clamp(64px,7.2vw,92px);margin-bottom:28px}
+h2{font-size:54px;margin-bottom:24px}
+h3{font:400 29px/1.25 var(--serif);letter-spacing:-.025em;text-wrap:balance}
+em{font-weight:400;color:var(--blue)}.title-dot{color:var(--blue)}
+.eyebrow{font-size:14px;letter-spacing:.07em;line-height:1.5;font-weight:500;text-transform:uppercase}
+.intro{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;min-height:calc(100svh - 88px)}
+.lead{font-size:19px;line-height:1.6;max-width:390px;margin-bottom:0}
+.intro-aside{background:var(--white);padding:28px 30px 24px;border-radius:6px}
+.art{width:100%;margin:0 auto 20px;max-width:360px}
+.art svg{display:block;width:100%;height:auto}
+.art-orb{animation:orbFloat 6s ease-in-out infinite}
+.art-caption{font:italic 22px/1.4 var(--serif);color:var(--blue);text-align:center;margin:0 0 22px}
+.intro-meta{font-size:16px;text-align:center;margin:0 0 18px}
+.primary,.secondary{min-height:54px;padding:14px 20px;border:1px solid var(--blue);border-radius:3px;display:inline-flex;align-items:center;justify-content:center;gap:16px;line-height:1.4;text-decoration:none;transition:background .2s,transform .2s,color .2s}
+.primary{background:var(--blue);color:#fff}.primary:hover{background:#253ca9}.primary:active,.secondary:active{transform:translateY(1px)}
+.primary svg,.secondary svg{width:20px;height:20px;flex:none}
+.secondary{background:transparent;border-color:var(--line);color:var(--ink)}.secondary:hover{background:#e8e5dd}
+.intro-aside>.primary{width:100%;justify-content:space-between}
+.text-button{background:none;border:0;border-bottom:1px solid #a6afd9;padding:8px 0 3px;min-height:40px;font-size:15px;color:var(--blue);text-align:left;line-height:1.45;transition:color .2s,border-color .2s}
+.text-button:hover{color:#24389d;border-bottom-color:currentColor}
+.privacy{font-size:14px;line-height:1.6;color:var(--muted);margin:16px 0 0;text-align:center}
+.intro-links{text-align:center;margin-top:8px}
+.small{font-size:14px;color:var(--muted);line-height:1.6}
+.conversation{display:grid;grid-template-columns:260px minmax(0,1fr);gap:44px;height:calc(100svh - 88px);min-height:620px;max-height:1000px}
+.side-copy{display:flex;flex-direction:column;padding-top:30px}
+.side-copy h2{font-size:43px;line-height:1.13}.side-copy>p{font-size:16px;color:var(--muted)}
+.side-bottom{margin-top:auto;padding-bottom:12px}
+.chat-panel{min-width:0;min-height:0;display:flex;flex-direction:column;background:#faf8f3;border-radius:6px;overflow:hidden}
+.chat-top{display:flex;align-items:center;padding:18px 24px;gap:10px;font-size:14px}
+.chat-top .eyebrow{margin:0;text-transform:none;letter-spacing:0;font-size:15px}
+.progress-track{height:4px;background:#fff;flex-shrink:0}.progress-track span{display:block;height:100%;background:var(--blue);width:0;transition:width .4s ease}
+.messages{overflow-y:auto;padding:24px 24px 16px;flex:1;min-height:160px;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#c6c8d3 transparent}
+.chat-line{display:flex;margin-bottom:18px;align-items:flex-end}.chat-line:last-child{animation:reveal .3s ease both}
+.bubble{max-width:94%;background:#fff;border-radius:14px 14px 14px 3px;padding:16px 18px;font-size:17px;line-height:1.55}
+.bubble p:last-child{margin-bottom:0}
+.chat-line.user{justify-content:flex-end}.user .bubble{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:14px 14px 3px 14px;text-align:left;max-width:90%;padding:12px 17px;font-size:16px;transition:background .2s}
+.user .bubble:hover{background:var(--paper)}.user .bubble:focus-visible{outline-offset:3px}
+.answer-panel{border-top:1px solid var(--line);padding:18px 24px 16px;background:#faf8f3}
+.answer-prompt{font-size:16px;margin-bottom:14px}
+.choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;position:relative}
+.choices::before{content:'';position:absolute;left:12.5%;right:12.5%;height:1px;top:13px;background:#afb7d5;pointer-events:none}
+.choice{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:14px;border:0;background:transparent;border-radius:4px;padding:4px 4px 10px;min-height:100px;font-size:15px;color:var(--ink);line-height:1.4;transition:background .2s,color .2s}
+.choice::before{content:'';display:block;width:20px;height:20px;flex:none;border:1.5px solid #8b95b8;background:#faf8f3;border-radius:50%;transition:background .2s,border-color .2s,box-shadow .2s}
+.choice:hover{color:var(--blue)}.choice:hover::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.choice[aria-pressed=true]{color:var(--blue)}.choice[aria-pressed=true]::before{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.answer-help{font-size:14px;color:var(--muted);margin:12px 0 0}.choices>.primary{grid-column:1/-1;width:100%}.choices.is-complete::before{display:none}
+.result-heading{margin-bottom:28px}.result-heading h2{font-size:58px;margin-bottom:0}
+.result-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:stretch}
+.score-card{background:var(--blue);color:#fff;padding:28px 30px;border-radius:4px}.score-card .eyebrow{color:#e0e5ff;margin-bottom:8px}
+.score-number{display:flex;align-items:baseline;gap:16px;line-height:1.2;margin-bottom:26px}.score-number strong{font:400 100px/1.2 var(--serif);letter-spacing:-.04em;font-variant-numeric:lining-nums tabular-nums}.score-number>span{color:#e0e5ff;font-size:18px}
+.score-track{height:3px;background:#8494ef;position:relative;margin:12px 7px}.score-track>span{position:absolute;top:50%;width:14px;height:14px;background:var(--paper);border-radius:50%;transform:translate(-50%,-50%);left:0;transition:left 1s cubic-bezier(.2,.8,.2,1)}
+.scale-labels{display:flex;justify-content:space-between;font-size:14px;color:#e0e5ff;margin-bottom:22px;font-variant-numeric:tabular-nums}
+.score-card>p:not(.eyebrow){font-size:16px;line-height:1.6}.score-card .score-note{border-top:1px solid #7180d7;padding-top:18px;margin:20px 0 0;color:#e0e5ff;font-size:14px}
+.insight-card{display:flex;flex-direction:column;padding:28px 30px;background:var(--white);border-radius:4px;min-width:0}
+.section-number{font-size:14px;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:18px}
+.insight-card h3{font-size:32px;margin-bottom:18px}.insight-card #observations p{font-size:17px;line-height:1.65;margin-bottom:16px}
+.result-actions{display:flex;flex-direction:column;gap:10px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.result-actions>.primary,.result-actions>.secondary{width:100%}
+.result-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:2px}
+.reflection{display:grid;grid-template-columns:190px minmax(0,1fr);gap:30px;border-top:1px solid var(--line);padding:26px 0 8px;margin-top:30px}
+.reflection .section-number{padding-top:5px}.reflection h3{font-size:27px;max-width:710px;margin-bottom:10px}
+.result-method{margin-top:10px}
+.review-view{max-width:800px;margin:auto}.review-view h2{font-size:54px}.review-view>p{color:var(--muted)}
+.review-row{border-top:1px solid var(--line);padding:20px 0;display:grid;grid-template-columns:35px minmax(0,1fr);gap:12px}.review-row>.small{padding-top:3px}.review-row p{margin-bottom:8px;font-size:17px}.review-row button{font-size:16px}.review-view>.primary{margin-top:25px}
+dialog{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;max-width:680px;width:calc(100% - 32px);padding:42px;max-height:85svh;overflow-y:auto;font:16px/1.65 var(--sans)}
+dialog::backdrop{background:#15191680;backdrop-filter:blur(3px)}dialog h2{font-size:42px}dialog ul{padding-left:20px}dialog h3{font-size:25px;margin:25px 0 15px}
+.dialog-close{position:absolute;right:12px;top:10px;width:44px;height:44px;background:none;border:0;font-size:29px;color:var(--muted)}.dialog-actions{display:flex;gap:12px;flex-wrap:wrap}
+.notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:10;background:var(--ink);color:#fff;padding:12px 20px;border-radius:4px;font-size:15px;box-shadow:0 5px 20px #0002;max-width:calc(100% - 32px);width:max-content;pointer-events:none}.notice:empty{display:none}
+@keyframes reveal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(min-width:1450px){.quiz{padding-top:64px}.intro{min-height:calc(100svh - 112px)}}
+@media(max-width:1050px){.quiz{padding:32px 28px}.intro{gap:36px}.intro-aside{padding:24px}.conversation{grid-template-columns:210px minmax(0,1fr);gap:26px;height:calc(100svh - 64px)}.side-copy h2{font-size:37px}.result-grid{grid-template-columns:.8fr 1.2fr;gap:18px}.score-card,.insight-card{padding:25px}.choice{font-size:14px}}
+@media(max-width:800px){.conversation{display:block;height:calc(100svh - 32px);min-height:560px;max-height:none}.quiz:has(.conversation:not([hidden])){padding:16px}.side-copy{display:none}.chat-panel{height:100%}.bubble{max-width:94%}.result-grid{grid-template-columns:1fr 1.25fr}.score-number strong{font-size:80px}.score-number{gap:10px}.result-heading h2{font-size:50px}}
+@media(max-width:700px){.quiz{padding:30px 20px}.intro{display:block;min-height:0}.intro-copy{margin-bottom:28px}h1{font-size:clamp(52px,11vw,72px);margin-bottom:20px}.lead{font-size:18px;max-width:440px}.intro-aside{padding:20px 24px}.art{max-width:260px;margin-bottom:10px}.art-caption{font-size:21px;margin-bottom:18px}.intro-meta{margin-bottom:16px}.privacy{font-size:14px}.result-heading h2{font-size:clamp(38px,8vw,49px)}.result-grid{grid-template-columns:1fr;gap:16px}.score-card,.insight-card{padding:24px}.score-number strong{font-size:86px}.score-number{margin-bottom:20px}.score-card>p:not(.eyebrow){max-width:470px}.insight-card h3{font-size:29px}.reflection{grid-template-columns:1fr;gap:0;margin-top:24px;padding-top:24px}.reflection .section-number{margin-bottom:14px}.reflection h3{font-size:25px}.review-view h2{font-size:42px}.review-row{grid-template-columns:26px minmax(0,1fr)}dialog{padding:36px 24px}dialog h2{font-size:34px}.dialog-actions>*{width:100%}}
+@media(max-width:540px){.chat-top{padding:15px 18px}.messages{padding:18px 16px 12px}.bubble{padding:14px 16px;font-size:17px}.answer-panel{padding:16px}.answer-prompt{margin-bottom:12px}.choices{grid-template-columns:1fr;gap:7px}.choices::before{display:none}.choice{flex-direction:row;text-align:left;justify-content:flex-start;gap:14px;font-size:16px;min-height:52px;padding:12px 14px;border:1px solid #d6d9e5;background:#fff}.choice::before{width:18px;height:18px;background:#fff}.answer-help{font-size:14px;margin-top:10px}.conversation{min-height:650px}.result-links{gap:5px 20px}.intro-aside{padding:20px}.primary,.secondary{padding:14px 16px;font-size:16px}}
+
+
+html:has(dialog[open]){overflow:hidden}
+#about-dialog{padding:0;overflow:hidden}
+#about-dialog[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.dialog-header{position:relative;padding:36px 70px 20px 38px}
+.dialog-header h2{margin:0}
+#about-dialog .dialog-close{top:16px;right:16px;border-radius:50%;transition:background .2s,color .2s}
+#about-dialog .dialog-close:hover{background:#e4e5ef;color:var(--blue)}
+.dialog-body{padding:0 30px 30px 38px;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#8996d9 #e9e7df}
+.dialog-body>:last-child{margin-bottom:0}
+.dialog-body::-webkit-scrollbar{width:9px}
+.dialog-body::-webkit-scrollbar-track{background:#e9e7df;border-radius:10px;margin-block:4px 12px}
+.dialog-body::-webkit-scrollbar-thumb{background:#8996d9;border:2px solid #e9e7df;border-radius:10px}
+.dialog-body::-webkit-scrollbar-thumb:hover{background:var(--blue)}
+@media(max-width:700px){
+#about-dialog{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100svh;height:100dvh;max-height:100svh;max-height:100dvh;border:0;border-radius:0}
+.dialog-header{padding:calc(30px + env(safe-area-inset-top)) calc(64px + env(safe-area-inset-right)) 22px calc(24px + env(safe-area-inset-left))}
+#about-dialog .dialog-close{top:calc(14px + env(safe-area-inset-top));right:calc(12px + env(safe-area-inset-right))}
+.dialog-body{padding:0 calc(20px + env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) calc(24px + env(safe-area-inset-left))}
+}
+
+</style>
+</head>
+
+<body>
+    <main class="quiz" id="quiz" aria-label="Тест самооценки">
+        <section id="intro" class="intro view">
+            <div class="intro-copy">
+                <h1>Как вы<br>относитесь<br><em>к себе</em><span class="title-dot">?</span></h1>
+                <p class="lead">Небольшой тест, который поможет присмотреться к своему отношению к себе.</p>
+            </div>
+            <div>
+                <div class="intro-aside">
+                    <div class="art"><svg viewBox="0 0 380 270" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false">
+<path d="M69 233H312" stroke="#d6d5cc" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M103 233V126C103 78 139 41 184 41C229 41 264 78 264 126V233H103Z" fill="#e9e5dc"/>
+<path d="M148 233V131C148 99 171 75 201 75C231 75 254 99 254 131V233H148Z" fill="#fffdfa"/>
+<path d="M172 233V134C172 113 187 97 206 97C225 97 240 113 240 134V233H172Z" fill="#324bc5"/>
+<path d="M103 231V126C103 78 139 41 184 41" stroke="#242b29" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M264 231V126C264 105 257 85 245 70" stroke="#242b29" stroke-width="1.7" stroke-linecap="round"/>
+<path d="M186 153C204 142 223 145 237 161C251 178 263 187 283 182" stroke="#abb6e7" stroke-width="1.7" stroke-linecap="round"/>
+<g class="art-orb"><circle cx="206" cy="153" r="22" fill="#d5dcf6"/>
+<path d="M206 131A22 22 0 0 1 206 175" fill="#abb6e7"/></g>
+<circle cx="285" cy="68" r="11" fill="#324bc5"/>
+<circle cx="93" cy="154" r="23" stroke="#b6bdd8" stroke-width="1.5"/><path d="M77 170L109 138" stroke="#b6bdd8" stroke-width="1.5"/>
+<path d="M280 221C280 200 287 188 302 183C303 204 296 216 280 221Z" fill="#bfc6a8"/>
+<path d="M280 232V213" stroke="#65704f" stroke-width="1.5" stroke-linecap="round"/>
+</svg></div>
+                    <p class="art-caption">Быть на своей стороне</p>
+                    <p class="intro-meta">10 утверждений · около 3 минут</p>
+                    <button class="primary" id="start" type="button">Начать тест <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <p class="privacy">Ответы никуда не отправляются.<br>Тест не заменяет консультацию специалиста.</p>
+                </div>
+                <div class="intro-links"><button class="text-button about" type="button">О методике и источниках</button></div>
+            </div>
+        </section>
+        <section id="conversation" class="conversation view" hidden>
+            <aside class="side-copy">
+                
+                <h2>Здесь можно<br>быть <em>собой.</em></h2>
+                <p>Выбирайте то, что ближе вам.</p>
+                <div class="side-bottom">
+                    <button class="text-button about">О методике</button>
+                </div>
+            </aside>
+            <div class="chat-panel">
+                <div class="chat-top"><span id="progress-label" class="eyebrow">Утверждение 1 из 10</span></div>
+                <div class="progress-track" role="progressbar" aria-label="Дано ответов" aria-valuemin="0"
+                    aria-valuemax="10" aria-valuenow="0"><span id="progress-fill"></span></div>
+                <div id="messages" class="messages" aria-label="История разговора"></div>
+                <div class="answer-panel">
+                    <p id="answer-prompt" class="answer-prompt">Насколько вы согласны?</p>
+                    <div id="choices" class="choices" role="group" aria-labelledby="answer-prompt"></div>
+                    <p id="answer-help" class="answer-help">Ответ можно изменить — нажмите на него в переписке.</p>
+                </div>
+            </div>
+        </section>
+        <section id="result" class="result view" hidden>
+            <div class="result-heading"><h2>Ваше отношение<br><em>к себе — сейчас.</em></h2></div>
+            <div class="result-grid">
+                <div class="score-card">
+                    <p class="eyebrow">ПО ШКАЛЕ РОЗЕНБЕРГА</p>
+                    <div class="score-number"><strong id="score">0</strong><span>из 30</span></div>
+                    <div class="score-track"><span id="score-marker"></span></div>
+                    <div class="scale-labels"><span>0</span><span>30</span></div>
+                    <p>Чем выше балл, тем более положительное отношение к себе отражают ответы.</p>
+                    <p class="score-note">Для самонаблюдения, не для постановки диагноза.</p>
+                </div>
+                <div class="insight-card">
+                    <h3 id="insight-title">В ваших ответах</h3>
+                    <div id="observations"></div>
+                    <div class="result-actions">
+                        <button type="button" class="primary" id="discuss">Обсудить со специалистом</button>
+                        <button type="button" id="copy" class="secondary"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" stroke="currentColor" stroke-width="1.6"/></svg> Скопировать результат</button>
+                        <div class="result-links"><button type="button" id="review" class="text-button">Посмотреть ответы</button><button type="button" class="text-button restart">Пройти заново</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="reflection"><span class="section-number">ВОПРОС ДЛЯ СЕБЯ</span>
+                <div>
+                    <h3 id="reflection-question"></h3>
+                    <button id="another"
+                        class="text-button">Другой вопрос <span aria-hidden="true">↻</span></button>
+                </div>
+            </div>
+            <div class="result-method"><button class="text-button about" type="button">О методике и источниках</button></div>
+        </section>
+        <section id="review-view" class="review-view view" hidden>
+            
+            <h2>Можно <em>пересмотреть.</em></h2>
+            <p>Нажмите на ответ, если хотите его изменить.</p>
+            <div id="review-list"></div><button class="primary" id="back-result">Вернуться к результату</button>
+        </section>
+    </main>
+    <dialog id="about-dialog" aria-labelledby="about-title">
+        <div class="dialog-header"><h2 id="about-title">Что показывает<br><em>этот тест</em></h2><button type="button" class="dialog-close" aria-label="Закрыть">×</button></div>
+        <div class="dialog-body">
+        <p>Шкала самооценки Розенберга (RSES) помогает оценить общее отношение к себе. Здесь используются 10 утверждений
+            русскоязычной версии А. А. Золотаревой, 2020.</p>
+        <p>Сумма — от 0 до 30. Чем она выше, тем более положительную самооценку отражают ответы. Универсальных границ
+            «низкой», «средней» и «высокой» самооценки у шкалы нет.</p>
+        <p>Русская адаптация исследована на 213 студентах 16–24 лет. Это ограничивает перенос выводов на другие группы.
+            Этот интерактив предназначен для самонаблюдения взрослых, не ставит диагноз и не заменяет консультацию.</p>
+        <p>Резюме ответов и вопросы для размышления — авторские пояснения, а не дополнительные шкалы методики.</p>
+        <h3>Источники</h3>
+        <ul>
+            <li><a href="https://socy.umd.edu/about-us/using-rosenberg-self-esteem-scale" target="_blank"
+                    rel="noopener noreferrer">Rosenberg Self-Esteem Scale · University of Maryland ↗</a></li>
+            <li><a href="https://publications.hse.ru/pubs/share/direct/383400468.pdf" target="_blank"
+                    rel="noopener noreferrer">А. А. Золотарева. Валидность и надежность русскоязычной версии шкалы
+                    самооценки М. Розенберга, 2020 ↗</a></li>
+            <li><a href="https://socy.umd.edu/about-us/rosenberg-scale-faq" target="_blank"
+                    rel="noopener noreferrer">Rosenberg Scale FAQ · ограничения интерпретации ↗</a></li>
+        </ul>
+        <p class="small">Ответы обрабатываются только на этой странице. После перезагрузки они удаляются.</p>
+    
+        </div>
+    </dialog>
+    <dialog id="restart-dialog">
+        
+        <h2>Начать <em>заново?</em></h2>
+        <p>Текущие ответы будут очищены.</p>
+        <div class="dialog-actions"><button id="confirm-restart" class="primary">Начать заново</button><button
+                id="cancel-restart" class="secondary" autofocus>Оставить ответы</button></div>
+    </dialog>
+    <p id="notice" role="status" class="notice"></p>
+    <noscript>Для прохождения теста включите JavaScript в браузере.</noscript>
+    <script>
+        'use strict';
+        const questions = [
+            'В целом я доволен собой',
+            'Временами мне кажется, что я не совсем хорош',
+            'Думаю, у меня есть ряд достоинств',
+            'Многие вещи я способен делать не хуже большинства других людей',
+            'Мне кажется, что мне нечем гордиться',
+            'Иногда я чувствую себя бесполезным',
+            'Я считаю себя достойным и равным другим человеком',
+            'Мне бы хотелось больше уважать себя',
+            'По большому счету я считаю себя неудачником',
+            'Я хорошо отношусь к себе'
+        ];
+        const labels = ['Полностью не согласен', 'Не согласен', 'Согласен', 'Полностью согласен'];
+        const direct = new Set([0, 2, 3, 6, 9]);
+        function scoreAnswers(values) {
+            if (values.length !== 10 || values.some(v => !Number.isInteger(v) || v < 0 || v > 3)) throw new Error('Нужны все 10 ответов');
+            return values.reduce((sum, v, i) => sum + (direct.has(i) ? v : 3 - v), 0);
+        }
+        function observationsFor(a) {
+            const out = [];
+            if (a[2] >= 2 && a[7] >= 2) out.push('Вы замечаете свои достоинства и хотели бы больше уважать себя.');
+            else if (a[2] >= 2 && a[9] >= 2) out.push('Вы отмечаете у себя достоинства и описываете своё отношение к себе положительно.');
+            else if (a[2] <= 1 && a[9] <= 1) out.push('В ответах вы отмечаете трудности с признанием своих достоинств и положительным отношением к себе.');
+            else if (a[9] >= 2) out.push('Вы описываете своё отношение к себе положительно.');
+            else if (a[2] >= 2) out.push('Вы отмечаете, что у вас есть достоинства.');
+            else if (a[7] >= 2) out.push('Вы отмечаете, что вам хотелось бы больше уважать себя.');
+            else out.push('Вы не согласились с утверждением о положительном отношении к себе.');
+            if (a[5] >= 2) out.push('Вы также отмечаете, что иногда чувствуете себя бесполезным.');
+            else if (a[3] >= 2) out.push('Вы считаете, что многое можете делать не хуже других людей.');
+            else if (a[0] >= 2) out.push('При этом в целом вы отмечаете удовлетворённость собой.');
+            return out.slice(0, 2);
+        }
+        const reflections = [
+            'Вспомните недавнюю ситуацию, в которой вы были на своей стороне. Что вы тогда сказали себе или сделали?',
+            'Какое своё качество вы цените, даже если окружающие редко его замечают?',
+            'Что вы сказали бы близкому человеку, если бы он сейчас сомневался в себе?',
+            'В какой ситуации вам хотелось бы отнестись к себе чуть бережнее?'
+        ];
+        const $ = id => document.getElementById(id);
+        let answers = Array(10).fill(null), current = 0, editing = false, editOrigin = 'conversation', reflectionIndex = 0, view = 'intro', noticeTimer;
+        function node(tag, cls, text) {const el = document.createElement(tag); if (cls) el.className = cls; if (text !== undefined) el.textContent = text; return el;}
+        function show(id) {
+            document.querySelectorAll('.view').forEach(el => el.hidden = el.id !== id); view = id;
+            const heading = $(id).querySelector('h1,h2');
+            if (heading) {heading.tabIndex = -1; heading.focus({preventScroll: true});}
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        function speak(text) {
+            const line = node('div', 'chat-line');
+            const bubble = node('div', 'bubble');
+            bubble.append(node('p', '', text)); line.append(bubble); $('messages').append(line); return bubble;
+        }
+        function renderChat() {
+            $('messages').replaceChildren();
+            speak('Отвечайте о себе в целом. Здесь нет правильных или неправильных ответов.');
+            const end = editing ? current : Math.min(current, 9);
+            for (let i = 0; i <= end; i++) {
+                speak(questions[i]);
+                if (answers[i] !== null && !(editing && i === current)) {
+                    const line = node('div', 'chat-line user'); const b = node('button', 'bubble', labels[answers[i]]);
+                    b.type = 'button'; b.setAttribute('aria-label', 'Изменить ответ на утверждение ' + (i + 1) + ': ' + labels[answers[i]]);
+                    b.addEventListener('click', () => edit(i, 'conversation')); line.append(b); $('messages').append(line);
+                }
+            }
+            const count = answers.filter(v => v !== null).length;
+            $('progress-label').textContent = editing ? 'Изменение ответа ' + (current + 1) + ' из 10' : count === 10 ? 'Все 10 ответов готовы' : 'Утверждение ' + (current + 1) + ' из 10';
+            $('progress-fill').style.width = count * 10 + '%'; document.querySelector('.progress-track').setAttribute('aria-valuenow', String(count));
+            $('choices').replaceChildren();
+            $('choices').classList.toggle('is-complete', current === 10 && !editing);
+            $('choices').setAttribute('role', 'group');
+            if (current === 10 && !editing) {
+                $('answer-prompt').textContent = 'Все ответы готовы';
+                const b = node('button', 'primary', 'Посмотреть результат'); b.addEventListener('click', renderResult); $('choices').append(b);
+                $('answer-help').textContent = 'Перед просмотром можно изменить любой ответ.';
+            } else {
+                $('answer-prompt').textContent = editing ? 'Выберите новый ответ' : 'Насколько вы согласны?';
+                labels.forEach((label, value) => {const b = node('button', 'choice', label); b.type = 'button'; b.setAttribute('aria-pressed', String(answers[current] === value)); b.addEventListener('click', () => choose(value)); b.addEventListener('keydown', e => {const step = ['ArrowRight', 'ArrowDown'].includes(e.key) ? 1 : ['ArrowLeft', 'ArrowUp'].includes(e.key) ? -1 : 0; if (!step && !['Home', 'End'].includes(e.key)) return; e.preventDefault(); const options = [...$('choices').children]; const next = e.key === 'Home' ? 0 : e.key === 'End' ? 3 : (value + step + 4) % 4; options[next].focus();}); $('choices').append(b);});
+                $('answer-help').textContent = editing ? 'Остальные ответы сохранятся.' : 'Ответ можно изменить — нажмите на него в переписке.';
+            }
+            requestAnimationFrame(() => {
+                $('messages').scrollTo({top: $('messages').scrollHeight, behavior: 'smooth'});
+                const active = current === 10 && !editing ? $('choices').querySelector('button') : $('messages').lastElementChild?.querySelector('.bubble');
+                if (active) {if (active.tagName !== 'BUTTON') active.tabIndex = -1; active.focus({preventScroll: true});}
+            });
+        }
+        function choose(value) {
+            answers[current] = value;
+            if (editing) {editing = false; if (editOrigin === 'review-view') {renderReview(); return;} current = answers.findIndex(v => v === null); if (current === -1) current = 10;}
+            else current++;
+            renderChat();
+        }
+        function edit(index, origin) {current = index; editing = true; editOrigin = origin; show('conversation'); renderChat();}
+        function renderResult() {
+            const score = scoreAnswers(answers); $('score').textContent = String(score); $('score-marker').style.left = '0%';
+            $('observations').replaceChildren(...observationsFor(answers).map(t => node('p', '', t)));
+            $('reflection-question').textContent = reflections[reflectionIndex]; show('result');
+            requestAnimationFrame(() => requestAnimationFrame(() => $('score-marker').style.left = score / 30 * 100 + '%'));
+        }
+        function renderReview() {
+            $('review-list').replaceChildren(); questions.forEach((q, i) => {
+                const row = node('div', 'review-row'); row.append(node('span', 'small', String(i + 1).padStart(2, '0')));
+                const body = node('div'); body.append(node('p', '', q)); const b = node('button', 'text-button', labels[answers[i]] + ' · изменить'); b.setAttribute('aria-label', 'Изменить ответ ' + (i + 1) + ': ' + labels[answers[i]]); b.addEventListener('click', () => edit(i, 'review-view')); body.append(b); row.append(body); $('review-list').append(row);
+            }); show('review-view');
+        }
+        function notify(text) {clearTimeout(noticeTimer); $('notice').textContent = text; noticeTimer = setTimeout(() => $('notice').textContent = '', 4500);}
+        $('start').addEventListener('click', () => {show('conversation'); renderChat();});
+        
+        
+        $('another').addEventListener('click', () => {reflectionIndex = (reflectionIndex + 1) % reflections.length; $('reflection-question').textContent = reflections[reflectionIndex];});
+        $('review').addEventListener('click', renderReview); $('back-result').addEventListener('click', renderResult);
+        document.querySelectorAll('.about').forEach(b => b.addEventListener('click', () => $('about-dialog').showModal()));
+        document.querySelector('.dialog-close').addEventListener('click', () => $('about-dialog').close());
+        document.querySelectorAll('dialog').forEach(d=>{let press=false;const outside=e=>{const r=d.getBoundingClientRect();return e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;};d.addEventListener('pointerdown',e=>{press=e.target===d&&outside(e);});d.addEventListener('pointercancel',()=>{press=false;});d.addEventListener('click',e=>{if(press&&e.target===d&&outside(e))d.close();press=false;});d.addEventListener('close',()=>{press=false;});});
+        document.querySelectorAll('.restart').forEach(b => b.addEventListener('click', () => $('restart-dialog').showModal()));
+        $('cancel-restart').addEventListener('click', () => $('restart-dialog').close());
+        $('confirm-restart').addEventListener('click', () => {$('restart-dialog').close(); answers = Array(10).fill(null); current = 0; editing = false; reflectionIndex = 0; show('conversation'); renderChat();});
+        $('copy').addEventListener('click', async () => {
+            const text = 'Как вы относитесь к себе\nШкала самооценки Розенберга (RSES), русскоязычная версия А. А. Золотаревой, 2020.\nРезультат: ' + scoreAnswers(answers) + ' из 30.\nЧем выше балл, тем более положительное отношение к себе отражают ответы. Универсальных границ уровней у шкалы нет.\nДля самонаблюдения; не заменяет консультацию специалиста.';
+            try {await navigator.clipboard.writeText(text); notify('Результат скопирован');} catch {
+                const field = node('textarea'); field.value = text; field.setAttribute('aria-label', 'Текст результата для копирования'); $('result').append(field); field.focus(); field.select(); notify('Автокопирование недоступно. Выделенный текст можно скопировать вручную.');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

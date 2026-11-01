@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="16 утверждений о вашей жизни вдвоём: общение, поддержка, быт и близость.">
+<meta name="referrer" content="no-referrer">
+<title>Удовлетворённость отношениями</title>
+<style>
+:root{--sidebar-width:240px;--shell-gap:48px;--paper:#f3f0ea;--ink:#151916;--blue:#324bc5;--muted:#62665f;--line:#d6d5cc;--white:#fffdfa;--serif:'GDPSY Lora','Lora',Georgia,serif;--sans:'GDPSY Onest','Onest',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scrollbar-gutter:stable}
+html:has(dialog[open]){overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{cursor:pointer;color:inherit}
+button:disabled{cursor:default;opacity:.45}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+[tabindex='-1']:focus{outline:none}
+[hidden]{display:none!important}
+::selection{background:#dbe0ff}
+a{color:var(--blue);text-underline-offset:4px}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-weight:400;font-family:var(--serif);text-wrap:balance}
+h1,h2{line-height:1.08}
+h1{font-size:clamp(30px,4.2vw,54px);letter-spacing:-.045em;margin-bottom:28px;overflow-wrap:break-word}
+h2,h3{letter-spacing:-.035em}
+h2{font-size:52px;margin-bottom:24px}
+h3{font-size:29px;line-height:1.25;margin-bottom:16px}
+em{color:var(--blue);font-weight:400}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.small{font-size:14px;line-height:1.6;color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.quiz{max-width:1240px;margin:auto;padding:42px 48px 36px;min-height:100svh}
+.view{animation:reveal .45s cubic-bezier(.16,1,.3,1) both}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:54px;padding:14px 20px;border-radius:3px;border:1px solid var(--blue);font-size:16px;line-height:1.4;transition:background .2s,transform .2s,color .2s}
+.primary{background:var(--blue);color:white}
+.primary:hover{background:#253ca9}
+.secondary{background:transparent;border-color:var(--line)}
+.secondary:hover{background:#e8e5dd}
+.primary:active,.secondary:active{transform:translateY(1px)}
+.wide{width:100%}
+.text-button{background:none;border:0;border-bottom:1px solid #a6afd9;padding:6px 0 3px;min-height:36px;font-size:14px;color:var(--blue);line-height:1.5;text-align:left}
+.text-button:hover{border-color:var(--blue)}
+.quiet{color:var(--muted);border-color:var(--line)}
+.intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--shell-gap);align-items:start;padding-top:28px}
+.intro-copy{padding-top:26px;min-width:0}
+.intro-copy>.eyebrow{color:var(--muted);margin-bottom:28px}
+.lead{font-size:17px;line-height:1.65;max-width:430px;margin-bottom:22px}
+.intro-note{max-width:390px;font-size:13px}
+.intro-card{background:var(--white);border-radius:6px;padding:22px 30px 24px;min-width:0}
+.art{max-width:250px;margin:0 auto 10px}
+.art svg{width:100%;height:auto;display:block}
+.float-one{animation:floatOne 7s ease-in-out infinite}
+.float-two{animation:floatTwo 8s ease-in-out infinite}
+.art-caption{font:italic 23px/1.4 var(--serif);color:var(--blue);text-align:center;margin-bottom:22px}
+.intro-meta{text-align:center;font-size:14px;color:var(--muted);margin-bottom:18px}
+.check-list,.consent-box,.consent,.form-error,.mode-buttons{max-width:520px;margin-left:auto;margin-right:auto}
+.check-list{padding:0;list-style:none;margin-top:0;margin-bottom:24px;font-size:15px}
+.check-list li{position:relative;padding:13px 0 13px 27px;border-top:1px solid var(--line)}
+.check-list li:first-child{border:0;padding-top:0}
+.check-list li:before{content:'—';position:absolute;left:0;color:var(--blue)}
+.consent-box{background:#eef0f6;padding:12px 14px;margin-top:0;margin-bottom:14px;border-radius:4px}
+.consent-row{display:flex;align-items:center;gap:12px}
+.consent-label{flex:1;display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.55;cursor:pointer}
+.consent-label input{width:20px;height:20px;flex:none;accent-color:var(--blue);margin:0}
+.help-toggle{display:grid;place-items:center;width:28px;height:28px;min-width:28px;padding:0;border:0;border-radius:50%;background:#e1e5f4;color:var(--muted);font-weight:600;transition:background .2s,color .2s}
+.help-toggle:hover,.help-toggle[aria-expanded=true]{background:#dbe1f8;color:var(--blue)}
+.consent-details{padding-top:12px;font-size:14px;line-height:1.55;animation:reveal .25s ease both}
+.consent-details p{margin:0 0 10px}
+.consent-details ul{margin:0 0 12px;padding-left:20px}
+.consent-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.consent-actions .secondary{min-height:40px;padding:8px 16px;font-size:14px;background:white}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:0;margin-bottom:6px;font-size:15px;cursor:pointer}
+.consent input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:var(--blue)}
+.form-error{margin-top:6px;margin-bottom:14px;font-size:14px;font-weight:500}
+.form-error:empty{display:none}
+.mode-buttons{display:grid;gap:10px;margin-top:6px}
+.privacy{text-align:center;margin:17px 0 0;font-size:13px;color:var(--muted)}
+.intro-links{text-align:center;margin-top:12px}
+.stage{display:grid;grid-template-columns:var(--sidebar-width) minmax(0,1fr);gap:var(--shell-gap);align-items:start;padding-top:28px}
+.side-copy{padding-top:26px;position:sticky;top:35px}
+.side-copy h2{font-size:42px;line-height:1.13}
+.side-copy>p{color:var(--muted);font-size:15px;max-width:210px}
+.side-meta{margin-top:52px}
+.side-meta span{display:block;font-size:13px;color:var(--muted);margin-bottom:12px}
+.panel{background:#faf8f3;border-radius:6px;min-width:0;overflow:hidden}
+.panel-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:15px;padding:17px 26px;font-size:13px}
+.panel-top .text-button{font-size:12px;min-height:30px}
+.progress-track{height:3px;background:#e4e3dd}
+.progress-track span{height:100%;background:var(--blue);display:block;width:0;transition:width .4s ease}
+.question-area{padding:32px 30px 24px}
+.topic{color:var(--muted);font-size:13px;margin-bottom:20px}
+.bubble{background:white;padding:24px 25px;border-radius:17px 17px 17px 3px;position:relative}
+.bubble h2{font:400 24px/1.45 var(--sans);letter-spacing:-.025em;margin:0;text-wrap:pretty}
+.answer-area{padding:24px 30px 26px;border-top:1px solid var(--line)}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend{font-size:14px;margin-bottom:18px;padding:0}
+.answers{display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:6px}
+.answer{position:relative;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:13px;border-radius:4px;padding:8px 3px 12px;line-height:1.4;font-size:14px;transition:background .2s,color .2s}
+.answer input{appearance:none;width:20px;height:20px;border:1.5px solid #929bb8;border-radius:50%;background:#faf8f3;margin:0;flex:none;cursor:pointer;transition:background .2s,box-shadow .2s;outline-offset:3px}
+.answer input:checked{background:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.answer:has(input:checked){background:#e8ebf7;color:var(--blue)}
+.answer:hover{background:#eef0f6}
+.navigation{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:22px}
+.navigation .primary{min-width:165px}
+.navigation .text-button{flex-shrink:0}
+.question-footer{margin:16px 0 0;font-size:12px;color:var(--muted)}
+.safe-box{margin:0 0 24px;padding:20px 24px;border:2px solid var(--ink);border-radius:5px;background:var(--white)}
+.safe-box p{margin:0 0 10px}
+.safe-box p:last-child{margin-bottom:0}
+.result-content{min-width:0}
+.result-heading{margin:0 0 26px}
+.result-heading h2{font-size:43px;margin-bottom:0}
+.result-heading .small{max-width:580px;margin:16px 0 0}
+.result-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.map-card{background:var(--blue);color:white;padding:30px;border-radius:5px;min-width:0}
+.map-card h3{font-size:31px;margin:0 0 15px}
+.map-card .eyebrow{color:#dfe4ff;margin-bottom:10px}
+.map-key{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:#e4e8ff;margin:0 0 28px}
+.key{display:inline-flex;gap:8px;align-items:center}
+.key:before{content:'';width:10px;height:10px;background:var(--paper);border-radius:50%}
+.key.second:before{border-radius:1px;background:#b7c6ff;transform:rotate(45deg)}
+.map-row{margin-bottom:25px}
+.map-row:last-child{margin-bottom:0}
+.row-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.row-name{font-size:15px}
+.row-values{font-size:11px;color:#e0e6ff;text-align:right}
+.row-note{margin:11px 0 0;font-size:13px;line-height:1.55;color:#e0e6ff}
+.track{height:24px;position:relative;margin:0 8px;background:linear-gradient(90deg,transparent calc(25% - .5px),#7487de calc(25% - .5px),#7487de calc(25% + .5px),transparent calc(25% + .5px),transparent calc(50% - .5px),#7487de calc(50% - .5px),#7487de calc(50% + .5px),transparent calc(50% + .5px),transparent calc(75% - .5px),#7487de calc(75% - .5px),#7487de calc(75% + .5px),transparent calc(75% + .5px));background-size:100% 8px;background-repeat:no-repeat;background-position:center}
+.track:before{content:'';position:absolute;height:1px;top:50%;left:0;right:0;background:#8999e5}
+.dot{position:absolute;left:var(--x);top:50%;width:13px;height:13px;border:2px solid var(--paper);background:var(--paper);border-radius:50%;transform:translate(-50%,-50%);animation:marker .7s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--delay,0s)}
+.dot.second{background:#b7c6ff;border-color:#b7c6ff;border-radius:1px;transform:translate(-50%,-50%) rotate(45deg)}
+.track.paired .dot.first{top:25%}
+.track.paired .dot.second{top:75%}
+.scale-labels{display:flex;justify-content:space-between;color:#e0e6ff;font-size:11px;margin-top:22px}
+.map-note{font-size:12px;line-height:1.65;color:#e0e6ff;border-top:1px solid #7183da;padding-top:18px;margin:22px 0 0}
+.insight-card{background:var(--white);border-radius:5px;padding:30px;display:flex;flex-direction:column;gap:22px}
+.insight{padding-bottom:20px;border-bottom:1px solid var(--line)}
+.insight:last-child,.insight:has(+ .insight[hidden]){border:0;padding:0}
+.insight .eyebrow{font-size:11px;color:var(--muted);margin:0 0 10px}
+.insight p{font-size:15px;line-height:1.65}
+.insight p:last-child{margin-bottom:0}
+.result-step{display:grid;grid-template-columns:1fr;gap:10px;margin-top:28px;padding:30px;background:#e6e8f0;border-radius:5px}
+.result-step>.eyebrow{color:var(--blue);font-size:12px;padding-top:6px;margin-bottom:7px}
+.result-step p{max-width:750px;margin:0}
+.fill{display:block;height:100%;width:0;border-radius:4px;background:var(--blue);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.vlist{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.vitem{padding:14px 16px;border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+.vitem p{margin:0 0 8px;font-size:15px;line-height:1.6}
+.vitem p:last-child{margin-bottom:0}
+.vmeta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{padding:1px 10px;border:1px solid var(--line);border-radius:99px;font-size:12px;color:var(--muted);background:var(--white)}
+.center-card{background:var(--white);border-radius:5px;padding:30px;margin-top:28px}
+.center-card .small{margin:0 0 18px;max-width:640px}
+.code-row{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-bottom:10px}
+.code-row code{flex:1 1 220px;min-width:0;display:flex;align-items:center;padding:10px 14px;border:1px dashed #a6afd9;border-radius:3px;background:var(--paper);font:500 17px/1.4 var(--sans);letter-spacing:.04em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;user-select:all}
+.field-label{display:block;margin:20px 0 8px;font-size:14px;color:var(--muted)}
+.inp{flex:1 1 220px;min-width:0;min-height:54px;padding:10px 14px;border:1px solid var(--line);border-radius:3px;background:var(--paper);color:var(--ink);font:16px/1.4 var(--sans);letter-spacing:.04em}
+.inp:focus{border-color:var(--blue)}
+.cmp-out:not(:empty){margin-top:22px}
+.cmp-out .map-card{margin-bottom:22px}
+.hint{margin:22px 0 0;font-size:14px;color:var(--muted)}
+.result-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.result-actions>*{min-width:220px}
+.result-footer{border-top:1px solid var(--line);padding-top:20px;margin-top:26px}
+.result-footer p{max-width:680px;margin:0 0 12px;font-size:13px}
+dialog{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;max-width:720px;width:calc(100% - 32px);padding:0;max-height:85svh;overflow:hidden;font:16px/1.65 var(--sans)}
+dialog[open]{display:flex;flex-direction:column}
+dialog::backdrop{background:#15191680;backdrop-filter:blur(3px)}
+.dialog-head{padding:30px 65px 18px 32px;position:relative;flex-shrink:0}
+.dialog-head h2{font-size:36px;margin:0}
+.dialog-close{position:absolute;right:12px;top:12px;width:44px;height:44px;background:none;border:0;font-size:28px}
+.dialog-body{padding:0 32px 30px;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#8996d9 #e9e7df;min-height:0}
+.dialog-body h3{font-size:25px;margin-top:27px}
+.dialog-body p,.dialog-body li{font-size:15px}
+.dialog-body ul,.dialog-body ol{padding-left:21px}
+.dialog-body li{margin-bottom:13px}
+.dialog-body a{overflow-wrap:anywhere}
+.dialog-body>:last-child{margin-bottom:0}
+.dialog-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+@media(min-width:1450px){
+.quiz{padding-top:60px}
+}
+@media(max-width:1050px){
+:root{--sidebar-width:190px;--shell-gap:28px}
+.quiz{padding:32px 28px}
+.lead{font-size:16px}
+.intro-copy>.eyebrow{font-size:11px}
+.side-copy h2{font-size:36px}
+.result-grid{gap:18px}
+.map-card,.insight-card{padding:25px}
+.result-heading h2{font-size:40px}
+}
+@media(min-width:801px) and (max-width:1050px),(max-width:540px){
+.row-head{display:block}
+.row-values{display:block;text-align:left;margin-top:3px}
+}
+@media(max-width:800px){
+.stage{display:block;padding-top:0;max-width:680px;margin:auto}
+.side-copy{display:none}
+}
+@media(max-width:700px){
+.quiz{padding:28px 20px}
+h1{font-size:clamp(30px,8.4vw,46px);margin-bottom:22px}
+.intro{display:block;padding-top:0}
+.intro-copy{padding-top:0;margin-bottom:30px}
+.intro-copy>.eyebrow{margin-bottom:21px}
+.lead{font-size:18px;max-width:500px}
+.intro-note{max-width:500px}
+.intro-card{padding:20px 24px}
+.art-caption{font-size:22px}
+.result-step{padding:25px}
+.result-actions>*{width:100%;min-width:0}
+.dialog-head{padding:28px 60px 18px 24px}
+.dialog-head h2{font-size:32px}
+.dialog-body{padding:0 24px 28px}
+}
+@media(max-width:540px){
+.quiz:has(.stage:not([hidden])){padding:16px}
+.primary,.secondary{font-size:15px}
+.panel-top{gap:10px;padding:12px 18px}
+.question-area{padding:24px 18px 20px}
+.topic{margin-bottom:15px}
+.bubble{padding:20px}
+.bubble h2{font-size:21px}
+.answer-area{padding:20px 18px 22px}
+.answers{grid-template-columns:1fr;gap:7px}
+.answer{flex-direction:row;gap:13px;text-align:left;padding:12px 14px;min-height:48px;border:1px solid var(--line);background:white;font-size:15px}
+.answer input{width:18px;height:18px}
+.navigation{gap:15px;margin-top:20px}
+.navigation .primary{min-width:145px}
+.map-card,.insight-card{padding:24px}
+.map-row{margin-bottom:22px}
+.row-values{margin-top:4px}
+.scale-labels{font-size:10px}
+.result-heading h2{font-size:36px}
+.result-step{padding:22px}
+.result-actions{gap:10px}
+.center-card{padding:22px 18px}
+.code-row>.secondary{width:100%}
+dialog{max-height:90svh}
+.dialog-actions>*{width:100%}
+}
+</style>
+</head>
+<body>
+<noscript><p class="noscript">Чтобы пройти тест, включите JavaScript в браузере. Ответы обрабатываются на вашем устройстве.</p></noscript>
+<main class="quiz" id="sat-dlg" data-view="intro">
+<section id="sat-intro" class="intro view" aria-labelledby="sat-title">
+ <div class="intro-copy"><p class="eyebrow">Тест · отношения</p><h1 id="sat-title">Удовлетворённость<br><em>отношениями.</em></h1><p class="lead">16 утверждений о вашей жизни вдвоём: общение, поддержка, быт и близость.</p><p class="small intro-note">Это не диагноз и не оценка ваших отношений. Тест показывает только то, как вы видите их сегодня.</p></div>
+ <div><div class="intro-card"><div class="art" aria-hidden="true"><svg viewBox="0 0 360 275" fill="none"><path d="M35 244H328" stroke="#d6d5cc"/><circle cx="145" cy="128" r="72" fill="#e9e5dc"/><circle cx="215" cy="128" r="72" fill="#d5dcf6"/><path d="M180 65.1A72 72 0 0 1 180 190.9A72 72 0 0 1 180 65.1Z" fill="#324bc5"/><g class="float-one"><circle cx="108" cy="102" r="14" fill="#fffdfa"/></g><g class="float-two"><circle cx="262" cy="158" r="10" fill="#abb6e7"/></g><circle cx="307" cy="60" r="8" fill="#324bc5"/><path d="M52 232C52 214 58 205 70 201C72 217 65 227 52 232Z" fill="#bfc6a8"/><path d="M52 244V225" stroke="#65704f" stroke-width="1.5"/></svg></div><p class="art-caption">Что нас связывает</p><p class="intro-meta">16 вопросов · около 5 минут</p><ul class="check-list"><li>Отвечайте о себе, а не о том, как ответил бы партнёр. Правильных ответов нет.</li><li>Если утверждение подходит не полностью, выберите то, что ближе.</li><li>Ответы не сохраняются и никуда не отправляются: закроете страницу, и они исчезнут.</li></ul><div class="consent-box"><div class="consent-row"><label class="consent-label"><input type="checkbox" id="sat-consent" aria-describedby="sat-consent-help"><span>Разрешить копирование кода</span></label><button type="button" class="help-toggle" id="sat-consent-info" aria-label="Как работает копирование кода" aria-expanded="false" aria-controls="sat-consent-details">?</button></div><div class="consent-details" id="sat-consent-details" hidden><p id="sat-consent-help">Тест можно пройти без разрешения. Результат будет виден только на этой странице и исчезнет после её закрытия или обновления.</p><p>Если поставить галочку, в конце появится код результата, который можно скопировать и отправить партнёру для сравнения.</p><p>Код содержит только четыре числа, по одному на сферу. Ничего не копируется и не отправляется само: копирование — отдельное действие по кнопке.</p><div class="consent-actions"><button type="button" class="secondary" id="sat-consent-understood">Понятно</button><button type="button" class="text-button" id="sat-consent-decline">Не разрешать</button></div></div></div><div class="mode-buttons"><button class="primary wide" type="button" id="sat-start">Начать</button></div><p class="privacy">Ответы никуда не отправляются.<br>Для самоанализа, без постановки диагноза.</p></div><div class="intro-links"><button class="text-button" type="button" data-about>О подходе и источниках</button></div></div>
+</section>
+<section id="sat-quiz" class="stage view" hidden>
+ <aside class="side-copy"><p class="eyebrow">Удовлетворённость отношениями</p><h2>Как вам<br>живётся<br><em>вдвоём.</em></h2><p>Отвечайте о себе, а не о том, как ответил бы партнёр.</p><div class="side-meta"><span>Каждый ответ можно изменить.</span><button class="text-button" type="button" data-about>О тесте</button></div></aside>
+ <div class="panel"><div class="panel-top"><span id="sat-count"></span><button class="text-button quiet" type="button" data-exit>Завершить</button></div><div class="progress-track" id="sat-progress" role="progressbar" aria-label="Пройдено вопросов" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><span id="sat-bar"></span></div><div id="sat-q"><div class="question-area"><p class="topic" id="sat-eyebrow"></p><div class="bubble"><h2 id="sat-legend" tabindex="-1"></h2></div></div><div class="answer-area"><fieldset aria-labelledby="sat-legend"><legend>Насколько это про вас?</legend><div class="answers" id="sat-opts"></div></fieldset><div class="navigation"><button class="text-button quiet" type="button" id="sat-back">← Назад</button><button class="primary" type="button" id="sat-next" disabled>Дальше</button></div><p class="question-footer">Ответ можно изменить: вернитесь кнопкой «Назад».</p></div></div></div>
+</section>
+<section id="sat-result" class="stage view result-shell" hidden>
+ <aside class="side-copy"><p class="eyebrow">Удовлетворённость отношениями</p><h2>Ваш<br><em>результат.</em></h2><p>Он остаётся на этой странице и никуда не отправляется.</p><div class="side-meta"><span>Можно пройти заново.</span><button class="text-button" type="button" data-about>О тесте</button></div></aside>
+ <div class="result-content"><div class="result-heading"><h2 id="sat-rtitle" tabindex="-1">Как вы видите отношения сегодня</h2><p class="small">Это ваш взгляд на сегодня, а не диагноз. Результат — повод для разговора.</p></div><div class="safe-box" id="sat-safe" hidden><p>Вы отметили, что бывает страшно сказать партнёру о неприятном. Если вы боитесь его реакции, не показывайте ему этот результат и не сравнивайте ответы.</p><p>Лучше обсудить это отдельно со специалистом: если есть страх за безопасность, сначала стоит работать индивидуально, а не вдвоём. Если вам угрожает опасность, звоните 112.</p></div><div class="result-grid"><div class="map-card"><p class="eyebrow">Ваш результат</p><h3>По четырём сферам</h3><div id="sat-rows"></div><div class="scale-labels"><span>Зона для разговора</span><span>Опора</span></div><p class="map-note">Метки показывают, как вы оцениваете каждую сферу по шкале от 0 до 100. Линии на шкале отмечают 25, 50 и 75.</p></div><div class="insight-card"><div class="insight"><p class="eyebrow">Общая картина</p><p id="sat-overall"></p></div></div></div><div class="result-step"><p class="eyebrow">Следующий шаг</p><div><p id="sat-start-hint"></p></div></div><section class="center-card share" id="sat-share"><h3>Сравнить с партнёром</h3><p class="small">Код содержит только четыре числа, по одному на сферу. Отправляйте его, только если вам спокойно это делать. Партнёр проходит тест сам и вводит ваш код, вы вводите его.</p><div id="sat-codebox"><div class="code-row"><code id="sat-code"></code><button class="secondary" type="button" id="sat-copy">Скопировать код</button></div><p class="small" id="sat-copy-st" role="status"></p></div><p class="small" id="sat-nocode" hidden>Вы не разрешали копирование кода, поэтому он не показан. Чтобы получить код, пройдите тест заново и отметьте разрешение на первом экране.</p><label class="field-label" for="sat-partner">Код партнёра</label><div class="code-row"><input class="inp" id="sat-partner" maxlength="24" autocomplete="off" spellcheck="false" placeholder="R1-72-50-88-31"><button class="secondary" type="button" id="sat-cmp">Сравнить</button></div><p class="form-error" id="sat-cmp-err" role="alert"></p><div class="cmp-out" id="sat-cmp-out" aria-live="polite"></div></section><div class="result-actions"><button class="primary" type="button" id="discuss">Обсудить со специалистом</button><button class="secondary" type="button" id="sat-again">Пройти заново</button></div><div class="result-footer"><p class="small">Тест — авторский и неклинический. Он не ставит диагноз и не заменяет консультацию специалиста.</p><button class="text-button" type="button" data-about>О тесте</button></div></div>
+</section>
+</main>
+<dialog id="sat-about" aria-labelledby="sat-about-title"><div class="dialog-head"><h2 id="sat-about-title">О подходе<br><em>и источниках.</em></h2><button class="dialog-close" type="button" aria-label="Закрыть" data-close>×</button></div><div class="dialog-body"><h3>Что показывает результат</h3><p>16 утверждений о жизни вдвоём делятся на четыре сферы по четыре: общение, поддержка, быт и близость.</p><p>Вариантам ответа от «Совсем не про нас» до «Точно про нас» соответствуют значения от 0 до 4. Для каждой сферы считается среднее значение и переводится в шкалу 0–100: 0 — все ответы «Совсем не про нас», 100 — все «Точно про нас». Все утверждения имеют одинаковый вес. Общий числовой балл не показывается: общая фраза строится по среднему значению четырёх сфер.</p><p>Условные границы — ниже 50, от 50 до 74 и от 75 — выбраны для интерфейса. Это не психологические нормы. Один из вопросов о том, можно ли без страха сказать партнёру о неприятном, входит в расчёт наравне с остальными. При ответе, говорящем о страхе, вместо кода для сравнения показывается отдельный блок.</p><h3>На чём основано</h3><p>Вопросы и правила расчёта авторские, составлены для этого упражнения.</p><p>Для сравнения: удовлетворённость отношениями в исследованиях измеряют стандартизированными шкалами [1–3]. Они устроены иначе, чем это упражнение, и результаты с ними не сопоставимы.</p><p>Исследования связывают негативные способы общения [4] и качество разговора о близости [5] с удовлетворённостью отношениями. Это контекст темы, а не обоснование отдельных пунктов.</p><h3>Источники</h3><ol><li><a href="https://pure.psu.edu/en/publications/measuring-dyadic-adjustment-new-scales-for-assessing-the-quality-/" target="_blank" rel="noopener noreferrer">Spanier G. B. (1976). Measuring dyadic adjustment: new scales for assessing the quality of marriage and similar dyads. Journal of Marriage and Family, 38(1), 15–28.</a><br>Классическая шкала качества отношений: четыре подшкалы — удовлетворённость, сплочённость, согласие, выражение близости.</li><li><a href="https://backend.fetzer.org/sites/default/files/images/stories/pdf/selfmeasures/Self_Measures_for_General_Relationship_Satisfaction_RELATIONSHIP.pdf" target="_blank" rel="noopener noreferrer">Hendrick S. S. (1988). A generic measure of relationship satisfaction. Journal of Marriage and the Family, 50, 93–98.</a><br>Краткая шкала из семи пунктов. Ссылка ведёт на описание шкалы, а не на статью.</li><li><a href="https://ras.jes.su/psy/s020595920007907-3-1" target="_blank" rel="noopener noreferrer">Столин В. В., Романова Т. А., Бутенко Г. П. Опросник удовлетворённости браком // Вестник Московского университета. Серия 14. Психология. 1984. № 2. С. 54–61.</a><br>Русскоязычный опросник. Ссылка ведёт на список литературы другой статьи, где он указан, а не на оригинал.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/1403613/" target="_blank" rel="noopener noreferrer">Gottman J. M., Levenson R. W. (1992). Marital processes predictive of later dissolution: behavior, physiology, and health. Journal of Personality and Social Psychology, 63(2), 221–233.</a><br>Наблюдение за 73 парами: у пар с более выраженными негативными эмоциями, уходом от взаимодействия и обороной ниже удовлетворённость и выше риск расставания. Авторы называют поддержку своей модели предварительной.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/34968095/" target="_blank" rel="noopener noreferrer">Dimensions of couples’ sexual communication, relationship satisfaction, and sexual satisfaction: a meta-analysis. Journal of Family Psychology, 2022, 36(3), 358–371.</a><br>Мета-анализ 93 исследований: качество разговора о близости связано с удовлетворённостью отношениями и сексуальной удовлетворённостью.</li></ol><h3>Границы</h3><p>Это авторское упражнение для самонаблюдения. Оно не является стандартизированным или валидированным психологическим тестом, не оценивает личность и не ставит диагноз, не прогнозирует будущее отношений. Результат отражает ваш взгляд сегодня и не заменяет консультацию специалиста.</p><h3>Ваши ответы</h3><p>Ответы обрабатываются в памяти этой страницы, не отправляются на сервер и удаляются при перезагрузке, при выходе кнопкой «Завершить и очистить» и при повторном прохождении. Код для сравнения содержит четыре числа — результаты по сферам. Код копируется только по вашей команде.</p></div></dialog>
+<dialog id="sat-exit" aria-labelledby="sat-exit-title"><div class="dialog-head"><h2 id="sat-exit-title">Завершить<br><em>тест?</em></h2><button class="dialog-close" type="button" aria-label="Закрыть" data-close>×</button></div><div class="dialog-body"><p>Ответы будут удалены с этой страницы. Вы сможете начать заново.</p><div class="dialog-actions"><button class="primary" type="button" id="sat-exit-ok">Завершить и очистить</button><button class="secondary" type="button" data-close>Остаться</button></div></div></dialog>
+<script>
+(function(){
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const mk = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  const band = p => p >= 75 ? 2 : p >= 50 ? 1 : 0;
+  const grow = pairs => requestAnimationFrame(() => requestAnimationFrame(() => pairs.forEach(([f, v]) => { f.style.width = v + "%"; })));
+  const DASH = /[‐-―−]/g;
+  const CODE_ERR_TAIL = "Не получилось прочитать код. Он выглядит так: ";
+  const openDialog = d => { if (d) (d.showModal ? d.showModal() : d.setAttribute("open", "")); };
+  const closeDialog = d => { if (d) (d.close ? d.close() : d.removeAttribute("open")); };
+
+  async function copyText(text, host){
+    try { await navigator.clipboard.writeText(text); return true; }
+    catch(_) {
+      const ta = mk("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;opacity:0";
+      host.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch(__) {}
+      ta.remove();
+      return ok;
+    }
+  }
+
+  const App = window.App = {mk, band, grow, copyText, tests: {}};
+
+  App.quiz = function(cfg){
+    const el = n => $(cfg.p + "-" + n);
+    const on = (n, ev, fn) => { const e = el(n); if (e) e.addEventListener(ev, fn); };
+    const root = el("dlg");
+    const panels = Object.fromEntries((cfg.panels || ["intro", "quiz", "result"]).map(n => [n, el(n)]));
+    const total = cfg.items.length;
+    let step = 0, answers = [], timer = 0, pointerAt = 0, consent = false;
+
+    const show = name => {
+      Object.keys(panels).forEach(k => { panels[k].hidden = k !== name; });
+      root.dataset.view = name;
+      if (root.getBoundingClientRect().top < 0) root.scrollIntoView({block: "start"});
+    };
+    const progress = v => {
+      el("bar").style.width = (v / total * 100) + "%";
+      el("progress").setAttribute("aria-valuenow", String(v));
+    };
+
+    function reset(){
+      clearTimeout(timer);
+      answers = cfg.items.map(() => null);
+      step = 0;
+      (cfg.clear || []).forEach(n => { const e = el(n); if (e) e.textContent = ""; });
+      const partner = el("partner");
+      if (partner) partner.value = "";
+      if (el("consent")){ el("consent").checked = false; consentInfo(false); }
+      progress(0);
+      if (cfg.onReset) cfg.onReset();
+    }
+    function open(initial){
+      reset();
+      show("intro");
+      if (!initial) el(cfg.focus || "start").focus();
+    }
+
+    function renderQ(){
+      const it = cfg.items[step];
+      el("eyebrow").textContent = cfg.eyebrow(it);
+      el("count").textContent = (cfg.prefix ? cfg.prefix() : "") + "Вопрос " + (step + 1) + " из " + total;
+      progress(step);
+      el("legend").textContent = it.t;
+      el("opts").style.setProperty("--n", cfg.scale.length);
+      el("opts").replaceChildren(...cfg.scale.map((label, i) => {
+        const lab = mk("label", "answer");
+        const inp = document.createElement("input");
+        inp.type = "radio";
+        inp.name = cfg.p + "-a";
+        inp.value = String(i + 1);
+        inp.checked = answers[step] === i + 1;
+        inp.addEventListener("change", () => {
+          answers[step] = i + 1;
+          el("next").disabled = false;
+          clearTimeout(timer);
+          if (Date.now() - pointerAt < 800) timer = setTimeout(advance, 280);
+        });
+        lab.append(inp, mk("span", "", label));
+        return lab;
+      }));
+      el("back").disabled = step === 0;
+      el("next").disabled = answers[step] == null;
+      el("next").textContent = step === total - 1 ? "К результату" : "Дальше";
+      el("q").animate([{opacity: 0, transform: "translateX(18px)"}, {opacity: 1, transform: "translateX(0)"}], {duration: 300, easing: "ease-out"});
+      el("legend").focus({preventScroll: true});
+    }
+    function advance(){
+      if (answers[step] == null) return;
+      if (step < total - 1){ step++; renderQ(); }
+      else cfg.onFinish(answers);
+    }
+    function consentInfo(open){
+      el("consent-details").hidden = !open;
+      el("consent-info").setAttribute("aria-expanded", String(open));
+    }
+    function start(){
+      consent = !!el("consent") && el("consent").checked;
+      answers = cfg.items.map(() => null);
+      step = 0;
+      show("quiz");
+      renderQ();
+    }
+    function showResult(){
+      if (el("codebox")){ el("codebox").hidden = !consent; el("nocode").hidden = consent; }
+      progress(total);
+      show("result");
+      el("rtitle").focus({preventScroll: true});
+    }
+
+    on("opts", "pointerdown", () => { pointerAt = Date.now(); });
+    on("start", "click", start);
+    on("again", "click", () => open(false));
+    on("back", "click", () => { clearTimeout(timer); if (step > 0){ step--; renderQ(); } });
+    on("next", "click", () => { clearTimeout(timer); advance(); });
+    on("copy", "click", async () => {
+      if (!consent) return;
+      el("copy-st").textContent = (await copyText(el("code").textContent, root))
+        ? "Код скопирован."
+        : "Не удалось скопировать. Выделите код и скопируйте вручную.";
+    });
+    if (el("consent")){
+      on("consent-info", "click", () => consentInfo(el("consent-details").hidden));
+      on("consent", "change", () => consentInfo(el("consent").checked));
+      on("consent-understood", "click", () => { consentInfo(false); el("consent-info").focus({preventScroll: true}); });
+      on("consent-decline", "click", () => { el("consent").checked = false; consentInfo(false); el("consent").focus({preventScroll: true}); });
+    }
+    on("exit-ok", "click", () => { closeDialog(el("exit")); open(false); });
+    document.addEventListener("click", e => {
+      const t = e.target.closest("[data-about],[data-exit],[data-close]");
+      if (!t) return;
+      if (t.hasAttribute("data-about")) openDialog(el("about"));
+      else if (t.hasAttribute("data-exit")) openDialog(el("exit"));
+      else closeDialog(t.closest("dialog"));
+    });
+    document.querySelectorAll("dialog").forEach(d => {
+      let press = false;
+      const outside = e => {
+        const r = d.getBoundingClientRect();
+        return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      };
+      d.addEventListener("pointerdown", e => { press = e.target === d && outside(e); });
+      d.addEventListener("pointercancel", () => { press = false; });
+      d.addEventListener("click", e => {
+        if (press && e.target === d && outside(e)) closeDialog(d);
+        press = false;
+      });
+      d.addEventListener("close", () => { press = false; });
+    });
+    if (cfg.compare){
+      on("cmp", "click", cfg.compare);
+      on("partner", "keydown", e => { if (e.key === "Enter"){ e.preventDefault(); cfg.compare(); } });
+    }
+
+    return {dlg: root, el, open, start, show, showResult, get answers(){ return answers; }};
+  };
+
+  App.scores = (count, items, answers) => Array.from({length: count}, (_, d) => {
+    let sum = 0, n = 0;
+    items.forEach((it, k) => { if (it.d === d){ sum += answers[k]; n++; } });
+    return Math.round((sum - n) / (n * 4) * 100);
+  });
+
+  App.parseScores = (text, prefix, count) => {
+    const s = String(text).toUpperCase().replace(DASH, "-").replace(/\s+/g, "");
+    const m = new RegExp("^" + prefix + "-" + Array(count).fill("(\\d{1,3})").join("-") + "$").exec(s);
+    if (!m) return null;
+    const v = m.slice(1).map(Number);
+    return v.every(n => n <= 100) ? v : null;
+  };
+
+  const dot = (cls, v, i) => {
+    const d = mk("span", "dot " + cls);
+    d.style.setProperty("--x", v + "%");
+    d.style.setProperty("--delay", (i * .07) + "s");
+    return d;
+  };
+  const sr = text => mk("span", "sr-only", text);
+
+  App.renderBands = (box, names, sc, words, notes) => {
+    box.replaceChildren(...names.map((name, i) => {
+      const b = band(sc[i]);
+      const row = mk("div", "map-row");
+      const head = mk("div", "row-head");
+      head.append(mk("span", "row-name", name), mk("span", "row-values", words[b] + " · " + sc[i]));
+      const track = mk("div", "track");
+      track.setAttribute("aria-hidden", "true");
+      track.append(dot("first", sc[i], i));
+      row.append(head, track, mk("p", "row-note", notes[i][b]), sr("Ваш результат: " + sc[i] + " из 100"));
+      return row;
+    }));
+  };
+
+  App.renderCompare = (out, names, mine, other, labelFn) => {
+    const card = mk("div", "map-card");
+    card.append(mk("p", "eyebrow", "Вы и партнёр"), mk("h3", "", "Две карты рядом"));
+    const key = mk("div", "map-key");
+    key.append(mk("span", "key", "Вы"), mk("span", "key second", "Партнёр"));
+    card.append(key);
+    names.forEach((name, i) => {
+      const row = mk("div", "map-row");
+      const head = mk("div", "row-head");
+      head.append(mk("span", "row-name", name), mk("span", "row-values", labelFn(mine[i], other[i])));
+      const track = mk("div", "track paired");
+      track.setAttribute("aria-hidden", "true");
+      track.append(dot("first", mine[i], i), dot("second", other[i], i));
+      row.append(head, track, sr("Вы: " + mine[i] + " из 100. Партнёр: " + other[i] + " из 100."));
+      card.append(row);
+    });
+    const scale = mk("div", "scale-labels");
+    scale.append(mk("span", "", "0"), mk("span", "", "100"));
+    card.append(scale);
+    out.append(card);
+  };
+
+  App.vitem = (text, tags) => {
+    const li = mk("li", "vitem");
+    const m = mk("div", "vmeta");
+    tags.forEach(([cls, t]) => m.append(mk("span", ("tag " + cls).trim(), t)));
+    li.append(mk("p", "", text), m);
+    return li;
+  };
+  App.vlist = entries => {
+    const ul = mk("ul", "vlist");
+    ul.append(...entries);
+    return ul;
+  };
+
+  App.bandedTest = function(cfg){
+    const names = cfg.domains.map(d => d.name);
+    const items = cfg.domains.flatMap((d, di) => d.items.map(t => ({d: di, t})));
+    let mine = null;
+
+    const q = App.quiz({
+      p: cfg.p, items, scale: cfg.scale,
+      eyebrow: it => names[it.d],
+      clear: ["rows", "cmp-out", "opts", "code", "copy-st", "cmp-err", "overall", "start-hint"],
+      onReset: () => { mine = null; },
+      onFinish: finish,
+      compare
+    });
+
+    function finish(answers){
+      const sc = App.scores(names.length, items, answers);
+      mine = sc;
+      q.el("overall").textContent = cfg.overall[band(Math.round(sc.reduce((a, b) => a + b, 0) / sc.length))];
+      App.renderBands(q.el("rows"), names, sc, cfg.words, cfg.notes);
+      const low = sc.indexOf(Math.min(...sc));
+      q.el("start-hint").textContent = sc[low] < 75
+        ? "С чего начать разговор: «" + names[low] + "»."
+        : cfg.allClear;
+      const flagged = answers[cfg.safeIndex] <= 2;
+      q.el("safe").hidden = !flagged;
+      q.el("share").hidden = flagged;
+      q.el("code").textContent = cfg.prefix + "-" + sc.join("-");
+      if (cfg.extra) cfg.extra(q, answers);
+      q.showResult();
+    }
+
+    function gap(a, b){
+      const g = Math.abs(a - b);
+      if (g <= 15){
+        if (a < 50 && b < 50) return cfg.gap.low;
+        if (a >= 75 && b >= 75) return cfg.gap.high;
+        return "Оценки близки";
+      }
+      return g <= 30 ? "Есть разница" : "Заметно расходятся";
+    }
+
+    function compare(){
+      const err = q.el("cmp-err"), out = q.el("cmp-out");
+      err.textContent = "";
+      out.replaceChildren();
+      const other = App.parseScores(q.el("partner").value, cfg.prefix, names.length);
+      if (!other || !mine){ err.textContent = CODE_ERR_TAIL + cfg.codeHint + "."; return; }
+      App.renderCompare(out, names, mine, other, gap);
+      out.append(mk("p", "hint", cfg.compareHint));
+    }
+
+    return q.open;
+  };
+})();
+(function(){
+  "use strict";
+
+  const SAT = {
+    scale: ["Совсем не\u00a0про\u00a0нас", "Скорее не\u00a0про\u00a0нас", "По-разному", "Скорее про\u00a0нас", "Точно про\u00a0нас"],
+    safetyIndex: 2,
+    domains: [
+      {name: "Общение", items: [
+        "Мы можем обсудить трудную тему, не\u00a0переходя на\u00a0обвинения.",
+        "После ссоры мы возвращаемся к\u00a0разговору и\u00a0о\u00a0чём-то договариваемся.",
+        "Я\u00a0могу сказать партнёру, что мне что-то не\u00a0нравится, и\u00a0не\u00a0боюсь его реакции.",
+        "Мне кажется, что партнёр слышит, что я\u00a0на\u00a0самом деле имею в\u00a0виду."]},
+      {name: "Поддержка", items: [
+        "Когда мне тяжело, партнёр рядом и\u00a0интересуется, что со\u00a0мной.",
+        "Партнёр уважает мои дела и\u00a0интересы вне отношений.",
+        "Мы радуемся успехам друг друга.",
+        "Я\u00a0могу показать слабость и\u00a0не\u00a0почувствовать осуждения."]},
+      {name: "Быт", items: [
+        "Домашние дела и\u00a0заботы распределены так, что мне это кажется справедливым.",
+        "Мы договариваемся о\u00a0деньгах без\u00a0напряжения.",
+        "Решения, которые касаются нас обоих, мы принимаем вместе.",
+        "С\u00a0родными и\u00a0друзьями у\u00a0нас понятные обоим границы."]},
+      {name: "Близость", items: [
+        "Мы проводим время вдвоём так, как хочется нам обоим.",
+        "Мне хватает нежности и\u00a0прикосновений.",
+        "Мы можем говорить о\u00a0близости и\u00a0сексе без\u00a0обид и\u00a0неловкости.",
+        "Я\u00a0чувствую эмоциональную близость с\u00a0партнёром."]}
+    ]
+  };
+  const NOTES = [
+    ["Разговоры сейчас даются трудно. Можно начать с\u00a0одного повторяющегося разговора и\u00a0разобрать, как он идёт.",
+     "Что-то в\u00a0разговорах получается, а\u00a0что-то заходит в\u00a0тупик. Полезно заметить, в\u00a0каких ситуациях именно.",
+     "Вы чувствуете, что о\u00a0важном можно говорить без\u00a0взаимных обвинений."],
+    ["Сейчас вам, похоже, не\u00a0хватает опоры. Полезно сказать об\u00a0этом конкретно: что помогло\u00a0бы в\u00a0трудный день.",
+     "Поддержка есть не\u00a0во\u00a0всех ситуациях. Стоит выяснить, когда она нужна вам больше всего.",
+     "Вы чувствуете рядом человека, на\u00a0которого можно опереться."],
+    ["Быт и\u00a0общие решения сейчас, вероятно, вызывают напряжение. Можно начать с\u00a0одной конкретной ситуации, а\u00a0не\u00a0со\u00a0всего сразу.",
+     "Часть договорённостей вас устраивает, часть держится на\u00a0ожиданиях. Их можно проговорить.",
+     "Договорённости о\u00a0быте и\u00a0деньгах для\u00a0вас в\u00a0целом работают."],
+    ["Близости сейчас не\u00a0хватает. С\u00a0этим можно разбираться без\u00a0спешки и\u00a0без\u00a0обязательств по\u00a0результату.",
+     "Близость устраивает вас не\u00a0во\u00a0всём. Важно понять, чего именно не\u00a0хватает.",
+     "Близость в\u00a0целом вас устраивает."]
+  ];
+  const OVERALL = [
+    "Сейчас вам непросто. Это ваш взгляд сегодня, а\u00a0не\u00a0приговор отношениям.",
+    "Картина смешанная: есть опоры и\u00a0есть зоны напряжения.",
+    "В\u00a0целом вы довольны тем, как складывается жизнь вдвоём."
+  ];
+
+  App.tests.satisfaction = App.bandedTest({
+    p: "sat", prefix: "R1", codeHint: "R1-72-50-88-31",
+    domains: SAT.domains, scale: SAT.scale, safeIndex: SAT.safetyIndex,
+    words: ["Зона для\u00a0разговора", "Смешанная картина", "Опора"],
+    notes: NOTES, overall: OVERALL,
+    allClear: "Все четыре сферы выглядят устойчивыми. Хороший повод поговорить о\u00a0том, что вы цените друг в\u00a0друге.",
+    gap: {low: "Совпали: обоим здесь трудно", high: "Совпали: это ваша опора"},
+    compareHint: "Разница в\u00a0ответах\u00a0— не\u00a0ошибка одного из\u00a0вас. Можно спросить друг друга: «Что для\u00a0тебя значит „хорошо“ в\u00a0этой сфере?»"
+  });
+})();
+App.tests.satisfaction(true);
+</script>
+</body>
+</html>

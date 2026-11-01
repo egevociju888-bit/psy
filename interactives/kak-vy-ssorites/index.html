@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="20 утверждений о том, как вы ведёте себя в споре с партнёром. Тест показывает, какие способы вы выбираете чаще и как они могут сочетаться со способами партнёра.">
+<meta name="referrer" content="no-referrer">
+<title>Как вы ссоритесь</title>
+<style>
+:root{--sidebar-width:240px;--shell-gap:48px;--paper:#f3f0ea;--ink:#151916;--blue:#324bc5;--muted:#62665f;--line:#d6d5cc;--white:#fffdfa;--serif:'GDPSY Lora','Lora',Georgia,serif;--sans:'GDPSY Onest','Onest',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scrollbar-gutter:stable}
+html:has(dialog[open]){overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{cursor:pointer;color:inherit}
+button:disabled{cursor:default;opacity:.45}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+[tabindex='-1']:focus{outline:none}
+[hidden]{display:none!important}
+::selection{background:#dbe0ff}
+a{color:var(--blue);text-underline-offset:4px}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-weight:400;font-family:var(--serif);text-wrap:balance}
+h1,h2{line-height:1.08}
+h1{font-size:clamp(30px,4.2vw,54px);letter-spacing:-.045em;margin-bottom:28px;overflow-wrap:break-word}
+h2,h3{letter-spacing:-.035em}
+h2{font-size:52px;margin-bottom:24px}
+h3{font-size:29px;line-height:1.25;margin-bottom:16px}
+em{color:var(--blue);font-weight:400}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.small{font-size:14px;line-height:1.6;color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.quiz{max-width:1240px;margin:auto;padding:42px 48px 36px;min-height:100svh}
+.view{animation:reveal .45s cubic-bezier(.16,1,.3,1) both}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:54px;padding:14px 20px;border-radius:3px;border:1px solid var(--blue);font-size:16px;line-height:1.4;transition:background .2s,transform .2s,color .2s}
+.primary{background:var(--blue);color:white}
+.primary:hover{background:#253ca9}
+.secondary{background:transparent;border-color:var(--line)}
+.secondary:hover{background:#e8e5dd}
+.primary:active,.secondary:active{transform:translateY(1px)}
+.wide{width:100%}
+.text-button{background:none;border:0;border-bottom:1px solid #a6afd9;padding:6px 0 3px;min-height:36px;font-size:14px;color:var(--blue);line-height:1.5;text-align:left}
+.text-button:hover{border-color:var(--blue)}
+.quiet{color:var(--muted);border-color:var(--line)}
+.intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--shell-gap);align-items:start;padding-top:28px}
+.intro-copy{padding-top:26px;min-width:0}
+.intro-copy>.eyebrow{color:var(--muted);margin-bottom:28px}
+.lead{font-size:17px;line-height:1.65;max-width:430px;margin-bottom:22px}
+.intro-note{max-width:390px;font-size:13px}
+.intro-card{background:var(--white);border-radius:6px;padding:22px 30px 24px;min-width:0}
+.art{max-width:250px;margin:0 auto 10px}
+.art svg{width:100%;height:auto;display:block}
+.float-one{animation:floatOne 7s ease-in-out infinite}
+.float-two{animation:floatTwo 8s ease-in-out infinite}
+.art-caption{font:italic 23px/1.4 var(--serif);color:var(--blue);text-align:center;margin-bottom:22px}
+.intro-meta{text-align:center;font-size:14px;color:var(--muted);margin-bottom:18px}
+.check-list,.consent-box,.consent,.form-error,.mode-buttons{max-width:520px;margin-left:auto;margin-right:auto}
+.check-list{padding:0;list-style:none;margin-top:0;margin-bottom:24px;font-size:15px}
+.check-list li{position:relative;padding:13px 0 13px 27px;border-top:1px solid var(--line)}
+.check-list li:first-child{border:0;padding-top:0}
+.check-list li:before{content:'—';position:absolute;left:0;color:var(--blue)}
+.consent-box{background:#eef0f6;padding:12px 14px;margin-top:0;margin-bottom:14px;border-radius:4px}
+.consent-row{display:flex;align-items:center;gap:12px}
+.consent-label{flex:1;display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.55;cursor:pointer}
+.consent-label input{width:20px;height:20px;flex:none;accent-color:var(--blue);margin:0}
+.help-toggle{display:grid;place-items:center;width:28px;height:28px;min-width:28px;padding:0;border:0;border-radius:50%;background:#e1e5f4;color:var(--muted);font-weight:600;transition:background .2s,color .2s}
+.help-toggle:hover,.help-toggle[aria-expanded=true]{background:#dbe1f8;color:var(--blue)}
+.consent-details{padding-top:12px;font-size:14px;line-height:1.55;animation:reveal .25s ease both}
+.consent-details p{margin:0 0 10px}
+.consent-details ul{margin:0 0 12px;padding-left:20px}
+.consent-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.consent-actions .secondary{min-height:40px;padding:8px 16px;font-size:14px;background:white}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:0;margin-bottom:6px;font-size:15px;cursor:pointer}
+.consent input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:var(--blue)}
+.form-error{margin-top:6px;margin-bottom:14px;font-size:14px;font-weight:500}
+.form-error:empty{display:none}
+.mode-buttons{display:grid;gap:10px;margin-top:6px}
+.privacy{text-align:center;margin:17px 0 0;font-size:13px;color:var(--muted)}
+.intro-links{text-align:center;margin-top:12px}
+.stage{display:grid;grid-template-columns:var(--sidebar-width) minmax(0,1fr);gap:var(--shell-gap);align-items:start;padding-top:28px}
+.side-copy{padding-top:26px;position:sticky;top:35px}
+.side-copy h2{font-size:42px;line-height:1.13}
+.side-copy>p{color:var(--muted);font-size:15px;max-width:210px}
+.side-meta{margin-top:52px}
+.side-meta span{display:block;font-size:13px;color:var(--muted);margin-bottom:12px}
+.panel{background:#faf8f3;border-radius:6px;min-width:0;overflow:hidden}
+.panel-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:15px;padding:17px 26px;font-size:13px}
+.panel-top .text-button{font-size:12px;min-height:30px}
+.progress-track{height:3px;background:#e4e3dd}
+.progress-track span{height:100%;background:var(--blue);display:block;width:0;transition:width .4s ease}
+.question-area{padding:32px 30px 24px}
+.topic{color:var(--muted);font-size:13px;margin-bottom:20px}
+.bubble{background:white;padding:24px 25px;border-radius:17px 17px 17px 3px;position:relative}
+.bubble h2{font:400 24px/1.45 var(--sans);letter-spacing:-.025em;margin:0;text-wrap:pretty}
+.answer-area{padding:24px 30px 26px;border-top:1px solid var(--line)}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend{font-size:14px;margin-bottom:18px;padding:0}
+.answers{display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:6px}
+.answer{position:relative;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:13px;border-radius:4px;padding:8px 3px 12px;line-height:1.4;font-size:14px;transition:background .2s,color .2s}
+.answer input{appearance:none;width:20px;height:20px;border:1.5px solid #929bb8;border-radius:50%;background:#faf8f3;margin:0;flex:none;cursor:pointer;transition:background .2s,box-shadow .2s;outline-offset:3px}
+.answer input:checked{background:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.answer:has(input:checked){background:#e8ebf7;color:var(--blue)}
+.answer:hover{background:#eef0f6}
+.navigation{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:22px}
+.navigation .primary{min-width:165px}
+.navigation .text-button{flex-shrink:0}
+.question-footer{margin:16px 0 0;font-size:12px;color:var(--muted)}
+.safe-box{margin:0 0 24px;padding:20px 24px;border:2px solid var(--ink);border-radius:5px;background:var(--white)}
+.safe-box p{margin:0 0 10px}
+.safe-box p:last-child{margin-bottom:0}
+.result-content{min-width:0}
+.result-heading{margin:0 0 26px}
+.result-heading h2{font-size:43px;margin-bottom:0}
+.result-heading .small{max-width:580px;margin:16px 0 0}
+.result-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.map-card{background:var(--blue);color:white;padding:30px;border-radius:5px;min-width:0}
+.map-card h3{font-size:31px;margin:0 0 15px}
+.map-card .eyebrow{color:#dfe4ff;margin-bottom:10px}
+.map-key{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:#e4e8ff;margin:0 0 28px}
+.key{display:inline-flex;gap:8px;align-items:center}
+.key:before{content:'';width:10px;height:10px;background:var(--paper);border-radius:50%}
+.key.second:before{border-radius:1px;background:#b7c6ff;transform:rotate(45deg)}
+.map-row{margin-bottom:25px}
+.map-row:last-child{margin-bottom:0}
+.row-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.row-name{font-size:15px}
+.row-values{font-size:11px;color:#e0e6ff;text-align:right}
+.row-note{margin:11px 0 0;font-size:13px;line-height:1.55;color:#e0e6ff}
+.track{height:24px;position:relative;margin:0 8px;background:linear-gradient(90deg,transparent calc(25% - .5px),#7487de calc(25% - .5px),#7487de calc(25% + .5px),transparent calc(25% + .5px),transparent calc(50% - .5px),#7487de calc(50% - .5px),#7487de calc(50% + .5px),transparent calc(50% + .5px),transparent calc(75% - .5px),#7487de calc(75% - .5px),#7487de calc(75% + .5px),transparent calc(75% + .5px));background-size:100% 8px;background-repeat:no-repeat;background-position:center}
+.track:before{content:'';position:absolute;height:1px;top:50%;left:0;right:0;background:#8999e5}
+.dot{position:absolute;left:var(--x);top:50%;width:13px;height:13px;border:2px solid var(--paper);background:var(--paper);border-radius:50%;transform:translate(-50%,-50%);animation:marker .7s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--delay,0s)}
+.dot.second{background:#b7c6ff;border-color:#b7c6ff;border-radius:1px;transform:translate(-50%,-50%) rotate(45deg)}
+.track.paired .dot.first{top:25%}
+.track.paired .dot.second{top:75%}
+.scale-labels{display:flex;justify-content:space-between;color:#e0e6ff;font-size:11px;margin-top:22px}
+.map-note{font-size:12px;line-height:1.65;color:#e0e6ff;border-top:1px solid #7183da;padding-top:18px;margin:22px 0 0}
+.insight-card{background:var(--white);border-radius:5px;padding:30px;display:flex;flex-direction:column;gap:22px}
+.insight{padding-bottom:20px;border-bottom:1px solid var(--line)}
+.insight:last-child,.insight:has(+ .insight[hidden]){border:0;padding:0}
+.insight .eyebrow{font-size:11px;color:var(--muted);margin:0 0 10px}
+.insight p{font-size:15px;line-height:1.65}
+.insight p:last-child{margin-bottom:0}
+.result-step{display:grid;grid-template-columns:1fr;gap:10px;margin-top:28px;padding:30px;background:#e6e8f0;border-radius:5px}
+.result-step>.eyebrow{color:var(--blue);font-size:12px;padding-top:6px;margin-bottom:7px}
+.result-step p{max-width:750px;margin:0}
+.fill{display:block;height:100%;width:0;border-radius:4px;background:var(--blue);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.vh{font-size:25px;line-height:1.25;margin:28px 0 8px}
+.cmp-out>.vh:first-child{margin-top:0}
+.vlist{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.vitem{padding:14px 16px;border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+.vitem p{margin:0 0 8px;font-size:15px;line-height:1.6}
+.vitem p:last-child{margin-bottom:0}
+.vmeta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{padding:1px 10px;border:1px solid var(--line);border-radius:99px;font-size:12px;color:var(--muted);background:var(--white)}
+.center-card{background:var(--white);border-radius:5px;padding:30px;margin-top:28px}
+.center-card .small{margin:0 0 18px;max-width:640px}
+.code-row{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-bottom:10px}
+.code-row code{flex:1 1 220px;min-width:0;display:flex;align-items:center;padding:10px 14px;border:1px dashed #a6afd9;border-radius:3px;background:var(--paper);font:500 17px/1.4 var(--sans);letter-spacing:.04em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;user-select:all}
+.field-label{display:block;margin:20px 0 8px;font-size:14px;color:var(--muted)}
+.inp{flex:1 1 220px;min-width:0;min-height:54px;padding:10px 14px;border:1px solid var(--line);border-radius:3px;background:var(--paper);color:var(--ink);font:16px/1.4 var(--sans);letter-spacing:.04em}
+.inp:focus{border-color:var(--blue)}
+.cmp-out:not(:empty){margin-top:22px}
+.cmp-out .map-card{margin-bottom:22px}
+.hint{margin:22px 0 0;font-size:14px;color:var(--muted)}
+.result-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.result-actions>*{min-width:220px}
+.result-footer{border-top:1px solid var(--line);padding-top:20px;margin-top:26px}
+.result-footer p{max-width:680px;margin:0 0 12px;font-size:13px}
+dialog{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;max-width:720px;width:calc(100% - 32px);padding:0;max-height:85svh;overflow:hidden;font:16px/1.65 var(--sans)}
+dialog[open]{display:flex;flex-direction:column}
+dialog::backdrop{background:#15191680;backdrop-filter:blur(3px)}
+.dialog-head{padding:30px 65px 18px 32px;position:relative;flex-shrink:0}
+.dialog-head h2{font-size:36px;margin:0}
+.dialog-close{position:absolute;right:12px;top:12px;width:44px;height:44px;background:none;border:0;font-size:28px}
+.dialog-body{padding:0 32px 30px;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#8996d9 #e9e7df;min-height:0}
+.dialog-body h3{font-size:25px;margin-top:27px}
+.dialog-body p,.dialog-body li{font-size:15px}
+.dialog-body ul,.dialog-body ol{padding-left:21px}
+.dialog-body li{margin-bottom:13px}
+.dialog-body a{overflow-wrap:anywhere}
+.dialog-body>:last-child{margin-bottom:0}
+.dialog-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+@media(min-width:1450px){
+.quiz{padding-top:60px}
+}
+@media(max-width:1050px){
+:root{--sidebar-width:190px;--shell-gap:28px}
+.quiz{padding:32px 28px}
+.lead{font-size:16px}
+.intro-copy>.eyebrow{font-size:11px}
+.side-copy h2{font-size:36px}
+.result-grid{gap:18px}
+.map-card,.insight-card{padding:25px}
+.result-heading h2{font-size:40px}
+}
+@media(min-width:801px) and (max-width:1050px),(max-width:540px){
+.row-head{display:block}
+.row-values{display:block;text-align:left;margin-top:3px}
+}
+@media(max-width:800px){
+.stage{display:block;padding-top:0;max-width:680px;margin:auto}
+.side-copy{display:none}
+}
+@media(max-width:700px){
+.quiz{padding:28px 20px}
+h1{font-size:clamp(30px,8.4vw,46px);margin-bottom:22px}
+.intro{display:block;padding-top:0}
+.intro-copy{padding-top:0;margin-bottom:30px}
+.intro-copy>.eyebrow{margin-bottom:21px}
+.lead{font-size:18px;max-width:500px}
+.intro-note{max-width:500px}
+.intro-card{padding:20px 24px}
+.art-caption{font-size:22px}
+.result-step{padding:25px}
+.result-actions>*{width:100%;min-width:0}
+.dialog-head{padding:28px 60px 18px 24px}
+.dialog-head h2{font-size:32px}
+.dialog-body{padding:0 24px 28px}
+}
+@media(max-width:540px){
+.quiz:has(.stage:not([hidden])){padding:16px}
+.primary,.secondary{font-size:15px}
+.panel-top{gap:10px;padding:12px 18px}
+.question-area{padding:24px 18px 20px}
+.topic{margin-bottom:15px}
+.bubble{padding:20px}
+.bubble h2{font-size:21px}
+.answer-area{padding:20px 18px 22px}
+.answers{grid-template-columns:1fr;gap:7px}
+.answer{flex-direction:row;gap:13px;text-align:left;padding:12px 14px;min-height:48px;border:1px solid var(--line);background:white;font-size:15px}
+.answer input{width:18px;height:18px}
+.navigation{gap:15px;margin-top:20px}
+.navigation .primary{min-width:145px}
+.map-card,.insight-card{padding:24px}
+.map-row{margin-bottom:22px}
+.row-values{margin-top:4px}
+.scale-labels{font-size:10px}
+.result-heading h2{font-size:36px}
+.result-step{padding:22px}
+.result-actions{gap:10px}
+.center-card{padding:22px 18px}
+.code-row>.secondary{width:100%}
+dialog{max-height:90svh}
+.dialog-actions>*{width:100%}
+}
+</style>
+</head>
+<body>
+<noscript><p class="noscript">Чтобы пройти тест, включите JavaScript в браузере. Ответы обрабатываются на вашем устройстве.</p></noscript>
+<main class="quiz" id="con-dlg" data-view="intro">
+<section id="con-intro" class="intro view" aria-labelledby="con-title">
+ <div class="intro-copy"><p class="eyebrow">Тест · отношения</p><h1 id="con-title">Как вы<br><em>ссоритесь.</em></h1><p class="lead">20 утверждений о том, как вы ведёте себя в споре с партнёром. Тест показывает, какие способы вы выбираете чаще и как они могут сочетаться со способами партнёра.</p><p class="small intro-note">Это не диагноз и не оценка вашей пары. Тест показывает только то, как вы видите свои действия сегодня.</p></div>
+ <div><div class="intro-card"><div class="art" aria-hidden="true"><svg viewBox="0 0 360 275" fill="none"><path d="M35 244H328" stroke="#d6d5cc"/><path d="M60 62H190a14 14 0 0 1 14 14V132a14 14 0 0 1-14 14H110L84 170V146H60a14 14 0 0 1-14-14V76a14 14 0 0 1 14-14Z" fill="#fffdfa" stroke="#424b42" stroke-width="1.5"/><path d="M170 124H300a14 14 0 0 1 14 14V190a14 14 0 0 1-14 14H292V228L262 204H170a14 14 0 0 1-14-14V138a14 14 0 0 1 14-14Z" fill="#324bc5"/><g class="float-one"><circle cx="82" cy="104" r="6" fill="#324bc5"/><circle cx="110" cy="104" r="6" fill="#abb6e7"/><circle cx="138" cy="104" r="6" fill="#d5dcf6"/></g><g class="float-two"><circle cx="198" cy="164" r="6" fill="#fffdfa"/><circle cx="226" cy="164" r="6" fill="#abb6e7"/><circle cx="254" cy="164" r="6" fill="#d5dcf6"/></g><path d="M326 244C326 226 332 217 344 213C346 229 339 239 326 244Z" fill="#bfc6a8"/><path d="M326 244V228" stroke="#65704f" stroke-width="1.5"/></svg></div><p class="art-caption">Разговор на повышенных тонах</p><p class="intro-meta">20 вопросов · около 7 минут</p><ul class="check-list"><li>Вспомните последние несколько месяцев и отвечайте, как часто вы так поступаете, а не как «следовало бы».</li><li>Стили не делятся на хорошие и плохие: каждый бывает уместен. Важно, какой из них становится привычкой.</li><li>Проходите отдельно от партнёра, не обсуждая ответы заранее. Сравнить результаты можно в конце.</li><li>Ответы не сохраняются и никуда не отправляются: закроете страницу, и они исчезнут.</li></ul><div class="consent-box"><div class="consent-row"><label class="consent-label"><input type="checkbox" id="con-consent" aria-describedby="con-consent-help"><span>Разрешить копирование кода</span></label><button type="button" class="help-toggle" id="con-consent-info" aria-label="Как работает копирование кода" aria-expanded="false" aria-controls="con-consent-details">?</button></div><div class="consent-details" id="con-consent-details" hidden><p id="con-consent-help">Тест можно пройти без разрешения. Результат будет виден только на этой странице и исчезнет после её закрытия или обновления.</p><p>Если поставить галочку, в конце появится код результата, который можно скопировать и отправить партнёру для сравнения.</p><p>Код содержит только четыре числа, по одному на стиль. Ничего не копируется и не отправляется само: копирование — отдельное действие по кнопке.</p><div class="consent-actions"><button type="button" class="secondary" id="con-consent-understood">Понятно</button><button type="button" class="text-button" id="con-consent-decline">Не разрешать</button></div></div></div><div class="mode-buttons"><button class="primary wide" type="button" id="con-start">Начать</button></div><p class="privacy">Ответы никуда не отправляются.<br>Для самоанализа, без постановки диагноза.</p></div><div class="intro-links"><button class="text-button" type="button" data-about>О подходе и источниках</button></div></div>
+</section>
+<section id="con-quiz" class="stage view" hidden>
+ <aside class="side-copy"><p class="eyebrow">Как вы ссоритесь</p><h2>Ваш способ<br>спорить<br><em>сегодня.</em></h2><p>Вспомните последние несколько месяцев и отвечайте, как есть.</p><div class="side-meta"><span>Каждый ответ можно изменить.</span><button class="text-button" type="button" data-about>О тесте</button></div></aside>
+ <div class="panel"><div class="panel-top"><span id="con-count"></span><button class="text-button quiet" type="button" data-exit>Завершить</button></div><div class="progress-track" id="con-progress" role="progressbar" aria-label="Пройдено вопросов" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><span id="con-bar"></span></div><div id="con-q"><div class="question-area"><p class="topic" id="con-eyebrow"></p><div class="bubble"><h2 id="con-legend" tabindex="-1"></h2></div></div><div class="answer-area"><fieldset aria-labelledby="con-legend"><legend>Как часто вы так поступаете?</legend><div class="answers" id="con-opts"></div></fieldset><div class="navigation"><button class="text-button quiet" type="button" id="con-back">← Назад</button><button class="primary" type="button" id="con-next" disabled>Дальше</button></div><p class="question-footer">Ответ можно изменить: вернитесь кнопкой «Назад».</p></div></div></div>
+</section>
+<section id="con-result" class="stage view result-shell" hidden>
+ <aside class="side-copy"><p class="eyebrow">Как вы ссоритесь</p><h2>Ваш<br><em>результат.</em></h2><p>Он остаётся на этой странице и никуда не отправляется.</p><div class="side-meta"><span>Можно пройти заново.</span><button class="text-button" type="button" data-about>О тесте</button></div></aside>
+ <div class="result-content"><div class="result-heading"><h2 id="con-rtitle" tabindex="-1">Как вы действуете в споре</h2><p class="small">Это ваш взгляд на сегодня, а не диагноз. Результат — повод для разговора.</p></div><div class="safe-box" id="con-safe" hidden><p>Вы отметили, что часто не поднимаете неприятные темы из-за страха реакции партнёра. Если вы боитесь его реакции, не показывайте ему этот результат и не сравнивайте ответы.</p><p>Лучше обсудить это отдельно со специалистом: если есть страх за безопасность, сначала стоит работать индивидуально, а не вдвоём. Если вам угрожает опасность, звоните 112.</p></div><div class="result-grid"><div class="map-card"><p class="eyebrow">Ваш результат</p><h3>По четырём стилям</h3><div id="con-rows"></div><div class="scale-labels"><span>Реже</span><span>Чаще</span></div><p class="map-note">Метки показывают, как часто вы выбираете каждый способ, по шкале от 0 до 100. Это не оценка: стили не делятся на хорошие и плохие.</p></div><div class="insight-card"><div class="insight"><p class="eyebrow">Общая картина</p><p id="con-overall"></p></div></div></div><div class="result-step"><p class="eyebrow">Следующий шаг</p><div><p id="con-start-hint"></p></div></div><section class="center-card share" id="con-share"><h3>Сравнить с партнёром</h3><p class="small">Код содержит только четыре числа, по одному на стиль. Отправляйте его, только если вам спокойно это делать. Партнёр проходит тест сам и вводит ваш код, вы вводите его.</p><div id="con-codebox"><div class="code-row"><code id="con-code"></code><button class="secondary" type="button" id="con-copy">Скопировать код</button></div><p class="small" id="con-copy-st" role="status"></p></div><p class="small" id="con-nocode" hidden>Вы не разрешали копирование кода, поэтому он не показан. Чтобы получить код, пройдите тест заново и отметьте разрешение на первом экране.</p><label class="field-label" for="con-partner">Код партнёра</label><div class="code-row"><input class="inp" id="con-partner" maxlength="24" autocomplete="off" spellcheck="false" placeholder="C1-72-50-88-31"><button class="secondary" type="button" id="con-cmp">Сравнить</button></div><p class="form-error" id="con-cmp-err" role="alert"></p><div class="cmp-out" id="con-cmp-out" aria-live="polite"></div></section><div class="result-actions"><button class="primary" type="button" id="discuss">Обсудить со специалистом</button><button class="secondary" type="button" id="con-again">Пройти заново</button></div><div class="result-footer"><p class="small">Тест — авторский и неклинический. Он не ставит диагноз и не заменяет консультацию специалиста.</p><button class="text-button" type="button" data-about>О тесте</button></div></div>
+</section>
+</main>
+<dialog id="con-about" aria-labelledby="con-about-title"><div class="dialog-head"><h2 id="con-about-title">О подходе<br><em>и источниках.</em></h2><button class="dialog-close" type="button" aria-label="Закрыть" data-close>×</button></div><div class="dialog-body"><h3>Что показывает результат</h3><p>20 утверждений делятся на четыре способа вести себя в споре по пять: нападение, избегание, уступки и поиск решения.</p><p>Вариантам от «Почти никогда» до «Почти всегда» соответствуют значения от 0 до 4. Для каждого способа считается среднее значение и переводится в шкалу 0–100. Слова «Редко», «Иногда» и «Часто» соответствуют условным границам: ниже 50, от 50 до 74 и от 75. Это не психологические нормы. Способы не делятся на хорошие и плохие: результат показывает, какие вы выбираете чаще.</p><p>Один из вопросов о том, что вы не поднимаете неприятные темы из-за страха реакции партнёра, входит в расчёт избегания. При частом ответе вместо кода для сравнения показывается отдельный блок. При сравнении сочетание ведущих способов (с наибольшим значением не ниже 50) сопоставляется с заготовленным списком описаний; если рисунка нет, это тоже сообщается.</p><h3>На чём основано</h3><p>Четыре способа (нападение, избегание, уступки, поиск решения) соответствуют четырём шкалам опросника конфликтных стилей Курдека (Conflict Resolution Styles Inventory) [1]: вовлечение в конфликт, отстранение, уступчивость и позитивное решение проблем. Русскоязычная версия опросника существует [2], но её пункты в тест не включены: формулировки авторские.</p><p>Раздел о сочетании стилей опирается на описание паттерна «требование — отстранение» [3] и на материалы Готтмана о критике, презрении, уходе в молчание и паузе около 20 минут [4].</p><p>Оговорка: в исследовании испанской версии на подростках лучше подошла структура из трёх стилей без уступчивости [5], а в русскоязычной версии уступчивость слабо связана с критериями валидности [2]. Поэтому разделение на четыре стиля и результат по уступкам — самые осторожные части теста.</p><h3>Источники</h3><ol><li><a href="https://psytests.org/confl/crsien.html" target="_blank" rel="noopener noreferrer">Kurdek L. A. (1994). Conflict Resolution Styles Inventory. Journal of Marriage and the Family, 56(3).</a><br>Ссылка ведёт на онлайн-версию опросника с четырьмя шкалами, а не на статью: название статьи и страницы не проверены, поэтому не указаны.</li><li><a href="https://psy-journal.hse.ru/en/2024-21-1/910189752.html" target="_blank" rel="noopener noreferrer">Сычев О., Аношкин И. (2024). Russian-language versions of inventories measuring styles and effectiveness of conflict resolution in close relationships. Психология. Журнал Высшей школы экономики, 21(1), 32–54.</a><br>Адаптация двух опросников Курдека на выборке из 415 взрослых. Уступчивость слабо связана лишь с частью критериев валидности.</li><li><a href="https://www.cambridge.org/core/books/abs/understanding-marriage/demandwithdraw-communication-during-couple-conflict-a-review-and-analysis/E517C8F615C433E03F4A237ADA061360" target="_blank" rel="noopener noreferrer">Eldridge K. A., Christensen A. (2002). Demand-withdraw communication during couple conflict: a review and analysis. In: Noller P., Feeney J. A. (eds.). Understanding marriage. Cambridge University Press, 289–322.</a><br>Обзор паттерна «требование — отстранение». Страница открывает только название главы и список литературы.</li><li><a href="https://www.gottman.com/about/research/couples/" target="_blank" rel="noopener noreferrer">The Gottman Institute. Research on couples.</a><br>Страница упоминает критику, оборону, презрение, уход в молчание и 20-минутную паузу, во время которой пульс возвращается к исходному.</li><li><a href="https://www.elsevier.es/en-revista-international-journal-clinical-health-psychology-355-pdf-download-S1697260016300242" target="_blank" rel="noopener noreferrer">Bonache H., Ramírez-Santana G., Gonzalez-Mendez R. (2016). Conflict resolution styles and teen dating violence. International Journal of Clinical and Health Psychology, 16, 276–286.</a><br>Испанская версия опросника Курдека для подростков: лучше всего подошла структура из трёх факторов, фактор уступчивости исключили.</li></ol><h3>Границы</h3><p>Это авторское упражнение для самонаблюдения. Оно не является стандартизированным или валидированным психологическим тестом, не оценивает личность и не ставит диагноз, не прогнозирует будущее отношений. Результат отражает ваш взгляд сегодня и не заменяет консультацию специалиста.</p><h3>Ваши ответы</h3><p>Ответы обрабатываются в памяти этой страницы, не отправляются на сервер и удаляются при перезагрузке, при выходе кнопкой «Завершить и очистить» и при повторном прохождении. Код для сравнения содержит четыре числа — результаты по способам. Код копируется только по вашей команде.</p></div></dialog>
+<dialog id="con-exit" aria-labelledby="con-exit-title"><div class="dialog-head"><h2 id="con-exit-title">Завершить<br><em>тест?</em></h2><button class="dialog-close" type="button" aria-label="Закрыть" data-close>×</button></div><div class="dialog-body"><p>Ответы будут удалены с этой страницы. Вы сможете начать заново.</p><div class="dialog-actions"><button class="primary" type="button" id="con-exit-ok">Завершить и очистить</button><button class="secondary" type="button" data-close>Остаться</button></div></div></dialog>
+<script>
+(function(){
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const mk = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  const band = p => p >= 75 ? 2 : p >= 50 ? 1 : 0;
+  const grow = pairs => requestAnimationFrame(() => requestAnimationFrame(() => pairs.forEach(([f, v]) => { f.style.width = v + "%"; })));
+  const DASH = /[‐-―−]/g;
+  const CODE_ERR_TAIL = "Не получилось прочитать код. Он выглядит так: ";
+  const openDialog = d => { if (d) (d.showModal ? d.showModal() : d.setAttribute("open", "")); };
+  const closeDialog = d => { if (d) (d.close ? d.close() : d.removeAttribute("open")); };
+
+  async function copyText(text, host){
+    try { await navigator.clipboard.writeText(text); return true; }
+    catch(_) {
+      const ta = mk("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;opacity:0";
+      host.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch(__) {}
+      ta.remove();
+      return ok;
+    }
+  }
+
+  const App = window.App = {mk, band, grow, copyText, tests: {}};
+
+  App.quiz = function(cfg){
+    const el = n => $(cfg.p + "-" + n);
+    const on = (n, ev, fn) => { const e = el(n); if (e) e.addEventListener(ev, fn); };
+    const root = el("dlg");
+    const panels = Object.fromEntries((cfg.panels || ["intro", "quiz", "result"]).map(n => [n, el(n)]));
+    const total = cfg.items.length;
+    let step = 0, answers = [], timer = 0, pointerAt = 0, consent = false;
+
+    const show = name => {
+      Object.keys(panels).forEach(k => { panels[k].hidden = k !== name; });
+      root.dataset.view = name;
+      if (root.getBoundingClientRect().top < 0) root.scrollIntoView({block: "start"});
+    };
+    const progress = v => {
+      el("bar").style.width = (v / total * 100) + "%";
+      el("progress").setAttribute("aria-valuenow", String(v));
+    };
+
+    function reset(){
+      clearTimeout(timer);
+      answers = cfg.items.map(() => null);
+      step = 0;
+      (cfg.clear || []).forEach(n => { const e = el(n); if (e) e.textContent = ""; });
+      const partner = el("partner");
+      if (partner) partner.value = "";
+      if (el("consent")){ el("consent").checked = false; consentInfo(false); }
+      progress(0);
+      if (cfg.onReset) cfg.onReset();
+    }
+    function open(initial){
+      reset();
+      show("intro");
+      if (!initial) el(cfg.focus || "start").focus();
+    }
+
+    function renderQ(){
+      const it = cfg.items[step];
+      el("eyebrow").textContent = cfg.eyebrow(it);
+      el("count").textContent = (cfg.prefix ? cfg.prefix() : "") + "Вопрос " + (step + 1) + " из " + total;
+      progress(step);
+      el("legend").textContent = it.t;
+      el("opts").style.setProperty("--n", cfg.scale.length);
+      el("opts").replaceChildren(...cfg.scale.map((label, i) => {
+        const lab = mk("label", "answer");
+        const inp = document.createElement("input");
+        inp.type = "radio";
+        inp.name = cfg.p + "-a";
+        inp.value = String(i + 1);
+        inp.checked = answers[step] === i + 1;
+        inp.addEventListener("change", () => {
+          answers[step] = i + 1;
+          el("next").disabled = false;
+          clearTimeout(timer);
+          if (Date.now() - pointerAt < 800) timer = setTimeout(advance, 280);
+        });
+        lab.append(inp, mk("span", "", label));
+        return lab;
+      }));
+      el("back").disabled = step === 0;
+      el("next").disabled = answers[step] == null;
+      el("next").textContent = step === total - 1 ? "К результату" : "Дальше";
+      el("q").animate([{opacity: 0, transform: "translateX(18px)"}, {opacity: 1, transform: "translateX(0)"}], {duration: 300, easing: "ease-out"});
+      el("legend").focus({preventScroll: true});
+    }
+    function advance(){
+      if (answers[step] == null) return;
+      if (step < total - 1){ step++; renderQ(); }
+      else cfg.onFinish(answers);
+    }
+    function consentInfo(open){
+      el("consent-details").hidden = !open;
+      el("consent-info").setAttribute("aria-expanded", String(open));
+    }
+    function start(){
+      consent = !!el("consent") && el("consent").checked;
+      answers = cfg.items.map(() => null);
+      step = 0;
+      show("quiz");
+      renderQ();
+    }
+    function showResult(){
+      if (el("codebox")){ el("codebox").hidden = !consent; el("nocode").hidden = consent; }
+      progress(total);
+      show("result");
+      el("rtitle").focus({preventScroll: true});
+    }
+
+    on("opts", "pointerdown", () => { pointerAt = Date.now(); });
+    on("start", "click", start);
+    on("again", "click", () => open(false));
+    on("back", "click", () => { clearTimeout(timer); if (step > 0){ step--; renderQ(); } });
+    on("next", "click", () => { clearTimeout(timer); advance(); });
+    on("copy", "click", async () => {
+      if (!consent) return;
+      el("copy-st").textContent = (await copyText(el("code").textContent, root))
+        ? "Код скопирован."
+        : "Не удалось скопировать. Выделите код и скопируйте вручную.";
+    });
+    if (el("consent")){
+      on("consent-info", "click", () => consentInfo(el("consent-details").hidden));
+      on("consent", "change", () => consentInfo(el("consent").checked));
+      on("consent-understood", "click", () => { consentInfo(false); el("consent-info").focus({preventScroll: true}); });
+      on("consent-decline", "click", () => { el("consent").checked = false; consentInfo(false); el("consent").focus({preventScroll: true}); });
+    }
+    on("exit-ok", "click", () => { closeDialog(el("exit")); open(false); });
+    document.addEventListener("click", e => {
+      const t = e.target.closest("[data-about],[data-exit],[data-close]");
+      if (!t) return;
+      if (t.hasAttribute("data-about")) openDialog(el("about"));
+      else if (t.hasAttribute("data-exit")) openDialog(el("exit"));
+      else closeDialog(t.closest("dialog"));
+    });
+    document.querySelectorAll("dialog").forEach(d => {
+      let press = false;
+      const outside = e => {
+        const r = d.getBoundingClientRect();
+        return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      };
+      d.addEventListener("pointerdown", e => { press = e.target === d && outside(e); });
+      d.addEventListener("pointercancel", () => { press = false; });
+      d.addEventListener("click", e => {
+        if (press && e.target === d && outside(e)) closeDialog(d);
+        press = false;
+      });
+      d.addEventListener("close", () => { press = false; });
+    });
+    if (cfg.compare){
+      on("cmp", "click", cfg.compare);
+      on("partner", "keydown", e => { if (e.key === "Enter"){ e.preventDefault(); cfg.compare(); } });
+    }
+
+    return {dlg: root, el, open, start, show, showResult, get answers(){ return answers; }};
+  };
+
+  App.scores = (count, items, answers) => Array.from({length: count}, (_, d) => {
+    let sum = 0, n = 0;
+    items.forEach((it, k) => { if (it.d === d){ sum += answers[k]; n++; } });
+    return Math.round((sum - n) / (n * 4) * 100);
+  });
+
+  App.parseScores = (text, prefix, count) => {
+    const s = String(text).toUpperCase().replace(DASH, "-").replace(/\s+/g, "");
+    const m = new RegExp("^" + prefix + "-" + Array(count).fill("(\\d{1,3})").join("-") + "$").exec(s);
+    if (!m) return null;
+    const v = m.slice(1).map(Number);
+    return v.every(n => n <= 100) ? v : null;
+  };
+
+  const dot = (cls, v, i) => {
+    const d = mk("span", "dot " + cls);
+    d.style.setProperty("--x", v + "%");
+    d.style.setProperty("--delay", (i * .07) + "s");
+    return d;
+  };
+  const sr = text => mk("span", "sr-only", text);
+
+  App.renderBands = (box, names, sc, words, notes) => {
+    box.replaceChildren(...names.map((name, i) => {
+      const b = band(sc[i]);
+      const row = mk("div", "map-row");
+      const head = mk("div", "row-head");
+      head.append(mk("span", "row-name", name), mk("span", "row-values", words[b] + " · " + sc[i]));
+      const track = mk("div", "track");
+      track.setAttribute("aria-hidden", "true");
+      track.append(dot("first", sc[i], i));
+      row.append(head, track, mk("p", "row-note", notes[i][b]), sr("Ваш результат: " + sc[i] + " из 100"));
+      return row;
+    }));
+  };
+
+  App.renderCompare = (out, names, mine, other, labelFn) => {
+    const card = mk("div", "map-card");
+    card.append(mk("p", "eyebrow", "Вы и партнёр"), mk("h3", "", "Две карты рядом"));
+    const key = mk("div", "map-key");
+    key.append(mk("span", "key", "Вы"), mk("span", "key second", "Партнёр"));
+    card.append(key);
+    names.forEach((name, i) => {
+      const row = mk("div", "map-row");
+      const head = mk("div", "row-head");
+      head.append(mk("span", "row-name", name), mk("span", "row-values", labelFn(mine[i], other[i])));
+      const track = mk("div", "track paired");
+      track.setAttribute("aria-hidden", "true");
+      track.append(dot("first", mine[i], i), dot("second", other[i], i));
+      row.append(head, track, sr("Вы: " + mine[i] + " из 100. Партнёр: " + other[i] + " из 100."));
+      card.append(row);
+    });
+    const scale = mk("div", "scale-labels");
+    scale.append(mk("span", "", "0"), mk("span", "", "100"));
+    card.append(scale);
+    out.append(card);
+  };
+
+  App.vitem = (text, tags) => {
+    const li = mk("li", "vitem");
+    const m = mk("div", "vmeta");
+    tags.forEach(([cls, t]) => m.append(mk("span", ("tag " + cls).trim(), t)));
+    li.append(mk("p", "", text), m);
+    return li;
+  };
+  App.vlist = entries => {
+    const ul = mk("ul", "vlist");
+    ul.append(...entries);
+    return ul;
+  };
+
+  App.bandedTest = function(cfg){
+    const names = cfg.domains.map(d => d.name);
+    const items = cfg.domains.flatMap((d, di) => d.items.map(t => ({d: di, t})));
+    let mine = null;
+
+    const q = App.quiz({
+      p: cfg.p, items, scale: cfg.scale,
+      eyebrow: it => names[it.d],
+      clear: ["rows", "cmp-out", "opts", "code", "copy-st", "cmp-err", "overall", "start-hint"],
+      onReset: () => { mine = null; },
+      onFinish: finish,
+      compare
+    });
+
+    function finish(answers){
+      const sc = App.scores(names.length, items, answers);
+      mine = sc;
+      q.el("overall").textContent = cfg.overall[band(Math.round(sc.reduce((a, b) => a + b, 0) / sc.length))];
+      App.renderBands(q.el("rows"), names, sc, cfg.words, cfg.notes);
+      const low = sc.indexOf(Math.min(...sc));
+      q.el("start-hint").textContent = sc[low] < 75
+        ? "С чего начать разговор: «" + names[low] + "»."
+        : cfg.allClear;
+      const flagged = answers[cfg.safeIndex] <= 2;
+      q.el("safe").hidden = !flagged;
+      q.el("share").hidden = flagged;
+      q.el("code").textContent = cfg.prefix + "-" + sc.join("-");
+      if (cfg.extra) cfg.extra(q, answers);
+      q.showResult();
+    }
+
+    function gap(a, b){
+      const g = Math.abs(a - b);
+      if (g <= 15){
+        if (a < 50 && b < 50) return cfg.gap.low;
+        if (a >= 75 && b >= 75) return cfg.gap.high;
+        return "Оценки близки";
+      }
+      return g <= 30 ? "Есть разница" : "Заметно расходятся";
+    }
+
+    function compare(){
+      const err = q.el("cmp-err"), out = q.el("cmp-out");
+      err.textContent = "";
+      out.replaceChildren();
+      const other = App.parseScores(q.el("partner").value, cfg.prefix, names.length);
+      if (!other || !mine){ err.textContent = CODE_ERR_TAIL + cfg.codeHint + "."; return; }
+      App.renderCompare(out, names, mine, other, gap);
+      out.append(mk("p", "hint", cfg.compareHint));
+    }
+
+    return q.open;
+  };
+})();
+(function(){
+  "use strict";
+  const {mk, band} = App;
+
+  const CON = {
+    scale: ["Почти никогда", "Редко", "Иногда", "Часто", "Почти всегда"],
+    styles: [
+      {name: "Нападение", verb: "нападаете", items: [
+        "Я\u00a0повышаю голос или говорю резко, когда меня задевают.",
+        "Я\u00a0вспоминаю партнёру прошлые промахи, пока мы спорим о\u00a0другом.",
+        "Я\u00a0говорю партнёру «ты всегда» или «ты никогда».",
+        "Я\u00a0отвечаю насмешкой, сарказмом или закатываю глаза.",
+        "Я\u00a0продолжаю давить, пока партнёр не\u00a0согласится или не\u00a0сдастся."]},
+      {name: "Избегание", verb: "избегаете", items: [
+        "Я\u00a0меняю тему или ухожу, когда разговор становится напряжённым.",
+        "Я\u00a0замолкаю и\u00a0не\u00a0отвечаю, даже если мне есть что сказать.",
+        "Я\u00a0делаю вид, что всё в\u00a0порядке, хотя обида остаётся.",
+        "Я\u00a0откладываю трудный разговор в\u00a0надежде, что всё уладится само.",
+        {t: "Я\u00a0не\u00a0поднимаю неприятную тему, потому что боюсь реакции партнёра.", safe: true}]},
+      {name: "Уступки", verb: "уступаете", items: [
+        "Я\u00a0соглашаюсь, чтобы скорее закончить спор, хотя думаю иначе.",
+        "Я\u00a0уступаю, даже когда вопрос для\u00a0меня важен.",
+        "Я\u00a0первым(ой) прошу прощения, чтобы снять напряжение, даже если не\u00a0считаю себя виноватым(ой).",
+        "Я\u00a0откладываю свои желания, чтобы не\u00a0расстраивать партнёра.",
+        "Я\u00a0не\u00a0говорю, чего хочу на\u00a0самом деле, чтобы не\u00a0обострять спор."]},
+      {name: "Поиск решения", verb: "ищете решение", items: [
+        "Я\u00a0спокойно объясняю, что меня задело, и\u00a0не\u00a0обвиняю.",
+        "Я\u00a0пересказываю своими словами, что услышал(а), прежде чем отвечать.",
+        "Если разговор накаляется, я\u00a0предлагаю паузу и\u00a0возвращаюсь к\u00a0теме позже.",
+        "Мы ищем решение, которое подойдёт нам обоим.",
+        "Я\u00a0признаю свою долю в\u00a0проблеме."]}
+    ]
+  };
+  const NOTES = [
+    ["В\u00a0споре вы редко переходите на\u00a0резкость и\u00a0упрёки. Это ресурс: сохраняйте умение говорить о\u00a0неприятном без\u00a0обвинений.",
+     "Иногда в\u00a0споре вы становитесь резким(ой) или упрекаете. Полезно заметить, в\u00a0какие моменты это случается и\u00a0что происходило перед этим.",
+     "Резкость, упрёки или давление появляются у\u00a0вас часто. Партнёр в\u00a0ответ чаще защищается, чем слышит. Можно потренировать другое начало разговора: сказать, что вам важно или больно, вместо «ты всегда»."],
+    ["Вы обычно остаётесь в\u00a0разговоре, даже когда он неприятный.",
+     "Иногда вы уходите от\u00a0темы или замолкаете. Пауза может помочь успокоиться, если после неё вы возвращаетесь к\u00a0разговору.",
+     "Вы часто уходите от\u00a0трудных разговоров или замолкаете. Пауза помогает, когда после неё есть возвращение к\u00a0теме; без\u00a0него вопросы копятся."],
+    ["Вы обычно отстаиваете своё мнение в\u00a0споре.",
+     "Иногда вы уступаете, чтобы снять напряжение. Стоит различать, когда это ваш выбор, а\u00a0когда согласие через силу.",
+     "Вы часто уступаете, даже если вопрос важен. Невысказанное желание не\u00a0исчезает, а\u00a0чаще проявляется позже в\u00a0другой форме. Можно пробовать говорить о\u00a0нём раньше."],
+    ["Совместный поиск решения пока получается редко. Можно начать с\u00a0малого: пауза, пересказ слов партнёра, общая формулировка проблемы.",
+     "Конструктивно спорить у\u00a0вас получается не\u00a0всегда. Стоит заметить, что помогает в\u00a0такие моменты, и\u00a0повторять это.",
+     "В\u00a0споре вы часто слушаете, называете свою долю и\u00a0ищете решение для\u00a0обоих. Это сильная сторона."]
+  ];
+  const WORDS = ["Редко", "Иногда", "Часто"];
+  const PER = 5;
+  const names = CON.styles.map(s => s.name);
+
+  const items = [];
+  for (let i = 0; i < PER; i++) CON.styles.forEach((s, d) => {
+    const it = s.items[i];
+    items.push(typeof it === "string" ? {d, t: it, safe: false} : {d, t: it.t, safe: !!it.safe});
+  });
+  const SAFE = items.findIndex(it => it.safe);
+
+  const PATTERNS = [
+    {title: "Взаимное нападение",
+     test: (a, b) => a.includes(0) && b.includes(0),
+     text: "Оба повышаете градус, и\u00a0спор быстро нарастает, а\u00a0повод уходит на\u00a0второй план. Помогает договорённость о\u00a0сигнале «пауза»: перерыв около 20\u00a0минут и\u00a0возвращение к\u00a0теме."},
+    {title: "Давление и\u00a0отстранение",
+     test: (a, b) => (a.includes(0) && b.includes(1)) || (a.includes(1) && b.includes(0)),
+     text: "Один настаивает и\u00a0упрекает, другой замолкает или уходит, и\u00a0чем сильнее давление, тем дальше отходит второй. Исследователи называют это паттерном «требование\u00a0— отстранение»; роли часто меняются от\u00a0темы к\u00a0теме. Помогает, когда первый говорит о\u00a0потребности вместо упрёка, а\u00a0второй говорит, когда вернётся к\u00a0разговору."},
+    {title: "Общее молчание",
+     test: (a, b) => a.includes(1) && b.includes(1),
+     text: "Оба уходите от\u00a0трудных тем. Ссор мало, но\u00a0вопросы остаются нерешёнными. Можно выбрать одну небольшую тему и\u00a0обсудить её в\u00a0спокойный момент."},
+    {title: "Один давит, другой уступает",
+     test: (a, b) => (a.includes(0) && b.includes(2)) || (a.includes(2) && b.includes(0)),
+     text: "Споры чаще заканчиваются в\u00a0пользу одного, а\u00a0невысказанное накапливается у\u00a0другого. Полезно, чтобы уступающий называл желание раньше, а\u00a0давящий уточнял: это согласие или усталость."},
+    {title: "Взаимные уступки",
+     test: (a, b) => a.includes(2) && b.includes(2),
+     text: "Оба уступаете, и\u00a0никто не\u00a0называет, чего хочет на\u00a0самом деле. Споров мало, но\u00a0важные желания могут оставаться невысказанными."},
+    {title: "Тишина и\u00a0уступки",
+     test: (a, b) => (a.includes(1) && b.includes(2)) || (a.includes(2) && b.includes(1)),
+     text: "Напряжение гасится: один уходит от\u00a0темы, другой соглашается. Снаружи спокойно, но\u00a0сами вопросы не\u00a0решаются."},
+    {title: "Общая опора",
+     test: (a, b) => a.includes(3) && b.includes(3),
+     text: "Оба склонны искать решение. Это сильная сторона пары: сохраняйте привычку возвращаться к\u00a0разговору, даже когда вы устали."}
+  ];
+
+  let mine = null;
+  const q = App.quiz({
+    p: "con", items, scale: CON.scale,
+    eyebrow: () => "В\u00a0споре с\u00a0партнёром",
+    clear: ["rows", "cmp-out", "opts", "code", "copy-st", "cmp-err", "overall", "start-hint"],
+    onReset: () => { mine = null; },
+    onFinish: finish,
+    compare
+  });
+
+  const leaders = sc => {
+    const m = Math.max(...sc);
+    return m < 50 ? [] : sc.map((v, i) => v === m ? i : -1).filter(i => i >= 0);
+  };
+
+  function finish(answers){
+    const sc = App.scores(names.length, items, answers);
+    mine = sc;
+    const lead = leaders(sc);
+    q.el("overall").textContent = lead.length
+      ? "Чаще всего в\u00a0споре вы " + lead.map(i => CON.styles[i].verb).join(" и\u00a0") + ". Это ваш взгляд на\u00a0себя сегодня, а\u00a0не\u00a0черта характера."
+      : "Ни\u00a0один способ не\u00a0выражен ярко: в\u00a0споре вы ведёте себя по-разному.";
+    App.renderBands(q.el("rows"), names, sc, WORDS, NOTES);
+
+    let hint;
+    if (sc[0] >= 75) hint = "как начинать трудную тему без\u00a0упрёков.";
+    else if (sc[1] >= 75) hint = "как возвращаться к\u00a0разговору после паузы.";
+    else if (sc[2] >= 75) hint = "как говорить о\u00a0своих желаниях раньше, чем накопится обида.";
+    else if (sc[3] < 50) hint = "короткая пауза и\u00a0пересказ слов друг друга.";
+    else hint = "что помогает вам договариваться, когда это получается.";
+    q.el("start-hint").textContent = "С\u00a0чего начать разговор: " + hint;
+
+    const flagged = answers[SAFE] >= 4;
+    q.el("safe").hidden = !flagged;
+    q.el("share").hidden = flagged;
+    q.el("code").textContent = "C1-" + sc.join("-");
+    q.showResult();
+  }
+
+  function gap(a, b){
+    const g = Math.abs(a - b);
+    if (a >= 75 && b >= 75) return "Совпали: у\u00a0обоих часто";
+    if (a < 50 && b < 50) return "Совпали: у\u00a0обоих редко";
+    if (g <= 15) return "Оценки близки";
+    return g <= 30 ? "Есть разница" : "Заметно расходятся";
+  }
+
+  function pattern(title, text){
+    const li = mk("li", "vitem");
+    const p = mk("p");
+    p.append(mk("b", "", title));
+    li.append(p, mk("p", "", text));
+    return li;
+  }
+
+  function compare(){
+    const err = q.el("cmp-err"), out = q.el("cmp-out");
+    err.textContent = "";
+    out.replaceChildren();
+    const other = App.parseScores(q.el("partner").value, "C1", names.length);
+    if (!other || !mine){ err.textContent = "Не\u00a0получилось прочитать код. Он выглядит так: C1-72-50-88-31."; return; }
+    App.renderCompare(out, names, mine, other, gap);
+
+    const a = leaders(mine), b = leaders(other);
+    const ul = mk("ul", "vlist");
+    if (!a.length || !b.length){
+      ul.append(pattern("Рисунок не\u00a0определить", "У\u00a0одного из\u00a0вас ни\u00a0один способ не\u00a0выражен ярко, поэтому устойчивого сочетания по\u00a0ответам не\u00a0видно."));
+    } else {
+      const hits = PATTERNS.filter(p => p.test(a, b));
+      if (hits.length) ul.append(...hits.map(p => pattern(p.title, p.text)));
+      else ul.append(pattern("Стили разные", "Повторяющегося рисунка по\u00a0ответам не\u00a0видно. Можно спросить друг друга: «Что помогает тебе в\u00a0споре, а\u00a0что мешает?»"));
+    }
+    out.append(
+      mk("h3", "vh", "Как сочетаются ваши стили"), ul,
+      mk("p", "hint", "Это рисунок ответов двух людей, а\u00a0не\u00a0диагноз паре. Разница в\u00a0ответах не\u00a0значит, что кто-то из\u00a0вас неправ: можно спросить друг друга, как каждый переживает спор.")
+    );
+  }
+
+  App.tests.conflicts = q.open;
+})();
+App.tests.conflicts(true);
+</script>
+</body>
+</html>

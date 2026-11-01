@@ -1,0 +1,8 @@
+Editorial (editorial-regular.woff2, editorial-italic.woff2)
+
+Файлы получены из шрифта, встроенного в watercolor_v5: по таблице имён это
+Nimbus Roman (URW++ Design & Development, 2014), переименованный в «Editorial».
+В нём нет знака ₽: на странице он берётся из Golos Text (см. --serif в css/style.css).
+
+Лицензию Nimbus Roman перед публикацией нужно проверить отдельно.
+Чтобы заменить шрифт на другой, достаточно подменить два woff2-файла, имя в CSS менять не нужно.

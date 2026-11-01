@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Вера Соколова — клинический психолог. КПТ и схема-терапия, онлайн и в Москве</title>
+<meta name="description" content="Клинический психолог Вера Соколова: тревога, панические атаки, выгорание, самокритика, сценарии в отношениях. КПТ и схема-терапия. Бесплатное знакомство 20 минут.">
+<meta name="theme-color" content="#FBFBF9">
+<link rel="preload" href="fonts/literata-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/onest-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#home">К содержимому</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#home" aria-label="Вера Соколова, на главную">
+      <svg class="brand-mark ill" viewBox="0 0 40 40" aria-hidden="true"><circle class="f" cx="20" cy="20" r="17"/><path class="th" d="M9 26c4-14 14-16 18-8s-8 10-9 2 9-12 14-4"/></svg>
+      <span><b>Вера Соколова</b><small>клинический психолог</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Разделы сайта">
+      <a href="#navigator">Навигатор</a>
+      <a href="#tools">Помочь себе</a>
+      <a href="#approach">Как я работаю</a>
+      <a href="#about">Обо мне</a>
+      <a href="#price">Стоимость</a>
+      <button type="button" data-open-sheet>Мне плохо сейчас</button>
+    </nav>
+    <div class="top-act">
+      <button type="button" class="btn btn-ghost" data-open-sheet aria-label="Помощь сейчас">Помощь</button>
+      <a class="btn btn-thread" href="#book">Записаться</a>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <h1>Когда всё спуталось, начинаем с одной нити</h1>
+    <p class="hero-lead">Я Вера Соколова, клинический психолог. Помогаю взрослым с тревогой, выгоранием, самокритикой и сценариями, которые повторяются в отношениях. Онлайн и очно в Москве.</p>
+    <div class="hero-actions">
+      <a class="btn btn-thread" href="#navigator">Разобраться, что со мной</a>
+      <a class="link-btn" href="#book">Записаться на знакомство</a>
+    </div>
+    <p class="hero-note">Знакомство 20 минут по видео — бесплатно. Поймём, подхожу ли я для вашего запроса.</p>
+    <div class="hero-stage">
+      <div class="knot-stage" id="knotStage">
+        <canvas class="knot" id="knot" role="img" aria-label="Спутанная нить. Её можно распутать, потянув в сторону"></canvas>
+        <svg class="ill knot-note" viewBox="0 0 200 90" aria-hidden="true"><text class="note" x="6" y="24" font-size="21">потяни за кончик</text><path class="th thin" d="M118 38C150 46 166 60 170 80M170 80l-9-10M170 80l-13-3"/></svg>
+        <div class="knot-meta">
+          <p class="knot-hint" id="knotHint">Потяните нить в сторону пальцем или мышкой</p>
+          <button type="button" class="link-btn" id="knotBtn">Распутать одним нажатием</button>
+        </div>
+      </div>
+      <p class="knot-msg" id="knotMsg" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M13 6 L9 7 L6 10 L3 14 L1 19 L0 26 L1 33 L3 42 L7 51 L13 59 L20 68 L29 77 L40 84 L52 91 L66 96 L80 100 L95 103 L111 104 L126 103 L141 100 L156 96 L169 91 L181 84 L192 77 L201 68 L209 59 L215 51 L218 42 L221 33 L221 26 L220 19 L218 14 L216 10 L212 7 L208 6 L204 7 L200 10 L197 14 L195 19 L195 26 L195 33 L198 42 L201 51 L207 59 L215 68 L224 77 L235 84 L247 91 L260 96 L275 100 L290 103 L305 104 L321 103 L336 100 L350 96 L364 91 L376 84 L387 77 L396 68 L403 59 L409 51 L413 42 L415 33 L416 26 L415 19 L413 14 L410 10 L407 7 L403 6 L399 7 L395 10 L392 14 L390 19 L389 26 L390 33 L392 42 L396 51 L402 59 L409 68 L419 77 L429 84 L442 91 L455 96 L470 100 L485 103 L500 104 L515 103 L530 100 L545 96 L558 91 L571 84 L581 77 L591 68 L598 59 L604 51 L608 42 L610 33 L611 26 L610 19 L608 14 L605 10 L601 7 L597 6 L593 7 L590 10 L587 14 L585 19 L584 26 L585 33 L587 42 L591 51 L597 59 L604 68 L613 77 L624 84 L636 91 L650 96 L664 100 L679 103 L695 104 L710 103 L725 100 L740 96 L753 91 L765 84 L776 77 L785 68 L793 59 L799 51 L802 42 L805 33 L805 26 L805 19 L803 14 L800 10 L796 7 L792 6 L788 7 L784 10 L782 14 L780 19 L779 26 L779 33 L782 42 L785 51 L791 59 L799 68 L808 77 L819 84 L831 91 L844 96 L859 100 L874 103 L889 104 L905 103 L920 100 L934 96 L948 91 L960 84 L971 77 L980 68 L987 59 L993 51 L997 42 L999 33 L1000 26 L999 19 L997 14 L994 10 L991 7 L987 6"/></svg>
+
+<section class="sec" id="about-you">
+  <div class="wrap">
+    <p class="eyebrow">узнаёте себя?</p>
+    <h2>Узнаёте <span class="nb">что-то</span> из этого?</h2>
+    <p class="intro">Нажмите на фразу: покажу, что за ней обычно стоит и как с этим работают в терапии.</p>
+    <div class="flip-grid">
+      <button type="button" class="flip" aria-pressed="false"><span class="flip-in">
+        <span class="flip-f">
+          <svg class="ill flip-art" viewBox="0 0 200 130" aria-hidden="true"><ellipse class="th" cx="106" cy="86" rx="60" ry="30"/><path class="th" d="M95 55l12-4-4 12"/><circle class="k" cx="166" cy="86" r="9"/><path class="f" d="M40 14a17 17 0 0 1 11 30v5H29v-5A17 17 0 0 1 40 14z"/><path class="thin" d="M32 56h16M34 62h12M40 4V0M22 12l-4-3M58 12l4-3M16 28h-5M64 28h5"/></svg>
+          <q>Всё понимаю умом, а делаю по-старому</q>
+          <span class="flip-cue"><svg width="22" height="12" viewBox="0 0 22 12" aria-hidden="true"><path d="M1 6c3-6 6 6 9 0s6-6 11 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Что за этим стоит</span>
+        </span>
+        <span class="flip-b"><span><strong>Это не слабая воля</strong>Старые реакции когда-то защищали вас и срабатывают быстрее мысли. В работе находим, что их запускает, и тренируем новые — сначала в безопасных условиях, потом в жизни.</span></span>
+      </span></button>
+      <button type="button" class="flip" aria-pressed="false"><span class="flip-in">
+        <span class="flip-f">
+          <svg class="ill flip-art" viewBox="0 0 200 130" aria-hidden="true"><rect class="f" x="42" y="30" width="108" height="62" rx="12"/><rect class="k" x="150" y="49" width="14" height="24" rx="4"/><rect class="pk" x="50" y="38" width="20" height="46" rx="5"/><path class="thin" d="M80 61h58" stroke-dasharray="2 7"/><rect class="f" x="8" y="100" width="22" height="16" rx="4"/><path class="thin" d="M30 106h6M30 111h6"/><path class="th" d="M36 108c34 0 26 18 56 12 20-4 20-16 42-12"/><circle class="k n" cx="138" cy="108" r="4"/></svg>
+          <q>Отдыхаю, а сил не прибавляется</q>
+          <span class="flip-cue"><svg width="22" height="12" viewBox="0 0 22 12" aria-hidden="true"><path d="M1 6c3-6 6 6 9 0s6-6 11 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Что за этим стоит</span>
+        </span>
+        <span class="flip-b"><span><strong>Похоже на истощение</strong>Отдых не восстанавливает, если причина никуда не делась. Разбираем нагрузку, границы и то, что незаметно забирает ресурс. Параллельно стоит проверить здоровье у терапевта.</span></span>
+      </span></button>
+      <button type="button" class="flip" aria-pressed="false"><span class="flip-in">
+        <span class="flip-f">
+          <svg class="ill flip-art" viewBox="0 0 200 130" aria-hidden="true"><path class="f" d="M24 18h72a10 10 0 0 1 10 10v28a10 10 0 0 1-10 10H56L42 78V66H24a10 10 0 0 1-10-10V28a10 10 0 0 1 10-10z"/><path class="thin" d="M34 34h46M34 48h30"/><path class="f" d="M110 70h64a10 10 0 0 1 10 10v22a10 10 0 0 1-10 10h-6v12l-14-12h-44a10 10 0 0 1-10-10V80a10 10 0 0 1 10-10z"/><path class="th" d="M140 90c-14-10 4-22 14-14 10 8-4 22-12 14-6-6 4-12 8-8"/><path class="th" d="M104 50c8-10 14 10 20 2s6 10 10 18"/></svg>
+          <q>Прокручиваю разговоры по сто раз</q>
+          <span class="flip-cue"><svg width="22" height="12" viewBox="0 0 22 12" aria-hidden="true"><path d="M1 6c3-6 6 6 9 0s6-6 11 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Что за этим стоит</span>
+        </span>
+        <span class="flip-b"><span><strong>Это руминация</strong>Мозг пытается решить задачу, у которой нет решения в голове. Есть конкретные техники, которые прерывают этот круг, — одну можно попробовать прямо на сайте, в разделе «Разгрузить голову».</span></span>
+      </span></button>
+      <button type="button" class="flip" aria-pressed="false"><span class="flip-in">
+        <span class="flip-f">
+          <svg class="ill flip-art" viewBox="0 0 200 130" aria-hidden="true"><circle class="f" cx="26" cy="66" r="14"/><path class="f" d="M6 118c0-22 10-34 20-34s20 12 20 34z"/><circle class="f" cx="174" cy="66" r="14"/><path class="f" d="M154 118c0-22 10-34 20-34s20 12 20 34z"/><path class="th" d="M44 92c20 0 22-36 36-32 14 4-6 28-10 12-4-16 26 20 32 20 14 0 10-36 24-32 14 4-6 28-10 12-4-16 24 20 40 20"/></svg>
+          <q>В отношениях повторяется одно и то же</q>
+          <span class="flip-cue"><svg width="22" height="12" viewBox="0 0 22 12" aria-hidden="true"><path d="M1 6c3-6 6 6 9 0s6-6 11 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Что за этим стоит</span>
+        </span>
+        <span class="flip-b"><span><strong>Такие повторы не случайны</strong>Схема-терапия помогает увидеть, какой знакомый с детства сценарий вы узнаёте в других людях и почему он так притягивает. Когда его видно, появляется выбор.</span></span>
+      </span></button>
+      <button type="button" class="flip" aria-pressed="false"><span class="flip-in">
+        <span class="flip-f">
+          <svg class="ill flip-art" viewBox="0 0 200 130" aria-hidden="true"><path class="f" d="M64 62h64v20a28 28 0 0 1-28 28h-8a28 28 0 0 1-28-28z"/><path class="f" d="M128 70h8a12 12 0 0 1 0 24h-10"/><path d="M48 118h110"/><path class="thin" d="M52 126h104"/><path class="th" d="M84 52l-8-9 10-9-8-9M108 52l-8-9 10-9-8-9"/></svg>
+          <q>Тревожно, хотя вроде всё в порядке</q>
+          <span class="flip-cue"><svg width="22" height="12" viewBox="0 0 22 12" aria-hidden="true"><path d="M1 6c3-6 6 6 9 0s6-6 11 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Что за этим стоит</span>
+        </span>
+        <span class="flip-b"><span><strong>Тревога не всегда про опасность</strong>Иногда это привычка нервной системы быть начеку. КПТ при тревоге — один из самых изученных методов: курс обычно занимает 12–20 встреч.</span></span>
+      </span></button>
+      <button type="button" class="flip" aria-pressed="false"><span class="flip-in">
+        <span class="flip-f">
+          <svg class="ill flip-art" viewBox="0 0 200 130" aria-hidden="true"><path class="f" d="M46 14h76v106H46z"/><path class="m n" d="M54 22h60v90H54z"/><path class="f" d="M122 22L164 8v116l-42-12z"/><circle class="k n" cx="152" cy="70" r="3"/><path d="M30 120h150"/><path class="th" d="M84 112c0 12-22 12-38 12-16 0-22-8-32-6"/><text class="note" x="76" y="74" font-size="26">?</text></svg>
+          <q>Не знаю, достаточно ли мне плохо для психолога</q>
+          <span class="flip-cue"><svg width="22" height="12" viewBox="0 0 22 12" aria-hidden="true"><path d="M1 6c3-6 6 6 9 0s6-6 11 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Что за этим стоит</span>
+        </span>
+        <span class="flip-b"><span><strong>Достаточно, если мешает</strong>Не нужно ждать кризиса, чтобы заслужить помощь. Чем раньше начать, тем короче обычно работа. Если сомневаетесь — пройдите навигатор ниже.</span></span>
+      </span></button>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M8 13 L5 13 L3 15 L1 19 L0 24 L0 29 L1 36 L4 43 L8 51 L14 59 L21 67 L30 74 L41 81 L52 86 L65 91 L78 95 L92 97 L106 97 L121 97 L135 95 L148 91 L161 86 L172 81 L183 74 L192 67 L199 59 L205 51 L209 43 L212 36 L213 29 L213 24 L212 19 L210 15 L208 13 L205 13 L202 13 L200 15 L198 19 L197 24 L197 29 L198 36 L201 43 L205 51 L211 59 L218 67 L227 74 L237 81 L249 86 L261 91 L275 95 L289 97 L303 97 L318 97 L332 95 L345 91 L358 86 L369 81 L379 74 L388 67 L396 59 L402 51 L406 43 L408 36 L410 29 L410 24 L409 19 L407 15 L404 13 L402 13 L399 13 L396 15 L395 19 L394 24 L394 29 L395 36 L398 43 L402 51 L408 59 L415 67 L424 74 L434 81 L446 86 L458 91 L472 95 L486 97 L500 97 L514 97 L528 95 L542 91 L554 86 L566 81 L576 74 L585 67 L592 59 L598 51 L602 43 L605 36 L606 29 L606 24 L605 19 L604 15 L601 13 L598 13 L596 13 L593 15 L591 19 L590 24 L590 29 L592 36 L594 43 L598 51 L604 59 L612 67 L621 74 L631 81 L642 86 L655 91 L668 95 L682 97 L697 97 L711 97 L725 95 L739 91 L751 86 L763 81 L773 74 L782 67 L789 59 L795 51 L799 43 L802 36 L803 29 L803 24 L802 19 L800 15 L798 13 L795 13 L792 13 L790 15 L788 19 L787 24 L787 29 L788 36 L791 43 L795 51 L801 59 L808 67 L817 74 L828 81 L839 86 L852 91 L865 95 L879 97 L894 97 L908 97 L922 95 L935 91 L948 86 L959 81 L970 74 L979 67 L986 59 L992 51 L996 43 L999 36 L1000 29 L1000 24 L999 19 L997 15 L995 13 L992 13"/></svg>
+
+<section class="sec" id="about">
+  <div class="wrap about">
+    <figure class="portrait">
+      <div class="portrait-photo"><img src="photo.webp" width="600" height="900" alt="Вера Соколова, клинический психолог, в кресле у книжного шкафа" loading="lazy" decoding="async"></div>
+      <svg class="ill portrait-loop" viewBox="0 0 240 200" aria-hidden="true"><path class="th" d="M10 150C40 100 80 180 110 130s50-70 20-50 10 90 60 40 40-60 42-80"/><text class="note" x="14" y="192" font-size="20">на связи в рабочие дни</text></svg>
+    </figure>
+    <div class="about-text">
+      <p class="eyebrow">познакомимся</p>
+      <h2>Обо мне</h2>
+      <p class="intro">Я пришла в психологию из интереса к тому, как мысли управляют чувствами, а осталась, потому что видела, как люди меняются. Двенадцать лет работаю со взрослыми, из них четыре года — в кризисном центре.</p>
+      <p>В работе я прямая и тёплая: не буду молча кивать весь час, но и торопить не стану. Всегда объясняю, что происходит и зачем мы делаем то или иное упражнение.</p>
+      <blockquote>Моя задача — чтобы однажды я стала вам не нужна.</blockquote>
+      <ul class="facts">
+        <li><b>12 лет</b><span>практики со взрослыми</span></li>
+        <li><b>4 000+</b><span>часов работы с клиентами</span></li>
+        <li><b>2 метода</b><span>КПТ и схема-терапия</span></li>
+      </ul>
+      <a class="about-more" href="#education">Образование и квалификация</a>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M4 19 L2 19 L1 21 L0 24 L0 28 L1 33 L3 39 L6 45 L10 52 L16 58 L23 65 L32 71 L42 77 L53 82 L64 86 L77 89 L90 91 L103 91 L116 91 L129 89 L142 86 L153 82 L164 77 L174 71 L182 65 L190 58 L195 52 L200 45 L203 39 L205 33 L206 28 L206 24 L205 21 L204 19 L202 19 L201 19 L199 21 L199 24 L199 28 L199 33 L201 39 L204 45 L209 52 L215 58 L222 65 L231 71 L240 77 L251 82 L263 86 L275 89 L288 91 L301 91 L315 91 L328 89 L340 86 L352 82 L363 77 L372 71 L381 65 L388 58 L394 52 L398 45 L402 39 L404 33 L404 28 L404 24 L404 21 L402 19 L401 19 L399 19 L398 21 L397 24 L397 28 L398 33 L400 39 L403 45 L407 52 L413 58 L421 65 L429 71 L439 77 L450 82 L461 86 L474 89 L487 91 L500 91 L513 91 L526 89 L539 86 L550 82 L561 77 L571 71 L579 65 L587 58 L593 52 L597 45 L600 39 L602 33 L603 28 L603 24 L602 21 L601 19 L599 19 L598 19 L596 21 L596 24 L596 28 L596 33 L598 39 L602 45 L606 52 L612 58 L619 65 L628 71 L637 77 L648 82 L660 86 L672 89 L685 91 L699 91 L712 91 L725 89 L737 86 L749 82 L760 77 L769 71 L778 65 L785 58 L791 52 L796 45 L799 39 L801 33 L801 28 L801 24 L801 21 L799 19 L798 19 L796 19 L795 21 L794 24 L794 28 L795 33 L797 39 L800 45 L805 52 L810 58 L818 65 L826 71 L836 77 L847 82 L858 86 L871 89 L884 91 L897 91 L910 91 L923 89 L936 86 L947 82 L958 77 L968 71 L977 65 L984 58 L990 52 L994 45 L997 39 L999 33 L1000 28 L1000 24 L999 21 L998 19 L996 19"/></svg>
+
+<section class="sec" id="navigator">
+  <div class="wrap">
+    <p class="eyebrow">три вопроса</p>
+    <h2>Навигатор: что происходит и чем помочь себе сейчас</h2>
+    <p class="intro">Три вопроса, меньше минуты. Это не диагноз, а ориентир: что можно сделать прямо сейчас и стоит ли идти к специалисту.</p>
+    <div class="panel" id="navPanel">
+      <div class="nav-top" id="navTop">
+        <div class="nav-route" id="navRoute" aria-hidden="true">
+          <svg class="ill" viewBox="0 0 320 60"><path class="soft" d="M24 38C60 0 96 56 160 36s90-34 132-2"/><path class="th" id="navRoutePath" pathLength="1" d="M24 38C60 0 96 56 160 36s90-34 132-2"/><circle class="f" cx="24" cy="38" r="9"/><circle class="f" cx="160" cy="36" r="9"/><circle class="f" cx="292" cy="34" r="9"/></svg>
+        </div>
+        <span class="nav-count" id="navCount">Вопрос 1 из 3</span>
+      </div>
+
+      <div class="nav-step" data-step="1">
+        <h3>Что сейчас заметнее всего?</h3>
+        <div class="opts" id="q1">
+          <button type="button" class="opt" data-v="body" aria-pressed="false"><b>Тело на взводе</b><small>Колотится сердце, трудно дышать ровно, ком в горле</small></button>
+          <button type="button" class="opt" data-v="loop" aria-pressed="false"><b>Мысли ходят по кругу</b><small>Не получается переключиться, прокручиваю одно и то же</small></button>
+          <button type="button" class="opt" data-v="empty" aria-pressed="false"><b>Нет сил</b><small>Даже простые дела даются с трудом, ничего не хочется</small></button>
+          <button type="button" class="opt" data-v="irritation" aria-pressed="false"><b>Всё раздражает</b><small>Срываюсь на близких, потом стыдно</small></button>
+          <button type="button" class="opt" data-v="sleep" aria-pressed="false"><b>Не получается спать</b><small>Долго не засыпаю или просыпаюсь среди ночи</small></button>
+          <button type="button" class="opt" data-v="people" aria-pressed="false"><b>Тяжело с конкретным человеком</b><small>Партнёр, родитель, руководитель</small></button>
+          <button type="button" class="opt opt-crisis" data-v="crisis" aria-pressed="false"><b>Думаю о том, чтобы не жить</b><small>Сразу покажу, куда обратиться</small></button>
+        </div>
+      </div>
+
+      <div class="nav-step" data-step="2" hidden>
+        <h3>Как давно так?</h3>
+        <div class="opts opts-4" id="q2">
+          <button type="button" class="opt" data-v="today" aria-pressed="false"><b>Сегодня или вчера</b><small>После конкретного события</small></button>
+          <button type="button" class="opt" data-v="weeks" aria-pressed="false"><b>Пару недель</b></button>
+          <button type="button" class="opt" data-v="months" aria-pressed="false"><b>Больше месяца</b></button>
+          <button type="button" class="opt" data-v="years" aria-pressed="false"><b>Годами, это давно знакомо</b></button>
+        </div>
+        <div class="nav-foot"><button type="button" class="link-btn" data-back>Назад</button></div>
+      </div>
+
+      <div class="nav-step" data-step="3" hidden>
+        <h3>Что уже задето?</h3>
+        <p class="small">Можно выбрать несколько.</p>
+        <div class="chips" id="q3">
+          <button type="button" class="chip" data-v="work" aria-pressed="false">Работа или учёба</button>
+          <button type="button" class="chip" data-v="rel" aria-pressed="false">Отношения</button>
+          <button type="button" class="chip" data-v="sleep" aria-pressed="false">Сон</button>
+          <button type="button" class="chip" data-v="food" aria-pressed="false">Аппетит</button>
+          <button type="button" class="chip" data-v="health" aria-pressed="false">Здоровье</button>
+          <button type="button" class="chip" data-v="none" aria-pressed="false">Пока ничего</button>
+        </div>
+        <div class="nav-foot">
+          <button type="button" class="link-btn" data-back>Назад</button>
+          <button type="button" class="btn btn-thread" id="navShow" disabled>Показать подсказки</button>
+        </div>
+      </div>
+
+      <div class="nav-res" id="navRes" hidden tabindex="-1" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M0 25 L0 25 L0 27 L0 29 L1 32 L3 37 L5 41 L9 47 L14 52 L20 58 L27 63 L35 69 L44 73 L54 78 L65 81 L76 83 L88 85 L100 85 L112 85 L124 83 L136 81 L147 78 L157 73 L166 69 L174 63 L181 58 L187 52 L192 47 L195 41 L198 37 L200 32 L200 29 L201 27 L201 25 L200 25 L200 25 L200 27 L200 29 L201 32 L203 37 L205 41 L209 47 L214 52 L219 58 L226 63 L235 69 L244 73 L254 78 L265 81 L276 83 L288 85 L300 85 L312 85 L324 83 L336 81 L346 78 L357 73 L366 69 L374 63 L381 58 L387 52 L392 47 L395 41 L398 37 L399 32 L400 29 L401 27 L400 25 L400 25 L400 25 L400 27 L400 29 L401 32 L402 37 L405 41 L409 47 L413 52 L419 58 L426 63 L434 69 L444 73 L454 78 L465 81 L476 83 L488 85 L500 85 L512 85 L524 83 L535 81 L546 78 L556 73 L566 69 L574 63 L581 58 L587 52 L591 47 L595 41 L598 37 L599 32 L600 29 L600 27 L600 25 L600 25 L600 25 L599 27 L600 29 L601 32 L602 37 L605 41 L608 47 L613 52 L619 58 L626 63 L634 69 L643 73 L654 78 L664 81 L676 83 L688 85 L700 85 L712 85 L724 83 L735 81 L746 78 L756 73 L765 69 L774 63 L781 58 L786 52 L791 47 L795 41 L797 37 L799 32 L800 29 L800 27 L800 25 L800 25 L799 25 L799 27 L800 29 L800 32 L802 37 L805 41 L808 47 L813 52 L819 58 L826 63 L834 69 L843 73 L853 78 L864 81 L876 83 L888 85 L900 85 L912 85 L924 83 L935 81 L946 78 L956 73 L965 69 L973 63 L980 58 L986 52 L991 47 L995 41 L997 37 L999 32 L1000 29 L1000 27 L1000 25 L1000 25"/></svg>
+
+<section class="sec" id="tools">
+  <div class="wrap">
+    <p class="eyebrow">прямо сейчас</p>
+    <h2>Помочь себе прямо сейчас</h2>
+    <p class="intro">Четыре упражнения из тех, что я даю клиентам. Работают без регистрации, ничего не сохраняется и никуда не отправляется.</p>
+    <div class="tabs" role="tablist" aria-label="Упражнения" id="toolTabs">
+      <button type="button" class="tab" role="tab" id="tab-breath" data-tab="breath" aria-controls="tool-breath" aria-selected="true">Дыхание</button>
+      <button type="button" class="tab" role="tab" id="tab-ground" data-tab="ground" aria-controls="tool-ground" aria-selected="false" tabindex="-1">Заземление</button>
+      <button type="button" class="tab" role="tab" id="tab-unload" data-tab="unload" aria-controls="tool-unload" aria-selected="false" tabindex="-1">Разгрузить голову</button>
+      <button type="button" class="tab" role="tab" id="tab-pmr" data-tab="pmr" aria-controls="tool-pmr" aria-selected="false" tabindex="-1">Отпустить напряжение</button>
+    </div>
+    <div class="bench">
+      <div role="tabpanel" id="tool-breath" aria-labelledby="tab-breath" class="tool">
+        <div class="tool-main">
+          <div class="chips inv" id="brMode">
+            <button type="button" class="chip" data-v="long" aria-pressed="true">Длинный выдох</button>
+            <button type="button" class="chip" data-v="box" aria-pressed="false">Квадрат</button>
+            <button type="button" class="chip" data-v="double" aria-pressed="false">Двойной вдох</button>
+          </div>
+          <p class="tool-note" id="brNote"></p>
+        </div>
+        <div class="tool-view">
+          <svg class="breath-svg" viewBox="0 0 320 150" aria-hidden="true">
+            <defs><clipPath id="brClip"><rect id="brClipRect" x="0" y="0" width="0" height="150"/></clipPath></defs>
+            <path id="brBase" class="br-base"/>
+            <path id="brDone" class="br-done" clip-path="url(#brClip)"/>
+            <circle id="brDot" class="br-dot" r="8" cx="16" cy="128"/>
+          </svg>
+          <div class="br-read"><span class="br-phase" id="brPhase" aria-live="polite">Готовы?</span><span class="br-count" id="brCount"></span></div>
+        </div>
+        <div class="tool-ctl">
+          <div class="tool-row">
+            <div class="chips inv" id="brMin">
+              <button type="button" class="chip" data-v="1" aria-pressed="true">1 мин</button>
+              <button type="button" class="chip" data-v="3" aria-pressed="false">3 мин</button>
+              <button type="button" class="chip" data-v="5" aria-pressed="false">5 мин</button>
+            </div>
+            <button type="button" class="btn btn-light" id="brStart">Начать</button>
+          </div>
+          <label class="check" id="brVibWrap" hidden><input type="checkbox" id="brVib"> Вибрация на смене фазы — можно закрыть глаза</label>
+          <p class="tool-left" id="brLeft">Линия — это объём воздуха в лёгких. Следите за точкой: вверх — вдох, вниз — выдох.</p>
+        </div>
+      </div>
+
+      <div role="tabpanel" id="tool-ground" aria-labelledby="tab-ground" class="tool" hidden>
+        <div class="tool-main">
+          <p class="g-step" id="gStep">Шаг 1 из 5</p>
+          <p class="g-title" id="gTitle"></p>
+          <p class="tool-note" id="gHint"></p>
+        </div>
+        <div class="tool-view">
+          <div class="g-dots" id="gDots"></div>
+        </div>
+        <div class="tool-ctl">
+          <p class="tool-left" id="gLeft">Отмечайте каждую найденную вещь нажатием на кружок.</p>
+          <div class="tool-row"><button type="button" class="btn btn-line" id="gReset">Начать сначала</button></div>
+        </div>
+      </div>
+
+      <div role="tabpanel" id="tool-unload" aria-labelledby="tab-unload" hidden>
+        <div id="uInput" class="tool">
+          <div class="tool-main">
+            <h3>Что крутится в голове?</h3>
+            <p class="tool-note">Выпишите каждую мысль отдельно, коротко. Потом разделим: на что вы можете повлиять, а на что нет.</p>
+            <form class="u-add" id="uForm">
+              <label class="sr" for="uField">Мысль или забота</label>
+              <input class="field" id="uField" maxlength="140" autocomplete="off" placeholder="Например: сроки по отчёту">
+              <button class="btn btn-light" type="submit">Добавить</button>
+            </form>
+          </div>
+          <div class="tool-view">
+            <p class="u-empty" id="uEmpty">Здесь появятся ваши записи. Каждую мысль можно будет отнести к «могу повлиять» или «не от меня».</p>
+            <ul class="u-list" id="uList"></ul>
+          </div>
+          <div class="tool-ctl">
+            <div class="tool-row"><button type="button" class="btn btn-light" id="uSort" disabled>Разобрать</button><span class="tool-left" id="uStatus"></span></div>
+          </div>
+        </div>
+        <div id="uResult" hidden>
+          <h3>Разобрали</h3>
+          <div class="u-cols">
+            <div class="u-col">
+              <h4>Не от меня</h4>
+              <p class="tool-note">Это важно, но не в ваших руках. Можно сказать себе: «меня это тревожит, и я не могу это решить прямо сейчас» — и вернуться к тому, что рядом.</p>
+              <ul class="u-go" id="uGo"></ul>
+            </div>
+            <div class="u-col">
+              <h4>Беру в работу</h4>
+              <p class="tool-note">Для каждого пункта — самый маленький шаг, который займёт не больше 10 минут.</p>
+              <ul class="u-keep" id="uKeep"></ul>
+            </div>
+          </div>
+          <div class="tool-row">
+            <button type="button" class="btn btn-light" id="uCopy">Скопировать план</button>
+            <button type="button" class="btn btn-line" id="uAgain">Начать заново</button>
+          </div>
+        </div>
+      </div>
+
+      <div role="tabpanel" id="tool-pmr" aria-labelledby="tab-pmr" class="tool" hidden>
+        <div class="tool-main">
+          <p class="tool-note">Прогрессивная мышечная релаксация. По очереди напрягаем группу мышц на 5 секунд и отпускаем на 10. Тело учится замечать разницу между зажимом и покоем. Около полутора минут.</p>
+          <p class="g-step" id="pmrStep">5 групп мышц</p>
+          <p class="pmr-name" id="pmrName">Начнём с кистей рук</p>
+          <p class="tool-note" id="pmrText" aria-live="polite">Сядьте удобно, стопы на полу.</p>
+        </div>
+        <div class="tool-view">
+          <svg class="pmr-svg" viewBox="0 0 320 90" aria-hidden="true"><path id="pmrPath" class="pmr-path" stroke-width="3"/></svg>
+          <div class="br-read"><span class="br-count" id="pmrCount"></span></div>
+        </div>
+        <div class="tool-ctl">
+          <div class="tool-row"><button type="button" class="btn btn-light" id="pmrStart">Начать</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M0 30 L1 31 L2 32 L3 34 L5 37 L7 40 L11 44 L15 48 L20 53 L26 57 L32 62 L40 66 L49 70 L58 73 L68 76 L78 78 L89 79 L100 80 L111 79 L122 78 L132 76 L142 73 L151 70 L160 66 L168 62 L174 57 L180 53 L185 48 L189 44 L193 40 L195 37 L197 34 L198 32 L199 31 L200 30 L201 31 L202 32 L203 34 L205 37 L207 40 L211 44 L215 48 L220 53 L226 57 L232 62 L240 66 L249 70 L258 73 L268 76 L278 78 L289 79 L300 80 L311 79 L322 78 L332 76 L342 73 L351 70 L360 66 L368 62 L374 57 L380 53 L385 48 L389 44 L393 40 L395 37 L397 34 L398 32 L399 31 L400 30 L401 31 L402 32 L403 34 L405 37 L407 40 L411 44 L415 48 L420 53 L426 57 L432 62 L440 66 L449 70 L458 73 L468 76 L478 78 L489 79 L500 80 L511 79 L522 78 L532 76 L542 73 L551 70 L560 66 L568 62 L574 57 L580 53 L585 48 L589 44 L593 40 L595 37 L597 34 L598 32 L599 31 L600 30 L601 31 L602 32 L603 34 L605 37 L607 40 L611 44 L615 48 L620 53 L626 57 L632 62 L640 66 L649 70 L658 73 L668 76 L678 78 L689 79 L700 80 L711 79 L722 78 L732 76 L742 73 L751 70 L760 66 L768 62 L774 57 L780 53 L785 48 L789 44 L793 40 L795 37 L797 34 L798 32 L799 31 L800 30 L801 31 L802 32 L803 34 L805 37 L807 40 L811 44 L815 48 L820 53 L826 57 L832 62 L840 66 L849 70 L858 73 L868 76 L878 78 L889 79 L900 80 L911 79 L922 78 L932 76 L942 73 L951 70 L960 66 L968 62 L974 57 L980 53 L985 48 L989 44 L993 40 L995 37 L997 34 L998 32 L999 31 L1000 30"/></svg>
+
+<section class="sec" id="approach">
+  <div class="wrap split">
+    <div class="split-side">
+      <p class="eyebrow">шаг за шагом</p>
+      <h2>Как проходит работа</h2>
+      <p class="intro">Работаю в когнитивно-поведенческой терапии и схема-терапии. У обоих методов хорошая доказательная база. Мы не просто разговариваем: договариваемся о цели и вместе смотрим, приближаемся ли к ней.</p>
+      <div class="room">
+        <svg class="ill" viewBox="212 50 300 383" role="img" aria-label="Кабинет: кресло, торшер и столик с чашкой">
+          <rect class="wall n" x="190" y="30" width="340" height="306"/>
+          <rect class="floor n" x="190" y="336" width="340" height="97"/>
+          <g transform="translate(328 336) scale(1.26) translate(-328 -386)">
+<ellipse class="rug" cx="326" cy="406" rx="110" ry="10" style="stroke-width:1.905"/>
+<g transform="translate(-8 0)">
+<path class="m n" d="M376 199 H408 L440 388 H344 Z"/>
+</g>
+<path class="thin" d="M200 386 H500" style="stroke-width:2.381"/>
+<g transform="translate(-8 0)">
+<path d="M392 40 V161" style="stroke-width:2.2"/>
+<path class="f" d="M385 161 H399 V168 H385 Z" style="stroke-width:1.905"/>
+<path class="f" d="M386 198 A6 6 0 0 0 398 198" style="stroke-width:1.905"/>
+<path class="f" d="M372 198 C372 179 381 167.5 392 167.5 C403 167.5 412 179 412 198 Z" style="stroke-width:2.381"/>
+</g>
+<g transform="translate(320 404) scale(1.14) translate(-349 -404)">
+<path class="f" d="M309 350 V286 C309 272 322 262 349 262 C376 262 389 272 389 286 V350 Z" style="stroke-width:3.174"/>
+<path class="thin" d="M317 346 V289 C317 279 328 270 349 270 C370 270 381 279 381 289 V346" style="stroke-width:1.746"/>
+<circle class="k n" cx="349" cy="284" r="2"/>
+<circle class="k n" cx="334" cy="307" r="2"/>
+<circle class="k n" cx="349" cy="330" r="2"/>
+<circle class="k n" cx="364" cy="307" r="2"/>
+<rect class="f n" x="305" y="350" width="88" height="30"/>
+<path class="f" d="M331 325 Q349 318 367 325 Q370 338 367 351 Q349 348 331 351 Q328 338 331 325 Z" style="stroke-width:1.746"/>
+<path class="f" d="M306 346 H392 C396 346 397 356 392 356 H306 C301 356 302 346 306 346 Z" style="stroke-width:2.381"/>
+<path class="f" d="M290 340 C290 326 308 326 308 340 V380 H290 Z" style="stroke-width:2.381"/>
+<path class="f" d="M390 340 C390 326 408 326 408 340 V380 H390 Z" style="stroke-width:2.381"/>
+<path class="f" d="M288 378 H410 V386 C410 389 408 391 405 391 H293 C290 391 288 389 288 386 Z" style="stroke-width:2.381"/>
+<path d="M298 391 L295 403 M400 391 L403 403" style="stroke-width:2.064"/>
+</g>
+<path class="thin" d="M426 363 V402.9" style="stroke-width:2.381"/>
+<path class="thin" d="M398 363 L393 402.9 M454 363 L459 402.9" style="stroke-width:2.381"/>
+<rect class="f" x="391" y="356" width="70" height="7" rx="2" style="stroke-width:2.381"/>
+<path d="M405 336 C403 333 407 330.5 405 327 M411 336 C409 333 413 330.5 411 327" style="stroke-width:1.27"/>
+<path d="M415 344 C420 344 420 350 415 350" style="stroke-width:1.905"/>
+<path class="f" d="M401 340 H415 V351 C415 354 413 356 408 356 C403 356 401 354 401 351 Z" style="stroke-width:1.905"/>
+<path d="M445 329 C440 308 433 290 428 272 M446 329 C444 296 440 272 438 252 M447 329 C448 300 447 282 446 266 M444 329 C441 315 437 303 434 295 M448 329 C449 314 448 300 446 292" style="stroke-width:1.905"/>
+<g transform="translate(0 -10)">
+<path class="f" d="M446 276 C447.1 284.3 460 283.4 466 276.5 C472 269.7 470.5 260.9 469 256.7 C465.1 254.5 456.7 251.5 448.9 256.2 C441.1 260.9 438.1 273.5 446 276 Z" style="stroke-width:1.905"/>
+<path d="M446 276 L465.5 259.6 M461.3 280.2 L458.8 272.6 M467 275.4 L464.5 267.8 M444.5 260.2 L451.6 264 M450.3 255.4 L457.3 259.2" style="stroke-width:1.27"/>
+<path class="f" d="M446 302 C443.1 307.3 451.3 312.1 457.8 310.5 C464.3 308.9 467.1 303.2 467.9 300.1 C466.6 297.2 462.8 292 456.1 291.6 C449.5 291.2 442.3 297.3 446 302 Z" style="stroke-width:1.905"/>
+<path d="M446 302 L464.6 300.4 M453.4 310.7 L455.1 305.2 M458.9 310.2 L460.6 304.7 M451.8 292.2 L454.4 297.2 M457.2 291.7 L459.9 296.8" style="stroke-width:1.27"/>
+<path class="f" d="M438 262 C446.8 264.2 450.5 250.2 445.6 241.2 C440.7 232.1 431.2 230.1 426.4 230.1 C422.7 233.2 416.7 240.8 418.8 250.9 C420.9 261 432.7 269.4 438 262 Z" style="stroke-width:1.905"/>
+<path d="M438 262 L428.1 234.8 M447.6 247.6 L439 247.2 M444.7 239.7 L436.1 239.2 M421.4 257.2 L427.7 251.3 M418.5 249.2 L424.8 243.3" style="stroke-width:1.27"/>
+<path class="f" d="M428 282 C434.6 277 427.4 266.1 418.5 264.4 C409.5 262.6 402.7 268.3 399.8 271.7 C399.8 276.2 401.4 285 409.4 289.4 C417.3 293.8 429.8 290.1 428 282 Z" style="stroke-width:1.905"/>
+<path d="M428 282 L404 273.3 M424 266.7 L418.6 272.6 M416.9 264.1 L411.6 270.1 M415.1 291.2 L414.8 283.2 M408 288.6 L407.8 280.6" style="stroke-width:1.27"/>
+<path class="f" d="M434 305 C436.6 299 427.3 294.5 420.4 296.8 C413.5 299.1 411 305.7 410.4 309.2 C412.1 312.2 416.7 317.5 424 317.4 C431.3 317.2 438.5 309.8 434 305 Z" style="stroke-width:1.905"/>
+<path d="M434 305 L413.9 308.5 M425.1 296.2 L423.8 302.3 M419.2 297.2 L417.9 303.4 M428.7 316.3 L425.3 311 M422.8 317.4 L419.4 312" style="stroke-width:1.27"/>
+</g>
+<path class="f" d="M432 334 H462 L459 356 H435 Z" style="stroke-width:2.381"/>
+<path class="f" d="M430 328 H464 V334 H430 Z" style="stroke-width:1.905"/>
+</g>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <ol class="path">
+        <li><h3>Вы пишете</h3><p>Через форму внизу страницы или сразу в Telegram. Отвечаю в течение рабочего дня.</p></li>
+        <li><h3>Знакомство, 20 минут</h3><p>Бесплатно, по видео. Вы коротко рассказываете, что беспокоит, я — как могла бы помочь. Решение, продолжать ли, остаётся за вами.</p></li>
+        <li><h3>Первые 2–3 встречи</h3><p>Составляем карту: что происходит и что это поддерживает. Формулируем цели так, чтобы было понятно, по каким признакам заметить изменения.</p></li>
+        <li><h3>Основная работа</h3><p>Встречи раз в неделю. Пробуем новые способы думать и действовать; между встречами — небольшие упражнения, если захотите.</p></li>
+        <li><h3>Завершение</h3><p>Окончание планируем заранее. Вы уходите с пониманием, что делать, если трудности вернутся.</p></li>
+      </ol>
+      <div class="est panel">
+        <h3>Сколько встреч понадобится?</h3>
+        <p class="small">Выберите, что ближе к вашему запросу.</p>
+        <div class="chips" id="estChips">
+          <button type="button" class="chip" data-v="situ" aria-pressed="true">Конкретная ситуация</button>
+          <button type="button" class="chip" data-v="anx" aria-pressed="false">Тревога, паника</button>
+          <button type="button" class="chip" data-v="burn" aria-pressed="false">Выгорание</button>
+          <button type="button" class="chip" data-v="pattern" aria-pressed="false">Давние сценарии, самооценка</button>
+        </div>
+        <div class="est-track" aria-hidden="true"><span class="est-range" id="estRange"></span></div>
+        <div class="est-axis" aria-hidden="true"><span style="left:0">0</span><span style="left:28.57%">20</span><span style="left:57.14%">40</span><span style="left:85.71%">60</span></div>
+        <p class="est-out" id="estOut" aria-live="polite"></p>
+        <p class="small">Это ориентир при встречах раз в неделю, а не договор. Темп подбираем вместе, закончить можно в любой момент.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M0 36 L2 36 L4 37 L6 39 L9 41 L12 43 L16 46 L21 50 L26 53 L32 57 L38 60 L46 64 L54 67 L62 69 L71 71 L81 73 L90 74 L100 74 L110 74 L119 73 L129 71 L138 69 L146 67 L154 64 L162 60 L168 57 L174 53 L179 50 L184 46 L188 43 L191 41 L194 39 L196 37 L198 36 L200 36 L202 36 L204 37 L206 39 L209 41 L212 43 L216 46 L221 50 L226 53 L232 57 L238 60 L246 64 L254 67 L262 69 L271 71 L281 73 L290 74 L300 74 L310 74 L319 73 L329 71 L338 69 L346 67 L354 64 L362 60 L368 57 L374 53 L379 50 L384 46 L388 43 L391 41 L394 39 L396 37 L398 36 L400 36 L402 36 L404 37 L406 39 L409 41 L412 43 L416 46 L421 50 L426 53 L432 57 L438 60 L446 64 L454 67 L462 69 L471 71 L481 73 L490 74 L500 74 L510 74 L519 73 L529 71 L538 69 L546 67 L554 64 L562 60 L568 57 L574 53 L579 50 L584 46 L588 43 L591 41 L594 39 L596 37 L598 36 L600 36 L602 36 L604 37 L606 39 L609 41 L612 43 L616 46 L621 50 L626 53 L632 57 L638 60 L646 64 L654 67 L662 69 L671 71 L681 73 L690 74 L700 74 L710 74 L719 73 L729 71 L738 69 L746 67 L754 64 L762 60 L768 57 L774 53 L779 50 L784 46 L788 43 L791 41 L794 39 L796 37 L798 36 L800 36 L802 36 L804 37 L806 39 L809 41 L812 43 L816 46 L821 50 L826 53 L832 57 L838 60 L846 64 L854 67 L862 69 L871 71 L881 73 L890 74 L900 74 L910 74 L919 73 L929 71 L938 69 L946 67 L954 64 L962 60 L968 57 L974 53 L979 50 L984 46 L988 43 L991 41 L994 39 L996 37 L998 36 L1000 36"/></svg>
+
+<section class="sec" id="scope">
+  <div class="wrap scope">
+    <div>
+      <p class="eyebrow">честно о границах</p>
+      <h2>С чем я работаю — и когда посоветую коллегу</h2>
+      <p class="intro">Так вы не потратите время и деньги на специалиста, который вам не подходит.</p>
+      <div class="seg" role="tablist" aria-label="Запросы" id="scopeTabs">
+        <button type="button" role="tab" id="tab-yes" data-tab="yes" aria-controls="scope-yes" aria-selected="true">Работаю</button>
+        <button type="button" role="tab" id="tab-no" data-tab="no" aria-controls="scope-no" aria-selected="false" tabindex="-1">Направлю к коллеге</button>
+      </div>
+      <div role="tabpanel" id="scope-yes" aria-labelledby="tab-yes"><ul class="scope-list">
+        <li><b>Тревога и панические атаки</b><span>Постоянное напряжение, страх за здоровье, избегание ситуаций, приступы паники.</span></li>
+        <li><b>Выгорание и хроническая усталость</b><span>Когда работа съела всё остальное, а отдых не помогает.</span></li>
+        <li><b>Самокритика и самооценка</b><span>Внутренний голос, которому всегда мало; перфекционизм; синдром самозванца.</span></li>
+        <li><b>Повторяющиеся сценарии в отношениях</b><span>Одни и те же конфликты, выбор «не тех» людей, страх близости или одиночества.</span></li>
+        <li><b>Расставания и потери</b><span>Развод, разрыв, смерть близкого, потеря работы или привычной жизни.</span></li>
+        <li><b>Большие перемены</b><span>Переезд, эмиграция, рождение ребёнка, смена профессии.</span></li>
+      </ul></div>
+      <div role="tabpanel" id="scope-no" aria-labelledby="tab-no" hidden><ul class="scope-list">
+        <li><b>Зависимости в активной фазе</b><span>Нужны нарколог и специализированные программы. Подскажу, куда обратиться.</span></li>
+        <li><b>Расстройства пищевого поведения в острой фазе</b><span>Лучше работать в команде с врачом: это вопрос физического здоровья.</span></li>
+        <li><b>Острые психотические состояния</b><span>Сначала — психиатр. Психотерапия может подключиться позже.</span></li>
+        <li><b>Дети и подростки до 16 лет</b><span>Порекомендую детского психолога. С родителями о трудностях с детьми — работаю.</span></li>
+        <li><b>Парная и семейная терапия</b><span>Это отдельная специализация. Дам контакты коллег, которым доверяю.</span></li>
+      </ul></div>
+    </div>
+    <div class="scope-art">
+      <svg class="ill" viewBox="0 0 220 210" aria-hidden="true"><rect class="f" x="100" y="24" width="14" height="170" rx="3"/><path class="f" d="M100 44H36L14 61l22 17h64z"/><path class="f" d="M114 100h68l22 16-22 16h-68z"/><text x="32" y="67" font-size="13">со мной</text><text x="122" y="121" font-size="13">к коллеге</text><path d="M70 194h76"/><path class="th" d="M107 24c-16-4-22 12-8 14 14 2 20-12 6-12M16 61C0 74-2 96 12 110"/></svg>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M0 41 L3 41 L6 42 L10 43 L13 45 L17 47 L22 49 L26 51 L32 54 L38 56 L44 59 L51 61 L58 63 L66 65 L74 67 L83 68 L91 69 L100 69 L109 69 L117 68 L126 67 L134 65 L142 63 L149 61 L156 59 L162 56 L168 54 L174 51 L178 49 L183 47 L187 45 L190 43 L194 42 L197 41 L200 41 L203 41 L206 42 L210 43 L213 45 L217 47 L222 49 L226 51 L232 54 L238 56 L244 59 L251 61 L258 63 L266 65 L274 67 L283 68 L291 69 L300 69 L309 69 L317 68 L326 67 L334 65 L342 63 L349 61 L356 59 L362 56 L368 54 L374 51 L378 49 L383 47 L387 45 L390 43 L394 42 L397 41 L400 41 L403 41 L406 42 L410 43 L413 45 L417 47 L422 49 L426 51 L432 54 L438 56 L444 59 L451 61 L458 63 L466 65 L474 67 L483 68 L491 69 L500 69 L509 69 L517 68 L526 67 L534 65 L542 63 L549 61 L556 59 L562 56 L568 54 L574 51 L578 49 L583 47 L587 45 L590 43 L594 42 L597 41 L600 41 L603 41 L606 42 L610 43 L613 45 L617 47 L622 49 L626 51 L632 54 L638 56 L644 59 L651 61 L658 63 L666 65 L674 67 L683 68 L691 69 L700 69 L709 69 L717 68 L726 67 L734 65 L742 63 L749 61 L756 59 L762 56 L768 54 L774 51 L778 49 L783 47 L787 45 L790 43 L794 42 L797 41 L800 41 L803 41 L806 42 L810 43 L813 45 L817 47 L822 49 L826 51 L832 54 L838 56 L844 59 L851 61 L858 63 L866 65 L874 67 L883 68 L891 69 L900 69 L909 69 L917 68 L926 67 L934 65 L942 63 L949 61 L956 59 L962 56 L968 54 L974 51 L978 49 L983 47 L987 45 L990 43 L994 42 L997 41 L1000 41"/></svg>
+
+<section class="sec" id="education">
+  <div class="wrap">
+    <p class="eyebrow">на чём это держится</p>
+    <h2>Образование и квалификация</h2>
+    <p class="intro">12 лет практики, более 4 000 часов работы с клиентами, супервизия дважды в месяц. Подробности — в карточках, у каждой есть пояснение, что это значит для вас.</p>
+    <div class="ftabs" role="tablist" aria-label="Квалификация" id="eduTabs">
+      <button type="button" class="ftab" role="tab" id="tab-e1" data-tab="e1" aria-controls="edu-e1" aria-selected="true">Базовое</button>
+      <button type="button" class="ftab" role="tab" id="tab-e2" data-tab="e2" aria-controls="edu-e2" aria-selected="false" tabindex="-1">Методы</button>
+      <button type="button" class="ftab" role="tab" id="tab-e3" data-tab="e3" aria-controls="edu-e3" aria-selected="false" tabindex="-1">Супервизия</button>
+      <button type="button" class="ftab" role="tab" id="tab-e4" data-tab="e4" aria-controls="edu-e4" aria-selected="false" tabindex="-1">Этика</button>
+    </div>
+    <div class="fpanel" role="tabpanel" id="edu-e1" aria-labelledby="tab-e1">
+      <details><summary><b>Клиническая психология</b><span>МГУ им. М. В. Ломоносова, факультет психологии, 2008–2013</span></summary>
+        <div class="fbody"><p>Специалитет. Выпускная работа — о когнитивных искажениях при генерализованной тревоге. Практика в психиатрической клинике и кризисном центре.</p>
+        <p class="for-you"><b>Для вас:</b> умею отличать психологические трудности от состояний, где нужен врач, и вовремя скажу, если стоит показаться психиатру или неврологу.</p></div></details>
+      <details><summary><b>Психодиагностика тревожных и депрессивных состояний</b><span>Повышение квалификации, 144 часа, 2014</span></summary>
+        <div class="fbody"><p>Клиническое интервью, стандартизированные опросники, оценка динамики в ходе терапии.</p>
+        <p class="for-you"><b>Для вас:</b> изменения отслеживаем не только «по ощущениям» — при необходимости используем проверенные опросники.</p></div></details>
+    </div>
+    <div class="fpanel" role="tabpanel" id="edu-e2" aria-labelledby="tab-e2" hidden>
+      <details><summary><b>Когнитивно-поведенческая терапия</b><span>Профессиональная переподготовка, 520 часов, 2014–2015</span></summary>
+        <div class="fbody"><p>Базовый и продвинутый курсы: тревожные расстройства, депрессия, панические атаки, ОКР. Итоговая аттестация с разбором записей сессий.</p>
+        <p class="for-you"><b>Для вас:</b> один из самых изученных методов при тревоге и депрессии. Понятная структура: цели, план, измеримые изменения.</p></div></details>
+      <details><summary><b>Схема-терапия</b><span>Обучение по стандартам ISST, 2018–2019</span></summary>
+        <div class="fbody"><p>Теория, практикумы и супервизия клинических случаев по стандартам Международного общества схема-терапии.</p>
+        <p class="for-you"><b>Для вас:</b> помогает, когда проблема тянется годами: повторяющиеся сценарии, жёсткая самокритика, ощущение «со мной что-то не так».</p></div></details>
+      <details><summary><b>Терапия принятия и ответственности (ACT)</b><span>72 часа, 2021</span></summary>
+        <div class="fbody"><p>Работа с переживаниями, которые нельзя «убрать», и опора на личные ценности.</p>
+        <p class="for-you"><b>Для вас:</b> полезно, когда нужно жить с неопределённостью, хронической болезнью или потерей.</p></div></details>
+      <details><summary><b>Протоколы при паническом расстройстве</b><span>36 часов, 2022</span></summary>
+        <div class="fbody"><p>Психообразование, интероцептивная экспозиция, работа с избеганием.</p>
+        <p class="for-you"><b>Для вас:</b> для панических атак существуют структурированные пошаговые протоколы, по ним я и работаю.</p></div></details>
+    </div>
+    <div class="fpanel" role="tabpanel" id="edu-e3" aria-labelledby="tab-e3" hidden>
+      <details><summary><b>Регулярная супервизия</b><span>С 2014 года, дважды в месяц</span></summary>
+        <div class="fbody"><p>Индивидуальная супервизия у коллеги с двадцатилетним стажем и групповая интервизия. Случаи обсуждаются анонимно.</p>
+        <p class="for-you"><b>Для вас:</b> по сложным вопросам у меня есть второе профессиональное мнение — без раскрытия вашей личности.</p></div></details>
+      <details><summary><b>Личная терапия</b><span>Более 180 часов</span></summary>
+        <div class="fbody"><p>Регулярная личная терапия в КПТ и схема-терапии.</p>
+        <p class="for-you"><b>Для вас:</b> я знаю, каково быть по ту сторону, и не приношу в вашу терапию свои нерешённые вопросы.</p></div></details>
+    </div>
+    <div class="fpanel" role="tabpanel" id="edu-e4" aria-labelledby="tab-e4" hidden>
+      <details><summary><b>Член профессиональной ассоциации</b><span>Профессиональная ассоциация специалистов по КПТ, с 2015 года</span></summary>
+        <div class="fbody"><p>Следую этическому кодексу ассоциации. Если вы не согласны с моими действиями, можно обратиться в её этический комитет.</p>
+        <p class="for-you"><b>Для вас:</b> над моей работой есть внешний профессиональный контроль.</p></div></details>
+      <details><summary><b>Конфиденциальность</b><span>Без исключений, кроме одного</span></summary>
+        <div class="fbody"><p>Всё, что вы рассказываете, остаётся между нами. Исключение — прямая угроза жизни, вашей или другого человека. Записи сессий не веду без письменного согласия.</p>
+        <p class="for-you"><b>Для вас:</b> можно говорить о том, о чём больше никому не рассказывали.</p></div></details>
+      <details><summary><b>Документы</b><span>Покажу по запросу</span></summary>
+        <div class="fbody"><p>Сканы дипломов и сертификатов покажу на знакомстве или пришлю заранее — просто попросите.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M0 46 L4 47 L8 47 L13 48 L17 49 L22 50 L27 51 L32 53 L38 54 L43 56 L50 57 L56 59 L63 60 L70 61 L77 62 L85 63 L92 63 L100 64 L108 63 L115 63 L123 62 L130 61 L137 60 L144 59 L150 57 L157 56 L162 54 L168 53 L173 51 L178 50 L183 49 L187 48 L192 47 L196 47 L200 46 L204 47 L208 47 L213 48 L217 49 L222 50 L227 51 L232 53 L238 54 L243 56 L250 57 L256 59 L263 60 L270 61 L277 62 L285 63 L292 63 L300 64 L308 63 L315 63 L323 62 L330 61 L337 60 L344 59 L350 57 L357 56 L362 54 L368 53 L373 51 L378 50 L383 49 L387 48 L392 47 L396 47 L400 46 L404 47 L408 47 L413 48 L417 49 L422 50 L427 51 L432 53 L438 54 L443 56 L450 57 L456 59 L463 60 L470 61 L477 62 L485 63 L492 63 L500 64 L508 63 L515 63 L523 62 L530 61 L537 60 L544 59 L550 57 L557 56 L562 54 L568 53 L573 51 L578 50 L583 49 L587 48 L592 47 L596 47 L600 46 L604 47 L608 47 L613 48 L617 49 L622 50 L627 51 L632 53 L638 54 L643 56 L650 57 L656 59 L663 60 L670 61 L677 62 L685 63 L692 63 L700 64 L708 63 L715 63 L723 62 L730 61 L737 60 L744 59 L750 57 L757 56 L762 54 L768 53 L773 51 L778 50 L783 49 L787 48 L792 47 L796 47 L800 46 L804 47 L808 47 L813 48 L817 49 L822 50 L827 51 L832 53 L838 54 L843 56 L850 57 L856 59 L863 60 L870 61 L877 62 L885 63 L892 63 L900 64 L908 63 L915 63 L923 62 L930 61 L937 60 L944 59 L950 57 L957 56 L962 54 L968 53 L973 51 L978 50 L983 49 L987 48 L992 47 L996 47 L1000 46"/></svg>
+
+<section class="sec" id="price">
+  <div class="wrap">
+    <p class="eyebrow">без сюрпризов</p>
+    <h2>Формат и стоимость</h2>
+    <div class="seg" role="tablist" aria-label="Формат встреч" id="priceTabs">
+      <button type="button" role="tab" id="tab-on" data-tab="on" aria-controls="price-on" aria-selected="true">Онлайн</button>
+      <button type="button" role="tab" id="tab-off" data-tab="off" aria-controls="price-off" aria-selected="false" tabindex="-1">Очно в Москве</button>
+    </div>
+    <div class="price-grid">
+      <div>
+        <div class="price-box" role="tabpanel" id="price-on" aria-labelledby="tab-on">
+          <svg class="ill price-art" viewBox="0 0 260 180" aria-hidden="true"><rect class="f" x="52" y="18" width="156" height="96" rx="10"/><rect class="m n" x="60" y="26" width="140" height="80" rx="5"/><circle class="f" cx="106" cy="58" r="11"/><path class="f" d="M86 98c0-14 8-22 20-22s20 8 20 22z"/><circle class="f" cx="156" cy="58" r="11"/><path class="f" d="M136 98c0-14 8-22 20-22s20 8 20 22z"/><path class="f" d="M30 114h200l-12 22H42z"/><path d="M196 160a22 22 0 0 1 44 0"/><rect class="f" x="190" y="154" width="12" height="22" rx="5"/><rect class="f" x="234" y="154" width="12" height="22" rx="5"/><path class="th" d="M190 168c-30 12-70-18-100-8-30 10-50-10-56-22"/></svg>
+          <p class="price-num">5 500 ₽</p><p class="small">за встречу 50 минут</p>
+          <dl>
+            <div><dt>Где</dt><dd>Zoom или видеозвонок в Telegram</dd></div>
+            <div><dt>Что понадобится</dt><dd>Место, где вас не услышат, и наушники</dd></div>
+            <div><dt>Из других стран</dt><dd>Работаю с любым часовым поясом, время согласуем</dd></div>
+            <div><dt>Когда</dt><dd>Пн–пт с 9 до 21 по Москве</dd></div>
+          </dl>
+        </div>
+        <div class="price-box" role="tabpanel" id="price-off" aria-labelledby="tab-off" hidden>
+          <svg class="ill price-art" viewBox="0 0 200 130" aria-hidden="true"><path class="f" d="M46 14h76v106H46z"/><path class="m n" d="M54 22h60v90H54z"/><path class="f" d="M122 22L164 8v116l-42-12z"/><circle class="k n" cx="152" cy="70" r="3"/><path d="M30 120h150"/><path class="th" d="M20 120c14-8 30 8 46-2s22 4 34 0"/></svg>
+          <p class="price-num">6 500 ₽</p><p class="small">за встречу 50 минут</p>
+          <dl>
+            <div><dt>Где</dt><dd>Очные встречи в Москве по записи</dd></div>
+            <div><dt>Кабинет</dt><dd>Отдельный вход и звукоизоляция — вы не встретите других клиентов</dd></div>
+            <div><dt>Как добраться</dt><dd>Подробности пришлю после записи</dd></div>
+            <div><dt>Когда</dt><dd>Вт, чт, сб с 10 до 19</dd></div>
+          </dl>
+        </div>
+      </div>
+      <ul class="scope-list">
+        <li><b>Знакомство</b><span>20 минут, бесплатно и только онлайн.</span></li>
+        <li><b>Перенос и отмена</b><span>Бесплатно за 24 часа до встречи. Позже встреча оплачивается.</span></li>
+        <li><b>Оплата</b><span>После встречи, переводом или картой. Выдаю чек.</span></li>
+        <li><b>Ритм</b><span>Обычно встречаемся раз в неделю в одно и то же время.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M0 51 L5 51 L10 51 L15 52 L21 52 L26 53 L31 53 L37 54 L43 55 L49 55 L55 56 L61 57 L67 57 L74 58 L80 58 L87 59 L93 59 L100 59 L107 59 L113 59 L120 58 L126 58 L133 57 L139 57 L145 56 L151 55 L157 55 L163 54 L169 53 L174 53 L179 52 L185 52 L190 51 L195 51 L200 51 L205 51 L210 51 L215 52 L221 52 L226 53 L231 53 L237 54 L243 55 L249 55 L255 56 L261 57 L267 57 L274 58 L280 58 L287 59 L293 59 L300 59 L307 59 L313 59 L320 58 L326 58 L333 57 L339 57 L345 56 L351 55 L357 55 L363 54 L369 53 L374 53 L379 52 L385 52 L390 51 L395 51 L400 51 L405 51 L410 51 L415 52 L421 52 L426 53 L431 53 L437 54 L443 55 L449 55 L455 56 L461 57 L467 57 L474 58 L480 58 L487 59 L493 59 L500 59 L507 59 L513 59 L520 58 L526 58 L533 57 L539 57 L545 56 L551 55 L557 55 L563 54 L569 53 L574 53 L579 52 L585 52 L590 51 L595 51 L600 51 L605 51 L610 51 L615 52 L621 52 L626 53 L631 53 L637 54 L643 55 L649 55 L655 56 L661 57 L667 57 L674 58 L680 58 L687 59 L693 59 L700 59 L707 59 L713 59 L720 58 L726 58 L733 57 L739 57 L745 56 L751 55 L757 55 L763 54 L769 53 L774 53 L779 52 L785 52 L790 51 L795 51 L800 51 L805 51 L810 51 L815 52 L821 52 L826 53 L831 53 L837 54 L843 55 L849 55 L855 56 L861 57 L867 57 L874 58 L880 58 L887 59 L893 59 L900 59 L907 59 L913 59 L920 58 L926 58 L933 57 L939 57 L945 56 L951 55 L957 55 L963 54 L969 53 L974 53 L979 52 L985 52 L990 51 L995 51 L1000 51"/></svg>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">спрашивают чаще всего</p>
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details><summary>Психолог, психотерапевт, психиатр — в чём разница?</summary><p>Психиатр — врач: ставит диагнозы и назначает лекарства. Психотерапевт в России — тоже врач, с дополнительной подготовкой. Клинический психолог не назначает лекарства, но работает методами психотерапии и умеет распознать, когда нужна помощь врача. Часто лучший результат даёт сочетание: лечение у психиатра и терапия у психолога.</p></details>
+      <details><summary>Всё останется между нами?</summary><p>Да. Я не рассказываю о вас никому, включая родственников и работодателя. Единственное исключение — прямая угроза жизни. На супервизии случаи обсуждаются без имён и деталей, по которым вас можно узнать.</p></details>
+      <details><summary>А если мы не подойдём друг другу?</summary><p>Так бывает, и это нормально: контакт с терапевтом — один из главных факторов успеха. Скажите об этом прямо — я не обижусь и помогу найти коллегу.</p></details>
+      <details><summary>Нужно сразу рассказывать всё?</summary><p>Нет. Вы решаете, о чём и в каком темпе говорить. Можно просто сказать: «об этом я пока не готов(а)».</p></details>
+      <details><summary>Не знаю, с чего начать разговор</summary><p>Это частая ситуация. Начнём с того, что беспокоит сейчас, а общая картина сложится за первые встречи. Навигатор выше поможет сформулировать запрос — его можно одной кнопкой перенести в заявку.</p></details>
+      <details><summary>Будут домашние задания?</summary><p>Иногда — небольшие упражнения между встречами. Они помогают закрепить сделанное на встрече, но это предложение, а не обязанность.</p></details>
+    </div>
+  </div>
+</section>
+
+<svg class="divider" viewBox="0 0 1000 110" aria-hidden="true"><path pathLength="1" d="M0 55 L6 55 L12 55 L18 55 L24 55 L29 55 L35 55 L41 55 L47 55 L53 55 L59 55 L65 55 L71 55 L76 55 L82 55 L88 55 L94 55 L100 55 L106 55 L112 55 L118 55 L124 55 L129 55 L135 55 L141 55 L147 55 L153 55 L159 55 L165 55 L171 55 L176 55 L182 55 L188 55 L194 55 L200 55 L206 55 L212 55 L218 55 L224 55 L229 55 L235 55 L241 55 L247 55 L253 55 L259 55 L265 55 L271 55 L276 55 L282 55 L288 55 L294 55 L300 55 L306 55 L312 55 L318 55 L324 55 L329 55 L335 55 L341 55 L347 55 L353 55 L359 55 L365 55 L371 55 L376 55 L382 55 L388 55 L394 55 L400 55 L406 55 L412 55 L418 55 L424 55 L429 55 L435 55 L441 55 L447 55 L453 55 L459 55 L465 55 L471 55 L476 55 L482 55 L488 55 L494 55 L500 55 L506 55 L512 55 L518 55 L524 55 L529 55 L535 55 L541 55 L547 55 L553 55 L559 55 L565 55 L571 55 L576 55 L582 55 L588 55 L594 55 L600 55 L606 55 L612 55 L618 55 L624 55 L629 55 L635 55 L641 55 L647 55 L653 55 L659 55 L665 55 L671 55 L676 55 L682 55 L688 55 L694 55 L700 55 L706 55 L712 55 L718 55 L724 55 L729 55 L735 55 L741 55 L747 55 L753 55 L759 55 L765 55 L771 55 L776 55 L782 55 L788 55 L794 55 L800 55 L806 55 L812 55 L818 55 L824 55 L829 55 L835 55 L841 55 L847 55 L853 55 L859 55 L865 55 L871 55 L876 55 L882 55 L888 55 L894 55 L900 55 L906 55 L912 55 L918 55 L924 55 L929 55 L935 55 L941 55 L947 55 L953 55 L959 55 L965 55 L971 55 L976 55 L982 55 L988 55 L994 55 L1000 55"/></svg>
+
+<section class="sec" id="book">
+  <div class="wrap split">
+    <div class="split-side">
+      <p class="eyebrow">первый шаг</p>
+      <h2>Записаться</h2>
+      <p class="intro">Соберите сообщение здесь и отправьте удобным способом. Сайт ничего не хранит: текст уйдёт только туда, куда вы его отправите.</p>
+      <svg class="ill book-end" viewBox="0 0 260 120" aria-hidden="true"><rect class="f" x="20" y="22" width="120" height="80" rx="8"/><path d="M20 30l60 42 60-42"/><path class="th" d="M140 62c30 0 40-14 70-14s30 14 50 14"/><circle class="k n" cx="256" cy="62" r="4"/></svg>
+      <p class="small book-alt">Если удобнее без формы — позвоните по номеру <a href="#">+7(000)000-00-00</a> или напишите в <a href="#">Telegram</a>.</p>
+    </div>
+    <div class="panel">
+      <form class="form" id="bForm" novalidate>
+        <div><label class="lbl" for="bName">Как к вам обращаться</label><input class="field" id="bName" name="name" autocomplete="given-name" placeholder="Имя или как вам удобно" required aria-describedby="bNameErr"><p class="err" id="bNameErr" hidden></p></div>
+        <div><span class="lbl" id="bFmtL">Формат</span>
+          <div class="chips" id="bFmt" role="group" aria-labelledby="bFmtL">
+            <button type="button" class="chip" data-v="бесплатное знакомство, 20 минут" aria-pressed="true">Знакомство, 20 мин</button>
+            <button type="button" class="chip" data-v="онлайн-сессия" aria-pressed="false">Онлайн</button>
+            <button type="button" class="chip" data-v="очная встреча" aria-pressed="false">Очно</button>
+          </div></div>
+        <div><span class="lbl" id="bTimeL">Когда удобно</span>
+          <div class="chips" id="bTime" role="group" aria-labelledby="bTimeL">
+            <button type="button" class="chip" data-v="утро" aria-pressed="false">Утро</button>
+            <button type="button" class="chip" data-v="день" aria-pressed="false">День</button>
+            <button type="button" class="chip" data-v="вечер" aria-pressed="false">Вечер</button>
+            <button type="button" class="chip" data-v="выходные" aria-pressed="false">Выходные</button>
+          </div></div>
+        <div><label class="lbl" for="bTopic">О чём хочется поговорить <span class="small">(необязательно)</span></label><textarea class="field" id="bTopic" name="topic" placeholder="Пара слов — этого достаточно"></textarea></div>
+        <div><span class="lbl" id="bWayL">Где вам ответить</span>
+          <div class="chips" id="bWay" role="group" aria-labelledby="bWayL">
+            <button type="button" class="chip" data-v="Telegram" aria-pressed="true">Telegram</button>
+            <button type="button" class="chip" data-v="WhatsApp" aria-pressed="false">WhatsApp</button>
+            <button type="button" class="chip" data-v="почта" aria-pressed="false">Почта</button>
+          </div>
+          <label class="sr" for="bContact">Контакт</label>
+          <input class="field" id="bContact" name="contact" placeholder="@username" autocomplete="off" required aria-describedby="bContactErr"><p class="err" id="bContactErr" hidden></p></div>
+        <div><label class="check"><input type="checkbox" id="bAgree" aria-describedby="bAgreeErr"><span>Даю согласие на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span></label><p class="err" id="bAgreeErr" hidden></p></div>
+        <button type="submit" class="btn btn-thread" id="bMake">Собрать сообщение</button>
+      </form>
+      <div class="out" id="bOut" hidden tabindex="-1">
+        <h3>Сообщение готово</h3>
+        <pre id="bText"></pre>
+        <div class="out-actions">
+          <a class="btn btn-light" id="bTg" href="#">Отправить в Telegram</a>
+          <a class="btn btn-line" id="bWa" href="#">WhatsApp</a>
+          <a class="btn btn-line" id="bMail" href="#">Письмом</a>
+          <button type="button" class="btn btn-line" id="bCopy">Скопировать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="crisis-slot"></div>
+    <div>
+      <h3>Контакты</h3>
+      <ul class="contacts">
+        <li><a href="#">+7(000)000-00-00</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">Почта</a></li>
+      </ul>
+      <p>Очные встречи в Москве по записи. Онлайн — из любой точки.</p>
+      <p class="small">Психологическое консультирование не является медицинской услугой и не заменяет лечение у врача. Самозанятая Соколова В. А.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet-head">
+    <h2 id="sheetTitle">Что поможет прямо сейчас</h2>
+    <button type="button" class="x" id="sheetClose" aria-label="Закрыть">×</button>
+  </div>
+  <div class="quick">
+    <button type="button" data-quick="breath"><b>Подышать 1 минуту</b><small>Двойной вдох с длинным выдохом помогает при острой тревоге</small></button>
+    <button type="button" data-quick="ground"><b>Вернуться в «здесь и сейчас»</b><small>Заземление 5-4-3-2-1, если накрывает или всё будто нереально</small></button>
+    <button type="button" data-quick="unload"><b>Выгрузить мысли</b><small>Если голова гудит и не отпускает</small></button>
+  </div>
+  <div class="crisis-slot"></div>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<template id="crisisBlock">
+  <div class="crisis">
+    <h3>Если вам сейчас очень плохо</h3>
+    <p>Если есть опасность для жизни прямо сейчас — звоните <a href="tel:112">112</a>.</p>
+    <ul class="phones">
+      <li><a class="num" href="tel:+74959895050">+7 495 989-50-50</a><span>экстренная психологическая помощь МЧС, круглосуточно</span></li>
+      <li><a class="num" href="tel:051">051</a><span>психологическая помощь в Москве, круглосуточно; с мобильного — 8 495 051</span></li>
+      <li><a class="num" href="tel:88002000122">8 800 2000-122</a><span>телефон доверия для детей, подростков и родителей, бесплатно</span></li>
+    </ul>
+    <p>Помогает и ещё один шаг: написать человеку, которому доверяете. Например: «Мне сейчас очень тяжело. Можешь побыть со мной на связи?»</p>
+    <p class="small">Я не веду экстренную помощь и могу ответить не сразу, поэтому в остром состоянии сначала звоните на линию. Если вы не в России — наберите местный номер экстренной службы.</p>
+  </div>
+</template>
+
+</body>
+</html>

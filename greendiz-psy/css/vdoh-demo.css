@@ -1,0 +1,1614 @@
+.vd {
+  --a-paper: #F4EFE6;
+  --a-paper-2: #EAE3D5;
+  --a-card: #FFFDF9;
+  --a-ink: #1B1B1B;
+  --a-soft: #5E5950;
+  --a-line: rgba(27, 27, 27, .13);
+  --a-line-2: rgba(27, 27, 27, .34);
+  --a-ultra: #2B44D6;
+  --a-ultra-soft: #DDE2FA;
+  --a-ease: cubic-bezier(.2, .7, .2, 1);
+  --a-breath: cubic-bezier(.77, 0, .18, 1);
+  margin: 0;
+  width: 100%;
+  max-width: 300px;
+  justify-self: center;
+  display: grid;
+  gap: 14px;
+}
+
+.vd-phone {
+  position: relative;
+  padding: 7px;
+  border: 2px solid var(--ink);
+  border-radius: 44px;
+  background: var(--white);
+  box-shadow: 0 28px 50px -34px rgba(28, 28, 28, .45);
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.vd-glass {
+  container-type: inline-size;
+  border-radius: 36px;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+.vd-screen {
+  position: relative;
+  aspect-ratio: 9/18.4;
+  overflow: hidden;
+  background: var(--a-paper);
+  color: var(--a-ink);
+  font-family: var(--sans);
+  font-size: calc(100cqi / 24);
+  line-height: 1.4;
+}
+
+.vd-status {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+  height: 2.6em;
+  padding: 0 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vd-status b {
+  font-size: .78em;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.vd-island {
+  position: absolute;
+  left: 50%;
+  top: .55em;
+  width: 6.2em;
+  height: 1.55em;
+  margin-left: -3.1em;
+  border-radius: 1em;
+  background: var(--a-ink);
+}
+
+.vd-batt {
+  position: relative;
+  width: 1.55em;
+  height: .78em;
+  border: .09em solid var(--a-ink);
+  border-radius: .22em;
+  padding: .1em;
+}
+
+.vd-batt::after {
+  content: "";
+  position: absolute;
+  right: -.2em;
+  top: .22em;
+  width: .1em;
+  height: .28em;
+  border-radius: 0 .1em .1em 0;
+  background: var(--a-ink);
+}
+
+.vd-batt i {
+  display: block;
+  width: 70%;
+  height: 100%;
+  border-radius: .1em;
+  background: var(--a-ink);
+}
+
+.vd-scene {
+  position: absolute;
+  inset: 2.6em 0 0;
+  padding: 0 1.25em;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .45s ease, visibility 0s linear .45s;
+}
+
+.vd-scene.is-on {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .45s ease .05s, visibility 0s;
+}
+
+.vd-hd {
+  display: flex;
+  align-items: center;
+  gap: .9em;
+  height: 3.4em;
+}
+
+.vd-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  margin-right: auto;
+  font: 500 1.2em/1 var(--serif);
+}
+
+.vd-logo svg {
+  width: 1.3em;
+  height: 1.3em;
+  color: var(--a-ink);
+}
+
+.vd-hd-ic {
+  width: 1.35em;
+  height: 1.35em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.vd-g {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vd-g .d {
+  fill: var(--a-ultra);
+  stroke: none;
+}
+
+.vd-h1 {
+  margin-top: .25em;
+  font: 500 2.55em/1.05 var(--serif);
+  letter-spacing: -.01em;
+}
+
+.vd-hand {
+  position: relative;
+  display: inline-block;
+  margin-top: .1em;
+  font: 400 1.15em/1.2 var(--hand);
+  color: var(--a-ultra);
+}
+
+.vd-hand svg {
+  position: absolute;
+  left: 10%;
+  right: 0;
+  bottom: -.35em;
+  width: 85%;
+  height: .5em;
+  fill: none;
+  stroke: var(--a-ultra);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.vd-ring {
+  position: relative;
+  width: 19em;
+  aspect-ratio: 1;
+  margin: 1.5em auto 0;
+}
+
+.vd-ring-dash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--a-ink);
+  stroke-width: .45;
+  stroke-linecap: round;
+  stroke-dasharray: .35 1.7;
+}
+
+.vd-disk {
+  position: absolute;
+  inset: 19%;
+  border-radius: 50%;
+  background: var(--a-ultra);
+  transform: scale(.86);
+  will-change: transform;
+}
+
+.vd-ring-ava {
+  position: absolute;
+  left: 25%;
+  top: 23%;
+  width: 50%;
+  height: 50%;
+  color: var(--a-ink);
+}
+
+.vd-say {
+  position: relative;
+  height: 1.35em;
+  margin-top: .8em;
+  font: italic 400 1.45em/1.35 var(--serif);
+  text-align: center;
+}
+
+.vd-say span {
+  position: absolute;
+  inset: 0;
+}
+
+.vd-say-out {
+  opacity: 0;
+}
+
+.vd-ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1em;
+  margin-top: 1.5em;
+}
+
+.vd-cb {
+  width: 2.75em;
+  height: 2.75em;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: .1em solid var(--a-line-2);
+}
+
+.vd-cb svg {
+  width: 1.25em;
+  height: 1.25em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vd-cb--main {
+  width: 3.7em;
+  height: 3.7em;
+  background: var(--a-ink);
+  border-color: var(--a-ink);
+  color: var(--a-paper);
+}
+
+.vd-cb--main svg {
+  stroke-width: 2.2;
+}
+
+.vd-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6em;
+  margin-top: 1.6em;
+}
+
+.vd-btn {
+  display: grid;
+  place-items: center;
+  height: 3.2em;
+  border-radius: 2em;
+  border: .1em solid var(--a-line-2);
+  font-size: .88em;
+  font-weight: 500;
+}
+
+.vd-btn--main {
+  background: var(--a-ultra);
+  border-color: var(--a-ultra);
+  color: #fff;
+}
+
+.vd-h2 {
+  font: 500 1.95em/1.1 var(--serif);
+  letter-spacing: -.01em;
+}
+
+.vd-s2 .vd-h2 {
+  margin-top: .2em !important;
+}
+
+.vd-lead {
+  margin-top: .55em;
+  font-size: .86em;
+  line-height: 1.45;
+  color: var(--a-soft);
+}
+
+.vd-field {
+  position: relative;
+  margin-top: 1em;
+  aspect-ratio: 1;
+  border: .1em solid var(--a-ink);
+  border-radius: 1.4em;
+  background: var(--a-card);
+  overflow: hidden;
+}
+
+.vd-axis::before,
+.vd-axis::after {
+  content: "";
+  position: absolute;
+  background: var(--a-line);
+}
+
+.vd-axis::before {
+  left: 50%;
+  top: 6%;
+  bottom: 6%;
+  width: 1px;
+}
+
+.vd-axis::after {
+  top: 50%;
+  left: 4%;
+  right: 4%;
+  height: 1px;
+}
+
+.vd-q {
+  position: absolute;
+  font: 400 .9em/1 var(--hand);
+  color: var(--a-ink);
+}
+
+.vd-q--tl {
+  left: .75em;
+  top: .65em;
+}
+
+.vd-q--tr {
+  right: .75em;
+  top: .65em;
+}
+
+.vd-q--bl {
+  left: .75em;
+  bottom: .7em;
+  color: var(--a-ultra);
+}
+
+.vd-q--br {
+  right: .75em;
+  bottom: .7em;
+}
+
+.vd-dots i,
+.vd-sat i {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.vd-dots i {
+  width: var(--s);
+  height: var(--s);
+  background: var(--a-ink);
+  opacity: var(--o);
+}
+
+.vd-sat i {
+  width: .38em;
+  height: .38em;
+  margin: -.19em 0 0 -.19em;
+  background: var(--a-ultra);
+}
+
+.vd-pt {
+  position: absolute;
+  left: 28%;
+  top: 70%;
+  width: 1.5em;
+  height: 1.5em;
+  margin: -.75em 0 0 -.75em;
+  border-radius: 50%;
+  background: var(--a-ultra);
+}
+
+.vd-pt i {
+  position: absolute;
+  inset: -.95em;
+  border-radius: 50%;
+  border: .1em solid var(--a-ultra);
+  opacity: .35;
+}
+
+.vd-w {
+  position: absolute;
+  padding: .38em .75em;
+  border-radius: 2em;
+  border: .1em solid var(--a-ink);
+  background: var(--a-card);
+  font-size: .76em;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.vd-w--on {
+  background: var(--a-ink);
+  color: var(--a-paper);
+}
+
+.vd-hint {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  padding: .55em .9em;
+  border-radius: .7em;
+  background: var(--a-ink);
+  color: var(--a-paper);
+  font-size: .78em;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.vd-finger {
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  fill: var(--a-card);
+  stroke: var(--a-ink);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vd-field .vd-finger {
+  left: calc(28% - 1em);
+  top: calc(70% - .3em);
+}
+
+.vd-msg {
+  display: flex;
+  align-items: flex-end;
+  gap: .5em;
+  max-width: 92%;
+}
+
+.vd-ava {
+  flex: none;
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: 50%;
+  background: var(--a-paper-2);
+  overflow: hidden;
+  color: var(--a-ink);
+}
+
+.vd-ava svg {
+  width: 100%;
+  height: 100%;
+}
+
+.vd-msg--cont .vd-ava {
+  visibility: hidden;
+}
+
+.vd-bub {
+  padding: .6em .85em;
+  border-radius: 1.15em 1.15em 1.15em .38em;
+  background: var(--a-card);
+  border: 1px solid var(--a-line);
+  font-size: .9em;
+  line-height: 1.4;
+}
+
+.vd-bub--big {
+  background: var(--a-ultra);
+  border-color: var(--a-ultra);
+  color: #fff;
+  font: 500 1.02em/1.25 var(--serif);
+}
+
+.vd-msg--res {
+  margin-top: 1em;
+}
+
+.vd-msg--res2 {
+  margin-top: .4em;
+}
+
+.vd-row-h {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .2em;
+}
+
+.vd-pick {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  height: 2.5em;
+  padding: 0 .95em;
+  border-radius: 2em;
+  border: .1em solid var(--a-line-2);
+  font-size: .78em;
+  font-weight: 500;
+}
+
+.vd-pick svg {
+  width: 1.3em;
+  height: 1.3em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.vd-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .45em;
+  margin-top: 1em;
+}
+
+.vd-tab {
+  display: flex;
+  align-items: center;
+  gap: .4em;
+  min-height: 2.9em;
+  padding: 0 .55em;
+  border-radius: 1em;
+  border: .1em solid var(--a-line-2);
+  font-size: .74em;
+  line-height: 1.15;
+}
+
+.vd-tab .vd-g {
+  flex: none;
+  width: 1.7em;
+  height: 1.7em;
+  stroke-width: 2.4;
+}
+
+.vd-tab b {
+  flex: 1;
+  font-weight: 500;
+}
+
+.vd-tab i {
+  flex: none;
+  min-width: 1.6em;
+  height: 1.6em;
+  display: grid;
+  place-items: center;
+  border-radius: 1em;
+  border: 1px solid currentColor;
+  font-style: normal;
+  font-size: .85em;
+  opacity: .7;
+}
+
+.vd-tab.is-sel {
+  background: var(--a-ink);
+  border-color: var(--a-ink);
+  color: var(--a-paper);
+}
+
+.vd-tab.is-sel .vd-g .d {
+  fill: var(--a-paper);
+}
+
+.vd-folder {
+  position: relative;
+  margin: 1em -.2em 0;
+  padding: 1em 0 1.2em;
+  border-radius: 0 1.5em 1.5em 1.5em;
+  background: var(--a-paper-2);
+}
+
+.vd-folder-sub {
+  padding: 0 1.1em;
+  font-size: .8em;
+  color: var(--a-soft);
+}
+
+.vd-cards-view {
+  overflow: hidden;
+  margin-top: .8em;
+}
+
+.vd-cards {
+  display: flex;
+  gap: .7em;
+  padding: 0 1.1em;
+  width: max-content;
+  will-change: transform;
+}
+
+.vd-card {
+  position: relative;
+  flex: none;
+  width: 14em;
+  min-height: 13.8em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 1.3em;
+  border: 1px solid var(--a-line);
+  background: var(--a-card);
+}
+
+.vd-card-g {
+  width: 3.1em;
+  height: 3.1em;
+}
+
+.vd-heart {
+  position: absolute;
+  top: .9em;
+  right: .9em;
+  width: 1.3em;
+  height: 1.3em;
+  fill: var(--a-ultra);
+  stroke: var(--a-ultra);
+  stroke-width: 1.7;
+}
+
+.vd-card-t {
+  margin-top: .7em;
+  font: 500 1.15em/1.15 var(--serif);
+}
+
+.vd-card-d {
+  margin-top: .4em;
+  font-size: .8em;
+  line-height: 1.4;
+  color: var(--a-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.vd-card-m {
+  margin-top: auto;
+  padding-top: .7em;
+  display: flex;
+  gap: .7em;
+  font-size: .74em;
+  color: var(--a-soft);
+}
+
+.vd-card-m .q::before {
+  content: "";
+  display: inline-block;
+  width: .45em;
+  height: .45em;
+  margin: 0 .4em .1em 0;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+}
+
+.vd-finger--swipe {
+  right: 2.2em;
+  bottom: 2.4em;
+}
+
+.vd-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5em;
+  margin: 0 -1.25em;
+  padding: 0 1.25em;
+  border-bottom: 1px solid var(--a-line);
+}
+
+.vd-bar b {
+  font-size: .9em;
+  font-weight: 500;
+}
+
+.vd-x {
+  width: 2.4em;
+  height: 2.4em;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: .1em solid var(--a-line-2);
+}
+
+.vd-x svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.vd-prog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: .14em;
+}
+
+.vd-prog i {
+  display: block;
+  height: 100%;
+  background: var(--a-ultra);
+  transform-origin: left;
+  transform: scaleX(.22);
+}
+
+.vd-prog--full i {
+  transform: scaleX(1);
+}
+
+.vd-chat {
+  display: flex;
+  flex-direction: column;
+  gap: .45em;
+  padding-top: .9em;
+}
+
+.vd-msg--me {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.vd-msg--me .vd-bub {
+  background: var(--a-ultra);
+  border-color: var(--a-ultra);
+  color: #fff;
+  border-radius: 1.15em 1.15em .38em 1.15em;
+}
+
+.vd-dock {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .8em 1.25em 1.3em;
+  background: linear-gradient(to bottom, rgba(244, 239, 230, 0), var(--a-paper) 26%);
+}
+
+.vd-ans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45em;
+}
+
+.vd-ans--a {
+  position: absolute;
+  left: 1.25em;
+  right: 1.25em;
+  top: .8em;
+  opacity: 0;
+}
+
+.vd-pill {
+  padding: .5em .9em;
+  border-radius: 2em;
+  border: .1em solid var(--a-ink);
+  font-size: .86em;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.vd-ans--a .vd-pill--hit {
+  background: var(--a-ink);
+  color: var(--a-paper);
+}
+
+.vd-tip {
+  margin-top: .8em;
+  font-size: .7em;
+  line-height: 1.4;
+  color: var(--a-soft);
+}
+
+.vd-res-h {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.1em;
+  font-size: .8em;
+  color: var(--a-soft);
+}
+
+.vd-res-ring {
+  position: relative;
+  width: 11.5em;
+  aspect-ratio: 1;
+  margin: .9em auto 0;
+}
+
+.vd-res-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.vd-res-ring circle {
+  fill: none;
+  stroke-width: 7;
+}
+
+.vd-res-ring .bg {
+  stroke: var(--a-line);
+}
+
+.vd-res-ring .fg {
+  stroke: var(--a-ultra);
+  stroke-linecap: round;
+  stroke-dasharray: 276.46;
+  stroke-dashoffset: 116.1;
+}
+
+.vd-res-num {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.vd-res-num b {
+  font: 500 3.3em/1 var(--serif);
+  font-variant-numeric: lining-nums;
+}
+
+.vd-res-num span {
+  margin-top: .3em;
+  font-size: .75em;
+  color: var(--a-soft);
+}
+
+.vd-res-t {
+  margin-top: .75em;
+  font: 500 1.6em/1.1 var(--serif);
+  text-align: center;
+}
+
+.vd-res-p {
+  margin-top: .55em;
+  font-size: .8em;
+  line-height: 1.45;
+  color: var(--a-soft);
+  text-align: center;
+}
+
+.vd-parts {
+  display: grid;
+  gap: .75em;
+  margin-top: 1.1em;
+}
+
+.vd-part {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .35em .7em;
+  font-size: .8em;
+}
+
+.vd-part b {
+  font-weight: 500;
+}
+
+.vd-part i {
+  grid-column: 1/-1;
+  height: .55em;
+  border-radius: 1em;
+  background: var(--a-line);
+  overflow: hidden;
+}
+
+.vd-part i::after {
+  content: "";
+  display: block;
+  height: 100%;
+  border-radius: 1em;
+  background: var(--a-ultra);
+  transform-origin: left;
+  transform: scaleX(var(--v));
+}
+
+.vd-rec-h {
+  margin-top: 1.3em;
+  font-size: .82em;
+  font-weight: 500;
+}
+
+.vd-rec {
+  display: flex;
+  align-items: center;
+  gap: .7em;
+  margin-top: .55em;
+  padding: .75em .9em;
+  border-radius: 1.2em;
+  border: 1px solid var(--a-line);
+  background: var(--a-card);
+}
+
+.vd-rec .vd-g {
+  flex: none;
+  width: 2.3em;
+  height: 2.3em;
+}
+
+.vd-rec span {
+  flex: 1;
+  display: grid;
+}
+
+.vd-rec b {
+  font: 500 1em/1.2 var(--serif);
+}
+
+.vd-rec small {
+  font-size: .72em;
+  color: var(--a-soft);
+}
+
+.vd-rec--mood {
+  margin-top: .7em;
+}
+
+.vd-rec--2 {
+  margin-top: .5em;
+}
+
+.vd-rec em {
+  font-style: normal;
+  font-size: .74em;
+  color: var(--a-soft);
+}
+
+.vd-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.vd-segs {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+}
+
+.vd-seg {
+  flex: 1;
+  height: 32px;
+  padding: 0;
+  position: relative;
+  border: 0;
+  background: none;
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.vd-seg::after {
+  content: "";
+  position: absolute;
+  inset: -6px 0;
+}
+
+.vd-seg i {
+  display: block;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--line);
+  overflow: hidden;
+  transition: height .2s;
+}
+
+.vd-seg:hover i {
+  height: 6px;
+}
+
+.vd-seg b {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.vd-seg.is-done b,
+.vd-seg.is-on b {
+  transform: scaleX(1);
+}
+
+.vd-pp {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: var(--stroke) solid var(--ink);
+  background: var(--white);
+  color: var(--ink);
+  padding: 0;
+  position: relative;
+}
+
+.vd-pp::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+}
+
+.vd-pp svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vd-pp-play {
+  display: none;
+}
+
+.vd-pp[aria-pressed="true"] .vd-pp-pause {
+  display: none;
+}
+
+.vd-pp[aria-pressed="true"] .vd-pp-play {
+  display: block;
+  fill: currentColor;
+  stroke-width: 1.4;
+}
+
+.vd-cap {
+  display: grid;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--graphite);
+  text-wrap: balance;
+}
+
+.vd-cap span {
+  grid-area: 1/1;
+  opacity: 0;
+  transition: opacity .35s;
+}
+
+.vd-cap span.is-on {
+  opacity: 1;
+}
+
+.vd:not(.is-enhanced) .vd-nav {
+  display: none;
+}
+
+.vd.is-run .vd-seg.is-on b {
+  animation: vd-fill var(--d) linear both;
+}
+
+.vd.is-run .is-on .vd-h1 {
+  animation: vd-up .6s var(--a-ease) .1s both;
+}
+
+.vd.is-run .is-on .vd-hand {
+  animation: vd-up .6s var(--a-ease) .25s both;
+}
+
+.vd.is-run .is-on .vd-disk {
+  animation: vd-breath 7.4s var(--a-breath) .3s both;
+}
+
+.vd.is-run .is-on .vd-say-in {
+  animation: vd-say-in 7.4s linear .3s both;
+}
+
+.vd.is-run .is-on .vd-say-out {
+  animation: vd-say-out 7.4s linear .3s both;
+}
+
+.vd.is-run .is-on .vd-hint {
+  animation: vd-hint 2.2s ease .1s both;
+}
+
+.vd.is-run .is-on .vd-field .vd-finger {
+  animation: vd-tap 1.9s var(--a-ease) .5s both;
+}
+
+.vd.is-run .is-on .vd-pt {
+  animation: vd-pop .45s var(--a-ease) 2.05s both;
+}
+
+.vd.is-run .is-on .vd-pt i {
+  animation: vd-pulse 1.8s ease-out 2.1s both;
+}
+
+.vd.is-run .is-on .vd-sat i {
+  animation: vd-in .5s ease 2.25s both;
+}
+
+.vd.is-run .is-on .vd-q--bl {
+  animation: vd-ink .4s ease 2.05s both;
+}
+
+.vd.is-run .is-on .vd-w {
+  animation: vd-pop .4s var(--a-ease) calc(2.55s + var(--i) * .12s) both;
+}
+
+.vd.is-run .is-on .vd-w--on {
+  animation: vd-pop .4s var(--a-ease) calc(2.55s + var(--i) * .12s) both, vd-sel .3s ease 4.3s both;
+}
+
+.vd.is-run .is-on .vd-msg--res {
+  animation: vd-up .5s var(--a-ease) 5.1s both;
+}
+
+.vd.is-run .is-on .vd-msg--res2 {
+  animation: vd-up .5s var(--a-ease) 5.8s both;
+}
+
+.vd.is-run .is-on .vd-heart {
+  animation: vd-heart .55s var(--a-ease) 1s both;
+}
+
+.vd.is-run .is-on .vd-cards {
+  animation: vd-swipe 7.5s var(--a-ease) both;
+}
+
+.vd.is-run .is-on .vd-finger--swipe {
+  animation: vd-swipe-f 7.5s ease both;
+}
+
+.vd.is-run .is-on .vd-chat .vd-msg {
+  animation: vd-up .45s var(--a-ease) var(--t) both;
+}
+
+.vd.is-run .vd-s4.is-on .vd-prog i {
+  animation: vd-prog4 9s ease both;
+}
+
+.vd.is-run .is-on .vd-ans--a {
+  animation: vd-ans-a 9s ease both;
+}
+
+.vd.is-run .is-on .vd-ans--a .vd-pill--hit {
+  animation: vd-hit-a 9s ease both;
+}
+
+.vd.is-run .is-on .vd-ans--b {
+  animation: vd-ans-b 9s ease both;
+}
+
+.vd.is-run .is-on .vd-ans--b .vd-pill--hit {
+  animation: vd-hit-b 9s ease both;
+}
+
+.vd.is-run .is-on .vd-res-ring .fg {
+  animation: vd-ring 1.7s var(--a-breath) .3s both;
+}
+
+.vd.is-run .is-on .vd-res-num {
+  animation: vd-up .5s var(--a-ease) .6s both;
+}
+
+.vd.is-run .is-on .vd-res-t {
+  animation: vd-up .5s var(--a-ease) 1s both;
+}
+
+.vd.is-run .is-on .vd-res-p {
+  animation: vd-up .5s var(--a-ease) 1.2s both;
+}
+
+.vd.is-run .is-on .vd-part {
+  animation: vd-up .5s var(--a-ease) 1.5s both;
+}
+
+.vd.is-run .is-on .vd-part i::after {
+  animation: vd-bar 1.3s var(--a-breath) 1.7s both;
+}
+
+.vd.is-run .is-on .vd-rec-h {
+  animation: vd-up .5s var(--a-ease) 2.8s both;
+}
+
+.vd.is-run .is-on .vd-rec {
+  animation: vd-up .5s var(--a-ease) 3.1s both;
+}
+
+.vd.is-run .is-on .vd-rec--2 {
+  animation-delay: 3.3s;
+}
+
+.vd.is-run .is-on .vd-rec--mood {
+  animation-delay: 6.4s;
+}
+
+.vd.is-paused *,
+.vd.is-off * {
+  animation-play-state: paused !important;
+}
+
+@keyframes vd-fill {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes vd-up {
+  from {
+    opacity: 0;
+    transform: translateY(.8em);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes vd-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes vd-pop {
+  from {
+    opacity: 0;
+    transform: scale(.4);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes vd-breath {
+  0% {
+    transform: scale(.62);
+  }
+
+  42%,
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(.64);
+  }
+}
+
+@keyframes vd-say-in {
+  0% {
+    opacity: 0;
+  }
+
+  6%,
+  42% {
+    opacity: 1;
+  }
+
+  48%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes vd-say-out {
+
+  0%,
+  48% {
+    opacity: 0;
+  }
+
+  55%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes vd-hint {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, .4em);
+  }
+
+  15%,
+  70% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes vd-tap {
+  0% {
+    opacity: 0;
+    transform: translate(4.6em, -5.2em);
+  }
+
+  18% {
+    opacity: 1;
+    transform: translate(4.6em, -5.2em);
+  }
+
+  62% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+  74% {
+    transform: translate(0, 0) scale(.84);
+  }
+
+  84% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(.4em, .8em) scale(1);
+  }
+}
+
+@keyframes vd-pulse {
+  0% {
+    opacity: .9;
+    transform: scale(.3);
+  }
+
+  60% {
+    opacity: .5;
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: .35;
+    transform: scale(1);
+  }
+}
+
+@keyframes vd-ink {
+  from {
+    color: var(--a-ink);
+  }
+
+  to {
+    color: var(--a-ultra);
+  }
+}
+
+@keyframes vd-sel {
+  from {
+    background: var(--a-card);
+    color: var(--a-ink);
+  }
+
+  to {
+    background: var(--a-ink);
+    color: var(--a-paper);
+  }
+}
+
+@keyframes vd-heart {
+  0% {
+    fill: transparent;
+    stroke: var(--a-ink);
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.35);
+  }
+
+  100% {
+    fill: var(--a-ultra);
+    stroke: var(--a-ultra);
+    transform: scale(1);
+  }
+}
+
+@keyframes vd-swipe {
+
+  0%,
+  24% {
+    transform: translateX(0);
+  }
+
+  36%,
+  54% {
+    transform: translateX(-14.7em);
+  }
+
+  66%,
+  100% {
+    transform: translateX(-24.1em);
+  }
+}
+
+@keyframes vd-swipe-f {
+
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  22% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translateX(-7em);
+  }
+
+  39%,
+  50% {
+    opacity: 0;
+    transform: translateX(-7em);
+  }
+
+  52% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  55% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  66% {
+    opacity: 1;
+    transform: translateX(-7em);
+  }
+
+  70%,
+  100% {
+    opacity: 0;
+    transform: translateX(-7em);
+  }
+}
+
+@keyframes vd-prog4 {
+
+  0%,
+  31% {
+    transform: scaleX(.06);
+  }
+
+  34%,
+  62% {
+    transform: scaleX(.14);
+  }
+
+  65%,
+  100% {
+    transform: scaleX(.22);
+  }
+}
+
+@keyframes vd-ans-a {
+
+  0%,
+  14% {
+    opacity: 0;
+    transform: translateY(.6em);
+  }
+
+  18%,
+  28% {
+    opacity: 1;
+    transform: none;
+  }
+
+  31%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes vd-hit-a {
+
+  0%,
+  24% {
+    background: transparent;
+    color: var(--a-ink);
+  }
+
+  26%,
+  100% {
+    background: var(--a-ink);
+    color: var(--a-paper);
+  }
+}
+
+@keyframes vd-ans-b {
+
+  0%,
+  40% {
+    opacity: 0;
+    transform: translateY(.6em);
+  }
+
+  44%,
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes vd-hit-b {
+
+  0%,
+  56%,
+  64%,
+  100% {
+    background: transparent;
+    color: var(--a-ink);
+  }
+
+  58%,
+  61% {
+    background: var(--a-ink);
+    color: var(--a-paper);
+  }
+}
+
+@keyframes vd-ring {
+  from {
+    stroke-dashoffset: 276.46;
+  }
+
+  to {
+    stroke-dashoffset: 116.1;
+  }
+}
+
+@keyframes vd-bar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(var(--v));
+  }
+}
+
+@media (min-width: 960px) {
+  .vd {
+    max-width: 330px;
+  }
+}
+

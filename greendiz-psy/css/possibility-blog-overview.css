@@ -1,0 +1,98 @@
+.gz-possibility-detail--blog .gz-possibility-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 24px 30px;
+  margin-bottom: 20px;
+}
+.gz-possibility-detail--blog .gz-possibility-split > div {
+  min-width: 0;
+}
+.gz-possibility-detail--blog .gz-possibility-split > div > :last-child {
+  margin-bottom: 0;
+}
+.gz-possibility-detail--blog .gz-possibility-visual {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--gz-paper);
+}
+.gz-possibility-detail--blog .gz-possibility-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  animation: gz-possibility-appear .8s ease both;
+  transition: transform .5s ease;
+}
+.gz-possibility-detail--blog .gz-possibility-visual:hover img {
+  transform: scale(1.025);
+}
+.gz-possibility-detail--blog .gz-possibility-steps {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: gz-possibility-step;
+}
+.gz-possibility-detail--blog .gz-possibility-steps > li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 32px 64px;
+  counter-increment: gz-possibility-step;
+}
+.gz-possibility-detail--blog .gz-possibility-steps > li:last-child {
+  padding-bottom: 0;
+}
+.gz-possibility-detail--blog .gz-possibility-steps > li::before {
+  content: counter(gz-possibility-step, decimal-leading-zero);
+  position: absolute;
+  inset: 0 auto auto 0;
+  color: var(--gz-ink);
+  font-family: var(--gz-display-font);
+  font-size: 26px;
+  line-height: 1.2;
+}
+.gz-possibility-detail--blog .gz-possibility-steps > li::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: -5px;
+  left: 44px;
+  width: 1px;
+  background: #b0b0b0;
+}
+.gz-possibility-detail--blog .gz-possibility-steps > li:last-child::after {
+  height: 24px;
+  bottom: auto;
+}
+.gz-possibility-detail--blog .gz-possibility-steps h3 {
+  max-width: 100%;
+  margin: 0 0 12px;
+  padding: 0;
+  background: transparent;
+}
+.gz-possibility-detail--blog .gz-possibility-steps p {
+  margin-bottom: 0;
+}
+.gz-possibility-detail--blog .gz-possibility-cta {
+  display: grid;
+  gap: 24px;
+  margin-top: 28px;
+}
+.gz-possibility-detail--blog .gz-possibility-cta > div > :last-child {
+  margin-bottom: 0;
+}
+@keyframes gz-possibility-appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (min-width: 761px) {
+  .gz-possibility-detail--blog .gz-possibility-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+  .gz-possibility-detail--blog .gz-possibility-split--visual-end {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}

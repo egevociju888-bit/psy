@@ -1,0 +1,39 @@
+.gz-project-dark .gz-brand-dot { background: currentColor; }
+.gz-project-main { flex: 1; min-width: 0; }
+.gz-gipnopro-page { --gz-paper: #fbf8f2; }
+:is(.gz-project-dark, .gz-concept-page) #gz-articles.gz-related-projects {
+  --gz-blue: #f5f5f5;
+  background: var(--gz-paper);
+}
+.gz-project-dark #gz-articles.gz-related-projects {
+  border-top: 1px solid var(--gz-rule);
+}
+:is(.gz-project-dark, .gz-concept-page) #gz-articles .gz-article {
+  --gz-ink: #090d0b;
+  --gz-muted: #686763;
+  --gz-blue: #2e50c8;
+  --gz-sand: #e7e1da;
+  --gz-sand-line: #c7bdb0;
+  background: #fff;
+  color: var(--gz-ink);
+}
+:is(.gz-project-dark, .gz-concept-page) #gz-articles .gz-inline-link.gz-button {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+  color: #111416;
+}
+:is(.gz-project-dark, .gz-concept-page) #gz-articles .gz-inline-link.gz-button:hover {
+  background: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #111416;
+}
+:is(.gz-project-dark, .gz-concept-page) #gz-articles .gz-article:hover {
+  box-shadow: 0 15px 20px -10px #0009;
+}
+:is(.gz-project-dark, .gz-concept-page) #gz-articles :focus-visible:not(.gz-button):not(.gz-icon-action) {
+  outline: 2px solid currentColor;
+  outline-offset: -4px;
+}
+:is(.gz-project-dark, .gz-concept-page) #gz-articles .gz-articles-arrow {
+  --gz-icon-hover-color: #111416;
+}

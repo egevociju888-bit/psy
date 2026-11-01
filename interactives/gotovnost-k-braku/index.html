@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="25 утверждений о том, что вы с партнёром уже обсудили и в чём договорились: решение, деньги, родные, дети, близость и споры.">
+<meta name="referrer" content="no-referrer">
+<title>Готовность к браку</title>
+<style>
+:root{--sidebar-width:240px;--shell-gap:48px;--paper:#f3f0ea;--ink:#151916;--blue:#324bc5;--muted:#62665f;--line:#d6d5cc;--white:#fffdfa;--serif:'GDPSY Lora','Lora',Georgia,serif;--sans:'GDPSY Onest','Onest',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scrollbar-gutter:stable}
+html:has(dialog[open]){overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{cursor:pointer;color:inherit}
+button:disabled{cursor:default;opacity:.45}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+[tabindex='-1']:focus{outline:none}
+[hidden]{display:none!important}
+::selection{background:#dbe0ff}
+a{color:var(--blue);text-underline-offset:4px}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-weight:400;font-family:var(--serif);text-wrap:balance}
+h1,h2{line-height:1.08}
+h1{font-size:clamp(30px,4.2vw,54px);letter-spacing:-.045em;margin-bottom:28px;overflow-wrap:break-word}
+h2,h3{letter-spacing:-.035em}
+h2{font-size:52px;margin-bottom:24px}
+h3{font-size:29px;line-height:1.25;margin-bottom:16px}
+em{color:var(--blue);font-weight:400}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.small{font-size:14px;line-height:1.6;color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.quiz{max-width:1240px;margin:auto;padding:42px 48px 36px;min-height:100svh}
+.view{animation:reveal .45s cubic-bezier(.16,1,.3,1) both}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:54px;padding:14px 20px;border-radius:3px;border:1px solid var(--blue);font-size:16px;line-height:1.4;transition:background .2s,transform .2s,color .2s}
+.primary{background:var(--blue);color:white}
+.primary:hover{background:#253ca9}
+.secondary{background:transparent;border-color:var(--line)}
+.secondary:hover{background:#e8e5dd}
+.primary:active,.secondary:active{transform:translateY(1px)}
+.wide{width:100%}
+.text-button{background:none;border:0;border-bottom:1px solid #a6afd9;padding:6px 0 3px;min-height:36px;font-size:14px;color:var(--blue);line-height:1.5;text-align:left}
+.text-button:hover{border-color:var(--blue)}
+.quiet{color:var(--muted);border-color:var(--line)}
+.intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--shell-gap);align-items:start;padding-top:28px}
+.intro-copy{padding-top:26px;min-width:0}
+.intro-copy>.eyebrow{color:var(--muted);margin-bottom:28px}
+.lead{font-size:17px;line-height:1.65;max-width:430px;margin-bottom:22px}
+.intro-note{max-width:390px;font-size:13px}
+.intro-card{background:var(--white);border-radius:6px;padding:22px 30px 24px;min-width:0}
+.art{max-width:250px;margin:0 auto 10px}
+.art svg{width:100%;height:auto;display:block}
+.float-one{animation:floatOne 7s ease-in-out infinite}
+.float-two{animation:floatTwo 8s ease-in-out infinite}
+.art-caption{font:italic 23px/1.4 var(--serif);color:var(--blue);text-align:center;margin-bottom:22px}
+.intro-meta{text-align:center;font-size:14px;color:var(--muted);margin-bottom:18px}
+.check-list,.consent-box,.consent,.form-error,.mode-buttons{max-width:520px;margin-left:auto;margin-right:auto}
+.check-list{padding:0;list-style:none;margin-top:0;margin-bottom:24px;font-size:15px}
+.check-list li{position:relative;padding:13px 0 13px 27px;border-top:1px solid var(--line)}
+.check-list li:first-child{border:0;padding-top:0}
+.check-list li:before{content:'—';position:absolute;left:0;color:var(--blue)}
+.consent-box{background:#eef0f6;padding:12px 14px;margin-top:0;margin-bottom:14px;border-radius:4px}
+.consent-row{display:flex;align-items:center;gap:12px}
+.consent-label{flex:1;display:flex;align-items:center;gap:10px;font-size:15px;line-height:1.55;cursor:pointer}
+.consent-label input{width:20px;height:20px;flex:none;accent-color:var(--blue);margin:0}
+.help-toggle{display:grid;place-items:center;width:28px;height:28px;min-width:28px;padding:0;border:0;border-radius:50%;background:#e1e5f4;color:var(--muted);font-weight:600;transition:background .2s,color .2s}
+.help-toggle:hover,.help-toggle[aria-expanded=true]{background:#dbe1f8;color:var(--blue)}
+.consent-details{padding-top:12px;font-size:14px;line-height:1.55;animation:reveal .25s ease both}
+.consent-details p{margin:0 0 10px}
+.consent-details ul{margin:0 0 12px;padding-left:20px}
+.consent-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.consent-actions .secondary{min-height:40px;padding:8px 16px;font-size:14px;background:white}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:0;margin-bottom:6px;font-size:15px;cursor:pointer}
+.consent input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:var(--blue)}
+.form-error{margin-top:6px;margin-bottom:14px;font-size:14px;font-weight:500}
+.form-error:empty{display:none}
+.mode-buttons{display:grid;gap:10px;margin-top:6px}
+.privacy{text-align:center;margin:17px 0 0;font-size:13px;color:var(--muted)}
+.intro-links{text-align:center;margin-top:12px}
+.stage{display:grid;grid-template-columns:var(--sidebar-width) minmax(0,1fr);gap:var(--shell-gap);align-items:start;padding-top:28px}
+.side-copy{padding-top:26px;position:sticky;top:35px}
+.side-copy h2{font-size:42px;line-height:1.13}
+.side-copy>p{color:var(--muted);font-size:15px;max-width:210px}
+.side-meta{margin-top:52px}
+.side-meta span{display:block;font-size:13px;color:var(--muted);margin-bottom:12px}
+.panel{background:#faf8f3;border-radius:6px;min-width:0;overflow:hidden}
+.panel-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:15px;padding:17px 26px;font-size:13px}
+.panel-top .text-button{font-size:12px;min-height:30px}
+.progress-track{height:3px;background:#e4e3dd}
+.progress-track span{height:100%;background:var(--blue);display:block;width:0;transition:width .4s ease}
+.question-area{padding:32px 30px 24px}
+.topic{color:var(--muted);font-size:13px;margin-bottom:20px}
+.bubble{background:white;padding:24px 25px;border-radius:17px 17px 17px 3px;position:relative}
+.bubble h2{font:400 24px/1.45 var(--sans);letter-spacing:-.025em;margin:0;text-wrap:pretty}
+.answer-area{padding:24px 30px 26px;border-top:1px solid var(--line)}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend{font-size:14px;margin-bottom:18px;padding:0}
+.answers{display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:6px}
+.answer{position:relative;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:13px;border-radius:4px;padding:8px 3px 12px;line-height:1.4;font-size:14px;transition:background .2s,color .2s}
+.answer input{appearance:none;width:20px;height:20px;border:1.5px solid #929bb8;border-radius:50%;background:#faf8f3;margin:0;flex:none;cursor:pointer;transition:background .2s,box-shadow .2s;outline-offset:3px}
+.answer input:checked{background:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 4px #fff}
+.answer:has(input:checked){background:#e8ebf7;color:var(--blue)}
+.answer:hover{background:#eef0f6}
+.navigation{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:22px}
+.navigation .primary{min-width:165px}
+.navigation .text-button{flex-shrink:0}
+.question-footer{margin:16px 0 0;font-size:12px;color:var(--muted)}
+.safe-box{margin:0 0 24px;padding:20px 24px;border:2px solid var(--ink);border-radius:5px;background:var(--white)}
+.safe-box p{margin:0 0 10px}
+.safe-box p:last-child{margin-bottom:0}
+.result-content{min-width:0}
+.result-heading{margin:0 0 26px}
+.result-heading h2{font-size:43px;margin-bottom:0}
+.result-heading .small{max-width:580px;margin:16px 0 0}
+.result-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.map-card{background:var(--blue);color:white;padding:30px;border-radius:5px;min-width:0}
+.map-card h3{font-size:31px;margin:0 0 15px}
+.map-card .eyebrow{color:#dfe4ff;margin-bottom:10px}
+.map-key{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:#e4e8ff;margin:0 0 28px}
+.key{display:inline-flex;gap:8px;align-items:center}
+.key:before{content:'';width:10px;height:10px;background:var(--paper);border-radius:50%}
+.key.second:before{border-radius:1px;background:#b7c6ff;transform:rotate(45deg)}
+.map-row{margin-bottom:25px}
+.map-row:last-child{margin-bottom:0}
+.row-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.row-name{font-size:15px}
+.row-values{font-size:11px;color:#e0e6ff;text-align:right}
+.row-note{margin:11px 0 0;font-size:13px;line-height:1.55;color:#e0e6ff}
+.track{height:24px;position:relative;margin:0 8px;background:linear-gradient(90deg,transparent calc(25% - .5px),#7487de calc(25% - .5px),#7487de calc(25% + .5px),transparent calc(25% + .5px),transparent calc(50% - .5px),#7487de calc(50% - .5px),#7487de calc(50% + .5px),transparent calc(50% + .5px),transparent calc(75% - .5px),#7487de calc(75% - .5px),#7487de calc(75% + .5px),transparent calc(75% + .5px));background-size:100% 8px;background-repeat:no-repeat;background-position:center}
+.track:before{content:'';position:absolute;height:1px;top:50%;left:0;right:0;background:#8999e5}
+.dot{position:absolute;left:var(--x);top:50%;width:13px;height:13px;border:2px solid var(--paper);background:var(--paper);border-radius:50%;transform:translate(-50%,-50%);animation:marker .7s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--delay,0s)}
+.dot.second{background:#b7c6ff;border-color:#b7c6ff;border-radius:1px;transform:translate(-50%,-50%) rotate(45deg)}
+.track.paired .dot.first{top:25%}
+.track.paired .dot.second{top:75%}
+.scale-labels{display:flex;justify-content:space-between;color:#e0e6ff;font-size:11px;margin-top:22px}
+.map-note{font-size:12px;line-height:1.65;color:#e0e6ff;border-top:1px solid #7183da;padding-top:18px;margin:22px 0 0}
+.insight-card{background:var(--white);border-radius:5px;padding:30px;display:flex;flex-direction:column;gap:22px}
+.insight{padding-bottom:20px;border-bottom:1px solid var(--line)}
+.insight:last-child,.insight:has(+ .insight[hidden]){border:0;padding:0}
+.insight .eyebrow{font-size:11px;color:var(--muted);margin:0 0 10px}
+.insight p{font-size:15px;line-height:1.65}
+.insight p:last-child{margin-bottom:0}
+.result-step{display:grid;grid-template-columns:1fr;gap:10px;margin-top:28px;padding:30px;background:#e6e8f0;border-radius:5px}
+.result-step>.eyebrow{color:var(--blue);font-size:12px;padding-top:6px;margin-bottom:7px}
+.result-step p{max-width:750px;margin:0}
+.fill{display:block;height:100%;width:0;border-radius:4px;background:var(--blue);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.vlist{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.vitem{padding:14px 16px;border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+.vitem p{margin:0 0 8px;font-size:15px;line-height:1.6}
+.vitem p:last-child{margin-bottom:0}
+.vmeta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{padding:1px 10px;border:1px solid var(--line);border-radius:99px;font-size:12px;color:var(--muted);background:var(--white)}
+.center-card{background:var(--white);border-radius:5px;padding:30px;margin-top:28px}
+.center-card .small{margin:0 0 18px;max-width:640px}
+.code-row{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-bottom:10px}
+.code-row code{flex:1 1 220px;min-width:0;display:flex;align-items:center;padding:10px 14px;border:1px dashed #a6afd9;border-radius:3px;background:var(--paper);font:500 17px/1.4 var(--sans);letter-spacing:.04em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;user-select:all}
+.field-label{display:block;margin:20px 0 8px;font-size:14px;color:var(--muted)}
+.inp{flex:1 1 220px;min-width:0;min-height:54px;padding:10px 14px;border:1px solid var(--line);border-radius:3px;background:var(--paper);color:var(--ink);font:16px/1.4 var(--sans);letter-spacing:.04em}
+.inp:focus{border-color:var(--blue)}
+.cmp-out:not(:empty){margin-top:22px}
+.cmp-out .map-card{margin-bottom:22px}
+.hint{margin:22px 0 0;font-size:14px;color:var(--muted)}
+.result-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.result-actions>*{min-width:220px}
+.result-footer{border-top:1px solid var(--line);padding-top:20px;margin-top:26px}
+.result-footer p{max-width:680px;margin:0 0 12px;font-size:13px}
+dialog{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;max-width:720px;width:calc(100% - 32px);padding:0;max-height:85svh;overflow:hidden;font:16px/1.65 var(--sans)}
+dialog[open]{display:flex;flex-direction:column}
+dialog::backdrop{background:#15191680;backdrop-filter:blur(3px)}
+.dialog-head{padding:30px 65px 18px 32px;position:relative;flex-shrink:0}
+.dialog-head h2{font-size:36px;margin:0}
+.dialog-close{position:absolute;right:12px;top:12px;width:44px;height:44px;background:none;border:0;font-size:28px}
+.dialog-body{padding:0 32px 30px;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#8996d9 #e9e7df;min-height:0}
+.dialog-body h3{font-size:25px;margin-top:27px}
+.dialog-body p,.dialog-body li{font-size:15px}
+.dialog-body ul,.dialog-body ol{padding-left:21px}
+.dialog-body li{margin-bottom:13px}
+.dialog-body a{overflow-wrap:anywhere}
+.dialog-body>:last-child{margin-bottom:0}
+.dialog-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+@media(min-width:1450px){
+.quiz{padding-top:60px}
+}
+@media(max-width:1050px){
+:root{--sidebar-width:190px;--shell-gap:28px}
+.quiz{padding:32px 28px}
+.lead{font-size:16px}
+.intro-copy>.eyebrow{font-size:11px}
+.side-copy h2{font-size:36px}
+.result-grid{gap:18px}
+.map-card,.insight-card{padding:25px}
+.result-heading h2{font-size:40px}
+}
+@media(min-width:801px) and (max-width:1050px),(max-width:540px){
+.row-head{display:block}
+.row-values{display:block;text-align:left;margin-top:3px}
+}
+@media(max-width:800px){
+.stage{display:block;padding-top:0;max-width:680px;margin:auto}
+.side-copy{display:none}
+}
+@media(max-width:700px){
+.quiz{padding:28px 20px}
+h1{font-size:clamp(30px,8.4vw,46px);margin-bottom:22px}
+.intro{display:block;padding-top:0}
+.intro-copy{padding-top:0;margin-bottom:30px}
+.intro-copy>.eyebrow{margin-bottom:21px}
+.lead{font-size:18px;max-width:500px}
+.intro-note{max-width:500px}
+.intro-card{padding:20px 24px}
+.art-caption{font-size:22px}
+.result-step{padding:25px}
+.result-actions>*{width:100%;min-width:0}
+.dialog-head{padding:28px 60px 18px 24px}
+.dialog-head h2{font-size:32px}
+.dialog-body{padding:0 24px 28px}
+}
+@media(max-width:540px){
+.quiz:has(.stage:not([hidden])){padding:16px}
+.primary,.secondary{font-size:15px}
+.panel-top{gap:10px;padding:12px 18px}
+.question-area{padding:24px 18px 20px}
+.topic{margin-bottom:15px}
+.bubble{padding:20px}
+.bubble h2{font-size:21px}
+.answer-area{padding:20px 18px 22px}
+.answers{grid-template-columns:1fr;gap:7px}
+.answer{flex-direction:row;gap:13px;text-align:left;padding:12px 14px;min-height:48px;border:1px solid var(--line);background:white;font-size:15px}
+.answer input{width:18px;height:18px}
+.navigation{gap:15px;margin-top:20px}
+.navigation .primary{min-width:145px}
+.map-card,.insight-card{padding:24px}
+.map-row{margin-bottom:22px}
+.row-values{margin-top:4px}
+.scale-labels{font-size:10px}
+.result-heading h2{font-size:36px}
+.result-step{padding:22px}
+.result-actions{gap:10px}
+.center-card{padding:22px 18px}
+.code-row>.secondary{width:100%}
+dialog{max-height:90svh}
+.dialog-actions>*{width:100%}
+}
+</style>
+</head>
+<body>
+<noscript><p class="noscript">Чтобы пройти тест, включите JavaScript в браузере. Ответы обрабатываются на вашем устройстве.</p></noscript>
+<main class="quiz" id="mar-dlg" data-view="intro">
+<section id="mar-intro" class="intro view" aria-labelledby="mar-title">
+ <div class="intro-copy"><p class="eyebrow">Тест · отношения</p><h1 id="mar-title">Готовность<br><em>к браку.</em></h1><p class="lead">25 утверждений о том, что вы с партнёром уже обсудили и в чём договорились: решение, деньги, родные, дети, близость и споры.</p><p class="small intro-note">Это не прогноз и не оценка вашего брака. Если пункт не подходит к вашей ситуации, выберите ответ, который ближе.</p></div>
+ <div><div class="intro-card"><div class="art" aria-hidden="true"><svg viewBox="0 0 360 275" fill="none"><path d="M35 244H328" stroke="#d6d5cc"/><path d="M78 241V124C78 77 109 45 151 45C193 45 224 77 224 124V241" fill="#e9e5dc"/><path d="M110 241V132C110 98 128 76 151 76C174 76 192 98 192 132V241" fill="#d5dcf6"/><path d="M110 241V132C110 98 128 76 151 76" stroke="#424b42" stroke-width="1.5" stroke-linecap="round"/><g class="float-one"><circle cx="262" cy="150" r="30" stroke="#324bc5" stroke-width="5"/></g><g class="float-two"><circle cx="298" cy="150" r="30" stroke="#8795d1" stroke-width="5"/></g><circle cx="300" cy="60" r="8" fill="#324bc5"/><path d="M48 232C48 214 54 205 66 201C68 217 61 227 48 232Z" fill="#bfc6a8"/><path d="M48 244V225" stroke="#65704f" stroke-width="1.5"/></svg></div><p class="art-caption">Шаг за шагом, вдвоём</p><p class="intro-meta">25 вопросов · около 10 минут</p><ul class="check-list"><li>Тест показывает не «готовы вы или нет», а карту: какие темы у вас ясны, а какие ещё ждут разговора.</li><li>Отвечайте о том, как есть сейчас, а не о том, как «должно быть». Правильных ответов нет.</li><li>Проходите отдельно от партнёра, не обсуждая ответы заранее. Сравнить результаты можно в конце.</li><li>Ответы не сохраняются и никуда не отправляются: закроете страницу, и они исчезнут.</li></ul><div class="consent-box"><div class="consent-row"><label class="consent-label"><input type="checkbox" id="mar-consent" aria-describedby="mar-consent-help"><span>Разрешить копирование кода</span></label><button type="button" class="help-toggle" id="mar-consent-info" aria-label="Как работает копирование кода" aria-expanded="false" aria-controls="mar-consent-details">?</button></div><div class="consent-details" id="mar-consent-details" hidden><p id="mar-consent-help">Тест можно пройти без разрешения. Результат будет виден только на этой странице и исчезнет после её закрытия или обновления.</p><p>Если поставить галочку, в конце появится код результата, который можно скопировать и отправить партнёру для сравнения.</p><p>Код содержит только пять чисел, по одному на сферу. Ничего не копируется и не отправляется само: копирование — отдельное действие по кнопке.</p><div class="consent-actions"><button type="button" class="secondary" id="mar-consent-understood">Понятно</button><button type="button" class="text-button" id="mar-consent-decline">Не разрешать</button></div></div></div><div class="mode-buttons"><button class="primary wide" type="button" id="mar-start">Начать</button></div><p class="privacy">Ответы никуда не отправляются.<br>Для самоанализа, без постановки диагноза.</p></div><div class="intro-links"><button class="text-button" type="button" data-about>О подходе и источниках</button></div></div>
+</section>
+<section id="mar-quiz" class="stage view" hidden>
+ <aside class="side-copy"><p class="eyebrow">Готовность к браку</p><h2>Что ясно,<br>а что ждёт<br><em>разговора.</em></h2><p>Отвечайте о том, как есть сейчас, а не как «должно быть».</p><div class="side-meta"><span>Каждый ответ можно изменить.</span><button class="text-button" type="button" data-about>О тесте</button></div></aside>
+ <div class="panel"><div class="panel-top"><span id="mar-count"></span><button class="text-button quiet" type="button" data-exit>Завершить</button></div><div class="progress-track" id="mar-progress" role="progressbar" aria-label="Пройдено вопросов" aria-valuemin="0" aria-valuemax="25" aria-valuenow="0"><span id="mar-bar"></span></div><div id="mar-q"><div class="question-area"><p class="topic" id="mar-eyebrow"></p><div class="bubble"><h2 id="mar-legend" tabindex="-1"></h2></div></div><div class="answer-area"><fieldset aria-labelledby="mar-legend"><legend>Насколько это про вас?</legend><div class="answers" id="mar-opts"></div></fieldset><div class="navigation"><button class="text-button quiet" type="button" id="mar-back">← Назад</button><button class="primary" type="button" id="mar-next" disabled>Дальше</button></div><p class="question-footer">Ответ можно изменить: вернитесь кнопкой «Назад».</p></div></div></div>
+</section>
+<section id="mar-result" class="stage view result-shell" hidden>
+ <aside class="side-copy"><p class="eyebrow">Готовность к браку</p><h2>Ваш<br><em>результат.</em></h2><p>Он остаётся на этой странице и никуда не отправляется.</p><div class="side-meta"><span>Можно пройти заново.</span><button class="text-button" type="button" data-about>О тесте</button></div></aside>
+ <div class="result-content"><div class="result-heading"><h2 id="mar-rtitle" tabindex="-1">Что у вас уже ясно, а что ждёт разговора</h2><p class="small">Это ваш взгляд на сегодня, а не диагноз. Результат — повод для разговора.</p></div><div class="safe-box" id="mar-safe" hidden><p>Вы отметили, что бывает страшно сказать партнёру о сомнениях. Если вы боитесь его реакции, не показывайте ему этот результат и не сравнивайте ответы.</p><p>Лучше обсудить это отдельно со специалистом: если есть страх за безопасность, сначала стоит работать индивидуально, а не вдвоём. Если вам угрожает опасность, звоните 112.</p></div><div class="result-grid"><div class="map-card"><p class="eyebrow">Ваш результат</p><h3>По пяти сферам</h3><div id="mar-rows"></div><div class="scale-labels"><span>Нужен разговор</span><span>Ясно</span></div><p class="map-note">Метки показывают, насколько ясна каждая сфера, по шкале от 0 до 100. Это карта для разговора, а не оценка.</p></div><div class="insight-card"><div class="insight"><p class="eyebrow">Общая картина</p><p id="mar-overall"></p></div><div class="insight" id="mar-press" hidden><p class="eyebrow">Отдельно</p><p>Вы отметили, что на решение о браке могло влиять давление. Это стоит обсудить отдельно, например на индивидуальной консультации: решение должно быть вашим.</p></div></div></div><div class="result-step"><p class="eyebrow">Следующий шаг</p><div><p id="mar-start-hint"></p></div></div><section class="center-card share" id="mar-share"><h3>Сравнить с партнёром</h3><p class="small">Код содержит только пять чисел, по одному на сферу. Отправляйте его, только если вам спокойно это делать. Партнёр проходит тест сам и вводит ваш код, вы вводите его.</p><div id="mar-codebox"><div class="code-row"><code id="mar-code"></code><button class="secondary" type="button" id="mar-copy">Скопировать код</button></div><p class="small" id="mar-copy-st" role="status"></p></div><p class="small" id="mar-nocode" hidden>Вы не разрешали копирование кода, поэтому он не показан. Чтобы получить код, пройдите тест заново и отметьте разрешение на первом экране.</p><label class="field-label" for="mar-partner">Код партнёра</label><div class="code-row"><input class="inp" id="mar-partner" maxlength="28" autocomplete="off" spellcheck="false" placeholder="M1-72-50-88-31-60"><button class="secondary" type="button" id="mar-cmp">Сравнить</button></div><p class="form-error" id="mar-cmp-err" role="alert"></p><div class="cmp-out" id="mar-cmp-out" aria-live="polite"></div></section><div class="result-actions"><button class="primary" type="button" id="discuss">Обсудить со специалистом</button><button class="secondary" type="button" id="mar-again">Пройти заново</button></div><div class="result-footer"><p class="small">Тест — авторский и неклинический. Он не ставит диагноз и не заменяет консультацию специалиста.</p><button class="text-button" type="button" data-about>О тесте</button></div></div>
+</section>
+</main>
+<dialog id="mar-about" aria-labelledby="mar-about-title"><div class="dialog-head"><h2 id="mar-about-title">О подходе<br><em>и источниках.</em></h2><button class="dialog-close" type="button" aria-label="Закрыть" data-close>×</button></div><div class="dialog-body"><h3>Что показывает результат</h3><p>25 утверждений делятся на пять сфер по пять: решение, деньги и обязанности, границы новой семьи, дети и родительство, близость и споры.</p><p>Вариантам от «Совсем не про нас» до «Точно про нас» соответствуют значения от 0 до 4. Для каждой сферы считается среднее значение и переводится в шкалу 0–100. Слова «Нужен разговор», «Часть обсуждена» и «Ясно» соответствуют условным границам: ниже 50, от 50 до 74 и от 75. Это не психологические нормы.</p><p>Один из вопросов — о давлении при решении о браке: при низком ответе показывается отдельная заметка. Другой вопрос — о том, можно ли без страха сказать партнёру о сомнениях: он входит в расчёт наравне с остальными, а при ответе, говорящем о страхе, вместо кода для сравнения показывается отдельный блок.</p><h3>На чём основано</h3><p>Пункты составлены автором: готового валидированного опросника на русском языке найти не удалось.</p><p>Выбор тем опирается на исследования готовности к браку [1, 2]: в них её описывают через межличностные навыки, долгосрочные обязательства, заботу о других, а также финансовую, эмоциональную, семейно-ролевую и сексуальную готовность и социальную ответственность.</p><p>Сфера «Решение» опирается на идею «решать, а не скользить» [3]: риск связывают с тем, что пары переходят к совместной жизни, помолвке или браку без явного решения. Шкала измеряет, насколько тема обсуждена и ясна, а не «правильность» ответа.</p><p>Результат — повод для разговора, а не вывод: мета-анализ добрачного обучения показывает неоднозначные и скромные эффекты [4].</p><h3>Источники</h3><ol><li><a href="https://scholarsarchive.byu.edu/facpub/4345" target="_blank" rel="noopener noreferrer">Carroll J. S., Badger S., Willoughby B. J., Nelson L. J., Madsen S. D., Barry C. M. (2009). Ready or not? Criteria for marriage readiness among emerging adults. Journal of Adolescent Research, 24(3), 349–375.</a><br>Выборка из 788 молодых людей: готовность к браку описывают как развитие межличностных навыков, долгосрочные обязательства и способность заботиться о других.</li><li><a href="https://avesis.hacettepe.edu.tr/yayin/97c318f7-9c45-42fb-a56e-6de475a0ce59/factors-associated-with-marital-readiness-among-turkish-young-adults" target="_blank" rel="noopener noreferrer">Keldal G., Yıldırım İ. (2022). Factors associated with marital readiness among Turkish young adults. Family Relations, 71(1), 307–324.</a><br>Шесть тем: финансовая, эмоциональная, межличностная, семейно-ролевая и сексуальная готовность, социальная ответственность.</li><li>Stanley S. M., Rhoades G. K., Markman H. J. (2006). Sliding versus deciding: inertia and the premarital cohabitation effect. Family Relations, 55, 499–509.<br>Оригинал не открывался; выходные данные подтверждены списком литературы другой работы.</li><li><a href="https://scholarsarchive.byu.edu/facpub/4230" target="_blank" rel="noopener noreferrer">Fawcett E. B., Hawkins A. J., Blanchard V. L., Carroll J. S. (2010). Do premarital education programs really work? A meta-analytic study. Family Relations, 59, 232–239.</a><br>Мета-анализ 47 исследований: эффекты неоднозначные и скромные; для навыков общения они заметнее.</li></ol><h3>Границы</h3><p>Это авторское упражнение для самонаблюдения. Оно не является стандартизированным или валидированным психологическим тестом, не оценивает личность и не ставит диагноз, не прогнозирует будущее отношений. Результат отражает ваш взгляд сегодня и не заменяет консультацию специалиста.</p><h3>Ваши ответы</h3><p>Ответы обрабатываются в памяти этой страницы, не отправляются на сервер и удаляются при перезагрузке, при выходе кнопкой «Завершить и очистить» и при повторном прохождении. Код для сравнения содержит пять чисел — результаты по сферам. Код копируется только по вашей команде.</p></div></dialog>
+<dialog id="mar-exit" aria-labelledby="mar-exit-title"><div class="dialog-head"><h2 id="mar-exit-title">Завершить<br><em>тест?</em></h2><button class="dialog-close" type="button" aria-label="Закрыть" data-close>×</button></div><div class="dialog-body"><p>Ответы будут удалены с этой страницы. Вы сможете начать заново.</p><div class="dialog-actions"><button class="primary" type="button" id="mar-exit-ok">Завершить и очистить</button><button class="secondary" type="button" data-close>Остаться</button></div></div></dialog>
+<script>
+(function(){
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+  const mk = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  const band = p => p >= 75 ? 2 : p >= 50 ? 1 : 0;
+  const grow = pairs => requestAnimationFrame(() => requestAnimationFrame(() => pairs.forEach(([f, v]) => { f.style.width = v + "%"; })));
+  const DASH = /[‐-―−]/g;
+  const CODE_ERR_TAIL = "Не получилось прочитать код. Он выглядит так: ";
+  const openDialog = d => { if (d) (d.showModal ? d.showModal() : d.setAttribute("open", "")); };
+  const closeDialog = d => { if (d) (d.close ? d.close() : d.removeAttribute("open")); };
+
+  async function copyText(text, host){
+    try { await navigator.clipboard.writeText(text); return true; }
+    catch(_) {
+      const ta = mk("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;opacity:0";
+      host.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try { ok = document.execCommand("copy"); } catch(__) {}
+      ta.remove();
+      return ok;
+    }
+  }
+
+  const App = window.App = {mk, band, grow, copyText, tests: {}};
+
+  App.quiz = function(cfg){
+    const el = n => $(cfg.p + "-" + n);
+    const on = (n, ev, fn) => { const e = el(n); if (e) e.addEventListener(ev, fn); };
+    const root = el("dlg");
+    const panels = Object.fromEntries((cfg.panels || ["intro", "quiz", "result"]).map(n => [n, el(n)]));
+    const total = cfg.items.length;
+    let step = 0, answers = [], timer = 0, pointerAt = 0, consent = false;
+
+    const show = name => {
+      Object.keys(panels).forEach(k => { panels[k].hidden = k !== name; });
+      root.dataset.view = name;
+      if (root.getBoundingClientRect().top < 0) root.scrollIntoView({block: "start"});
+    };
+    const progress = v => {
+      el("bar").style.width = (v / total * 100) + "%";
+      el("progress").setAttribute("aria-valuenow", String(v));
+    };
+
+    function reset(){
+      clearTimeout(timer);
+      answers = cfg.items.map(() => null);
+      step = 0;
+      (cfg.clear || []).forEach(n => { const e = el(n); if (e) e.textContent = ""; });
+      const partner = el("partner");
+      if (partner) partner.value = "";
+      if (el("consent")){ el("consent").checked = false; consentInfo(false); }
+      progress(0);
+      if (cfg.onReset) cfg.onReset();
+    }
+    function open(initial){
+      reset();
+      show("intro");
+      if (!initial) el(cfg.focus || "start").focus();
+    }
+
+    function renderQ(){
+      const it = cfg.items[step];
+      el("eyebrow").textContent = cfg.eyebrow(it);
+      el("count").textContent = (cfg.prefix ? cfg.prefix() : "") + "Вопрос " + (step + 1) + " из " + total;
+      progress(step);
+      el("legend").textContent = it.t;
+      el("opts").style.setProperty("--n", cfg.scale.length);
+      el("opts").replaceChildren(...cfg.scale.map((label, i) => {
+        const lab = mk("label", "answer");
+        const inp = document.createElement("input");
+        inp.type = "radio";
+        inp.name = cfg.p + "-a";
+        inp.value = String(i + 1);
+        inp.checked = answers[step] === i + 1;
+        inp.addEventListener("change", () => {
+          answers[step] = i + 1;
+          el("next").disabled = false;
+          clearTimeout(timer);
+          if (Date.now() - pointerAt < 800) timer = setTimeout(advance, 280);
+        });
+        lab.append(inp, mk("span", "", label));
+        return lab;
+      }));
+      el("back").disabled = step === 0;
+      el("next").disabled = answers[step] == null;
+      el("next").textContent = step === total - 1 ? "К результату" : "Дальше";
+      el("q").animate([{opacity: 0, transform: "translateX(18px)"}, {opacity: 1, transform: "translateX(0)"}], {duration: 300, easing: "ease-out"});
+      el("legend").focus({preventScroll: true});
+    }
+    function advance(){
+      if (answers[step] == null) return;
+      if (step < total - 1){ step++; renderQ(); }
+      else cfg.onFinish(answers);
+    }
+    function consentInfo(open){
+      el("consent-details").hidden = !open;
+      el("consent-info").setAttribute("aria-expanded", String(open));
+    }
+    function start(){
+      consent = !!el("consent") && el("consent").checked;
+      answers = cfg.items.map(() => null);
+      step = 0;
+      show("quiz");
+      renderQ();
+    }
+    function showResult(){
+      if (el("codebox")){ el("codebox").hidden = !consent; el("nocode").hidden = consent; }
+      progress(total);
+      show("result");
+      el("rtitle").focus({preventScroll: true});
+    }
+
+    on("opts", "pointerdown", () => { pointerAt = Date.now(); });
+    on("start", "click", start);
+    on("again", "click", () => open(false));
+    on("back", "click", () => { clearTimeout(timer); if (step > 0){ step--; renderQ(); } });
+    on("next", "click", () => { clearTimeout(timer); advance(); });
+    on("copy", "click", async () => {
+      if (!consent) return;
+      el("copy-st").textContent = (await copyText(el("code").textContent, root))
+        ? "Код скопирован."
+        : "Не удалось скопировать. Выделите код и скопируйте вручную.";
+    });
+    if (el("consent")){
+      on("consent-info", "click", () => consentInfo(el("consent-details").hidden));
+      on("consent", "change", () => consentInfo(el("consent").checked));
+      on("consent-understood", "click", () => { consentInfo(false); el("consent-info").focus({preventScroll: true}); });
+      on("consent-decline", "click", () => { el("consent").checked = false; consentInfo(false); el("consent").focus({preventScroll: true}); });
+    }
+    on("exit-ok", "click", () => { closeDialog(el("exit")); open(false); });
+    document.addEventListener("click", e => {
+      const t = e.target.closest("[data-about],[data-exit],[data-close]");
+      if (!t) return;
+      if (t.hasAttribute("data-about")) openDialog(el("about"));
+      else if (t.hasAttribute("data-exit")) openDialog(el("exit"));
+      else closeDialog(t.closest("dialog"));
+    });
+    document.querySelectorAll("dialog").forEach(d => {
+      let press = false;
+      const outside = e => {
+        const r = d.getBoundingClientRect();
+        return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      };
+      d.addEventListener("pointerdown", e => { press = e.target === d && outside(e); });
+      d.addEventListener("pointercancel", () => { press = false; });
+      d.addEventListener("click", e => {
+        if (press && e.target === d && outside(e)) closeDialog(d);
+        press = false;
+      });
+      d.addEventListener("close", () => { press = false; });
+    });
+    if (cfg.compare){
+      on("cmp", "click", cfg.compare);
+      on("partner", "keydown", e => { if (e.key === "Enter"){ e.preventDefault(); cfg.compare(); } });
+    }
+
+    return {dlg: root, el, open, start, show, showResult, get answers(){ return answers; }};
+  };
+
+  App.scores = (count, items, answers) => Array.from({length: count}, (_, d) => {
+    let sum = 0, n = 0;
+    items.forEach((it, k) => { if (it.d === d){ sum += answers[k]; n++; } });
+    return Math.round((sum - n) / (n * 4) * 100);
+  });
+
+  App.parseScores = (text, prefix, count) => {
+    const s = String(text).toUpperCase().replace(DASH, "-").replace(/\s+/g, "");
+    const m = new RegExp("^" + prefix + "-" + Array(count).fill("(\\d{1,3})").join("-") + "$").exec(s);
+    if (!m) return null;
+    const v = m.slice(1).map(Number);
+    return v.every(n => n <= 100) ? v : null;
+  };
+
+  const dot = (cls, v, i) => {
+    const d = mk("span", "dot " + cls);
+    d.style.setProperty("--x", v + "%");
+    d.style.setProperty("--delay", (i * .07) + "s");
+    return d;
+  };
+  const sr = text => mk("span", "sr-only", text);
+
+  App.renderBands = (box, names, sc, words, notes) => {
+    box.replaceChildren(...names.map((name, i) => {
+      const b = band(sc[i]);
+      const row = mk("div", "map-row");
+      const head = mk("div", "row-head");
+      head.append(mk("span", "row-name", name), mk("span", "row-values", words[b] + " · " + sc[i]));
+      const track = mk("div", "track");
+      track.setAttribute("aria-hidden", "true");
+      track.append(dot("first", sc[i], i));
+      row.append(head, track, mk("p", "row-note", notes[i][b]), sr("Ваш результат: " + sc[i] + " из 100"));
+      return row;
+    }));
+  };
+
+  App.renderCompare = (out, names, mine, other, labelFn) => {
+    const card = mk("div", "map-card");
+    card.append(mk("p", "eyebrow", "Вы и партнёр"), mk("h3", "", "Две карты рядом"));
+    const key = mk("div", "map-key");
+    key.append(mk("span", "key", "Вы"), mk("span", "key second", "Партнёр"));
+    card.append(key);
+    names.forEach((name, i) => {
+      const row = mk("div", "map-row");
+      const head = mk("div", "row-head");
+      head.append(mk("span", "row-name", name), mk("span", "row-values", labelFn(mine[i], other[i])));
+      const track = mk("div", "track paired");
+      track.setAttribute("aria-hidden", "true");
+      track.append(dot("first", mine[i], i), dot("second", other[i], i));
+      row.append(head, track, sr("Вы: " + mine[i] + " из 100. Партнёр: " + other[i] + " из 100."));
+      card.append(row);
+    });
+    const scale = mk("div", "scale-labels");
+    scale.append(mk("span", "", "0"), mk("span", "", "100"));
+    card.append(scale);
+    out.append(card);
+  };
+
+  App.vitem = (text, tags) => {
+    const li = mk("li", "vitem");
+    const m = mk("div", "vmeta");
+    tags.forEach(([cls, t]) => m.append(mk("span", ("tag " + cls).trim(), t)));
+    li.append(mk("p", "", text), m);
+    return li;
+  };
+  App.vlist = entries => {
+    const ul = mk("ul", "vlist");
+    ul.append(...entries);
+    return ul;
+  };
+
+  App.bandedTest = function(cfg){
+    const names = cfg.domains.map(d => d.name);
+    const items = cfg.domains.flatMap((d, di) => d.items.map(t => ({d: di, t})));
+    let mine = null;
+
+    const q = App.quiz({
+      p: cfg.p, items, scale: cfg.scale,
+      eyebrow: it => names[it.d],
+      clear: ["rows", "cmp-out", "opts", "code", "copy-st", "cmp-err", "overall", "start-hint"],
+      onReset: () => { mine = null; },
+      onFinish: finish,
+      compare
+    });
+
+    function finish(answers){
+      const sc = App.scores(names.length, items, answers);
+      mine = sc;
+      q.el("overall").textContent = cfg.overall[band(Math.round(sc.reduce((a, b) => a + b, 0) / sc.length))];
+      App.renderBands(q.el("rows"), names, sc, cfg.words, cfg.notes);
+      const low = sc.indexOf(Math.min(...sc));
+      q.el("start-hint").textContent = sc[low] < 75
+        ? "С чего начать разговор: «" + names[low] + "»."
+        : cfg.allClear;
+      const flagged = answers[cfg.safeIndex] <= 2;
+      q.el("safe").hidden = !flagged;
+      q.el("share").hidden = flagged;
+      q.el("code").textContent = cfg.prefix + "-" + sc.join("-");
+      if (cfg.extra) cfg.extra(q, answers);
+      q.showResult();
+    }
+
+    function gap(a, b){
+      const g = Math.abs(a - b);
+      if (g <= 15){
+        if (a < 50 && b < 50) return cfg.gap.low;
+        if (a >= 75 && b >= 75) return cfg.gap.high;
+        return "Оценки близки";
+      }
+      return g <= 30 ? "Есть разница" : "Заметно расходятся";
+    }
+
+    function compare(){
+      const err = q.el("cmp-err"), out = q.el("cmp-out");
+      err.textContent = "";
+      out.replaceChildren();
+      const other = App.parseScores(q.el("partner").value, cfg.prefix, names.length);
+      if (!other || !mine){ err.textContent = CODE_ERR_TAIL + cfg.codeHint + "."; return; }
+      App.renderCompare(out, names, mine, other, gap);
+      out.append(mk("p", "hint", cfg.compareHint));
+    }
+
+    return q.open;
+  };
+})();
+(function(){
+  "use strict";
+
+  const MAR = {
+    scale: ["Совсем не\u00a0про\u00a0нас", "Скорее не\u00a0про\u00a0нас", "По-разному", "Скорее про\u00a0нас", "Точно про\u00a0нас"],
+    pressureIndex: 2,
+    safeIndex: 3,
+    domains: [
+      {name: "Решение", items: [
+        "Мы выбрали пожениться осознанно, а\u00a0не\u00a0потому что «так сложилось»: из-за\u00a0совместной жизни, возраста или ожиданий окружающих.",
+        "Мы обсуждали, зачем каждому из\u00a0нас брак и\u00a0что он должен изменить в\u00a0нашей жизни.",
+        "Решение пожениться мы принимаем без\u00a0давления со\u00a0стороны родных, обстоятельств или друг друга.",
+        "Я\u00a0могу сказать партнёру, что в\u00a0чём-то сомневаюсь, и\u00a0не\u00a0бояться его реакции.",
+        "Мы говорили о\u00a0том, как будем действовать, если в\u00a0браке станет трудно: к\u00a0кому обратимся, как будем договариваться."]},
+      {name: "Деньги и\u00a0обязанности", items: [
+        "Мы знаем доходы, долги и\u00a0крупные обязательства друг друга.",
+        "Мы договорились, как будем вести общий бюджет и\u00a0какие траты обсуждаем вместе.",
+        "Мы обсуждали, как распределим домашние дела и\u00a0заботы, чтобы обоим это казалось справедливым.",
+        "Мы говорили о\u00a0том, как работа и\u00a0карьерные планы каждого повлияют на\u00a0общие решения: переезд, график, отпуск.",
+        "Мы обсуждали, что будем делать, если один из\u00a0нас потеряет доход или надолго заболеет."]},
+      {name: "Границы новой семьи", items: [
+        "Мы обсуждали, какую роль в\u00a0нашей жизни будут играть родители и\u00a0другие родственники.",
+        "У\u00a0нас есть общее понимание, как часто и\u00a0на\u00a0каких условиях мы видимся с\u00a0роднёй и\u00a0друзьями.",
+        "Если родные вмешиваются в\u00a0наши дела, мы решаем, как реагировать, вместе.",
+        "Мы говорили о\u00a0том, сколько времени каждому нужно для\u00a0себя, друзей и\u00a0увлечений.",
+        "Мы договорились, какие решения принимаем вдвоём, а\u00a0какие каждый вправе принимать сам."]},
+      {name: "Дети и\u00a0родительство", items: [
+        "Мы говорили о\u00a0том, хотим\u00a0ли мы детей и, если да, в\u00a0какие примерно сроки.",
+        "Мы обсуждали, как поступим, если завести детей не\u00a0получится или планы изменятся.",
+        "Мы обсуждали, как распределим заботу о\u00a0ребёнке и\u00a0как это скажется на\u00a0работе каждого.",
+        "Мы говорили о\u00a0том, как воспитывали каждого из\u00a0нас и\u00a0что мы хотим повторить или сделать иначе.",
+        "Мы понимаем, как будем принимать решения, если наши взгляды на\u00a0воспитание разойдутся."]},
+      {name: "Близость и\u00a0споры", items: [
+        "Мы можем говорить о\u00a0близости и\u00a0сексе без\u00a0обид и\u00a0неловкости.",
+        "Мы обсуждали, как каждый понимает верность и\u00a0что для\u00a0нас допустимо, а\u00a0что нет.",
+        "После ссоры мы возвращаемся к\u00a0разговору и\u00a0о\u00a0чём-то договариваемся.",
+        "Мы знаем, что каждый из\u00a0нас делает, когда злится или обижается, и\u00a0как с\u00a0этим обращаться.",
+        "Мы умеем остановить спор, который идёт по\u00a0кругу, и\u00a0вернуться к\u00a0теме позже."]}
+    ]
+  };
+  const NOTES = [
+    ["Решение о\u00a0браке пока не\u00a0до\u00a0конца проговорено или на\u00a0него что-то давит. Можно начать с\u00a0вопроса «зачем нам это именно сейчас?» и\u00a0ответить на\u00a0него каждому по\u00a0очереди.",
+     "Часть причин и\u00a0сомнений вы уже обсудили, часть осталась невысказанной. Стоит выяснить, чего именно не\u00a0хватает.",
+     "Вы выбрали этот шаг осознанно и\u00a0можете говорить о\u00a0сомнениях."],
+    ["О\u00a0деньгах и\u00a0обязанностях договорённостей пока мало. Можно начать с\u00a0одного вопроса: кто что оплачивает и\u00a0кто за\u00a0что отвечает.",
+     "Часть финансовых и\u00a0бытовых вопросов вы согласовали, часть держится на\u00a0ожиданиях. Их можно проговорить.",
+     "Основные вопросы денег и\u00a0обязанностей у\u00a0вас обсуждены."],
+    ["Роль родных и\u00a0личное пространство пока не\u00a0обсуждены. Удобнее договориться об\u00a0этом заранее, пока нет споров.",
+     "Часть границ вы уже определили, часть пока держится на\u00a0ожиданиях. Полезно назвать их вслух.",
+     "Границы с\u00a0роднёй, друзьями и\u00a0друг с\u00a0другом у\u00a0вас в\u00a0целом понятны."],
+    ["Тема детей пока почти не\u00a0обсуждалась. Можно начать с\u00a0вопроса: что каждый себе представляет и\u00a0в\u00a0какие сроки. Заранее «правильного» ответа здесь нет.",
+     "Часть вопросов о\u00a0детях вы обсудили, часть осталась открытой. Можно выбрать одну из\u00a0них и\u00a0начать с\u00a0неё.",
+     "О\u00a0детях и\u00a0родительстве вы говорили и\u00a0понимаете позиции друг друга."],
+    ["О\u00a0близости и\u00a0спорах говорить пока трудно. Можно начать без\u00a0спешки: выберите одну небольшую тему.",
+     "Говорить о\u00a0близости и\u00a0возвращаться после споров получается не\u00a0всегда. Можно заметить, в\u00a0каких ситуациях это труднее.",
+     "О\u00a0близости и\u00a0спорах вы можете говорить и\u00a0возвращаться к\u00a0разговору."]
+  ];
+  const OVERALL = [
+    "Многие темы пока не\u00a0обсуждены. Это не\u00a0плохо и\u00a0не\u00a0хорошо: это список разговоров, которые можно вести вдвоём.",
+    "Часть тем вы уже обсудили, часть ещё ждёт разговора.",
+    "Многие важные темы у\u00a0вас уже обсуждены. Это не\u00a0гарантия: договорённости стоит пересматривать по\u00a0мере перемен."
+  ];
+
+  App.tests.marriage = App.bandedTest({
+    p: "mar", prefix: "M1", codeHint: "M1-72-50-88-31-60",
+    domains: MAR.domains, scale: MAR.scale, safeIndex: MAR.safeIndex,
+    words: ["Нужен разговор", "Часть обсуждена", "Ясно"],
+    notes: NOTES, overall: OVERALL,
+    allClear: "Все пять сфер выглядят ясными. Хороший повод проверить, не\u00a0изменилось\u00a0ли что-то со\u00a0времени последних разговоров.",
+    gap: {low: "Совпали: нужен разговор", high: "Совпали: здесь у\u00a0вас ясность"},
+    compareHint: "Разница в\u00a0оценках не\u00a0значит, что кто-то из\u00a0вас ошибается: возможно, разговор был, но\u00a0каждый запомнил его по-своему. Можно спросить друг друга: «Что мы с\u00a0тобой об\u00a0этом уже решили?»",
+    extra: (q, answers) => { q.el("press").hidden = answers[MAR.pressureIndex] > 2; }
+  });
+})();
+App.tests.marriage(true);
+</script>
+</body>
+</html>
