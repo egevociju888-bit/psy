@@ -1972,9 +1972,9 @@ body {
 
 #gz-concepts .gz-concept-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 0.7fr) repeat(2, minmax(0, 1fr));
   align-items: stretch;
-  gap: 56px 32px;
+  gap: 48px;
 }
 
 #gz-concepts .gz-concept-side {
@@ -1994,18 +1994,16 @@ body {
 }
 
 #gz-concepts .gz-screen-title {
-  transform: translateY(-13px);
-}
-
-#gz-concepts .gz-title-main {
-  font-size: 66px;
+  margin-bottom: 40px;
+  font-size: clamp(40px, 4vw, 58px);
+  letter-spacing: -0.045em;
   line-height: 1.1;
 }
 
 #gz-concepts .gz-title-accent {
   margin-top: 0;
-  font-size: 66px;
-  line-height: 1.1;
+  font-size: clamp(30px, 3vw, 42px);
+  text-wrap: balance;
 }
 
 #gz-concepts .gz-concept-intro > p {
@@ -2158,18 +2156,6 @@ body {
     padding-bottom: 80px;
   }
 
-  #gz-concepts .gz-screen-title {
-    transform: translateY(-15px);
-  }
-
-  #gz-concepts .gz-title-main {
-    font-size: 76px;
-  }
-
-  #gz-concepts .gz-title-accent {
-    font-size: 76px;
-  }
-
 }
 
 @media (max-width: 1200px) {
@@ -2236,18 +2222,6 @@ body {
     margin-top: 0;
   }
 
-  #gz-concepts .gz-screen-title {
-    transform: translateY(-11px);
-  }
-
-  #gz-concepts .gz-title-main {
-    font-size: 56px;
-  }
-
-  #gz-concepts .gz-title-accent {
-    font-size: 56px;
-  }
-
   #gz-concepts .gz-case {
     grid-template-columns: minmax(0, 1fr);
     gap: 30px;
@@ -2279,14 +2253,6 @@ body {
   #gz-concepts .gz-concept-owner {
     display: flex;
     align-items: flex-start;
-  }
-
-  #gz-concepts .gz-title-main {
-    font-size: clamp(30px, 9vw, 40px);
-  }
-
-  #gz-concepts .gz-title-accent {
-    font-size: clamp(30px, 9vw, 40px);
   }
 
   #gz-concepts .gz-concept-owner > .gz-concepts-action {
@@ -2818,30 +2784,10 @@ body {
   white-space: nowrap;
 }
 
-#gz-benefit .gz-title-main {
+#gz-benefit .gz-screen-title {
   font-size: clamp(40px, 4vw, 58px);
-  line-height: 1.1;
   letter-spacing: -0.045em;
-  white-space: nowrap;
-}
-
-#gz-benefit .gz-title-follow {
-  display: block;
-  margin: 0;
-  font-size: clamp(28px, 2.9vw, 42px);
   line-height: 1.1;
-  letter-spacing: -0.045em;
-}
-
-#gz-benefit .gz-title-follow > span {
-  white-space: nowrap;
-}
-
-#gz-benefit .gz-title-accent {
-  margin-top: 0;
-  font-size: inherit;
-  line-height: 1.1;
-  white-space: nowrap;
 }
 
 #gz-benefit .gz-benefit-body {
@@ -3384,15 +3330,6 @@ body {
 }
 
 @media (max-width: 540px) {
-
-  #gz-benefit .gz-title-main {
-    font-size: clamp(40px, 12vw, 50px);
-  }
-
-  #gz-benefit .gz-title-follow {
-    margin-top: 4px;
-    font-size: clamp(20px, 6.6vw, 30px);
-  }
 
   #gz-benefit .gz-benefit-body {
     margin-top: 48px;

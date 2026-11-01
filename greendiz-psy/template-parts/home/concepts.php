@@ -12,13 +12,13 @@ $slots = array( 'gz-concept-teen', 'gz-concept-family', 'gz-concept-academic', '
 ?>
 <section class="gz-gallery gz-inner" id="gz-concepts" aria-labelledby="gz-concepts-title">
 <div class="gz-screen-meta"><div class="gz-index">Разные настроения</div><div class="gz-screen-caption">Разные подходы</div></div>
+<h2 id="gz-concepts-title" class="gz-screen-title">
+  <span class="gz-title-main">Примеры сайтов:</span>
+  <span class="gz-title-accent">готовые концепты <span class="gz-title-tail">для разных практик</span></span>
+</h2>
 <div class="gz-concept-stage"><div class="gz-concept-grid<?php echo count( $concepts ) > 5 ? ' is-expanded' : ''; ?>" id="gz-concepts-grid" style="--gz-concept-rows: <?php echo absint( $gdpsy_rows_closed ); ?>; --gz-concept-rows-open: <?php echo absint( $gdpsy_rows_open ); ?>;">
 <div class="gz-concept-side">
 <div class="gz-concept-intro">
-              <h2 id="gz-concepts-title" class="gz-screen-title">
-                <span class="gz-title-main">Примеры сайтов:</span>
-                <span class="gz-title-accent">готовые концепты <span class="gz-title-tail">для разных практик</span></span>
-              </h2>
               <p>Концепт — это готовый дизайн сайта, который я придумала заранее. Выберите близкий вам по настроению: я заменю тексты и фото на ваши и при необходимости добавлю до трёх блоков в том же стиле.</p>
             </div>
 <aside class="gz-concept-owner" aria-labelledby="gz-owner-title">
