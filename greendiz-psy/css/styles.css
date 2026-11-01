@@ -1842,7 +1842,7 @@ body {
 }
 
 .gz-help-list p {
-  color: var(--gz-on-blue-secondary);
+  color: #fff;
   letter-spacing: -0.025em;
 }
 
@@ -4266,7 +4266,7 @@ body {
     grid-template-areas: "intro" "foot";
     gap: 40px;
     padding-top: 52px;
-    padding-bottom: var(--gz-gutter);
+    padding-bottom: calc(var(--gz-gutter) + 12px);
   }
 
   .gz-hero-word {
@@ -4283,7 +4283,7 @@ body {
   .gz-hero-audience {
     width: 300px;
     max-width: 100%;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .gz-hero-audience > span {
@@ -4309,6 +4309,10 @@ body {
   .gz-hero-nav .gz-wp-menu {
     grid-template-rows: none;
     grid-auto-flow: row;
+  }
+
+  .gz-hero-nav a {
+    min-height: 54px;
   }
 
   .gz-hero-nav li:nth-child(3n + 1) a {

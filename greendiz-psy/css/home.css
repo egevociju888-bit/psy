@@ -14,7 +14,7 @@
 @media (max-width: 760px) {
   .gz-help-list > li {
     grid-template-columns: 24px minmax(0, 1fr);
-    gap: 16px;
+    gap: 8px;
     padding-block: 8px;
   }
 }
